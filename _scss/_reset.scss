@@ -5,6 +5,7 @@
 /*****************************************************************************/
 
 /* Global Reset */
+@import '../node_modules/frow/sass/frow/_variables.scss';
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +14,7 @@
 html, body { height: 100%; }
 
 body {
-    background-color: black;
+    background-color: $background-color;
     font: 13.34px Helvetica, Arial, sans-serif;
     font-size: small;
     text-align: center;
@@ -47,6 +48,7 @@ a:visited { color: #a0a; }
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
+    display: flex;
 }
 
 /*****************************************************************************/
@@ -58,8 +60,8 @@ a:visited { color: #a0a; }
 .site {
     font-size: 115%;
     text-align: justify;
-    width: 42em;
-    margin: 3em auto 2em;
+    width: 100%;
+    margin: 3em 2em;
     line-height: 1.5em;
 }
 
@@ -79,6 +81,9 @@ a:visited { color: #a0a; }
 
 .title a:hover {
     color: #000;
+}
+.header {
+    background: $nav-background;
 }
 
 .header a.extra {

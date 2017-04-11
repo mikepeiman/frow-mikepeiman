@@ -1,6 +1,3 @@
-@import "reset";
+@import "reset.scss";
 @import "syntax";
-
-body {
-    background: white;
-}
+@import '../node_modules/frow/sass/_frow.scss';
