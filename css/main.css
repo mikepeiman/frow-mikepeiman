@@ -8,20 +8,26 @@
   margin: 0;
   padding: 0; }
 
-html, body {
+html {
   height: 100%; }
 
 body {
-  background-color: #aaaaff;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  background-color: #333333;
+  background: url(../images/mikepeiman-site-bg-v1.png);
+  font: 1.25em Helvetica, Arial, sans-serif;
   font-size: small;
-  text-align: center; }
+  text-align: center;
+  min-height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 {
-  margin-bottom: 1em; }
+  margin: 0em; }
 
 p {
   margin: 1em 0; }
@@ -42,7 +48,9 @@ a:visited {
 /*****************************************************************************/
 .posts {
   list-style-type: none;
-  margin-bottom: 2em; }
+  background: white;
+  margin: 2em;
+  padding: 2em; }
 
 .posts li {
   line-height: 1.75em; }
@@ -60,28 +68,29 @@ a:visited {
 /*
 /*****************************************************************************/
 .site {
-  font-size: 115%;
   text-align: justify;
   width: 100%;
-  margin: 3em 2em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  -ms-flex: 1;
+      flex: 1;
+  background: url(../images/mikepeiman-site-bg-v1.png) cover no-repeat; }
 
 .header a {
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 2em 1.25em; }
 
 .title {
-  display: inline-block;
-  margin-bottom: 2em; }
+  display: inline-block; }
 
 .title a {
-  color: #a00; }
+  color: #efefef; }
 
 .title a:hover {
   color: #000; }
 
 .header {
-  background: #d5aaff; }
+  background: #111111; }
 
 .header a.extra {
   color: #aaa;
@@ -96,9 +105,10 @@ a:visited {
 .footer {
   font-size: 80%;
   color: #666;
-  border-top: 4px solid #eee;
+  border-top: 4px solid #777777;
   margin-top: 2em;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #1a1a1a; }
 
 .footer .contact {
   float: left;

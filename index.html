@@ -4,9 +4,11 @@ title: Developing Human Potential
 ---
 
 <div id="home">
-	<div class="frow container">
+	<div class="frow direction-column">
 		  <h1>Blog Posts</h1>
-		  <ul class="frow direction-column justify-start">
+	</div>
+	<div class="frow centered">
+		  <ul>
 		    {% for post in site.posts %}
 			    <div class="blog-post">
 			      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
