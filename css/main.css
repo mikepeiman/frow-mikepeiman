@@ -12,8 +12,7 @@ html {
   height: 100%; }
 
 body {
-  background-color: #333333;
-  background: linear-gradient(rgba(85, 5, 255, 0.4), transparent), url(../images/mikepeiman-site-bg-v2.png) left no-repeat;
+  background: url(../images/mikepeiman-site-bg-v2-white.png) left no-repeat;
   font: 1.25em Helvetica, Arial, sans-serif;
   text-align: center;
   display: -ms-flexbox;
@@ -23,16 +22,17 @@ body {
       flex-direction: column; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 100%;
+  font-weight: 400; }
 
 a {
-  color: #00a; }
+  color: #fffcf2; }
 
 a:hover {
-  color: #99f; }
+  color: #FFC100; }
 
 a:visited {
-  color: #b7b; }
+  color: #265FFF; }
 
 /*****************************************************************************/
 /*
@@ -41,18 +41,19 @@ a:visited {
 /*****************************************************************************/
 .posts {
   list-style-type: none;
-  background: white;
-  padding: 1em;
+  background: #fffcf2;
+  margin: 1em;
   line-height: 1.25em;
   -ms-flex: 1;
-      flex: 1; }
+      flex: 1;
+  border-top: 5px solid #1a1a1a;
+  box-shadow: 0px 3px 5px 1px #808080; }
 
 .posts li {
   line-height: 1.75em; }
 
 .posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
+  color: #1a1a1a;
   font-size: 80%; }
 
 /*****************************************************************************/
@@ -60,11 +61,36 @@ a:visited {
 /* Site
 /*
 /*****************************************************************************/
+nav {
+  background: #1a1a1a;
+  padding-bottom: 0.25em; }
+  nav ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    width: 100%;
+    -ms-flex-align: center;
+        align-items: center; }
+  nav ul li {
+    padding-right: 2em; }
+  nav ul li:first-child {
+    margin-right: auto;
+    margin-left: 1.5em; }
+  nav a:hover {
+    color: #26C3FF;
+    text-decoration: none; }
+  nav ul {
+    margin-right: 2em; }
+
 .intro-text {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 1em;
+  color: #fffcf2;
+  background: #1a1a1a;
+  margin: 1em;
   -ms-flex: 1;
-      flex: 1; }
+      flex: 1;
+  box-shadow: 0px 3px 5px 1px #808080;
+  border-top: 5px solid #FFC100; }
 
 .intro-text h1, h2, h3, h4, h5, h6 {
   text-align: center;
@@ -79,89 +105,51 @@ a:visited {
   -ms-flex: 1;
       flex: 1; }
 
+.nav-menu a {
+  color: #fffcf2;
+  text-decoration: none;
+  display: block; }
+
 .site-branding {
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start; }
-
-.nav-menu a {
-  color: white;
-  text-decoration: none; }
-
-.site-branding a {
-  color: white;
-  text-decoration: none; }
-
-.topnav a:hover {
-  color: #3355ff;
-  text-decoration: none; }
-
-.topnav ul {
-  margin-right: 2em; }
-
-.site-branding {
   -ms-flex: 1;
       flex: 1; }
+
+.site-branding a {
+  color: #fffcf2;
+  text-decoration: none; }
 
 .site-branding h1 {
   margin: 0.3em 0 0 0; }
 
 .site-branding p {
-  margin: 0 0 0.5em; }
+  margin: 0 0 0.5em;
+  font-size: .85em;
+  color: #26C3FF; }
 
-nav {
-  background: rgba(0, 0, 0, 0.5);
-  padding-bottom: 0.25em; }
-  nav .topnav {
-    -ms-flex-align: center;
-        align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
-  nav ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    width: 50%;
-    -ms-flex-align: center;
-        align-items: center; }
-
-@media all and (max-width: 670px) {
-  .topnav {
-    /* On small screens, we are no longer using row direction but column */
-    -ms-flex-direction: column;
-        flex-direction: column; }
-  .nav-menu {
-    display: inline-block;
-    width: 95%;
-    margin: 0; }
-  .nav-menu {
-    margin-top: .75em; }
-  .nav-menu li {
-    margin-bottom: .1em; } }
+@media all and (min-width: 670px) {
+  nav .site-branding {
+    display: block;
+    margin-right: auto; } }
 
 .meta {
-  color: #aaa; }
+  color: #808080; }
 
 .footer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #6688aa;
-  border-top: 4px solid #777777;
+  color: #265FFF;
+  border-top: 2.5px solid #FFC100;
   background: #1a1a1a; }
 
 .footer a {
   padding: .25em 1em; }
 
 .footer svg:hover {
-  fill: #3355ff; }
+  fill: #26C3FF; }
 
 .footer .rss {
   margin-top: 1.1em;
@@ -172,12 +160,48 @@ nav {
   border: 0; }
 
 .icon {
-  fill: #5599ff;
+  fill: #FFC100;
   width: 32px;
   height: 32px;
   margin: 1em 0;
   -ms-flex: 1;
       flex: 1; }
+
+@media all and (max-width: 995px) {
+  body {
+    background: #fffcf2; }
+  nav ul li {
+    padding-right: .75em; } }
+
+@media all and (max-width: 670px) {
+  body {
+    font-size: 100%; }
+  .topnav {
+    /* On small screens, we are no longer using row direction but column */
+    -ms-flex-direction: column;
+        flex-direction: column;
+    background: url(../images/mikepeiman-site-bg-v2.png) left no-repeat; }
+  .nav-menu {
+    display: inline-block;
+    width: 95%; }
+  .nav-menu {
+    margin-top: .75em;
+    margin-bottom: .75em; }
+  .nav-menu li {
+    margin-bottom: .1em;
+    padding: 0; }
+  .intro-text {
+    margin: 0;
+    font-size: 80%; }
+  .posts {
+    margin: 0;
+    font-size: 80%; }
+  .footer a {
+    padding: .25em .5em; } }
+
+@media all and (max-width: 480px) {
+  .footer a {
+    padding: .25em .25em; } }
 
 /*****************************************************************************/
 /*
@@ -186,16 +210,16 @@ nav {
 /*****************************************************************************/
 /* standard */
 .post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
+  border: 1px solid #808080;
+  background-color: #fffcf2;
   padding: 0 .4em; }
 
 .post ul, .post ol {
   margin-left: 1.35em; }
 
 .post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
+  border: 1px solid #808080;
+  background-color: #fffcf2;
   padding: 0 .2em; }
 
 .post pre code {
@@ -203,12 +227,12 @@ nav {
 
 /* terminal */
 .post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF; }
+  border: 1px solid #1a1a1a;
+  background-color: #808080;
+  color: #fffcf2; }
 
 .post pre.terminal code {
-  background-color: #333; }
+  background-color: #808080; }
 
 .highlight {
   background: #ffffff; }
@@ -880,10 +904,10 @@ template {
   -webkit-tap-highlight-color: transparent; }
 
 a {
-  color: #333333;
+  color: #26C3FF;
   text-decoration: none; }
   a:hover, a:focus, a:active {
-    color: #0d0d0d;
+    color: #009dd9;
     text-decoration: underline; }
   p a {
     text-decoration: underline; }
@@ -1933,7 +1957,7 @@ textarea:not(.reset) {
   box-shadow: 0px 1px 3px 0px #A0A0A0; }
 
 .dark-card-shadow {
-  box-shadow: 0px 1px 3px 0px #1B1B1B; }
+  box-shadow: 0px 3px 5px 1px #808080; }
 
 .clearfix:after {
   content: "";

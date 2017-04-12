@@ -14,8 +14,7 @@
 html { height: 100%; }
 
 body {
-    background-color: $background-color;
-    background: linear-gradient(rgba(85,5,255,.4), rgba(0,0,0,0)), $bg-image;
+    background: $bg-image; // linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.9)),
     font: 1.25em Helvetica, Arial, sans-serif;
     text-align: center;
     display: flex;
@@ -24,11 +23,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: 100%; }
+    font-size: 100%;
+    font-weight: 400;
+}
 
-a         { color: #00a; }
-a:hover   { color: #99f; }
-a:visited { color: #b7b; }
+a         { color: $main-white; }
+a:hover   { color: $main-color; }
+a:visited { color: $third-accent; }
 
 /*****************************************************************************/
 /*
@@ -38,10 +39,12 @@ a:visited { color: #b7b; }
 
 .posts {
     list-style-type: none;
-    background: white;
-    padding: 1em;
+    background: $main-white;
+    margin: 1em;
     line-height: 1.25em;
     flex: 1;
+    border-top: 5px solid $main-black;
+    box-shadow: $dark-card-shadow; // border: $main-border;
 }
 
 .posts li {
@@ -49,8 +52,8 @@ a:visited { color: #b7b; }
 }
 
 .posts span {
-    color: #aaa;
-    font-family: Monaco, "Courier New", monospace;
+    color: $main-black;
+    //font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
 }
 
@@ -60,10 +63,44 @@ a:visited { color: #b7b; }
 /*
 /*****************************************************************************/
 
+nav {
+  background: $main-black;
+  padding-bottom: 0.25em;
+
+  ul {
+  	display: flex;
+  	justify-content: flex-end; // space-around;
+  	width: 100%;
+  	align-items: center;
+  }
+
+  ul li {
+  	padding-right: 2em;
+  }
+
+	ul li:first-child {
+  	margin-right: auto;
+  	margin-left: 1.5em;
+  }
+
+	 a:hover {
+  color: $third-color;
+  text-decoration: none;
+	}
+
+	ul {
+		margin-right: 2em;
+	}
+}
+
 .intro-text {
-    background: rgba(255,255,255,0.2);
-    padding: 1em;
+		color: $main-white;
+    background: $main-black; // $near-white; // #6B311E; // rgba(255,255,255,0.2);
+    margin: 1em;
     flex: 1;
+    box-shadow: $dark-card-shadow; // border: $main-border;
+    border-top: 5px solid #FFC100;
+
 }
 
 .intro-text h1, h2, h3, h4, h5, h6 {
@@ -80,33 +117,20 @@ a:visited { color: #b7b; }
    // align-content: stretch;
 }
 
-.site-branding {
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
+.nav-menu a {
+	color: $main-white;
+	text-decoration: none;
+	display: block;
 }
 
-.nav-menu a {
-	color: white;
-	text-decoration: none;
+.site-branding {
+	flex-direction: column;
+	flex: 1;
 }
 
 .site-branding a {
-	color: white;
+	color: $main-white;
 	text-decoration: none;
-}
-
-.topnav a:hover {
-  color: #3355ff;
-  text-decoration: none;
-}
-
-.topnav ul {
-	margin-right: 2em;
-}
-
-.site-branding {
-	flex: 1;
 }
 
 .site-branding h1 {
@@ -115,68 +139,36 @@ a:visited { color: #b7b; }
 
 .site-branding p {
 	margin: 0 0 0.5em;
+	font-size: .85em;
+	color: $third-color;
 }
 
-nav {
-  background: rgba(0,0,0,0.5);
-  padding-bottom: 0.25em;
-
-  .topnav {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  ul {
-  	display: flex;
-  	justify-content: space-between;
-  	width: 50%;
-  	align-items: center;
-  }
-}
-
-@media all and (max-width: 670px) {
-  .topnav {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-
-  .nav-menu {
-  	display: inline-block;
-  	width: 95%;
-  	margin: 0;
-  }
-
-	.nav-menu {
-	margin-top: .75em;
-	}
-
-  .nav-menu li {
-	margin-bottom: .1em;
+@media all and (min-width: 670px) {
+	nav .site-branding {
+		display: block;
+		margin-right: auto;
 	}
 }
-
-
-
 
 .meta {
-    color: #aaa;
+    color: $main-grey;
 }
 
 .footer {
     display: flex;
     justify-content: space-around;
-    color: #6688aa;
+    color: $third-accent;
     border-top: $main-border;
   //  margin-top: 2em;
-    background: $footer-background;
+    background: $main-black;
 }
 
 .footer a {
 	padding: .25em 1em;
 }
+
 .footer svg:hover {
-    fill: #3355ff;
+    fill: $third-color;
 }
 
 .footer .rss {
@@ -190,12 +182,69 @@ nav {
 }
 
 .icon {
-    fill: #5599ff;
+    fill: $main-color;
     width: 32px;
     height: 32px;
     margin: 1em 0;
     flex: 1;
 }
+
+@media all and (max-width: 995px) {
+  body {
+  	background: $main-white;
+  }
+  nav ul li {
+  	padding-right: .75em;
+  }
+}
+
+@media all and (max-width: 670px) {
+  body {
+  	font-size: 100%;
+  }
+
+  .topnav {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    background: $bg-image-2;
+  }
+
+  .nav-menu {
+  	display: inline-block;
+  	width: 95%;
+  }
+
+	.nav-menu {
+	margin-top: .75em;
+	margin-bottom: .75em;
+	}
+
+  .nav-menu li {
+	margin-bottom: .1em;
+	padding: 0;
+	}
+
+	.intro-text {
+		margin: 0;
+		font-size: 80%;
+	}
+
+	.posts {
+		margin: 0;
+		font-size: 80%;
+	}
+
+	.footer a {
+	padding: .25em .5em;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.footer a {
+	padding: .25em .25em;
+	}
+}
+
 /*****************************************************************************/
 /*
 /* Posts
@@ -204,8 +253,8 @@ nav {
 
 /* standard */
 .post pre {
-    border: 1px solid #ddd;
-    background-color: #eef;
+    border: 1px solid $main-grey;
+    background-color: $main-white;
     padding: 0 .4em;
 }
 
@@ -214,8 +263,8 @@ nav {
 }
 
 .post code {
-    border: 1px solid #ddd;
-    background-color: #eef;
+    border: 1px solid $main-grey;
+    background-color: $main-white;
     padding: 0 .2em;
 }
 
@@ -225,11 +274,11 @@ nav {
 
 /* terminal */
 .post pre.terminal {
-    border: 1px solid #000;
-    background-color: #333;
-    color: #FFF;
+    border: 1px solid $main-black;
+    background-color: $main-grey;
+    color: $main-white;
 }
 
 .post pre.terminal code {
-    background-color: #333;
+    background-color: $main-grey;
 }
