@@ -68,12 +68,12 @@ a:visited {
 .hero {
   -ms-flex-align: stretch;
       align-items: stretch;
+  background: rgba(255, 55, 55, 0.25);
   height: 100%; }
 
 .intro-text {
   background: rgba(255, 255, 255, 0.5);
   padding: 2em;
-  height: 100%;
   -ms-flex: 1;
       flex: 1; }
 
@@ -84,7 +84,8 @@ a:visited {
   -ms-flex: 1;
       flex: 1;
   -ms-flex-align: stretch;
-      align-items: stretch; }
+      align-items: stretch;
+  background: rgba(255, 55, 255, 0.25); }
 
 .header a {
   font-weight: bold;
@@ -121,7 +122,6 @@ nav {
       justify-content: space-around;
   color: #6688aa;
   border-top: 4px solid #777777;
-  margin-top: 2em;
   background: #1a1a1a; }
 
 .footer .contact a {

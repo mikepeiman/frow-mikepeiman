@@ -64,14 +64,13 @@ a:visited { color: #a0a; }
 
 .hero {
     align-items: stretch;
- //   background: rgba(255,55,55,0.5);
+    background: rgba(255,55,55,0.25);
     height: 100%;
 }
 
 .intro-text {
     background: rgba(255,255,255,0.5);
     padding: 2em;
-    height: 100%;
     flex: 1;
 }
 
@@ -81,7 +80,7 @@ a:visited { color: #a0a; }
     line-height: 1.5em;
     flex: 1;
     align-items: stretch;
- //   background: rgba(255,55,255,0.5);
+    background: rgba(255,55,255,0.25);
 }
 
 .header a {
@@ -125,7 +124,7 @@ nav {
     justify-content: space-around;
     color: #6688aa;
     border-top: $main-border;
-    margin-top: 2em;
+  //  margin-top: 2em;
     background: $footer-background;
 }
 
