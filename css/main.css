@@ -13,13 +13,12 @@ html {
 
 body {
   background-color: #333333;
-  background: url(../images/mikepeiman-site-bg-v2.png) left no-repeat;
-  overflow: hidden;
+  background: linear-gradient(rgba(85, 5, 255, 0.4), transparent), url(../images/mikepeiman-site-bg-v2.png) left no-repeat;
   font: 1.25em Helvetica, Arial, sans-serif;
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   -ms-flex-direction: column;
       flex-direction: column; }
 
@@ -49,8 +48,9 @@ a:visited {
 .posts {
   list-style-type: none;
   background: white;
-  margin: 2em;
-  padding: 2em; }
+  padding: 2em;
+  -ms-flex: 1;
+      flex: 1; }
 
 .posts li {
   line-height: 1.75em; }
@@ -65,12 +65,26 @@ a:visited {
 /* Site
 /*
 /*****************************************************************************/
+.hero {
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  height: 100%; }
+
+.intro-text {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2em;
+  height: 100%;
+  -ms-flex: 1;
+      flex: 1; }
+
 .site {
   text-align: justify;
   width: 100%;
   line-height: 1.5em;
   -ms-flex: 1;
-      flex: 1; }
+      flex: 1;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
 
 .header a {
   font-weight: bold;
@@ -103,6 +117,8 @@ nav {
 .footer {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: #6688aa;
   border-top: 4px solid #777777;
   margin-top: 2em;
@@ -122,7 +138,10 @@ nav {
 .icon {
   fill: #5599ff;
   width: 32px;
-  height: 32px; }
+  height: 32px;
+  margin: 1em 0;
+  -ms-flex: 1;
+      flex: 1; }
 
 /*****************************************************************************/
 /*

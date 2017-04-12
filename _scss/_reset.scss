@@ -15,12 +15,11 @@ html { height: 100%; }
 
 body {
     background-color: $background-color;
-    background: $bg-image;
-    overflow: hidden;
+    background: linear-gradient(rgba(85,5,255,.4), rgba(0,0,0,0)), $bg-image;
     font: 1.25em Helvetica, Arial, sans-serif;
     text-align: center;
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
     flex-direction: column;
 }
 
@@ -39,11 +38,12 @@ a:visited { color: #a0a; }
 /* Home
 /*
 /*****************************************************************************/
+
 .posts {
     list-style-type: none;
     background: white;
-    margin: 2em;
     padding: 2em;
+    flex: 1;
 }
 
 .posts li {
@@ -62,11 +62,26 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 
+.hero {
+    align-items: stretch;
+ //   background: rgba(255,55,55,0.5);
+    height: 100%;
+}
+
+.intro-text {
+    background: rgba(255,255,255,0.5);
+    padding: 2em;
+    height: 100%;
+    flex: 1;
+}
+
 .site {
     text-align: justify;
     width: 100%;
     line-height: 1.5em;
     flex: 1;
+    align-items: stretch;
+ //   background: rgba(255,55,255,0.5);
 }
 
 .header a {
@@ -107,6 +122,7 @@ nav {
 
 .footer {
     display: flex;
+    justify-content: space-around;
     color: #6688aa;
     border-top: $main-border;
     margin-top: 2em;
@@ -131,6 +147,8 @@ nav {
     fill: #5599ff;
     width: 32px;
     height: 32px;
+    margin: 1em 0;
+    flex: 1;
 }
 /*****************************************************************************/
 /*
