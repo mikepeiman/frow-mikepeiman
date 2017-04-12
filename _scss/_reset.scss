@@ -26,12 +26,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%; }
 
-h1 { margin: 0em; }
-p { margin: 1em 0; }
-
 a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a:hover   { color: #99f; }
+a:visited { color: #b7b; }
 
 /*****************************************************************************/
 /*
@@ -42,7 +39,8 @@ a:visited { color: #a0a; }
 .posts {
     list-style-type: none;
     background: white;
-    padding: 2em;
+    padding: 1em;
+    line-height: 1.25em;
     flex: 1;
 }
 
@@ -62,58 +60,104 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 
-.hero {
-    align-items: stretch;
-    background: rgba(255,55,55,0.25);
-    height: 100%;
-}
-
 .intro-text {
-    background: rgba(255,255,255,0.5);
-    padding: 2em;
+    background: rgba(255,255,255,0.2);
+    padding: 1em;
     flex: 1;
 }
+
+.intro-text h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    align-self: center;
+    line-height: 1.25em;
+} 
 
 .site {
     text-align: justify;
     width: 100%;
     line-height: 1.5em;
     flex: 1;
-    align-items: stretch;
-    background: rgba(255,55,255,0.25);
+   // align-content: stretch;
 }
 
-.header a {
-    font-weight: bold;
-    text-decoration: none;
-    margin: 2em 1.25em;
+.site-branding {
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
 }
 
-.title {
-    display: inline-block;
+.nav-menu a {
+	color: white;
+	text-decoration: none;
 }
 
-.title a {
-    color: #efefef;
+.site-branding a {
+	color: white;
+	text-decoration: none;
 }
 
-.title a:hover {
-    color: #000;
+.topnav a:hover {
+  color: #3355ff;
+  text-decoration: none;
+}
+
+.topnav ul {
+	margin-right: 2em;
+}
+
+.site-branding {
+	flex: 1;
+}
+
+.site-branding h1 {
+	margin: 0.3em 0 0 0;
+}
+
+.site-branding p {
+	margin: 0 0 0.5em;
 }
 
 nav {
-    border-bottom: $main-border;
-    background: $nav-background;
+  background: rgba(0,0,0,0.5);
+  padding-bottom: 0.25em;
+
+  .topnav {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  ul {
+  	display: flex;
+  	justify-content: space-between;
+  	width: 50%;
+  	align-items: center;
+  }
 }
 
-.header a.extra {
-    color: #aaa;
-    margin-left: 1em;
+@media all and (max-width: 670px) {
+  .topnav {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+
+  .nav-menu {
+  	display: inline-block;
+  	width: 95%;
+  	margin: 0;
+  }
+
+	.nav-menu {
+	margin-top: .75em;
+	}
+
+  .nav-menu li {
+	margin-bottom: .1em;
+	}
 }
 
-.header a.extra:hover {
-    color: #000;
-}
+
+
 
 .meta {
     color: #aaa;
@@ -128,8 +172,11 @@ nav {
     background: $footer-background;
 }
 
-.footer .contact a {
-    color: #5599ff;
+.footer a {
+	padding: .25em 1em;
+}
+.footer svg:hover {
+    fill: #3355ff;
 }
 
 .footer .rss {

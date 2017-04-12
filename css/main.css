@@ -25,20 +25,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
-h1 {
-  margin: 0em; }
-
-p {
-  margin: 1em 0; }
-
 a {
   color: #00a; }
 
 a:hover {
-  color: #000; }
+  color: #99f; }
 
 a:visited {
-  color: #a0a; }
+  color: #b7b; }
 
 /*****************************************************************************/
 /*
@@ -48,7 +42,8 @@ a:visited {
 .posts {
   list-style-type: none;
   background: white;
-  padding: 2em;
+  padding: 1em;
+  line-height: 1.25em;
   -ms-flex: 1;
       flex: 1; }
 
@@ -65,52 +60,90 @@ a:visited {
 /* Site
 /*
 /*****************************************************************************/
-.hero {
-  -ms-flex-align: stretch;
-      align-items: stretch;
-  background: rgba(255, 55, 55, 0.25);
-  height: 100%; }
-
 .intro-text {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 2em;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1em;
   -ms-flex: 1;
       flex: 1; }
+
+.intro-text h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  line-height: 1.25em; }
 
 .site {
   text-align: justify;
   width: 100%;
   line-height: 1.5em;
   -ms-flex: 1;
-      flex: 1;
-  -ms-flex-align: stretch;
-      align-items: stretch;
-  background: rgba(255, 55, 255, 0.25); }
+      flex: 1; }
 
-.header a {
-  font-weight: bold;
-  text-decoration: none;
-  margin: 2em 1.25em; }
+.site-branding {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
 
-.title {
-  display: inline-block; }
+.nav-menu a {
+  color: white;
+  text-decoration: none; }
 
-.title a {
-  color: #efefef; }
+.site-branding a {
+  color: white;
+  text-decoration: none; }
 
-.title a:hover {
-  color: #000; }
+.topnav a:hover {
+  color: #3355ff;
+  text-decoration: none; }
+
+.topnav ul {
+  margin-right: 2em; }
+
+.site-branding {
+  -ms-flex: 1;
+      flex: 1; }
+
+.site-branding h1 {
+  margin: 0.3em 0 0 0; }
+
+.site-branding p {
+  margin: 0 0 0.5em; }
 
 nav {
-  border-bottom: 4px solid #777777;
-  background: #111111; }
+  background: rgba(0, 0, 0, 0.5);
+  padding-bottom: 0.25em; }
+  nav .topnav {
+    -ms-flex-align: center;
+        align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  nav ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 50%;
+    -ms-flex-align: center;
+        align-items: center; }
 
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em; }
-
-.header a.extra:hover {
-  color: #000; }
+@media all and (max-width: 670px) {
+  .topnav {
+    /* On small screens, we are no longer using row direction but column */
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .nav-menu {
+    display: inline-block;
+    width: 95%;
+    margin: 0; }
+  .nav-menu {
+    margin-top: .75em; }
+  .nav-menu li {
+    margin-bottom: .1em; } }
 
 .meta {
   color: #aaa; }
@@ -124,8 +157,11 @@ nav {
   border-top: 4px solid #777777;
   background: #1a1a1a; }
 
-.footer .contact a {
-  color: #5599ff; }
+.footer a {
+  padding: .25em 1em; }
+
+.footer svg:hover {
+  fill: #3355ff; }
 
 .footer .rss {
   margin-top: 1.1em;
