@@ -28,8 +28,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a         { color: $main-white; }
-a:hover   { color: $main-color; }
+a:hover   { color: $third-color; }
 a:visited { color: $third-accent; }
+
+.button {
+	background: $second-accent;
+	padding: 0.35em;
+	margin: 0.5em 0;
+	display: inline-block;
+	border-radius: 3px;
+	color: $main-white;
+}
+.button:hover {
+			background: $second-color;
+			color: $main-black;
+}
 
 /*****************************************************************************/
 /*
@@ -39,12 +52,13 @@ a:visited { color: $third-accent; }
 
 .posts {
     list-style-type: none;
-    background: $main-white;
+    color: $main-white;
+    background: $main-black;
     margin: 1em;
     line-height: 1.25em;
     flex: 1;
-    border-top: 5px solid $main-black;
-    box-shadow: $dark-card-shadow; // border: $main-border;
+    border-top: 5px solid $main-color;
+    box-shadow: $card-shadow;
 }
 
 .posts li {
@@ -52,9 +66,17 @@ a:visited { color: $third-accent; }
 }
 
 .posts span {
-    color: $main-black;
+    color: $main-grey;
     //font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
+}
+
+.posts a {
+	color: $main-color;
+}
+
+.posts a:hover {
+	text-decoration: none;
 }
 
 /*****************************************************************************/
@@ -83,9 +105,16 @@ nav {
   	margin-left: 1.5em;
   }
 
-	 a:hover {
+	a:hover {
   color: $third-color;
   text-decoration: none;
+	}
+
+	.menu-item:hover {
+	  border-bottom: 5px solid $second-color;
+	  color: $main-white;
+	  padding-bottom: 0.25em;
+	  text-decoration: none;
 	}
 
 	ul {
@@ -95,18 +124,21 @@ nav {
 
 .intro-text {
 		color: $main-white;
-    background: $main-black; // $near-white; // #6B311E; // rgba(255,255,255,0.2);
+    background: $main-black;
     margin: 1em;
     flex: 1;
-    box-shadow: $dark-card-shadow; // border: $main-border;
-    border-top: 5px solid #FFC100;
-
+    box-shadow: $card-shadow;
+    border-top: 5px solid $second-color;
 }
 
 .intro-text h1, h2, h3, h4, h5, h6 {
     text-align: center;
     align-self: center;
     line-height: 1.25em;
+}
+
+.intro-text p {
+	padding: 1em;
 } 
 
 .site {
@@ -143,6 +175,11 @@ nav {
 	color: $third-color;
 }
 
+.hire-me {
+	text-align: center;
+	color: $second-color;	
+}
+
 @media all and (min-width: 670px) {
 	nav .site-branding {
 		display: block;
@@ -154,30 +191,46 @@ nav {
     color: $main-grey;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-around;
-    color: $third-accent;
+footer {
+    color: $main-grey;
+    font-size: 80%;
     border-top: $main-border;
   //  margin-top: 2em;
     background: $main-black;
+
+    ul {
+	  	display: flex;
+	  	justify-content: flex-end; // space-around;
+	  	width: 100%;
+	  	align-items: center;
+	  	padding-right: 3em;
+	  }
+
+	  ul li:first-child {
+	  	margin-right: auto;
+	  	margin-left: 1.5em;
+	  }
+
+	  ul li {
+  		padding-right: 1em;
+  	}
 }
 
-.footer a {
+footer a {
 	padding: .25em 1em;
 }
 
-.footer svg:hover {
+footer svg:hover {
     fill: $third-color;
 }
 
-.footer .rss {
+footer .rss {
     margin-top: 1.1em;
     margin-right: -.2em;
     float: right;
 }
 
-.footer .rss img {
+footer .rss img {
     border: 0;
 }
 
@@ -203,20 +256,24 @@ nav {
   	font-size: 100%;
   }
 
-  .topnav {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
+  nav {
+		/* On small screens, we are no longer using row direction but column */
+  	flex-direction: column;
     background: $bg-image-2;
   }
 
   .nav-menu {
   	display: inline-block;
   	width: 95%;
-  }
+		margin-top: .75em;
+		margin-bottom: .75em;
 
-	.nav-menu {
-	margin-top: .75em;
-	margin-bottom: .75em;
+		a:hover {
+		  color: $third-color;
+		  text-decoration: none;
+		  border: none;
+		  padding: 0;
+		}
 	}
 
   .nav-menu li {
@@ -237,6 +294,8 @@ nav {
 	.footer a {
 	padding: .25em .5em;
 	}
+
+
 }
 
 @media all and (max-width: 480px) {
