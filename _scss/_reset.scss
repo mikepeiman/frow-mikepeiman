@@ -6,6 +6,7 @@
 
 /* Global Reset */
 @import '../node_modules/frow/sass/frow/_variables.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,8 @@ html { height: 100%; }
 
 body {
     background: $bg-image; // linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.9)),
-    font: 1.25em Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', 'Arvo', 'Anonymous Pro', 'Raleway', 'PT Sans', 'Kaushan Script', 'Rajdhani', 'Karla', 'Cantora One', 'Cantarell', 'Oxygen', 'Philosopher', 'Nunito', 'Ubuntu', 'Arimo', 'Dosis', 'Libre Baskerville', 'Timmana', 'IM Fell English', 'IM Fell Great Primer SC', 'Gudea','Lato', 'Oxygen', 'Cabin', Helvetica, sans-serif;
+    font-size: 1.25em;
     text-align: center;
     display: flex;
     min-height: 100%;
@@ -23,7 +25,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
     font-weight: 400;
 }
 
@@ -68,7 +69,7 @@ a:visited { color: $third-accent; }
 .posts span {
     color: $main-grey;
     //font-family: Monaco, "Courier New", monospace;
-    font-size: 80%;
+    font-size: 100%;
 }
 
 .posts a {
@@ -78,6 +79,27 @@ a:visited { color: $third-accent; }
 .posts a:hover {
 	text-decoration: none;
 }
+
+.intro-text {
+		color: $main-white;
+    background: $main-black;
+    margin: 1em;
+    flex: 1;
+    box-shadow: $card-shadow;
+    border-top: 5px solid $second-color;
+}
+
+.intro-text h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+    align-self: center;
+    line-height: 1.25em;
+    padding: .5em;
+}
+
+.intro-text p {
+	padding: 1em;
+} 
+
 
 /*****************************************************************************/
 /*
@@ -111,7 +133,7 @@ nav {
 	}
 
 	.menu-item:hover {
-	  border-bottom: 5px solid $second-color;
+	  border-bottom: 5px solid $third-color;
 	  color: $main-white;
 	  padding-bottom: 0.25em;
 	  text-decoration: none;
@@ -121,25 +143,6 @@ nav {
 		margin-right: 2em;
 	}
 }
-
-.intro-text {
-		color: $main-white;
-    background: $main-black;
-    margin: 1em;
-    flex: 1;
-    box-shadow: $card-shadow;
-    border-top: 5px solid $second-color;
-}
-
-.intro-text h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-    align-self: center;
-    line-height: 1.25em;
-}
-
-.intro-text p {
-	padding: 1em;
-} 
 
 .site {
     text-align: justify;
@@ -170,8 +173,8 @@ nav {
 }
 
 .site-branding p {
-	margin: 0 0 0.5em;
-	font-size: .85em;
+	margin: 0 0 1.5em 0;
+	font-size: 1em;
 	color: $third-color;
 }
 
@@ -193,7 +196,7 @@ nav {
 
 footer {
     color: $main-grey;
-    font-size: 80%;
+    font-size: 0.75em;
     border-top: $main-border;
   //  margin-top: 2em;
     background: $main-black;
@@ -211,17 +214,16 @@ footer {
 	  	margin-left: 1.5em;
 	  }
 
-	  ul li {
-  		padding-right: 1em;
-  	}
-}
-
-footer a {
-	padding: .25em 1em;
-}
-
-footer svg:hover {
-    fill: $third-color;
+	  .icon {
+    	fill: $main-color;
+	    width: 32px;
+	    height: 32px;
+	    margin: 1em .25em;
+	    flex: 1;
+	}
+		.icon:hover {
+			fill: $third-color;
+		}
 }
 
 footer .rss {
@@ -234,13 +236,7 @@ footer .rss img {
     border: 0;
 }
 
-.icon {
-    fill: $main-color;
-    width: 32px;
-    height: 32px;
-    margin: 1em 0;
-    flex: 1;
-}
+
 
 @media all and (max-width: 995px) {
   body {
@@ -252,15 +248,21 @@ footer .rss img {
 }
 
 @media all and (max-width: 670px) {
-  body {
-  	font-size: 100%;
-  }
 
   nav {
 		/* On small screens, we are no longer using row direction but column */
   	flex-direction: column;
     background: $bg-image-2;
+    border-bottom: 5px solid $third-color;
   }
+
+	.site-branding {
+		background: rgba(0,0,100,0.4);
+		padding: 5px 10px 5px 10px;
+		margin-bottom: 2em;
+		border-radius: 5px;
+		border-bottom: 5px solid $third-color;
+	}
 
   .nav-menu {
   	display: inline-block;
@@ -282,7 +284,7 @@ footer .rss img {
 	}
 
 	.intro-text {
-		margin: 0;
+		margin: 2em 0 0 0;
 		font-size: 80%;
 	}
 
@@ -290,12 +292,30 @@ footer .rss img {
 		margin: 0;
 		font-size: 80%;
 	}
+	
+	.posts {
+		margin-top: 2em;
+	}
 
-	.footer a {
-	padding: .25em .5em;
+	.posts:last-child {
+		margin-bottom: 2em;
+		padding-bottom: 2em;
+	}
+
+	footer ul li {
+		margin: .75em auto;
+		font-size: 1.2em;
+	}
+
+	footer ul li:nth-child(2) {
+		margin-left: 10%;
 	}
 
 
+	footer ul li:first-child {
+		width: 100%;
+		margin-top: 2em;
+	}
 }
 
 @media all and (max-width: 480px) {
