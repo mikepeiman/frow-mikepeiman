@@ -15,8 +15,13 @@
 html { height: 100%; }
 
 body {
-    background: $bg-image; // linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.9)),
-    font-family: 'Montserrat', 'Arvo', 'Anonymous Pro', 'Raleway', 'PT Sans', 'Kaushan Script', 'Rajdhani', 'Karla', 'Cantora One', 'Cantarell', 'Oxygen', 'Philosopher', 'Nunito', 'Ubuntu', 'Arimo', 'Dosis', 'Libre Baskerville', 'Timmana', 'IM Fell English', 'IM Fell Great Primer SC', 'Gudea','Lato', 'Oxygen', 'Cabin', Helvetica, sans-serif;
+    background: $bg-image;
+    font-family: 'Raleway', 
+    'Cabin', 'Oxygen', 'Karla', 'Raleway', 'Arvo', 'Anonymous Pro', 
+		'PT Sans', 'Kaushan Script', 
+		'Rajdhani', 'Cantora One', 
+    'Cantarell', 'Philosopher', 'Nunito', 'Arimo', 'Libre Baskerville', 
+    'Timmana', 'IM Fell English', 'IM Fell Great Primer SC', 'Gudea','Lato', Helvetica, sans-serif;
     font-size: 1.25em;
     text-align: center;
     display: flex;
@@ -24,25 +29,56 @@ body {
     flex-direction: column;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-weight: 400;
+    font-family: 'Ubuntu';
 }
 
-a         { color: $main-white; }
-a:hover   { color: $third-color; }
+h1 {
+	font-weight: 700;
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+}
+
+a         { 
+	color: $main-white;
+	text-decoration: none;
+}
+a:hover   { 
+	color: $third-color;
+	text-decoration: none;
+ }
 a:visited { color: $third-accent; }
 
-.button {
+.hire-me {
+	margin-bottom: 2em;
+}
+.hire-me p {
+	text-align: center;
+	color: $second-color;
+	margin-bottom: .5em;
+}
+
+.hire-me a {
+	text-decoration: none;
+}
+
+.hire-me a:hover {
+	text-decoration: none;
+}
+
+.hire-me span {
 	background: $second-accent;
-	padding: 0.35em;
-	margin: 0.5em 0;
-	display: inline-block;
-	border-radius: 3px;
+	border: 2px solid $second-color;
+	padding: .5em 2em;
+	margin-top: -2em;
+	border-radius: 1px;
 	color: $main-white;
 }
-.button:hover {
+.hire-me-button:hover {
 			background: $second-color;
 			color: $main-black;
+			text-decoration: none;
 }
 
 /*****************************************************************************/
@@ -84,6 +120,7 @@ a:visited { color: $third-accent; }
 		color: $main-white;
     background: $main-black;
     margin: 1em;
+    line-height: 1.25em;
     flex: 1;
     box-shadow: $card-shadow;
     border-top: 5px solid $second-color;
@@ -92,8 +129,7 @@ a:visited { color: $third-accent; }
 .intro-text h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     align-self: center;
-    line-height: 1.25em;
-    padding: .5em;
+    
 }
 
 .intro-text p {
@@ -110,6 +146,7 @@ a:visited { color: $third-accent; }
 nav {
   background: $main-black;
   padding-bottom: 0.25em;
+  border-bottom: 5px solid $third-color;
 
   ul {
   	display: flex;
@@ -144,14 +181,6 @@ nav {
 	}
 }
 
-.site {
-    text-align: justify;
-    width: 100%;
-    line-height: 1.5em;
-    flex: 1;
-   // align-content: stretch;
-}
-
 .nav-menu a {
 	color: $main-white;
 	text-decoration: none;
@@ -164,23 +193,18 @@ nav {
 }
 
 .site-branding a {
-	color: $main-white;
 	text-decoration: none;
 }
 
 .site-branding h1 {
 	margin: 0.3em 0 0 0;
+	color: $main-white;
 }
 
 .site-branding p {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1.25em 0;
 	font-size: 1em;
 	color: $third-color;
-}
-
-.hire-me {
-	text-align: center;
-	color: $second-color;	
 }
 
 @media all and (min-width: 670px) {
@@ -252,7 +276,8 @@ footer .rss img {
   nav {
 		/* On small screens, we are no longer using row direction but column */
   	flex-direction: column;
-    background: $bg-image-2;
+    background: $bg-image-mobile;
+//    background-size: auto 80%;
     border-bottom: 5px solid $third-color;
   }
 
@@ -319,8 +344,21 @@ footer .rss img {
 }
 
 @media all and (max-width: 480px) {
-	.footer a {
-	padding: .25em .25em;
+
+	footer ul {
+		padding-right: 0;
+	}
+
+	footer ul li:nth-child(2) {
+		margin-left: 1em;
+	}
+
+	footer ul li:last-child {
+		margin-right: 1em;
+	}
+	footer ul li {
+		padding: 0em;
+		margin: 0 auto;
 	}
 }
 
