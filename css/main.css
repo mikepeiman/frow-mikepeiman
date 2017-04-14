@@ -12,7 +12,7 @@ html {
   height: 100%; }
 
 body {
-  background: url(../images/mikepeiman-site-bg-v10-clear.png) left no-repeat;
+  background: url(../images/mikepeiman-site-bg-v2-white.png) left top no-repeat;
   font-family: 'Raleway',  'Cabin', 'Oxygen', 'Karla', 'Raleway', 'Arvo', 'Anonymous Pro',  'PT Sans', 'Kaushan Script',  'Rajdhani', 'Cantora One',  'Cantarell', 'Philosopher', 'Nunito', 'Arimo', 'Libre Baskerville',  'Timmana', 'IM Fell English', 'IM Fell Great Primer SC', 'Gudea','Lato', Helvetica, sans-serif;
   font-size: 1.25em;
   text-align: center;
@@ -23,14 +23,21 @@ body {
       flex-direction: column; }
 
 h2, h3, h4, h5, h6 {
-  font-weight: 400;
   font-family: 'Ubuntu'; }
 
 h1 {
-  font-weight: 700;
   font-family: 'Montserrat';
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: bold; }
 
+/*
+.greeting {
+	font-weight: bold;
+}
+#greeting {
+	font-weight: bold;
+}
+*/
 a {
   color: #fffcf2;
   text-decoration: none; }
@@ -42,48 +49,30 @@ a:hover {
 a:visited {
   color: #265FFF; }
 
-.hire-me {
-  margin-bottom: 2em; }
-
-.hire-me p {
-  text-align: center;
-  color: #33E100;
-  margin-bottom: .5em; }
-
-.hire-me a {
-  text-decoration: none; }
-
-.hire-me a:hover {
-  text-decoration: none; }
-
-.hire-me span {
-  background: #1A7000;
-  border: 2px solid #33E100;
-  padding: .5em 2em;
-  margin-top: -2em;
-  border-radius: 1px;
-  color: #fffcf2; }
-
-.hire-me-button:hover {
-  background: #33E100;
-  color: #1a1a1a;
-  text-decoration: none; }
-
 /*****************************************************************************/
 /*
 /* Home
 /*
 /*****************************************************************************/
+.site {
+  -ms-flex: 1;
+      flex: 1; }
+
 .posts {
   list-style-type: none;
   color: #fffcf2;
   background: #1a1a1a;
   margin: 1em;
+  padding: 1em 0 0 0;
   line-height: 1.25em;
   -ms-flex: 1;
       flex: 1;
   border-top: 5px solid #FFC100;
   box-shadow: 0px 3px 5px 1px #808080; }
+
+.posts h1 {
+  font-size: 2em;
+  font-weight: bold; }
 
 .posts li {
   line-height: 1.75em; }
@@ -99,22 +88,88 @@ a:visited {
   text-decoration: none; }
 
 .intro-text {
-  color: #fffcf2;
-  background: #1a1a1a;
+  color: #1a1a1a;
+  background: #fffcf2;
   margin: 1em;
+  padding: 1em 0 0 0;
   line-height: 1.25em;
   -ms-flex: 1;
       flex: 1;
   box-shadow: 0px 3px 5px 1px #808080;
-  border-top: 5px solid #33E100; }
+  border-top: 5px solid #33E100;
+  text-align: center; }
 
-.intro-text h1, h2, h3, h4, h5, h6, p {
-  text-align: center;
-  -ms-flex-item-align: center;
-      align-self: center; }
+.intro-text h1 {
+  font-weight: bold;
+  font-size: 2.1em; }
 
+/*
+.intro-text:hover {
+	h1 {
+		font-size: 2.15em;
+		transition: all .15s;
+	}
+}
+*/
 .intro-text p {
   padding: 1em; }
+
+.hire-me {
+  margin: 0 -.75em 2em -.75em;
+  background: #1a1a1a;
+  position: relative;
+  box-shadow: 0px 3px 5px 1px #808080; }
+
+.folded-corner-left:before {
+  content: "";
+  position: absolute;
+  top: -.33em;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  border-bottom: 0.35em solid #1A7000;
+  border-left: 0.75em solid rgba(255, 255, 255, 0);
+  /*Set to background color, not transparent!*/
+  /*  -webkit-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
+  -moz-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
+  box-shadow: -2px -2px 7px rgba(0,0,0,0.3);*/ }
+
+.folded-corner-right:after {
+  content: "";
+  position: absolute;
+  top: -.33em;
+  right: 0%;
+  width: 0px;
+  height: 0px;
+  border-bottom: 0.35em solid #1A7000;
+  border-right: 0.75em solid rgba(255, 255, 255, 0);
+  /*Set to background color, not transparent!*/
+  /* -webkit-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+  -moz-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+  box-shadow: 7px 7px 7px rgba(0,0,0,0.3); */ }
+
+.hire-me p {
+  text-align: center;
+  color: #33E100;
+  margin-bottom: .5em; }
+
+.hire-me a {
+  text-decoration: none; }
+
+.hire-me a:hover {
+  text-decoration: none; }
+
+.hire-me-button {
+  background: #1A7000;
+  border: 2px solid #33E100;
+  padding: .5em 2em;
+  color: #fffcf2;
+  box-shadow: 0px 3px 5px 1px #1a1a1a; }
+
+.hire-me-button:hover {
+  background: #33E100;
+  color: #1a1a1a;
+  text-decoration: none; }
 
 /*****************************************************************************/
 /*
@@ -170,7 +225,8 @@ nav {
 .site-branding p {
   margin: 0 0 1.25em 0;
   font-size: 1em;
-  color: #26C3FF; }
+  color: #26C3FF;
+  text-align: left; }
 
 @media all and (min-width: 670px) {
   nav .site-branding {
@@ -184,7 +240,8 @@ footer {
   color: #808080;
   font-size: 0.75em;
   border-top: 5px solid #FFC100;
-  background: #1a1a1a; }
+  background: #1a1a1a;
+  padding: 1em 0; }
   footer ul {
     display: -ms-flexbox;
     display: flex;
@@ -230,7 +287,7 @@ footer .rss img {
     border-bottom: 5px solid #26C3FF; }
   .site-branding {
     background: rgba(0, 0, 100, 0.4);
-    padding: 5px 10px 5px 10px;
+    padding: 5px;
     margin-bottom: 2em;
     border-radius: 5px;
     border-bottom: 5px solid #26C3FF; }
@@ -2032,6 +2089,9 @@ textarea:not(.reset) {
   box-shadow: 0px 3px 5px 1px #808080; }
 
 .dark-card-shadow {
+  box-shadow: 0px 3px 5px 1px #1a1a1a; }
+
+.light-card-shadow {
   box-shadow: 0px 3px 5px 1px #fffcf2; }
 
 .clearfix:after {

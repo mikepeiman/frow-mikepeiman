@@ -30,15 +30,23 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-    font-weight: 400;
+   // font-weight: 400;
     font-family: 'Ubuntu';
 }
 
 h1 {
-	font-weight: 700;
 	font-family: 'Montserrat';
 	text-transform: uppercase;
+	font-weight: bold;
 }
+/*
+.greeting {
+	font-weight: bold;
+}
+#greeting {
+	font-weight: bold;
+}
+*/
 
 a         { 
 	color: $main-white;
@@ -50,36 +58,6 @@ a:hover   {
  }
 a:visited { color: $third-accent; }
 
-.hire-me {
-	margin-bottom: 2em;
-}
-.hire-me p {
-	text-align: center;
-	color: $second-color;
-	margin-bottom: .5em;
-}
-
-.hire-me a {
-	text-decoration: none;
-}
-
-.hire-me a:hover {
-	text-decoration: none;
-}
-
-.hire-me span {
-	background: $second-accent;
-	border: 2px solid $second-color;
-	padding: .5em 2em;
-	margin-top: -2em;
-	border-radius: 1px;
-	color: $main-white;
-}
-.hire-me-button:hover {
-			background: $second-color;
-			color: $main-black;
-			text-decoration: none;
-}
 
 /*****************************************************************************/
 /*
@@ -87,15 +65,24 @@ a:visited { color: $third-accent; }
 /*
 /*****************************************************************************/
 
+.site {
+	flex: 1;
+}
 .posts {
     list-style-type: none;
     color: $main-white;
     background: $main-black;
     margin: 1em;
+    padding: $section-padding;
     line-height: 1.25em;
     flex: 1;
     border-top: 5px solid $main-color;
-    box-shadow: $card-shadow;
+    box-shadow: $card-shadow-grey;
+}
+
+.posts h1 {
+	font-size: 2em;
+	font-weight: bold;
 }
 
 .posts li {
@@ -117,25 +104,99 @@ a:visited { color: $third-accent; }
 }
 
 .intro-text {
-		color: $main-white;
-    background: $main-black;
+		color: $main-black; //$main-white;
+    background: $main-white; //$main-black;
     margin: 1em;
+    padding: $section-padding;
     line-height: 1.25em;
     flex: 1;
-    box-shadow: $card-shadow;
+    box-shadow: $card-shadow-grey;
     border-top: 5px solid $second-color;
+    text-align: center;
 }
 
-.intro-text h1, h2, h3, h4, h5, h6, p {
-    text-align: center;
-    align-self: center;
-    
+.intro-text h1 {
+    font-weight: bold;
+    font-size: 2.1em;
 }
+
+/*
+.intro-text:hover {
+	h1 {
+		font-size: 2.15em;
+		transition: all .15s;
+	}
+}
+*/
 
 .intro-text p {
 	padding: 1em;
-} 
+}
 
+
+.hire-me {
+	margin: 0 -.75em 2em -.75em;
+	background: $main-black;
+	position: relative;
+  //-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+  //-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+  box-shadow: $card-shadow-grey; //3px 5px 5px rgba(0,0,0,0.8);
+}
+
+.folded-corner-left:before {
+  content: "";
+  position: absolute;
+  top: -.33em;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  border-bottom: .35em solid $second-accent; // adjust-color($main-black, $lightness: 30%);
+  border-left: .75em solid rgba(255,255,255,0); /*Set to background color, not transparent!*/
+/*  -webkit-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
+  -moz-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
+  box-shadow: -2px -2px 7px rgba(0,0,0,0.3);*/
+}
+ 
+.folded-corner-right:after {
+  content: "";
+  position: absolute;
+  top: -.33em;
+  right: 0%;
+  width: 0px;
+  height: 0px;
+  border-bottom: .35em solid $second-accent; // adjust-color($main-black, $lightness: 30%);
+  border-right: .75em solid rgba(255,255,255,0); /*Set to background color, not transparent!*/
+ /* -webkit-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+  -moz-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+  box-shadow: 7px 7px 7px rgba(0,0,0,0.3); */
+}
+
+.hire-me p {
+	text-align: center;
+	color: $second-color;
+	margin-bottom: .5em;
+}
+
+.hire-me a {
+	text-decoration: none;
+}
+
+.hire-me a:hover {
+	text-decoration: none;
+}
+
+.hire-me-button {
+	background: $second-accent;
+	border: 2px solid $second-color;
+	padding: .5em 2em;
+	color: $main-white;
+	box-shadow: $card-shadow-black;
+}
+.hire-me-button:hover {
+			background: $second-color;
+			color: $main-black;
+			text-decoration: none;
+}
 
 /*****************************************************************************/
 /*
@@ -205,6 +266,7 @@ nav {
 	margin: 0 0 1.25em 0;
 	font-size: 1em;
 	color: $third-color;
+	text-align: left;
 }
 
 @media all and (min-width: 670px) {
@@ -224,6 +286,7 @@ footer {
     border-top: $main-border;
   //  margin-top: 2em;
     background: $main-black;
+    padding: 1em 0;
 
     ul {
 	  	display: flex;
@@ -283,7 +346,7 @@ footer .rss img {
 
 	.site-branding {
 		background: rgba(0,0,100,0.4);
-		padding: 5px 10px 5px 10px;
+		padding: 5px;
 		margin-bottom: 2em;
 		border-radius: 5px;
 		border-bottom: 5px solid $third-color;
