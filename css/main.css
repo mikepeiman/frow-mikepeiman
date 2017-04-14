@@ -87,6 +87,16 @@ a:visited {
 .posts a:hover {
   text-decoration: none; }
 
+.posts-container {
+  -ms-flex: 1;
+      flex: 1; }
+
+.sign-me-up {
+  margin: 0 -.75em 2em -.75em;
+  background: #1a1a1a;
+  justify-self: flex-end;
+  box-shadow: 0px 3px 5px 1px #808080; }
+
 .intro-text {
   color: #1a1a1a;
   background: #fffcf2;
@@ -120,7 +130,7 @@ a:visited {
   position: relative;
   box-shadow: 0px 3px 5px 1px #808080; }
 
-.folded-corner-left:before {
+.folded-corner-left-green:before {
   content: "";
   position: absolute;
   top: -.33em;
@@ -134,7 +144,7 @@ a:visited {
   -moz-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
   box-shadow: -2px -2px 7px rgba(0,0,0,0.3);*/ }
 
-.folded-corner-right:after {
+.folded-corner-right-green:after {
   content: "";
   position: absolute;
   top: -.33em;
