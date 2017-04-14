@@ -2,6 +2,8 @@
 layout: post
 title:  "Jekyll included post"
 date:   2014-04-20 09:11:03
+thumbnail: none
+permalink: none
 categories: jekyll update
 ---
 

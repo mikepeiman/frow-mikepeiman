@@ -70,8 +70,8 @@ a:visited { color: $third-accent; }
 }
 .posts {
     list-style-type: none;
-    color: $main-white;
-    background: $main-black;
+    color: $main-black; // $main-white;
+    background: $main-white;//$main-black;
     margin: 1em;
     padding: $section-padding;
     line-height: 1.25em;
@@ -105,6 +105,19 @@ a:visited { color: $third-accent; }
 
 .posts-container {
 	flex: 1;
+}
+
+.posts-container ul {
+	justify-content: flex-start;
+}
+
+.posts-container ul li {
+	text-align: left;
+	margin: 0 0 0 2em;
+}
+
+.category {
+	color: $third-accent;
 }
 
 .sign-me-up {

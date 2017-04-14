@@ -60,8 +60,8 @@ a:visited {
 
 .posts {
   list-style-type: none;
-  color: #fffcf2;
-  background: #1a1a1a;
+  color: #1a1a1a;
+  background: #fffcf2;
   margin: 1em;
   padding: 1em 0 0 0;
   line-height: 1.25em;
@@ -90,6 +90,17 @@ a:visited {
 .posts-container {
   -ms-flex: 1;
       flex: 1; }
+
+.posts-container ul {
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
+
+.posts-container ul li {
+  text-align: left;
+  margin: 0 0 0 2em; }
+
+.category {
+  color: #265FFF; }
 
 .sign-me-up {
   margin: 0 -.75em 2em -.75em;

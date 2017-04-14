@@ -2,6 +2,8 @@
 layout: post
 title:  "Welcome to MikePeiman.com!"
 date:   2017-4-1 11:15:00
+thumbnail: none
+permalink: none
 categories: web design, launch, welcome
 ---
 
