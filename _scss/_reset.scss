@@ -68,6 +68,7 @@ a:visited { color: $third-accent; }
 .site {
 	flex: 1;
 }
+
 .posts {
     list-style-type: none;
     color: $main-black; // $main-white;
@@ -80,6 +81,10 @@ a:visited { color: $third-accent; }
     box-shadow: $card-shadow-grey;
 }
 
+.posts-container {
+	flex: 1;
+}
+
 .posts h1 {
 	font-size: 2em;
 	font-weight: bold;
@@ -89,31 +94,53 @@ a:visited { color: $third-accent; }
     line-height: 1.75em;
 }
 
-.posts span {
-    color: $main-grey;
-    //font-family: Monaco, "Courier New", monospace;
-    font-size: 100%;
-}
-
 .posts a {
-	color: $main-color;
+	text-decoration: none;
 }
 
 .posts a:hover {
 	text-decoration: none;
-}
 
-.posts-container {
-	flex: 1;
-}
+	.post-feed-title {
+		color: $main-color;
+	}
 
-.posts-container ul {
-	justify-content: flex-start;
+	.post-excerpt {
+		color: $second-color;
+	}
+	.post-feed-thumbnail {
+		box-shadow: $card-shadow-grey;
+	}
 }
 
 .posts-container ul li {
 	text-align: left;
-	margin: 0 0 0 2em;
+	margin: 0 0 0 1.5em;
+}
+
+.blog-feed-thumbnail {
+	//	vertical-align: text-top;
+		margin: .6em 0 0 0;
+}
+
+.posts-container ul li p {
+	font-size: .9em;
+	line-height: 1.1em;
+}
+
+.post-feed-date {
+    color: $main-grey;
+    //font-family: Monaco, "Courier New", monospace;
+    font-size: .8em;
+    font-family: 'PT Sans', monospace;
+}
+
+.post-feed-title {
+	color: $main-black;
+}
+
+.posts a .post-excerpt {
+	color: $main-grey;
 }
 
 .category {
