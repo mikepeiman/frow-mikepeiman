@@ -152,13 +152,42 @@ a:visited { color: $third-accent; }
 	color: $third-accent;
 }
 
-.sign-me-up {
-	margin: 0 -.75em 2em -.75em;
-	background: $main-black;
-	justify-self: flex-end;
-  //-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
-  //-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
-  box-shadow: $card-shadow-grey; //3px 5px 5px rgba(0,0,0,0.8);
+.signup-form {
+    list-style-type: none;
+    color: $main-black; // $main-white;
+    background: $main-white;//$main-black;
+    margin: 1em 1em 0 1em;
+    padding: $section-padding;
+    line-height: 1.25em;
+    border-top: 5px solid $third-color;
+    box-shadow: $card-shadow-grey;
+
+    p {
+    	margin-bottom: .25em;
+    	padding: 0 1em 1em 1em;
+    }
+}
+
+form input {
+	padding: .5em;
+	color: $main-black;
+	cursor: pointer;
+	width: 90%;
+}
+
+.form-submit {
+	background: $third-accent;
+	border: 2px solid $third-color;
+	padding: .5em 2em;
+	margin: 1.15em 0 1.4em 0;
+	color: $main-white;
+	box-shadow: $card-shadow-black;
+}
+
+.form-submit:hover {
+			background: $third-color;
+			color: $main-black;
+			text-decoration: none;
 }
 
 .intro-text {

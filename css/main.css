@@ -121,11 +121,37 @@ a:visited {
 .category {
   color: #265FFF; }
 
-.sign-me-up {
-  margin: 0 -.75em 2em -.75em;
-  background: #1a1a1a;
-  justify-self: flex-end;
+.signup-form {
+  list-style-type: none;
+  color: #1a1a1a;
+  background: #fffcf2;
+  margin: 1em 1em 0 1em;
+  padding: 1em 0 0 0;
+  line-height: 1.25em;
+  border-top: 5px solid #26C3FF;
   box-shadow: 0px 3px 5px 1px #808080; }
+  .signup-form p {
+    margin-bottom: .25em;
+    padding: 0 1em 1em 1em; }
+
+form input {
+  padding: .5em;
+  color: #1a1a1a;
+  cursor: pointer;
+  width: 90%; }
+
+.form-submit {
+  background: #265FFF;
+  border: 2px solid #26C3FF;
+  padding: .5em 2em;
+  margin: 1.15em 0 1.4em 0;
+  color: #fffcf2;
+  box-shadow: 0px 3px 5px 1px #1a1a1a; }
+
+.form-submit:hover {
+  background: #26C3FF;
+  color: #1a1a1a;
+  text-decoration: none; }
 
 .intro-text {
   color: #1a1a1a;
@@ -1094,127 +1120,100 @@ ul {
 li {
   list-style-type: none; }
 
+/*
+@mixin button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    background-color: $gray-darker;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 100%;
+    outline: none;
+    padding: 9px;
+
+    &:hover, &:focus, &:active {
+        background-color: darken($gray-darker, 15%);
+        outline: none;
+        text-decoration: none;
+    }
+
+    &:active {
+        transform: scale(0.96);
+    }
+
+    &:disabled {
+        cursor: default !important;
+        opacity: 0.7;
+        box-shadow: none;
+    }
+}
+*/
+/*
 button:not(.reset),
 [type="button"]:not(.reset),
 [type="reset"]:not(.reset),
 [type="submit"]:not(.reset) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: none;
-  background-color: #4F4F51;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 100%;
-  outline: none;
-  padding: 9px; }
-  button:not(.reset):hover, button:not(.reset):focus, button:not(.reset):active,
-  [type="button"]:not(.reset):hover,
-  [type="button"]:not(.reset):focus,
-  [type="button"]:not(.reset):active,
-  [type="reset"]:not(.reset):hover,
-  [type="reset"]:not(.reset):focus,
-  [type="reset"]:not(.reset):active,
-  [type="submit"]:not(.reset):hover,
-  [type="submit"]:not(.reset):focus,
-  [type="submit"]:not(.reset):active {
-    background-color: #29292a;
-    outline: none;
-    text-decoration: none; }
-  button:not(.reset):active,
-  [type="button"]:not(.reset):active,
-  [type="reset"]:not(.reset):active,
-  [type="submit"]:not(.reset):active {
-    -webkit-transform: scale(0.96);
-            transform: scale(0.96); }
-  button:not(.reset):disabled,
-  [type="button"]:not(.reset):disabled,
-  [type="reset"]:not(.reset):disabled,
-  [type="submit"]:not(.reset):disabled {
-    cursor: default !important;
-    opacity: 0.7;
-    box-shadow: none; }
+    @include button;
+}
 
 input:not(.reset)::-webkit-file-upload-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: none;
-  background-color: #4F4F51;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 100%;
-  outline: none;
-  padding: 9px; }
-  input:not(.reset)::-webkit-file-upload-button:hover, input:not(.reset)::-webkit-file-upload-button:focus, input:not(.reset)::-webkit-file-upload-button:active {
-    background-color: #29292a;
-    outline: none;
-    text-decoration: none; }
-  input:not(.reset)::-webkit-file-upload-button:active {
-    -webkit-transform: scale(0.96);
-            transform: scale(0.96); }
-  input:not(.reset)::-webkit-file-upload-button:disabled {
-    cursor: default !important;
-    opacity: 0.7;
-    box-shadow: none; }
+    @include button;
+}
 
 input:not(.reset)::-ms-browse {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: none;
-  background-color: #4F4F51;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 100%;
-  outline: none;
-  padding: 9px; }
-  input:not(.reset)::-ms-browse:hover, input:not(.reset)::-ms-browse:focus, input:not(.reset)::-ms-browse:active {
-    background-color: #29292a;
-    outline: none;
-    text-decoration: none; }
-  input:not(.reset)::-ms-browse:active {
-    transform: scale(0.96); }
-  input:not(.reset)::-ms-browse:disabled {
-    cursor: default !important;
-    opacity: 0.7;
-    box-shadow: none; }
+    @include button;
+}
 
+// Labels
 label:not(.reset) {
-  color: #9E9E9E;
-  display: block;
-  font-size: 14px;
-  padding: 4px 5px; }
+    color: $gray-light;
+    display: block;
+    font-size: 14px;
+    padding: 4px 5px;
+}
 
+// Inputs
 input:not(.reset) {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  border-bottom: 2px solid #9E9E9E;
-  color: #333333;
-  display: block;
-  font-size: 15px;
-  margin-bottom: 20px;
-  padding: 4px 5px;
-  width: 100%; }
-  input:not(.reset):hover, input:not(.reset):focus {
-    border-color: #787878;
-    outline: none; }
-  input:not(.reset):disabled {
-    border-bottom: 1px dotted #9E9E9E;
-    cursor: default !important; }
-  input:not(.reset)[type=number] {
-    -moz-appearance: textfield; }
-    input:not(.reset)[type=number]::-webkit-inner-spin-button, input:not(.reset)[type=number]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0; }
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid $gray-light;
+    color: $near-black;
+    display: block;
+    font-size: 15px;
+    margin-bottom: $form-bottom-margin;
+    padding: 4px 5px;
+    width: 100%;
 
+    &:hover, &:focus {
+        border-color: darken($gray-light, 15%);
+        outline: none;
+    }
+
+    &:disabled {
+        border-bottom: 1px dotted $gray-light;
+        cursor: default !important;
+    }
+
+    &[type=number] {
+        -moz-appearance:textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0
+        }
+    }
+
+    // button {
+    //     transform: scale(2);
+    // }
+}
+*/
 select:not(.reset) {
   -webkit-appearance: none;
   -moz-appearance: none;

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Custom CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700,900|PT+Sans|Anonymous+Pro|Montserrat:400,400i,700,700i,900,900i|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700,900|PT+Sans|Anonymous+Pro|Montserrat:400,400i,700,700i,900,900i|Raleway:400,400i,500,500i,600,600i,700,700i|Ubuntu" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Arimo|Arvo|Cabin|Cabin+Sketch|Cantarell|Cantora+One|Dosis|Gudea|IM+Fell+English|IM+Fell+Great+Primer+SC|Karla|Kaushan+Script|Lato|Libre+Baskerville|Montserrat|Nunito|Oxygen|PT+Sans|Philosopher|Rajdhani|Raleway|Timmana|Ubuntu" rel="stylesheet"> -->
         <link rel="stylesheet" href="/css/main.css">
 
@@ -37,7 +37,7 @@
           <div class="col-md-1-5">
           </div>
           <div class="col-md-2-5 intro-text">
-              <h1 class="greeting" id="greeting">HI. I'M MIKE.</h1>
+              <h1 class="greeting">HI. I'M MIKE.</h1>
               <p>I'm a proud father, freelance web developer, and master pancake-maker. Seriously, you should try my pancakes. But only with real maple syrup.</p>
               <p>I'm also many other things. I'm an expert-level snowboard instructor, a personal trainer, and a champion for health, wellness, and vitality.</p>
               <p>I'm an advocate for sustainability, social and economic justice, and bringing a higher level of consciousness to life.</p>
@@ -46,10 +46,28 @@
                 <a href="#"><span class="hire-me-button">Hire me!</span></a>
               </div>
           </div>
-          <div class="frow col-md-2-5">
+          <div class="frow col-md-2-5 direction-column">
+
+            <div class="signup-form">
+              <h1>Stay in the loop</h1>
+              <p>I'm sharing the coolest, most useful, most profound things I've ever learned and discovered. With you <3</p>
+              <form class="frow" action="/my-handling-form-page" method="post">
+                <div class="form-name col-md-1-2">
+                    <input type="text" id="name" name="user_name" placeholder="Name">
+                </div>
+                <div class="form-email col-md-1-2">
+                    <input type="email" id="mail" name="user_mail" placeholder="Your best email">
+                </div>
+                <div>
+                  <input class="form-submit" type="submit" value="Sign up!"></input>
+                </div>
+              </form>
+            </div>
+
             <div class="posts">
               {{ content }}            
             </div>
+
           </div>
         </div>
 
