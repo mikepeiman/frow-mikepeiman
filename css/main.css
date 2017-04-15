@@ -30,14 +30,6 @@ h1 {
   text-transform: uppercase;
   font-weight: bold; }
 
-/*
-.greeting {
-	font-weight: bold;
-}
-#greeting {
-	font-weight: bold;
-}
-*/
 a {
   color: #fffcf2;
   text-decoration: none; }
@@ -47,7 +39,7 @@ a:hover {
   text-decoration: none; }
 
 a:visited {
-  color: #265FFF; }
+  color: #009dd9; }
 
 /*****************************************************************************/
 /*
@@ -119,7 +111,7 @@ a:visited {
   color: #808080; }
 
 .category {
-  color: #265FFF; }
+  color: #009dd9; }
 
 .signup-form {
   list-style-type: none;
@@ -135,13 +127,23 @@ a:visited {
     padding: 0 1em 1em 1em; }
 
 form input {
+  border: 1px solid #26C3FF;
   padding: .5em;
   color: #1a1a1a;
-  cursor: pointer;
-  width: 90%; }
+  cursor: pointer; }
 
+/*
+.form-name {
+	margin-left: .75em;
+	width: 98%;
+}
+
+.form-email {
+	margin-right: .75em;
+	width: 98%;
+}*/
 .form-submit {
-  background: #265FFF;
+  background: #009dd9;
   border: 2px solid #26C3FF;
   padding: .5em 2em;
   margin: 1.15em 0 1.4em 0;
@@ -152,6 +154,10 @@ form input {
   background: #26C3FF;
   color: #1a1a1a;
   text-decoration: none; }
+
+.whisper {
+  font-style: italic;
+  font-size: 90%; }
 
 .intro-text {
   color: #1a1a1a;
@@ -167,21 +173,18 @@ form input {
 
 .intro-text h1 {
   font-weight: bold;
-  font-size: 2.1em; }
+  font-size: 2em; }
 
-/*
-.intro-text:hover {
-	h1 {
-		font-size: 2.15em;
-		transition: all .15s;
-	}
-}
-*/
 .intro-text p {
-  padding: 1em; }
+  padding: 0 1em 1em 1em; }
+
+.flex-container {
+  -ms-flex: 1;
+      flex: 1; }
 
 .hire-me {
   margin: 0 -.75em 2em -.75em;
+  padding-top: 1.75em;
   background: #1a1a1a;
   position: relative;
   box-shadow: 0px 3px 5px 1px #808080; }
@@ -193,7 +196,7 @@ form input {
   left: 0%;
   width: 0px;
   height: 0px;
-  border-bottom: 0.35em solid #1A7000;
+  border-bottom: 0.35em solid #229500;
   border-left: 0.75em solid rgba(255, 255, 255, 0);
   /*Set to background color, not transparent!*/
   /*  -webkit-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
@@ -207,7 +210,7 @@ form input {
   right: 0%;
   width: 0px;
   height: 0px;
-  border-bottom: 0.35em solid #1A7000;
+  border-bottom: 0.35em solid #229500;
   border-right: 0.75em solid rgba(255, 255, 255, 0);
   /*Set to background color, not transparent!*/
   /* -webkit-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
@@ -226,7 +229,7 @@ form input {
   text-decoration: none; }
 
 .hire-me-button {
-  background: #1A7000;
+  background: #229500;
   border: 2px solid #33E100;
   padding: .5em 2em;
   color: #fffcf2;
@@ -286,7 +289,8 @@ nav {
 
 .site-branding h1 {
   margin: 0.3em 0 0 0;
-  color: #fffcf2; }
+  color: #fffcf2;
+  text-align: left; }
 
 .site-branding p {
   margin: 0 0 1.25em 0;
@@ -338,11 +342,22 @@ footer .rss {
 footer .rss img {
   border: 0; }
 
+.icon {
+  fill: red;
+  position: relative;
+  margin: -.5em auto .75em auto;
+  width: 32px;
+  height: 32px; }
+
 @media all and (max-width: 995px) {
   body {
     background: #fffcf2; }
   nav ul li {
-    padding-right: .75em; } }
+    padding-right: .75em; }
+  form input {
+    padding: .5em;
+    margin: .5em;
+    width: 100%; } }
 
 @media all and (max-width: 670px) {
   nav {
@@ -352,11 +367,15 @@ footer .rss img {
     background: url(../images/mikepeiman-site-bg-v3-dark.png) left center no-repeat #1a1a1a;
     border-bottom: 5px solid #26C3FF; }
   .site-branding {
-    background: rgba(0, 0, 100, 0.4);
+    background: rgba(0, 27, 38, 0.35);
     padding: 5px;
     margin-bottom: 2em;
     border-radius: 5px;
     border-bottom: 5px solid #26C3FF; }
+  .site-branding h1 {
+    text-align: center; }
+  .site-branding p {
+    text-align: center; }
   .nav-menu {
     display: inline-block;
     width: 95%;
@@ -399,7 +418,9 @@ footer .rss img {
     margin-right: 1em; }
   footer ul li {
     padding: 0em;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .input-field {
+    margin: 0; } }
 
 /*****************************************************************************/
 /*
@@ -1423,7 +1444,7 @@ textarea:not(.reset) {
 .col-xs-1-1, .col-sm-1-1, .col-md-1-1, .col-lg-1-1, .col-xs-1-2, .col-sm-1-2, .col-md-1-2, .col-lg-1-2, .col-xs-2-2, .col-sm-2-2, .col-md-2-2, .col-lg-2-2, .col-xs-1-3, .col-sm-1-3, .col-md-1-3, .col-lg-1-3, .col-xs-2-3, .col-sm-2-3, .col-md-2-3, .col-lg-2-3, .col-xs-3-3, .col-sm-3-3, .col-md-3-3, .col-lg-3-3, .col-xs-1-4, .col-sm-1-4, .col-md-1-4, .col-lg-1-4, .col-xs-2-4, .col-sm-2-4, .col-md-2-4, .col-lg-2-4, .col-xs-3-4, .col-sm-3-4, .col-md-3-4, .col-lg-3-4, .col-xs-4-4, .col-sm-4-4, .col-md-4-4, .col-lg-4-4, .col-xs-1-5, .col-sm-1-5, .col-md-1-5, .col-lg-1-5, .col-xs-2-5, .col-sm-2-5, .col-md-2-5, .col-lg-2-5, .col-xs-3-5, .col-sm-3-5, .col-md-3-5, .col-lg-3-5, .col-xs-4-5, .col-sm-4-5, .col-md-4-5, .col-lg-4-5, .col-xs-5-5, .col-sm-5-5, .col-md-5-5, .col-lg-5-5, .col-xs-1-6, .col-sm-1-6, .col-md-1-6, .col-lg-1-6, .col-xs-2-6, .col-sm-2-6, .col-md-2-6, .col-lg-2-6, .col-xs-3-6, .col-sm-3-6, .col-md-3-6, .col-lg-3-6, .col-xs-4-6, .col-sm-4-6, .col-md-4-6, .col-lg-4-6, .col-xs-5-6, .col-sm-5-6, .col-md-5-6, .col-lg-5-6, .col-xs-6-6, .col-sm-6-6, .col-md-6-6, .col-lg-6-6, .col-xs-1-7, .col-sm-1-7, .col-md-1-7, .col-lg-1-7, .col-xs-2-7, .col-sm-2-7, .col-md-2-7, .col-lg-2-7, .col-xs-3-7, .col-sm-3-7, .col-md-3-7, .col-lg-3-7, .col-xs-4-7, .col-sm-4-7, .col-md-4-7, .col-lg-4-7, .col-xs-5-7, .col-sm-5-7, .col-md-5-7, .col-lg-5-7, .col-xs-6-7, .col-sm-6-7, .col-md-6-7, .col-lg-6-7, .col-xs-7-7, .col-sm-7-7, .col-md-7-7, .col-lg-7-7, .col-xs-1-8, .col-sm-1-8, .col-md-1-8, .col-lg-1-8, .col-xs-2-8, .col-sm-2-8, .col-md-2-8, .col-lg-2-8, .col-xs-3-8, .col-sm-3-8, .col-md-3-8, .col-lg-3-8, .col-xs-4-8, .col-sm-4-8, .col-md-4-8, .col-lg-4-8, .col-xs-5-8, .col-sm-5-8, .col-md-5-8, .col-lg-5-8, .col-xs-6-8, .col-sm-6-8, .col-md-6-8, .col-lg-6-8, .col-xs-7-8, .col-sm-7-8, .col-md-7-8, .col-lg-7-8, .col-xs-8-8, .col-sm-8-8, .col-md-8-8, .col-lg-8-8, .col-xs-1-9, .col-sm-1-9, .col-md-1-9, .col-lg-1-9, .col-xs-2-9, .col-sm-2-9, .col-md-2-9, .col-lg-2-9, .col-xs-3-9, .col-sm-3-9, .col-md-3-9, .col-lg-3-9, .col-xs-4-9, .col-sm-4-9, .col-md-4-9, .col-lg-4-9, .col-xs-5-9, .col-sm-5-9, .col-md-5-9, .col-lg-5-9, .col-xs-6-9, .col-sm-6-9, .col-md-6-9, .col-lg-6-9, .col-xs-7-9, .col-sm-7-9, .col-md-7-9, .col-lg-7-9, .col-xs-8-9, .col-sm-8-9, .col-md-8-9, .col-lg-8-9, .col-xs-9-9, .col-sm-9-9, .col-md-9-9, .col-lg-9-9, .col-xs-1-10, .col-sm-1-10, .col-md-1-10, .col-lg-1-10, .col-xs-2-10, .col-sm-2-10, .col-md-2-10, .col-lg-2-10, .col-xs-3-10, .col-sm-3-10, .col-md-3-10, .col-lg-3-10, .col-xs-4-10, .col-sm-4-10, .col-md-4-10, .col-lg-4-10, .col-xs-5-10, .col-sm-5-10, .col-md-5-10, .col-lg-5-10, .col-xs-6-10, .col-sm-6-10, .col-md-6-10, .col-lg-6-10, .col-xs-7-10, .col-sm-7-10, .col-md-7-10, .col-lg-7-10, .col-xs-8-10, .col-sm-8-10, .col-md-8-10, .col-lg-8-10, .col-xs-9-10, .col-sm-9-10, .col-md-9-10, .col-lg-9-10, .col-xs-10-10, .col-sm-10-10, .col-md-10-10, .col-lg-10-10, .col-xs-1-11, .col-sm-1-11, .col-md-1-11, .col-lg-1-11, .col-xs-2-11, .col-sm-2-11, .col-md-2-11, .col-lg-2-11, .col-xs-3-11, .col-sm-3-11, .col-md-3-11, .col-lg-3-11, .col-xs-4-11, .col-sm-4-11, .col-md-4-11, .col-lg-4-11, .col-xs-5-11, .col-sm-5-11, .col-md-5-11, .col-lg-5-11, .col-xs-6-11, .col-sm-6-11, .col-md-6-11, .col-lg-6-11, .col-xs-7-11, .col-sm-7-11, .col-md-7-11, .col-lg-7-11, .col-xs-8-11, .col-sm-8-11, .col-md-8-11, .col-lg-8-11, .col-xs-9-11, .col-sm-9-11, .col-md-9-11, .col-lg-9-11, .col-xs-10-11, .col-sm-10-11, .col-md-10-11, .col-lg-10-11, .col-xs-11-11, .col-sm-11-11, .col-md-11-11, .col-lg-11-11, .col-xs-1-12, .col-sm-1-12, .col-md-1-12, .col-lg-1-12, .col-xs-2-12, .col-sm-2-12, .col-md-2-12, .col-lg-2-12, .col-xs-3-12, .col-sm-3-12, .col-md-3-12, .col-lg-3-12, .col-xs-4-12, .col-sm-4-12, .col-md-4-12, .col-lg-4-12, .col-xs-5-12, .col-sm-5-12, .col-md-5-12, .col-lg-5-12, .col-xs-6-12, .col-sm-6-12, .col-md-6-12, .col-lg-6-12, .col-xs-7-12, .col-sm-7-12, .col-md-7-12, .col-lg-7-12, .col-xs-8-12, .col-sm-8-12, .col-md-8-12, .col-lg-8-12, .col-xs-9-12, .col-sm-9-12, .col-md-9-12, .col-lg-9-12, .col-xs-10-12, .col-sm-10-12, .col-md-10-12, .col-lg-10-12, .col-xs-11-12, .col-sm-11-12, .col-md-11-12, .col-lg-11-12, .col-xs-12-12, .col-sm-12-12, .col-md-12-12, .col-lg-12-12 {
   width: 100%; }
 
-@media (min-width: 0px) {
+@media (min-width: 480px) {
   .col-xs-1-1 {
     width: 100%; }
   .col-xs-1-2 {
@@ -1581,7 +1602,7 @@ textarea:not(.reset) {
   .col-xs-12-12 {
     width: 100%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 670px) {
   .col-sm-1-1 {
     width: 100%; }
   .col-sm-1-2 {
@@ -1739,7 +1760,7 @@ textarea:not(.reset) {
   .col-sm-12-12 {
     width: 100%; } }
 
-@media (min-width: 992px) {
+@media (min-width: 995px) {
   .col-md-1-1 {
     width: 100%; }
   .col-md-1-2 {
@@ -2065,7 +2086,7 @@ textarea:not(.reset) {
   display: -ms-flexbox !important;
   display: flex !important; }
 
-@media (max-width: 767px) {
+@media (max-width: 669px) {
   .visible-xs {
     display: block !important; }
   .frow.visible-xs {
@@ -2076,7 +2097,7 @@ textarea:not(.reset) {
   .frow.hidden-xs {
     display: none !important; } }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 670px) and (max-width: 994px) {
   .visible-sm {
     display: block !important; }
   .frow.visible-sm {
@@ -2087,7 +2108,7 @@ textarea:not(.reset) {
   .frow.hidden-sm {
     display: none !important; } }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 995px) and (max-width: 1199px) {
   .visible-md {
     display: block !important; }
   .frow.visible-md {

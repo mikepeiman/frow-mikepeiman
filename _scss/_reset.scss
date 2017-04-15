@@ -39,14 +39,6 @@ h1 {
 	text-transform: uppercase;
 	font-weight: bold;
 }
-/*
-.greeting {
-	font-weight: bold;
-}
-#greeting {
-	font-weight: bold;
-}
-*/
 
 a         { 
 	color: $main-white;
@@ -169,11 +161,21 @@ a:visited { color: $third-accent; }
 }
 
 form input {
+	border: 1px solid $third-color;
 	padding: .5em;
 	color: $main-black;
 	cursor: pointer;
-	width: 90%;
 }
+/*
+.form-name {
+	margin-left: .75em;
+	width: 98%;
+}
+
+.form-email {
+	margin-right: .75em;
+	width: 98%;
+}*/
 
 .form-submit {
 	background: $third-accent;
@@ -190,6 +192,11 @@ form input {
 			text-decoration: none;
 }
 
+.whisper {
+	font-style: italic;
+	font-size: 90%;
+}
+
 .intro-text {
 		color: $main-black; //$main-white;
     background: $main-white; //$main-black;
@@ -204,24 +211,20 @@ form input {
 
 .intro-text h1 {
     font-weight: bold;
-    font-size: 2.1em;
+    font-size: 2em;
 }
-
-/*
-.intro-text:hover {
-	h1 {
-		font-size: 2.15em;
-		transition: all .15s;
-	}
-}
-*/
 
 .intro-text p {
-	padding: 1em;
+	padding: 0 1em 1em 1em;
+}
+
+.flex-container {
+	flex: 1;
 }
 
 .hire-me {
 	margin: 0 -.75em 2em -.75em;
+	padding-top: 1.75em;
 	background: $main-black;
 	position: relative;
   //-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
@@ -346,6 +349,7 @@ nav {
 .site-branding h1 {
 	margin: 0.3em 0 0 0;
 	color: $main-white;
+	text-align: left;
 }
 
 .site-branding p {
@@ -386,17 +390,17 @@ footer {
 	  	margin-right: auto;
 	  	margin-left: 1.5em;
 	  }
-
-	  .icon {
-    	fill: $main-color;
-	    width: 32px;
-	    height: 32px;
-	    margin: 1em .25em;
-	    flex: 1;
+  .icon {
+		fill: $main-color;
+	  width: 32px;
+	  height: 32px;
+	  margin: 1em .25em;
+	  flex: 1;
 	}
-		.icon:hover {
-			fill: $third-color;
-		}
+
+	.icon:hover {
+		fill: $third-color;
+	}
 }
 
 footer .rss {
@@ -409,6 +413,13 @@ footer .rss img {
     border: 0;
 }
 
+.icon {
+	fill: red;
+	position: relative;
+	margin: -.5em auto .75em auto;
+	width: 32px;
+	height: 32px;
+}		
 
 
 @media all and (max-width: 995px) {
@@ -418,6 +429,12 @@ footer .rss img {
   nav ul li {
   	padding-right: .75em;
   }
+
+	form input {
+		padding: .5em;
+		margin: .5em;
+		width: 100%;
+	}
 }
 
 @media all and (max-width: 670px) {
@@ -431,11 +448,19 @@ footer .rss img {
   }
 
 	.site-branding {
-		background: rgba(0,0,100,0.4);
+		background: adjust-color($third-color, $lightness: -50%, $alpha: -.65);
 		padding: 5px;
 		margin-bottom: 2em;
 		border-radius: 5px;
 		border-bottom: 5px solid $third-color;
+	}
+
+	.site-branding h1 {
+		text-align: center;
+	}
+
+	.site-branding p {
+		text-align: center;
 	}
 
   .nav-menu {
@@ -485,7 +510,6 @@ footer .rss img {
 		margin-left: 10%;
 	}
 
-
 	footer ul li:first-child {
 		width: 100%;
 		margin-top: 2em;
@@ -505,9 +529,14 @@ footer .rss img {
 	footer ul li:last-child {
 		margin-right: 1em;
 	}
+
 	footer ul li {
 		padding: 0em;
 		margin: 0 auto;
+	}
+
+	.input-field {
+		margin: 0;
 	}
 }
 
