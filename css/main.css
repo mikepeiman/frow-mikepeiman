@@ -28,7 +28,8 @@ h2, h3, h4, h5, h6 {
 h1 {
   font-family: 'Montserrat';
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 1em; }
 
 a {
   color: #fffcf2;
@@ -55,10 +56,8 @@ a:visited {
   color: #1a1a1a;
   background: #fffcf2;
   margin: 1em;
-  padding: 1em 0 0 0;
+  padding: 0.25em 0 0 0;
   line-height: 1.25em;
-  -ms-flex: 1;
-      flex: 1;
   border-top: 5px solid #FFC100;
   box-shadow: 0px 3px 5px 1px #808080; }
 
@@ -117,14 +116,14 @@ a:visited {
   list-style-type: none;
   color: #1a1a1a;
   background: #fffcf2;
-  margin: 1em 1em 0 1em;
-  padding: 1em 0 0 0;
+  margin: 1em;
+  padding: 0.25em 0 0 0;
   line-height: 1.25em;
   border-top: 5px solid #26C3FF;
-  box-shadow: 0px 3px 5px 1px #808080; }
+  box-shadow: 0px 3px 5px 1px #808080;
+  text-align: center; }
   .signup-form p {
-    margin-bottom: .25em;
-    padding: 0 1em 1em 1em; }
+    padding: 0 1em .65em 1em; }
 
 input {
   appearance: none;
@@ -172,7 +171,7 @@ input[type="submit"] {
 .form-submit {
   background: #009dd9;
   border: 2px solid #26C3FF;
-  padding: .25em .5em;
+  padding: .5em;
   margin: 1.15em 0 1.4em 0;
   color: #fffcf2;
   box-shadow: 0px 3px 5px 1px #1a1a1a;
@@ -196,7 +195,7 @@ input[type="submit"] {
   transition: all .25s; }
 
 svg {
-  fill: rrgba(0, 0, 0, 0); }
+  fill: transparent; }
 
 .button-heart svg {
   margin: -1.5em 0 0 5em;
@@ -210,7 +209,7 @@ svg {
   color: #1a1a1a;
   background: #fffcf2;
   margin: 1em;
-  padding: 1em 0 0 0;
+  padding: 0.25em 0 0 0;
   line-height: 1.25em;
   -ms-flex: 1;
       flex: 1;
@@ -443,9 +442,20 @@ footer .rss img {
     background: #fffcf2; }
   nav ul li {
     padding-right: .75em; }
-  form input {
+  .input-field {
+    padding: .5em 0;
+    margin: .5em; }
+  .form-submit {
     padding: .5em;
-    margin: .5em; } }
+    margin: .5em; }
+  .input-field::-webkit-input-placeholder {
+    padding-left: 1em; }
+  .input-field::-moz-placeholder {
+    padding-left: 1em; }
+  .input-field:-ms-input-placeholder {
+    padding-left: 1em; }
+  .input-field::placeholder {
+    padding-left: 1em; } }
 
 /*****************************************************************************/
 /*
@@ -483,8 +493,7 @@ footer .rss img {
     margin-bottom: .1em;
     padding: 0; }
   .intro-text {
-    margin: 2em 0 0 0;
-    font-size: 80%; }
+    margin: 2em 0 0 0; }
   .posts {
     margin: 0;
     font-size: 80%; }

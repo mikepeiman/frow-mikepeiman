@@ -38,6 +38,7 @@ h1 {
 	font-family: 'Montserrat';
 	text-transform: uppercase;
 	font-weight: bold;
+	line-height: 1em;
 }
 
 a         { 
@@ -68,7 +69,6 @@ a:visited { color: $third-accent; }
     margin: 1em;
     padding: $section-padding;
     line-height: 1.25em;
-    flex: 1;
     border-top: 5px solid $main-color;
     box-shadow: $card-shadow-grey;
 }
@@ -148,17 +148,19 @@ a:visited { color: $third-accent; }
     list-style-type: none;
     color: $main-black; // $main-white;
     background: $main-white;//$main-black;
-    margin: 1em 1em 0 1em;
+    margin: 1em;
     padding: $section-padding;
     line-height: 1.25em;
     border-top: 5px solid $third-color;
     box-shadow: $card-shadow-grey;
+    text-align: center;
 
     p {
-    	margin-bottom: .25em;
-    	padding: 0 1em 1em 1em;
+    	padding: 0 1em .65em 1em;
     }
 }
+
+
 
 input {
 	appearance: none;
@@ -196,7 +198,7 @@ input[type="submit"] {
 .form-submit {
 	background: $third-accent;
 	border: 2px solid $third-color;
-	padding: .25em .5em;
+	padding: .5em;
 	margin: 1.15em 0 1.4em 0;
 	color: $main-white;
 	box-shadow: $card-shadow-black;
@@ -226,7 +228,7 @@ input[type="submit"] {
 
 
 svg {
-	fill: rrgba(0,0,0,0);
+	fill: rgba(0,0,0,0);
 }
 
 .button-heart svg {
@@ -523,9 +525,18 @@ footer .rss img {
   	padding-right: .75em;
   }
 
-	form input {
+	.input-field {
+		padding: .5em 0;
+		margin: .5em;
+	}
+
+	.form-submit {
 		padding: .5em;
 		margin: .5em;
+	}
+
+	.input-field::placeholder {
+		padding-left: 1em;
 	}
 }
 
@@ -582,7 +593,6 @@ footer .rss img {
 
 	.intro-text {
 		margin: 2em 0 0 0;
-		font-size: 80%;
 	}
 
 	.posts {
