@@ -63,65 +63,74 @@
                   <input type="email" value="" name="EMAIL" class="form-email input-field required" id="mce-EMAIL" placeholder="Your best email" autocomplete="on">
                 </div>
                 
-<div id="mce-responses" class="clear">
-  <div class="modal-overlay closed" id="modal-overlay">
-    <div class="response modal closed">
-      <button class="close-button closed" id="close-button">X</button>
-      <p id="mce-error-response"></p>
-      <p id="mce-success-response"></p>
-    </div>
-  </div>
-</div>    
+                <div id="mce-responses" class="clear">
+                  <div class="modal-overlay closed" id="modal-overlay">
+                    <div class="response modal closed">
+                      <button class="close-button closed" id="close-button">X</button>
+                      <p id="mce-error-response"></p>
+                      <p id="mce-success-response"></p>
+                    </div>
+                  </div>
+                </div>    
 
 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-<div style="position: absolute; left: -5000px;" aria-hidden="true">
-  <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
-</div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
+                </div>
 
-<div class="button-heart form-submit">
-  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-  <svg class="icon icon-heart" aria-hidden="true">
-    <use xlink:href="/images/icons.svg#heart"></use>
-  </svg>
-</div>
+                <div class="button-heart form-submit" id="form-submit" onclick="addHeart()">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+                  <svg class="icon icon-heart" aria-hidden="true">
+                    <use xlink:href="/images/icons.svg#heart"></use>
+                  </svg>
+                </div>
 
               </form>
             </div>
 
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
 </script>
+
 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
 </script>
 
-<script type='text/javascript'>                  
-  var modal = document.querySelector(".modal");
-  var modalOverlay = document.querySelector("#modal-overlay");
-  var closeButton = document.querySelector("#close-button");
-  var openButton = document.querySelector("#mc-embedded-subscribe");
-  
-  openButton.addEventListener("click", function() {
-    modal.classList.toggle("closed");
-    modalOverlay.classList.toggle("closed");
-    closeButton.classList.toggle("closed");
-  });
+<script>
+    function addHeart() {
+      var el = document.getElementById('form-submit');
+      el.classList.toggle("clicked");
+      setTimeout(removeHeartOpenModal, 1500);
+      }
 
-  closeButton.addEventListener("click", function() {
-    modal.classList.toggle("closed");
-    modalOverlay.classList.toggle("closed");
-    closeButton.classList.toggle("closed");
-  });
+    function removeHeartOpenModal() {
+      document.getElementById('form-submit').classList.remove("clicked");        
+      var modal = document.querySelector(".modal");
+      var modalOverlay = document.querySelector("#modal-overlay");
+      var closeButton = document.querySelector("#close-button");
+      var openButton = document.querySelector("#mc-embedded-subscribe");
+      
+        modal.classList.toggle("closed");
+        modalOverlay.classList.toggle("closed");
+        closeButton.classList.toggle("closed");
 
-  modal.addEventListener("click", function() {
-    modalOverlay.classList.toggle("closed");
-    closeButton.classList.toggle("closed");
-    modal.classList.toggle("closed");
-  });
 
-  modalOverlay.addEventListener("click", function() {
-    modal.classList.toggle("closed");
-    modalOverlay.classList.toggle("closed");
-    closeButton.classList.toggle("closed");
-  });
+      closeButton.addEventListener("click", function() {
+        modal.classList.toggle("closed");
+        modalOverlay.classList.toggle("closed");
+        closeButton.classList.toggle("closed");
+      });
+
+      modal.addEventListener("click", function() {
+        modalOverlay.classList.toggle("closed");
+        closeButton.classList.toggle("closed");
+        modal.classList.toggle("closed");
+      });
+
+      modalOverlay.addEventListener("click", function() {
+        modal.classList.toggle("closed");
+        modalOverlay.classList.toggle("closed");
+        closeButton.classList.toggle("closed");
+      });
+    }
 
 
 </script>

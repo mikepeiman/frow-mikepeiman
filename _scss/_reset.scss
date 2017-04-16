@@ -248,7 +248,7 @@ svg {
   max-height: 100%;
   background: $main-white;
   box-shadow: $card-shadow-black;
-  border: 5px solid $second-color;
+  border: 5px solid $main-grey;
   transition: all .25s;
 }
 
@@ -278,13 +278,12 @@ svg {
 	position: relative;
 	top: 0;
 	left: 0;
-	color: $third-accent;
+	color: $main-color;
+	font-weight: bold;
 	padding: .5em;
-	margin: 0 0 -1.5em auto;
-	background: $main-color;
-	border-radius: 1em;
+	margin: -1px 0 -1.5em auto;
+	background: $main-grey;
 	border: none;
-	transition: all .25s;
 }
 
 #mce-success-response, #mce-error-response {
