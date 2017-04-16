@@ -160,36 +160,78 @@ a:visited { color: $third-accent; }
     }
 }
 
-form input {
-	border: 1px solid $third-color;
-	padding: .5em;
-	color: $main-black;
+input {
+	appearance: none;
+	-webkit-appearance: none;
 	cursor: pointer;
 }
-/*
-.form-name {
-	margin-left: .75em;
-	width: 98%;
+
+.input-field {
+		margin: .5em 0;
+		font-family: 'Ubuntu';
+		color: $third-accent;
+		border: 1px solid $third-color;
+		padding: .5em;
+		cursor: pointer;
+	}
+
+.input-field::placeholder {
+		background: none;
+		font-family: 'Ubuntu';
+		font-size: .85em;
+	}
+
+.button-heart input {
+	border: 0;
+	outline: 0;
+	background: none;
+	cursor: pointer;
 }
 
-.form-email {
-	margin-right: .75em;
-	width: 98%;
-}*/
+input[type="submit"] {
+	color: $main-white;
+	transition: all .25s;
+}
 
 .form-submit {
 	background: $third-accent;
 	border: 2px solid $third-color;
-	padding: .5em 2em;
+	padding: .25em .5em;
 	margin: 1.15em 0 1.4em 0;
 	color: $main-white;
 	box-shadow: $card-shadow-black;
+	transition: all .25s;
 }
 
 .form-submit:hover {
-			background: $third-color;
-			color: $main-black;
-			text-decoration: none;
+	background: $third-color;
+/*	input[type="submit"] {
+			padding-right: .75em;
+			transition: all .25s;
+	}
+	svg {
+		fill: red;
+		transition: all .25s;
+	}*/
+}
+
+
+.clicked {
+	svg {
+		transform: translate(0, -40px);
+		fill: red; // rgba(0,0,0,0);
+		transition: all .25s;
+	}
+}
+
+
+svg {
+	fill: rrgba(0,0,0,0);
+}
+
+.button-heart svg {
+	margin: -1.5em 0 0 5em;
+	padding: .25em 0 0 .35em;
 }
 
 .whisper {
@@ -359,13 +401,6 @@ nav {
 	text-align: left;
 }
 
-@media all and (min-width: 670px) {
-	nav .site-branding {
-		display: block;
-		margin-right: auto;
-	}
-}
-
 .meta {
     color: $main-grey;
 }
@@ -414,13 +449,71 @@ footer .rss img {
 }
 
 .icon {
-	fill: red;
+	fill: rgba(0,0,0,0);
 	position: relative;
 	margin: -.5em auto .75em auto;
 	width: 32px;
 	height: 32px;
+	transition: all .25s;
 }		
 
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+/* standard */
+.post pre {
+    border: 1px solid $main-grey;
+    background-color: $main-white;
+    padding: 0 .4em;
+}
+
+.post ul, .post ol {
+    margin-left: 1.35em;
+}
+
+.post code {
+    border: 1px solid $main-grey;
+    background-color: $main-white;
+    padding: 0 .2em;
+}
+
+.post pre code {
+    border: none;
+}
+
+/* terminal */
+.post pre.terminal {
+    border: 1px solid $main-black;
+    background-color: $main-grey;
+    color: $main-white;
+}
+
+.post pre.terminal code {
+    background-color: $main-grey;
+}
+
+/*****************************************************************************/
+/*
+/* Media - GREATER THAN SMALL
+/*
+/*****************************************************************************/
+
+@media all and (min-width: 670px) {
+	nav .site-branding {
+		display: block;
+		margin-right: auto;
+	}
+}
+
+/*****************************************************************************/
+/*
+/* Media - LESS THAN MEDIUM
+/*
+/*****************************************************************************/
 
 @media all and (max-width: 995px) {
   body {
@@ -433,9 +526,14 @@ footer .rss img {
 	form input {
 		padding: .5em;
 		margin: .5em;
-		width: 100%;
 	}
 }
+
+/*****************************************************************************/
+/*
+/* Media - LESS THAN SMALL
+/*
+/*****************************************************************************/
 
 @media all and (max-width: 670px) {
 
@@ -516,6 +614,12 @@ footer .rss img {
 	}
 }
 
+/*****************************************************************************/
+/*
+/* Media - LESS THAN EXTRA-SMALL
+/*
+/*****************************************************************************/
+
 @media all and (max-width: 480px) {
 
 	footer ul {
@@ -534,46 +638,4 @@ footer .rss img {
 		padding: 0em;
 		margin: 0 auto;
 	}
-
-	.input-field {
-		margin: 0;
-	}
-}
-
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
-/* standard */
-.post pre {
-    border: 1px solid $main-grey;
-    background-color: $main-white;
-    padding: 0 .4em;
-}
-
-.post ul, .post ol {
-    margin-left: 1.35em;
-}
-
-.post code {
-    border: 1px solid $main-grey;
-    background-color: $main-white;
-    padding: 0 .2em;
-}
-
-.post pre code {
-    border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-    border: 1px solid $main-black;
-    background-color: $main-grey;
-    color: $main-white;
-}
-
-.post pre.terminal code {
-    background-color: $main-grey;
 }

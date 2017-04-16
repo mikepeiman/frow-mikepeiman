@@ -54,14 +54,16 @@
 
          <!--     <p class="whisper">(I'll even share my awesome pancake recipe, if you ask nicely...)</p> -->
               
-<!-- Begin MailChimp Signup Form -->
-              <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow" target="_blank" novalidate>
+<!-- Begin MailChimp Signup Form 
+action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88"
+-->
+              <form  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" novalidate>
 
-                <div class="col-sm-1-2">
+                <div>
                   <input type="text" value="" name="FNAME" class="form-name input-field required" id="mce-FNAME" placeholder="First name" autocomplete="on">
                 </div>
-                <div class="col-sm-1-2">
-                  <input type="email" value="" name="EMAIL" class="form-email input-field required email" id="mce-EMAIL" placeholder="Your best email" autocomplete="on">
+                <div>
+                  <input type="email" value="" name="EMAIL" class="form-email input-field required" id="mce-EMAIL" placeholder="Your best email" autocomplete="on">
                 </div>
                 
                 <div id="mce-responses" class="clear">
@@ -73,19 +75,32 @@
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                   <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
                 </div>
-                <div class="clear">
 
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="form-submit">
-                                  <svg class="icon icon-heart" aria-hidden="true">
-                  <use xlink:href="/images/icons.svg#heart"></use>
-                </svg>
+                <div class="button-heart form-submit" id="form-submit">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" onClick="addHeart()">
+                  <svg class="icon icon-heart" aria-hidden="true">
+                    <use xlink:href="/images/icons.svg#heart"></use>
+                  </svg>
                 </div>
+
               </form>
             </div>
 
                 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
                 </script>
                 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+                </script>
+
+                <script>
+                    function addHeart() {
+                      var el = document.getElementById('form-submit');
+                      el.classList.add("clicked");
+                      setTimeout(removeHeart, 1000);
+                      }
+
+                    function removeHeart() {
+                      document.getElementById('form-submit').classList.remove("clicked");
+                      }
                 </script>
 
 <!--End mc_embed_signup-->

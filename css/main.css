@@ -126,34 +126,81 @@ a:visited {
     margin-bottom: .25em;
     padding: 0 1em 1em 1em; }
 
-form input {
-  border: 1px solid #26C3FF;
-  padding: .5em;
-  color: #1a1a1a;
+input {
+  appearance: none;
+  -webkit-appearance: none;
   cursor: pointer; }
 
-/*
-.form-name {
-	margin-left: .75em;
-	width: 98%;
-}
+.input-field {
+  margin: .5em 0;
+  font-family: 'Ubuntu';
+  color: #009dd9;
+  border: 1px solid #26C3FF;
+  padding: .5em;
+  cursor: pointer; }
 
-.form-email {
-	margin-right: .75em;
-	width: 98%;
-}*/
+.input-field::-webkit-input-placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  font-size: .85em; }
+
+.input-field::-moz-placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  font-size: .85em; }
+
+.input-field:-ms-input-placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  font-size: .85em; }
+
+.input-field::placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  font-size: .85em; }
+
+.button-heart input {
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer; }
+
+input[type="submit"] {
+  color: #fffcf2;
+  transition: all .25s; }
+
 .form-submit {
   background: #009dd9;
   border: 2px solid #26C3FF;
-  padding: .5em 2em;
+  padding: .25em .5em;
   margin: 1.15em 0 1.4em 0;
   color: #fffcf2;
-  box-shadow: 0px 3px 5px 1px #1a1a1a; }
+  box-shadow: 0px 3px 5px 1px #1a1a1a;
+  transition: all .25s; }
 
 .form-submit:hover {
   background: #26C3FF;
-  color: #1a1a1a;
-  text-decoration: none; }
+  /*	input[type="submit"] {
+			padding-right: .75em;
+			transition: all .25s;
+	}
+	svg {
+		fill: red;
+		transition: all .25s;
+	}*/ }
+
+.clicked svg {
+  -webkit-transform: translate(0, -40px);
+          transform: translate(0, -40px);
+  fill: red;
+  transition: all .25s; }
+
+svg {
+  fill: rrgba(0, 0, 0, 0); }
+
+.button-heart svg {
+  margin: -1.5em 0 0 5em;
+  padding: .25em 0 0 .35em; }
 
 .whisper {
   font-style: italic;
@@ -298,11 +345,6 @@ nav {
   color: #26C3FF;
   text-align: left; }
 
-@media all and (min-width: 670px) {
-  nav .site-branding {
-    display: block;
-    margin-right: auto; } }
-
 .meta {
   color: #808080; }
 
@@ -343,12 +385,59 @@ footer .rss img {
   border: 0; }
 
 .icon {
-  fill: red;
+  fill: transparent;
   position: relative;
   margin: -.5em auto .75em auto;
   width: 32px;
-  height: 32px; }
+  height: 32px;
+  transition: all .25s; }
 
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+/* standard */
+.post pre {
+  border: 1px solid #808080;
+  background-color: #fffcf2;
+  padding: 0 .4em; }
+
+.post ul, .post ol {
+  margin-left: 1.35em; }
+
+.post code {
+  border: 1px solid #808080;
+  background-color: #fffcf2;
+  padding: 0 .2em; }
+
+.post pre code {
+  border: none; }
+
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #1a1a1a;
+  background-color: #808080;
+  color: #fffcf2; }
+
+.post pre.terminal code {
+  background-color: #808080; }
+
+/*****************************************************************************/
+/*
+/* Media - GREATER THAN SMALL
+/*
+/*****************************************************************************/
+@media all and (min-width: 670px) {
+  nav .site-branding {
+    display: block;
+    margin-right: auto; } }
+
+/*****************************************************************************/
+/*
+/* Media - LESS THAN MEDIUM
+/*
+/*****************************************************************************/
 @media all and (max-width: 995px) {
   body {
     background: #fffcf2; }
@@ -356,9 +445,13 @@ footer .rss img {
     padding-right: .75em; }
   form input {
     padding: .5em;
-    margin: .5em;
-    width: 100%; } }
+    margin: .5em; } }
 
+/*****************************************************************************/
+/*
+/* Media - LESS THAN SMALL
+/*
+/*****************************************************************************/
 @media all and (max-width: 670px) {
   nav {
     /* On small screens, we are no longer using row direction but column */
@@ -409,6 +502,11 @@ footer .rss img {
     width: 100%;
     margin-top: 2em; } }
 
+/*****************************************************************************/
+/*
+/* Media - LESS THAN EXTRA-SMALL
+/*
+/*****************************************************************************/
 @media all and (max-width: 480px) {
   footer ul {
     padding-right: 0; }
@@ -418,40 +516,7 @@ footer .rss img {
     margin-right: 1em; }
   footer ul li {
     padding: 0em;
-    margin: 0 auto; }
-  .input-field {
-    margin: 0; } }
-
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-/* standard */
-.post pre {
-  border: 1px solid #808080;
-  background-color: #fffcf2;
-  padding: 0 .4em; }
-
-.post ul, .post ol {
-  margin-left: 1.35em; }
-
-.post code {
-  border: 1px solid #808080;
-  background-color: #fffcf2;
-  padding: 0 .2em; }
-
-.post pre code {
-  border: none; }
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #1a1a1a;
-  background-color: #808080;
-  color: #fffcf2; }
-
-.post pre.terminal code {
-  background-color: #808080; }
+    margin: 0 auto; } }
 
 .highlight {
   background: #ffffff; }
