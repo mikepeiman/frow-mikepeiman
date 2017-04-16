@@ -191,6 +191,7 @@ input {
 }
 
 input[type="submit"] {
+	font-family: 'Ubuntu';
 	color: $main-white;
 	transition: all .25s;
 }
@@ -236,6 +237,60 @@ svg {
 	padding: .25em 0 0 .35em;
 }
 
+.modal {
+	display: block;
+	z-index: 2000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  background: $main-white;
+  box-shadow: $card-shadow-black;
+  border: 5px solid $second-color;
+  transition: all .25s;
+}
+
+.modal-overlay {
+	display: block;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.75);
+	transition: all .25s;
+}
+
+.closed {
+	display: none;
+}
+
+.open {
+	display: block;
+}
+
+.close-button {
+	display: block;
+	z-index: 3000;
+	position: relative;
+	top: 0;
+	left: 0;
+	color: $third-accent;
+	padding: .5em;
+	margin: 0 0 -1.5em auto;
+	background: $main-color;
+	border-radius: 1em;
+	border: none;
+	transition: all .25s;
+}
+
+#mce-success-response, #mce-error-response {
+	padding: 1.5em;
+}
+
 .whisper {
 	font-style: italic;
 	font-size: 90%;
@@ -264,6 +319,13 @@ svg {
 
 .flex-container {
 	flex: 1;
+}
+
+.homepage-selfie {
+	width: 20em;
+	height: auto;
+	margin-bottom: -.5em;
+	border: 5px solid $main-black;
 }
 
 .hire-me {
@@ -526,7 +588,7 @@ footer .rss img {
   }
 
 	.input-field {
-		padding: .5em 0;
+		padding: .5em;
 		margin: .5em;
 	}
 

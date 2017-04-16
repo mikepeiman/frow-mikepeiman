@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700,900|PT+Sans|Anonymous+Pro|Montserrat:400,400i,700,700i,900,900i|Raleway:400,400i,500,500i,600,600i,700,700i|Ubuntu" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Arimo|Arvo|Cabin|Cabin+Sketch|Cantarell|Cantora+One|Dosis|Gudea|IM+Fell+English|IM+Fell+Great+Primer+SC|Karla|Kaushan+Script|Lato|Libre+Baskerville|Montserrat|Nunito|Oxygen|PT+Sans|Philosopher|Rajdhani|Raleway|Timmana|Ubuntu" rel="stylesheet"> -->
         <link rel="stylesheet" href="/css/main.css">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     </head> 
     <body>
         <nav class="frow">
@@ -54,11 +54,8 @@
 
          <!--     <p class="whisper">(I'll even share my awesome pancake recipe, if you ask nicely...)</p> -->
               
-<!-- Begin MailChimp Signup Form 
-action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88"
--->
-              <form  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" novalidate>
-
+<!-- Begin MailChimp Signup Form -->
+              <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" novalidate>
                 <div>
                   <input type="text" value="" name="FNAME" class="form-name input-field required" id="mce-FNAME" placeholder="First name" autocomplete="on">
                 </div>
@@ -66,44 +63,68 @@ action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5
                   <input type="email" value="" name="EMAIL" class="form-email input-field required" id="mce-EMAIL" placeholder="Your best email" autocomplete="on">
                 </div>
                 
-                <div id="mce-responses" class="clear">
-                  <div class="response" id="mce-error-response" style="display:none"></div>
-                  <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    
+<div id="mce-responses" class="clear">
+  <div class="modal-overlay closed" id="modal-overlay">
+    <div class="response modal closed">
+      <button class="close-button closed" id="close-button">X</button>
+      <p id="mce-error-response"></p>
+      <p id="mce-success-response"></p>
+    </div>
+  </div>
+</div>    
 
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
-                </div>
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<div style="position: absolute; left: -5000px;" aria-hidden="true">
+  <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
+</div>
 
-                <div class="button-heart form-submit" id="form-submit">
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" onClick="addHeart()">
-                  <svg class="icon icon-heart" aria-hidden="true">
-                    <use xlink:href="/images/icons.svg#heart"></use>
-                  </svg>
-                </div>
+<div class="button-heart form-submit">
+  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+  <svg class="icon icon-heart" aria-hidden="true">
+    <use xlink:href="/images/icons.svg#heart"></use>
+  </svg>
+</div>
 
               </form>
             </div>
 
-                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
-                </script>
-                <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-                </script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+</script>
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+</script>
 
-<!-- script to make svg heart rise up from submit button on click, then fade away -->
-                <script>
-                    function addHeart() {
-                      var el = document.getElementById('form-submit');
-                      el.classList.add("clicked");
-                      setTimeout(removeHeart, 1000);
-                      }
+<script type='text/javascript'>                  
+  var modal = document.querySelector(".modal");
+  var modalOverlay = document.querySelector("#modal-overlay");
+  var closeButton = document.querySelector("#close-button");
+  var openButton = document.querySelector("#mc-embedded-subscribe");
+  
+  openButton.addEventListener("click", function() {
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
+    closeButton.classList.toggle("closed");
+  });
 
-                    function removeHeart() {
-                      document.getElementById('form-submit').classList.remove("clicked");
-                      }
-                </script>
+  closeButton.addEventListener("click", function() {
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
+    closeButton.classList.toggle("closed");
+  });
 
+  modal.addEventListener("click", function() {
+    modalOverlay.classList.toggle("closed");
+    closeButton.classList.toggle("closed");
+    modal.classList.toggle("closed");
+  });
+
+  modalOverlay.addEventListener("click", function() {
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
+    closeButton.classList.toggle("closed");
+  });
+
+
+</script>
 <!--End mc_embed_signup-->
 
 <!-- keeping old signup form -->
