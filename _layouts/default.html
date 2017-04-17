@@ -10,7 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700,900|PT+Sans|Anonymous+Pro|Montserrat:400,400i,700,700i,900,900i|Raleway:400,400i,500,500i,600,600i,700,700i|Ubuntu" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Arimo|Arvo|Cabin|Cabin+Sketch|Cantarell|Cantora+One|Dosis|Gudea|IM+Fell+English|IM+Fell+Great+Primer+SC|Karla|Kaushan+Script|Lato|Libre+Baskerville|Montserrat|Nunito|Oxygen|PT+Sans|Philosopher|Rajdhani|Raleway|Timmana|Ubuntu" rel="stylesheet"> -->
         <link rel="stylesheet" href="/css/main.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/parsley.min.js"></script>
   <!--      <script src="/js/scripts.js"></script> -->
     </head> 
     <body>
@@ -45,12 +46,12 @@
               <p>You'll receive the most useful and life-changing things I've ever learned and discovered. Plus occasional updates and cool stuff like that.</p>
 
 <!-- Begin MailChimp Signup Form -->
-              <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank">
+              <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" validate>
                 <div>
-                  <input required type="text" name="FNAME" class="form-name input-field required" id="mce-FNAME" placeholder="First name" autocomplete="on">
+                  <input required type="text" name="FNAME" class="form-name input-field required form-control" id="mce-FNAME" placeholder="First name" autocomplete="on" required="">
                 </div>
                 <div>
-                  <input required type="email" name="EMAIL" class="form-email input-field required" id="mce-EMAIL" placeholder="Your best email" autocomplete="on">
+                  <input required type="email" name="EMAIL" class="form-email input-field required form-control" id="mce-EMAIL" placeholder="Your best email" autocomplete="on" required="">
                 </div>
                 
                 <div id="mce-responses" class="clear">
@@ -77,6 +78,19 @@
 <!--End mc_embed_signup-->
 
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+</script>
+
+<script type="text/javascript">
+$(function () {
+  $('#mc-embedded-subscribe-form').parsley().on('field:validated', function() {
+    var ok = $('.parsley-error').length === 0;
+    $('.bs-callout-info').toggleClass('hidden', !ok);
+    $('.bs-callout-warning').toggleClass('hidden', ok);
+  })
+  .on('form:submit', function() {
+    return false; // Don't submit form for this demo
+  });
+});
 </script>
 
 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);

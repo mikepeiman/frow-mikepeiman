@@ -16,8 +16,7 @@ html { height: 100%; }
 
 body {
     background: $bg-image;
-    font-family: 'Raleway', 
-    'Cabin', 'Oxygen', 'Karla', 'Raleway', 'Arvo', 'Anonymous Pro', 
+    font-family: 'Raleway', 'Cabin', 'Oxygen', 'Karla', 'Raleway', 'Arvo', 'Anonymous Pro', 
 		'PT Sans', 'Kaushan Script', 
 		'Rajdhani', 'Cantora One', 
     'Cantarell', 'Philosopher', 'Nunito', 'Arimo', 'Libre Baskerville', 
@@ -199,7 +198,7 @@ input[type="submit"] {
 	background: $third-accent;
 	border: 2px solid $third-color;
 	padding: .5em;
-	margin: 1.15em 0 1.4em 0;
+	margin: 1.15em 0 1.5em 0;
 	color: $main-white;
 	box-shadow: $card-shadow-black;
 	transition: all .25s;
@@ -266,15 +265,26 @@ input[type="submit"] {
 p#mce-success-response, p#mce-error-response {
 	padding: 1em;
 	margin: 1em;
-	border: 1px solid $second-color;
+	border: 1px solid $third-color;
 	border-radius: 10px;
 	box-shadow: $card-shadow-grey;
 }
 
 p#mce-success-response:after, p#mce-error-response:after {
-  content: "(click to close)";
-  color: $third-color;
+  content: "click to close";
+  color: $third-accent;
   font-style: italic;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: .5em auto 0 auto;
+  padding: 0.5em;
+  width: 10em;
+}
+
+p#mce-success-response:hover, p#mce-error-response:hover {
+  color: $third-color;
+  cursor: pointer;
 }
 
 p:empty {
@@ -283,6 +293,10 @@ p:empty {
 
 .closed {
 	display: none;
+}
+
+.parsley-required {
+  color: $main-color;
 }
 
 svg .icon-heart {
@@ -428,7 +442,7 @@ nav {
   	padding-right: 2em;
 
   	h1 {
-  		color: $main-accent;
+  		color: $main-color;
   	}
   }
 
@@ -611,7 +625,7 @@ footer .rss img {
 
 	.form-submit {
 		padding: .5em;
-		margin: .5em;
+		margin: .5em .5em 1.5em .5em;
 	}
 
 	.input-field::placeholder {
@@ -668,10 +682,6 @@ footer .rss img {
   .nav-menu li {
 	margin-bottom: .1em;
 	padding: 0;
-	}
-
-	.intro-text {
-		margin: 2em 0 0 0;
 	}
 
 	.posts {
