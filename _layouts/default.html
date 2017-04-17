@@ -26,11 +26,7 @@
                 </p>
               </div>
             </li>
-            <li><a class="menu-item" id="home" href="/">Home</a></li>
-            <li><a class="menu-item" id="about" href="/">About</a></li>
-            <li><a class="menu-item" id="blog" href="/">Blog</a></li>
-            <li><a class="menu-item" id="work" href="/">Work</a></li>
-            <li><a class="menu-item" id="contact" href="/">Contact</a></li>
+            <li><H1>UNDER CONSTRUCTION</H1></li>
           </ul>
         </nav>
 
@@ -40,12 +36,7 @@
           <div class="col-md-2-5 intro-text">
               <h1 class="greeting">HI. I'M MIKE.</h1>
               <p>I'm a proud father, freelance web developer, and master pancake-maker. Seriously, you should try my pancakes. But only with real maple syrup.</p>
-              <p>I'm also many other things. I'm an expert-level snowboard instructor, a personal trainer, and a champion for health, wellness, and vitality.</p>
-              <p>I'm an advocate for sustainability, social and economic justice, and bringing a higher level of consciousness to life.</p>
-              <div class="frow direction-column hire-me folded-corner-left-green folded-corner-right-green">
-                <p>I'd love to help you and your team achieve success.</p>
-                <a href="#"><span class="hire-me-button">Hire me!</span></a>
-              </div>
+              <p>I'm also many other things. But you'll have to wait to find out because my site is under construction. Well, actually, you *could* check out my social media profiles, or sign up to my newsletter (which is only going to be awesome). Your call. While you think about it, I'm gonna get back to coding.</p>
           </div>
           <div class="frow col-md-2-5 direction-column">
 
@@ -63,13 +54,11 @@
                 </div>
                 
                 <div id="mce-responses" class="clear">
-                  <div class="modal-overlay closed" id="modal-overlay">
-                    <div class="response modal closed">
+                    <div class="response">
                       <button class="close-button closed" id="close-button">X</button>
-                      <p id="mce-error-response"></p>
-                      <p id="mce-success-response"></p>
+                      <p class="closed" id="mce-error-response"></p>
+                      <p class="closed" id="mce-success-response"></p>
                     </div>
-                  </div>
                 </div>    
 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -102,38 +91,26 @@
       }
 
     function removeHeartOpenModal() {
-      document.getElementById('form-submit').classList.remove("clicked");        
-      var modal = document.querySelector(".modal");
-      var modalOverlay = document.querySelector("#modal-overlay");
+      document.getElementById('form-submit').classList.remove("clicked");
+      }      
+      var mceError = document.querySelector("#mce-error-response");
+      var mceSuccess = document.querySelector("#mce-success-response");
       var closeButton = document.querySelector("#close-button");
       var openButton = document.querySelector("#mc-embedded-subscribe");
       
-        modal.classList.toggle("closed");
-        modalOverlay.classList.toggle("closed");
+      openButton.addEventListener("click", function() {
         closeButton.classList.toggle("closed");
-      }
+        mceSuccess.classList.toggle("closed");
+        mceError.classList.toggle("closed");
+      });
 
       closeButton.addEventListener("click", function() {
-        modal.classList.toggle("closed");
-        modalOverlay.classList.toggle("closed");
         closeButton.classList.toggle("closed");
+        mceSuccess.classList.toggle("closed");
+        mceError.classList.toggle("closed");
       });
 
-      modal.addEventListener("click", function() {
-        modalOverlay.classList.toggle("closed");
-        closeButton.classList.toggle("closed");
-        modal.classList.toggle("closed");
-      });
-
-      modalOverlay.addEventListener("click", function() {
-        modal.classList.toggle("closed");
-        modalOverlay.classList.toggle("closed");
-        closeButton.classList.toggle("closed");
-      });
 </script>
-          <div class="posts">
-            {{ content }}            
-          </div>
         </div>
       </div>
 
@@ -141,7 +118,7 @@
           <ul class="frow direction-row justify-around">
             <li>
               <p>Mike Peiman &copy 2017</p>
-              <p>Some more content</p>
+              <p>Email: love@mikepeiman.com</p>
             </li>
             <li><a href="#" aria-label="twitter">
                         <svg class="icon icon-twitter" aria-hidden="true">

@@ -146,6 +146,7 @@ a:visited { color: $third-accent; }
 
 .signup-form {
     list-style-type: none;
+    flex: 1;
     color: $main-black; // $main-white;
     background: $main-white;//$main-black;
     margin: 1em;
@@ -159,8 +160,6 @@ a:visited { color: $third-accent; }
     	padding: 0 1em .65em 1em;
     }
 }
-
-
 
 input {
 	appearance: none;
@@ -264,10 +263,6 @@ svg {
 	transition: all .25s;
 }
 
-.closed {
-	display: none;
-}
-
 .open {
 	display: block;
 }
@@ -276,20 +271,30 @@ svg {
 	display: block;
 	z-index: 3000;
 	position: relative;
-	top: 0;
-	left: 0;
+	top: 3.1em;
+	left: -1em;
 	color: $main-color;
 	font-weight: bold;
 	padding: .5em;
-	margin: -1px 0 -1.5em auto;
+	margin: 0 0 0 auto;
 	background: $main-grey;
 	border: none;
+	border-radius: 0 10px 0 10px;
 }
 
-#mce-success-response, #mce-error-response {
-	padding: 1.5em;
+p#mce-success-response, p#mce-error-response {
+	display: none;
+	padding: 1em;
+	margin: 1em;
+	border: 1px solid $second-color;
+	border-radius: 10px;
+	box-shadow: $card-shadow-grey;
 }
 
+.closed {
+	display: none;
+	content: "";
+}
 .whisper {
 	font-style: italic;
 	font-size: 90%;
@@ -412,6 +417,10 @@ nav {
 
   ul li {
   	padding-right: 2em;
+
+  	h1 {
+  		color: $main-accent;
+  	}
   }
 
 	ul li:first-child {

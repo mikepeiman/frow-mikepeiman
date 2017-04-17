@@ -114,6 +114,8 @@ a:visited {
 
 .signup-form {
   list-style-type: none;
+  -ms-flex: 1;
+      flex: 1;
   color: #1a1a1a;
   background: #fffcf2;
   margin: 1em;
@@ -228,9 +230,6 @@ svg {
   background: rgba(0, 0, 0, 0.75);
   transition: all .25s; }
 
-.closed {
-  display: none; }
-
 .open {
   display: block; }
 
@@ -238,17 +237,27 @@ svg {
   display: block;
   z-index: 3000;
   position: relative;
-  top: 0;
-  left: 0;
+  top: 3.1em;
+  left: -1em;
   color: #FFC100;
   font-weight: bold;
   padding: .5em;
-  margin: -1px 0 -1.5em auto;
+  margin: 0 0 0 auto;
   background: #808080;
-  border: none; }
+  border: none;
+  border-radius: 0 10px 0 10px; }
 
-#mce-success-response, #mce-error-response {
-  padding: 1.5em; }
+p#mce-success-response, p#mce-error-response {
+  display: none;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid #33E100;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px 1px #808080; }
+
+.closed {
+  display: none;
+  content: ""; }
 
 .whisper {
   font-style: italic;
@@ -360,6 +369,8 @@ nav {
         align-items: center; }
   nav ul li {
     padding-right: 2em; }
+    nav ul li h1 {
+      color: #b38700; }
   nav ul li:first-child {
     margin-right: auto;
     margin-left: 1.5em; }
