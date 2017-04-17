@@ -45,7 +45,7 @@
               <p>You'll receive the most useful and life-changing things I've ever learned and discovered. Plus occasional updates and cool stuff like that.</p>
 
 <!-- Begin MailChimp Signup Form -->
-              <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" novalidate>
+              <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank">
                 <div>
                   <input required type="text" name="FNAME" class="form-name input-field required" id="mce-FNAME" placeholder="First name" autocomplete="on">
                 </div>
@@ -67,7 +67,7 @@
 
                 <div class="button-heart form-submit" id="form-submit">
                   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-                  <svg class="icon icon-heart" aria-hidden="true">
+                  <svg class="icon icon-heart" id="icon-heart" aria-hidden="true">
                     <use xlink:href="/images/icons.svg#heart"></use>
                   </svg>
                 </div>
@@ -88,13 +88,14 @@
         console.log("submitButton submit");
         var mceError = document.querySelector("#mce-error-response");
         var mceSuccess = document.querySelector("#mce-success-response");
-        var closeButton = document.querySelector("#close-button");
         var submitButton = document.querySelector("#mc-embedded-subscribe");
+        var iconHeart = document.querySelector("#mc-embedded-subscribe");
 
-          submitButton.classList.toggle("clicked");
-          closeButton.classList.toggle("closed");
-          mceSuccess.classList.toggle("closed");
-          mceError.classList.toggle("closed");
+          iconHeart.classList.add("clicked");
+          setTimeout(function() {
+            iconHeart.classList.remove("clicked");
+            console.log('should be adding class "clicked" to submitButton');
+          }, 1500);      
       });
 
       var submitButton = document.querySelector("#mc-embedded-subscribe");
@@ -104,51 +105,34 @@
         var mceSuccess = document.querySelector("#mce-success-response");
         var closeButton = document.querySelector("#close-button");
         var submitButton = document.querySelector("#mc-embedded-subscribe");
+        var iconHeart = document.querySelector("#mc-embedded-subscribe");
 
-          submitButton.classList.toggle("clicked");
-          closeButton.classList.toggle("closed");
-          mceSuccess.classList.toggle("closed");
-          mceError.classList.toggle("closed");
-      });
-
-      var closeButton = document.querySelector("#close-button");
-      closeButton.addEventListener("click", function() {
-        console.log("closeButton click");
-        var mceError = document.querySelector("#mce-error-response");
-        var mceSuccess = document.querySelector("#mce-success-response");
-        var closeButton = document.querySelector("#close-button");
-        var submitButton = document.querySelector("#mc-embedded-subscribe");
-
-          mceSuccess.removeAttribute("style");
-          submitButton.classList.toggle("clicked");
-          closeButton.classList.toggle("closed");
-          mceSuccess.classList.toggle("closed");
-          mceError.classList.toggle("closed");
+          iconHeart.classList.add("clicked");
+          setTimeout(function() {
+            iconHeart.classList.remove("clicked");
+            console.log('should be adding class "clicked" to submitButton');
+          }, 1500);    
       });
 
       var mceSuccess = document.querySelector("#mce-success-response");
       mceSuccess.addEventListener("click", function() {
         console.log("mceSuccess click");
         var mceSuccess = document.querySelector("#mce-success-response");
-        var closeButton = document.querySelector("#close-button");
         var submitButton = document.querySelector("#mc-embedded-subscribe");
 
           mceSuccess.removeAttribute("style");
           submitButton.classList.toggle("clicked");
-          closeButton.classList.toggle("closed");
           mceSuccess.classList.toggle("closed");
       });
 
       var mceError = document.querySelector("#mce-error-response");
-      mceSuccess.addEventListener("click", function() {
+      mceError.addEventListener("click", function() {
         console.log("mceError click");
         var mceError = document.querySelector("#mce-error-response");
-        var closeButton = document.querySelector("#close-button");
         var submitButton = document.querySelector("#mc-embedded-subscribe");
 
           mceSuccess.removeAttribute("style");
           submitButton.classList.toggle("clicked");
-          closeButton.classList.toggle("closed");
           mceError.classList.toggle("closed");
       });
 /*

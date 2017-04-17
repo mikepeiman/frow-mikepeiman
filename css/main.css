@@ -241,20 +241,28 @@ p#mce-success-response, p#mce-error-response {
   border-radius: 10px;
   box-shadow: 0px 3px 5px 1px #808080; }
 
+p#mce-success-response:after, p#mce-error-response:after {
+  content: "(click to close)";
+  color: #26C3FF;
+  font-style: italic; }
+
 p:empty {
   display: none; }
 
 .closed {
   display: none; }
 
-.clicked svg {
+svg .icon-heart {
   -webkit-transform: translate(0, -40px);
           transform: translate(0, -40px);
   fill: red;
   transition: all .25s; }
 
-svg {
-  fill: transparent; }
+.clicked svg {
+  -webkit-transform: translate(0, -40px);
+          transform: translate(0, -40px);
+  fill: red;
+  transition: all .25s; }
 
 .button-heart svg {
   margin: -1.5em 0 0 5em;

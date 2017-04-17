@@ -271,6 +271,12 @@ p#mce-success-response, p#mce-error-response {
 	box-shadow: $card-shadow-grey;
 }
 
+p#mce-success-response:after, p#mce-error-response:after {
+  content: "(click to close)";
+  color: $third-color;
+  font-style: italic;
+}
+
 p:empty {
 	display: none;
 }
@@ -279,22 +285,25 @@ p:empty {
 	display: none;
 }
 
+svg .icon-heart {
+		transform: translate(0, -40px);
+		fill: red;
+		transition: all .25s;
+	}
+
 .clicked {
 	svg {
 		transform: translate(0, -40px);
-		fill: red; // rgba(0,0,0,0);
+		fill: red;
 		transition: all .25s;
 	}
-}
-
-svg {
-	fill: rgba(0,0,0,0);
 }
 
 .button-heart svg {
 	margin: -1.5em 0 0 5em;
 	padding: .25em 0 0 .35em;
 }
+
 .whisper {
 	font-style: italic;
 	font-size: 90%;
