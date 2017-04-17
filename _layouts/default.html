@@ -11,6 +11,7 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Arimo|Arvo|Cabin|Cabin+Sketch|Cantarell|Cantora+One|Dosis|Gudea|IM+Fell+English|IM+Fell+Great+Primer+SC|Karla|Kaushan+Script|Lato|Libre+Baskerville|Montserrat|Nunito|Oxygen|PT+Sans|Philosopher|Rajdhani|Raleway|Timmana|Ubuntu" rel="stylesheet"> -->
         <link rel="stylesheet" href="/css/main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <!--      <script src="/js/scripts.js"></script> -->
     </head> 
     <body>
         <nav class="frow">
@@ -52,8 +53,6 @@
               <h1>Share some love!</h1>
               <p>You'll receive the most useful and life-changing things I've ever learned and discovered. Plus occasional updates and cool stuff like that.</p>
 
-         <!--     <p class="whisper">(I'll even share my awesome pancake recipe, if you ask nicely...)</p> -->
-              
 <!-- Begin MailChimp Signup Form -->
               <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" novalidate>
                 <div>
@@ -72,7 +71,6 @@
                     </div>
                   </div>
                 </div>    
-
 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                   <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
@@ -84,9 +82,10 @@
                     <use xlink:href="/images/icons.svg#heart"></use>
                   </svg>
                 </div>
-
               </form>
             </div>
+
+<!--End mc_embed_signup-->
 
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
 </script>
@@ -95,6 +94,7 @@
 </script>
 
 <script>
+
     function addHeart() {
       var el = document.getElementById('form-submit');
       el.classList.toggle("clicked");
@@ -111,7 +111,7 @@
         modal.classList.toggle("closed");
         modalOverlay.classList.toggle("closed");
         closeButton.classList.toggle("closed");
-
+      }
 
       closeButton.addEventListener("click", function() {
         modal.classList.toggle("closed");
@@ -130,30 +130,7 @@
         modalOverlay.classList.toggle("closed");
         closeButton.classList.toggle("closed");
       });
-    }
-
-
 </script>
-<!--End mc_embed_signup-->
-
-<!-- keeping old signup form -->
-<!--
-
-              <form class="frow" action="https://getthefitness.us7.list-manage.com/subscribe/post" method="POST">
-                <input type="hidden" name="u" value="2e0789618f3335c1fdeae5f80">
-                <input type="hidden" name="id" value="f5d18d0c88">
-                <div class="form-name col-md-1-2">
-                    <input type="text" name="MERGE1" id="MERGE1" placeholder="First name" autocomplete="on">
-                </div>
-                <div class="form-email col-md-1-2">
-                    <input type="email" name="MERGE0" id="MERGE0" placeholder="Your best email" autocomplete="on">
-                </div>
-                <div>
-                  <input class="form-submit" type="submit" value="Sign up!"></input>
-                </div>
-              </form>
--->
-
           <div class="posts">
             {{ content }}            
           </div>

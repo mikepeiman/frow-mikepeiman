@@ -3,7 +3,6 @@ layout: post
 title:  "Jekyll included post"
 date:   2014-04-20 09:11:03
 thumbnail: http://lorempixel.com/output/business-q-c-50-50-6.jpg
-permalink: jekyll-included-post
 categories: jekyll update
 ---
 

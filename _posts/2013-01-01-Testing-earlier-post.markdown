@@ -7,4 +7,5 @@ permalink: time-travel
 categories: tech coding web-development
 ---
 
-TIME TRAVELLLLLL!!
+I'm going to try including some assets in blog posts, like this image:
+![Selfie](D:\Web\frow-mikepeiman\images\mike-1x1.jpg)
