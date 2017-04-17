@@ -217,25 +217,6 @@ input[type="submit"] {
 	}*/
 }
 
-
-.clicked {
-	svg {
-		transform: translate(0, -40px);
-		fill: red; // rgba(0,0,0,0);
-		transition: all .25s;
-	}
-}
-
-
-svg {
-	fill: rgba(0,0,0,0);
-}
-
-.button-heart svg {
-	margin: -1.5em 0 0 5em;
-	padding: .25em 0 0 .35em;
-}
-
 .modal {
 	display: block;
 	z-index: 2000;
@@ -283,7 +264,6 @@ svg {
 }
 
 p#mce-success-response, p#mce-error-response {
-	display: none;
 	padding: 1em;
 	margin: 1em;
 	border: 1px solid $second-color;
@@ -291,9 +271,29 @@ p#mce-success-response, p#mce-error-response {
 	box-shadow: $card-shadow-grey;
 }
 
+p:empty {
+	display: none;
+}
+
 .closed {
 	display: none;
-	content: "";
+}
+
+.clicked {
+	svg {
+		transform: translate(0, -40px);
+		fill: red; // rgba(0,0,0,0);
+		transition: all .25s;
+	}
+}
+
+svg {
+	fill: rgba(0,0,0,0);
+}
+
+.button-heart svg {
+	margin: -1.5em 0 0 5em;
+	padding: .25em 0 0 .35em;
 }
 .whisper {
 	font-style: italic;

@@ -191,19 +191,6 @@ input[type="submit"] {
 		transition: all .25s;
 	}*/ }
 
-.clicked svg {
-  -webkit-transform: translate(0, -40px);
-          transform: translate(0, -40px);
-  fill: red;
-  transition: all .25s; }
-
-svg {
-  fill: transparent; }
-
-.button-heart svg {
-  margin: -1.5em 0 0 5em;
-  padding: .25em 0 0 .35em; }
-
 .modal {
   display: block;
   z-index: 2000;
@@ -248,16 +235,30 @@ svg {
   border-radius: 0 10px 0 10px; }
 
 p#mce-success-response, p#mce-error-response {
-  display: none;
   padding: 1em;
   margin: 1em;
   border: 1px solid #33E100;
   border-radius: 10px;
   box-shadow: 0px 3px 5px 1px #808080; }
 
+p:empty {
+  display: none; }
+
 .closed {
-  display: none;
-  content: ""; }
+  display: none; }
+
+.clicked svg {
+  -webkit-transform: translate(0, -40px);
+          transform: translate(0, -40px);
+  fill: red;
+  transition: all .25s; }
+
+svg {
+  fill: transparent; }
+
+.button-heart svg {
+  margin: -1.5em 0 0 5em;
+  padding: .25em 0 0 .35em; }
 
 .whisper {
   font-style: italic;
