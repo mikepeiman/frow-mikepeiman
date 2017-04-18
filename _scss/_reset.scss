@@ -16,12 +16,7 @@ html { height: 100%; }
 
 body {
     background: $bg-image;
-    font-family: 'Raleway', 
-    'Cabin', 'Oxygen', 'Karla', 'Raleway', 'Arvo', 'Anonymous Pro', 
-		'PT Sans', 'Kaushan Script', 
-		'Rajdhani', 'Cantora One', 
-    'Cantarell', 'Philosopher', 'Nunito', 'Arimo', 'Libre Baskerville', 
-    'Timmana', 'IM Fell English', 'IM Fell Great Primer SC', 'Gudea','Lato', Helvetica, sans-serif;
+    font-family: 'Raleway', Helvetica, sans-serif;
     font-size: 1.25em;
     text-align: center;
     display: flex;
@@ -29,16 +24,36 @@ body {
     flex-direction: column;
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
    // font-weight: 400;
     font-family: 'Ubuntu';
 }
 
-h1 {
+h1, h2 {
 	font-family: 'Montserrat';
 	text-transform: uppercase;
 	font-weight: bold;
 	line-height: 1em;
+}
+
+.block-quote {
+	color: $main-grey;
+	font-family: 'Karla','IM Fell Great Primer SC','Philosopher','PT Sans','Nunito','Oxygen', 'Ubuntu';
+	font-weight: normal; 
+	width: 90%;
+	border-left: 5px solid $main-color;
+	margin: 0 0 .5em 1em;
+	background: rgba(0,0,0,0.05);
+	padding: .65em;
+}
+
+.small-image {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border: 2px solid $main-grey;
+	background: $site-img-1;
+	background-size: cover;
 }
 
 a         { 
@@ -146,6 +161,7 @@ a:visited { color: $third-accent; }
 
 .signup-form {
     list-style-type: none;
+    flex: 1;
     color: $main-black; // $main-white;
     background: $main-white;//$main-black;
     margin: 1em;
@@ -159,8 +175,6 @@ a:visited { color: $third-accent; }
     	padding: 0 1em .65em 1em;
     }
 }
-
-
 
 input {
 	appearance: none;
@@ -200,95 +214,101 @@ input[type="submit"] {
 	background: $third-accent;
 	border: 2px solid $third-color;
 	padding: .5em;
-	margin: 1.15em 0 1.4em 0;
+	margin: 1.15em 0 1.5em 0;
 	color: $main-white;
 	box-shadow: $card-shadow-black;
 	transition: all .25s;
-}
-
-.form-submit:hover {
-	background: $third-color;
-/*	input[type="submit"] {
-			padding-right: .75em;
-			transition: all .25s;
-	}
-	svg {
-		fill: red;
-		transition: all .25s;
-	}*/
-}
-
-
-.clicked {
-	svg {
-		transform: translate(0, -40px);
-		fill: red; // rgba(0,0,0,0);
-		transition: all .25s;
-	}
-}
-
-
-svg {
-	fill: rgba(0,0,0,0);
-}
-
-.button-heart svg {
-	margin: -1.5em 0 0 5em;
-	padding: .25em 0 0 .35em;
-}
-
-.modal {
-	display: block;
-	z-index: 2000;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
-  background: $main-white;
-  box-shadow: $card-shadow-black;
-  border: 5px solid $main-grey;
-  transition: all .25s;
-}
-
-.modal-overlay {
-	display: block;
 	z-index: 1000;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.75);
-	transition: all .25s;
+}
+
+p#mce-success-response, p#mce-error-response {
+	padding: 1em;
+	margin: 1em;
+	border: 1px solid $third-color;
+	border-radius: 10px;
+	box-shadow: $card-shadow-grey;
+	color: $main-color;
+	background: #666;
+}
+
+p#mce-success-response:after, p#mce-error-response:after {
+  content: "click to close";
+  color: $main-color;
+  font-style: italic;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: .5em auto 0 auto;
+  padding: 0.5em;
+  width: 10em;
+}
+
+p#mce-success-response:hover, p#mce-error-response:hover {
+  color: $third-color;
+  cursor: pointer;
+}
+
+p#mce-error-response a {
+	display: block;
+	margin: .5em;
+}
+
+p:empty {
+	display: none;
 }
 
 .closed {
 	display: none;
 }
 
-.open {
-	display: block;
+.parsley-required, .parsley-type {
+  color: $main-color;
 }
 
-.close-button {
-	display: block;
-	z-index: 3000;
-	position: relative;
-	top: 0;
-	left: 0;
-	color: $main-color;
-	font-weight: bold;
-	padding: .5em;
-	margin: -1px 0 -1.5em auto;
-	background: $main-grey;
-	border: none;
+#form-submit {
+	cursor: pointer;
+	svg {
+		width: 32px;
+		height: 32px;
+		margin: -1.5em auto 0;
+		padding: .25em 0 0 .35em;
+		fill: none;
+	}
 }
 
-#mce-success-response, #mce-error-response {
-	padding: 1.5em;
+.heart-shown {
+ #form-submit	svg {
+		fill: red;
+		transition: all .5s;
+	}
 }
+
+.button-heart svg {
+	margin: -1.5em auto 0;
+	padding: .25em 0 0 .35em;
+}
+
+/*
+#form-submit:hover {
+	background: $third-color;
+	svg {
+		transform: translate(0, -40px);
+		fill: red;
+		transition: all .25s;
+	}
+}*/
+/*
+#form-submit {
+	svg {
+		fill: none;
+		width: 32px;
+		height: 32px;
+		margin: -1.5em auto 0;
+		padding: .25em 0 0 .35em;
+		transition: transform .75s;
+	}
+}*/
+
 
 .whisper {
 	font-style: italic;
@@ -412,6 +432,10 @@ nav {
 
   ul li {
   	padding-right: 2em;
+
+  	h1 {
+  		color: $main-color;
+  	}
   }
 
 	ul li:first-child {
@@ -510,7 +534,7 @@ footer .rss {
 footer .rss img {
     border: 0;
 }
-
+/*
 .icon {
 	fill: rgba(0,0,0,0);
 	position: relative;
@@ -518,7 +542,7 @@ footer .rss img {
 	width: 32px;
 	height: 32px;
 	transition: all .25s;
-}		
+}		*/
 
 
 /*****************************************************************************/
@@ -593,7 +617,7 @@ footer .rss img {
 
 	.form-submit {
 		padding: .5em;
-		margin: .5em;
+		margin: .5em .5em 1.5em .5em;
 	}
 
 	.input-field::placeholder {
@@ -650,10 +674,6 @@ footer .rss img {
   .nav-menu li {
 	margin-bottom: .1em;
 	padding: 0;
-	}
-
-	.intro-text {
-		margin: 2em 0 0 0;
 	}
 
 	.posts {
