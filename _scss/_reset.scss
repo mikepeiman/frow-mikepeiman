@@ -299,18 +299,16 @@ p:empty {
   color: $main-color;
 }
 
-svg .icon-heart {
-		transform: translate(0, -40px);
-		fill: red;
-		transition: all .25s;
-	}
+#icon-heart {
+		fill: none;
+		width: 32px;
+		height: 32px;
+}
 
 .clicked {
-	svg {
 		transform: translate(0, -40px);
 		fill: red;
 		transition: all .25s;
-	}
 }
 
 .button-heart svg {
@@ -542,7 +540,7 @@ footer .rss {
 footer .rss img {
     border: 0;
 }
-
+/*
 .icon {
 	fill: rgba(0,0,0,0);
 	position: relative;
@@ -550,7 +548,7 @@ footer .rss img {
 	width: 32px;
 	height: 32px;
 	transition: all .25s;
-}		
+}		*/
 
 
 /*****************************************************************************/

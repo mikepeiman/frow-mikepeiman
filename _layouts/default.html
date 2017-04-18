@@ -88,7 +88,7 @@ $(function () {
     $('.bs-callout-warning').toggleClass('hidden', ok);
   })
   .on('form:submit', function() {
-    return false; // Don't submit form for this demo
+    return true; // Don't submit form for this demo
   });
 });
 </script>
@@ -99,15 +99,13 @@ $(function () {
 <script> 
       var submitButton = document.querySelector("#mc-embedded-subscribe");
       submitButton.addEventListener("submit", function() {
-        console.log("submitButton submit");
-        var mceError = document.querySelector("#mce-error-response");
-        var mceSuccess = document.querySelector("#mce-success-response");
+        console.log("submitButton enter key submit");
         var submitButton = document.querySelector("#mc-embedded-subscribe");
         var iconHeart = document.querySelector("#mc-embedded-subscribe");
 
           iconHeart.classList.add("clicked");
           setTimeout(function() {
-            iconHeart.classList.remove("clicked");
+            submitButton.classList.remove("clicked");
             console.log('should be adding class "clicked" to submitButton');
           }, 1500);      
       });
@@ -115,15 +113,12 @@ $(function () {
       var submitButton = document.querySelector("#mc-embedded-subscribe");
       submitButton.addEventListener("click", function() {
         console.log("submitButton click");
-        var mceError = document.querySelector("#mce-error-response");
-        var mceSuccess = document.querySelector("#mce-success-response");
-        var closeButton = document.querySelector("#close-button");
         var submitButton = document.querySelector("#mc-embedded-subscribe");
         var iconHeart = document.querySelector("#mc-embedded-subscribe");
 
           iconHeart.classList.add("clicked");
           setTimeout(function() {
-            iconHeart.classList.remove("clicked");
+            submitButton.classList.remove("clicked");
             console.log('should be adding class "clicked" to submitButton');
           }, 1500);    
       });
@@ -149,46 +144,6 @@ $(function () {
           submitButton.classList.toggle("clicked");
           mceError.classList.toggle("closed");
       });
-/*
-      var mceError = document.querySelector("#mce-error-response");
-      var mceSuccess = document.querySelector("#mce-success-response");
-      var closeButton = document.querySelector("#close-button");
-      var submitButton = document.querySelector("#mc-embedded-subscribe");
-      
-      submitButton.addEventListener("submit", function() {
-        submitButton.classList.toggle("clicked");
-        setTimeout(removeHeart, 1500);
-      });
-
-      function removeHeart() {          
-        $("#mc-embedded-subscribe").classList.remove("clicked");         
-        $("#close-button").classList.remove("closed");
-        $("#mce-success-response").classList.toggle("closed");
-        $("#mce-error-response").classList.toggle("closed");
-      }     
-
-      closeButton.addEventListener("click", function() {       
-        document.querySelector("#mce-error-response").attr("style").remove("style");
-        document.querySelector("#mce-success-response").attr("style").remove("style");
-        $("#close-button").classList.toggle("closed");
-        $("#mce-success-response").classList.toggle("closed");
-        $("#mce-error-response").classList.toggle("closed");
-      });
-/*
-  var mceMsgStyle = $(".mce-msg").attr("style");
-    $("submitButton").click(function() {
-      var mceMsg = document.querySelector(".mce-msg");
-      var mceMsg = $(this).next();
-   
-      if (mceMsg.attr("style") === mceMsgStyle ) {
-        mceMsg.removeAttr("style")
-      } else {
-        mceMsg.attr("style", mceMsgStyle);
-      }
-   
-      $("#log").html("mceMsg style is now " + mceMsg.attr("style"));
-      });
-*/
 </script>
 
 <script>

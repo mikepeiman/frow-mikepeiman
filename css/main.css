@@ -265,13 +265,12 @@ p:empty {
 .parsley-required {
   color: #FFC100; }
 
-svg .icon-heart {
-  -webkit-transform: translate(0, -40px);
-          transform: translate(0, -40px);
-  fill: red;
-  transition: all .25s; }
+#icon-heart {
+  fill: none;
+  width: 32px;
+  height: 32px; }
 
-.clicked svg {
+.clicked {
   -webkit-transform: translate(0, -40px);
           transform: translate(0, -40px);
   fill: red;
@@ -471,14 +470,15 @@ footer .rss {
 footer .rss img {
   border: 0; }
 
+/*
 .icon {
-  fill: transparent;
-  position: relative;
-  margin: -.5em auto .75em auto;
-  width: 32px;
-  height: 32px;
-  transition: all .25s; }
-
+	fill: rgba(0,0,0,0);
+	position: relative;
+	margin: -.5em auto .75em auto;
+	width: 32px;
+	height: 32px;
+	transition: all .25s;
+}		*/
 /*****************************************************************************/
 /*
 /* Posts
