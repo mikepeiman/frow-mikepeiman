@@ -106,6 +106,14 @@ a:visited {
   text-align: left;
   margin: 0 0 0 1.5em; }
 
+.blog-post li a {
+  text-decoration: none; }
+  .blog-post li a :hover {
+    color: #26C3FF; }
+
+.blog-post li a:hover {
+  color: #FFC100; }
+
 .blog-feed-thumbnail {
   margin: .6em 0 0 0; }
 

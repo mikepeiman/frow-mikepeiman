@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Mike Peiman | Love</title>
+    <title>
+      {% if page.title %}
+      {{ page.title }}
+      {% else %}
+      Mike Peiman | Thinker
+      {% endif %}
+    </title>
     <meta name="viewport" content="width=device-width">
 
     <!-- Custom CSS -->
@@ -38,149 +44,53 @@
             </div>
           </li>
           <li><a class="menu-item" id="home" href="/">Home</a></li>
-          <li><a class="menu-item" id="about" href="/">About</a></li>
-          <li><a class="menu-item" id="blog" href="/">Blog</a></li>
-          <li><a class="menu-item" id="work" href="/">Work</a></li>
-          <li><a class="menu-item" id="contact" href="/">Contact</a></li>
+          <li><a class="menu-item" id="about" href="/about.html">About</a></li>
+          <li><a class="menu-item" id="blog" href="/blog.html">Blog</a></li>
+          <li><a class="menu-item" id="work" href="/work.html">Work</a></li>
+          <li><a class="menu-item" id="contact" href="/contact.html">Contact</a></li>
         </ul>
       </nav>
-
+      
       <div class="frow site">
-        <div class="col-md-1-5">
-        </div>
-        <div class="col-md-2-5 intro-text">
-            <h1 class="greeting">HI. I'M MIKE.</h1>
-            <p>I'm a proud father, freelance web developer, and master pancake-maker. Seriously, you should try my pancakes. But only with real maple syrup.</p>
-            <p>I'm also many other things. I'm an expert-level snowboard instructor, a personal trainer, and a champion for health, wellness, and vitality.</p>
-            <p>I'm an advocate for sustainability, social and economic justice, and bringing a higher level of consciousness to life.</p>
-            <div class="frow direction-column hire-me folded-corner-left-green folded-corner-right-green">
-              <p>I'd love to help you and your team achieve success.</p>
-              <a href="#"><span class="hire-me-button">Hire me!</span></a>
-            </div>
-        </div>
-        <div class="frow col-md-2-5 direction-column">
 
-          <div class="signup-form">
-            <h1>Knowledge is power</h1>
-            <p>The best insights, resources, tools, and wisdom I've gleaned from my strange and wonderful journey in this life. You'll want to check this out.</p>
-<!-- Begin MailChimp Signup Form -->
-            <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" validate>
-              <div>
-                <input required type="text" name="FNAME" class="form-name input-field required form-control" id="mce-FNAME" placeholder="First name" autocomplete="on" required="">
-              </div>
-              <div>
-                <input required type="email" name="EMAIL" class="form-email input-field required form-control" id="mce-EMAIL" placeholder="Your best email" autocomplete="on" required="">
-              </div>
-              
-              <div id="mce-responses" class="clear">
-                  <div class="response">
-                    <p class="mce-msg" id="mce-error-response"></p>
-                    <p class="mce-msg" id="mce-success-response"></p>
-                  </div>
-              </div>    
-<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
-              </div>
+        {{ content }}
 
-              <div class="button-heart form-submit" id="form-submit">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-                <svg class="icon icon-heart" id="icon-heart" aria-hidden="true">
-                  <use xlink:href="/images/icons.svg#heart"></use>
-                </svg>
-              </div>
-            </form>
-          </div>
-
-<!--End mc_embed_signup-->
-
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
-</script>
-
-<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-</script>
-
-<script type="text/javascript">
-  $(function () {
-  $('#mc-embedded-subscribe-form').parsley().on('field:validated', function() {
-    var ok = $('.parsley-error').length === 0;
-    $('.bs-callout-info').toggleClass('hidden', !ok);
-    $('.bs-callout-warning').toggleClass('hidden', ok);
-  })
-  .on('form:submit', function() {
-    return true;
-  });
-  });
-</script>
-
-<script> 
-  var mceSuccess = document.querySelector("#mce-success-response");
-  mceSuccess.addEventListener("click", function() {
-    console.log("mceSuccess click");
-    var mceSuccess = document.querySelector("#mce-success-response");
-    var submitButton = document.querySelector("#mc-embedded-subscribe");
-
-      mceSuccess.removeAttribute("style");
-      mceSuccess.classList.toggle("closed");
-  });
-
-  var mceError = document.querySelector("#mce-error-response");
-  mceError.addEventListener("click", function() {
-    console.log("mceError click");
-    var mceError = document.querySelector("#mce-error-response");
-    var submitButton = document.querySelector("#mc-embedded-subscribe");
-
-      mceError.removeAttribute("style");
-      mceError.classList.toggle("closed");
-  });
-</script>
-
-<!--*********************************************************************************************************
-*
-* POSTS PANEL
-*
-***********************************************************************************************************-->
-
-          <div class="posts">
-            {{ content }}            
-          </div>
-        </div>
       </div>
 
-        <footer class="footer">
-      <ul class="frow direction-row justify-around">
-        <li>
-          <p>Mike Peiman &copy 2017</p>
-          <p><a href="mailto:love@mikepeiman.com">Send me some love!</a></p>
-        </li>
-        <li><a href="https://twitter.com/mikepeiman" target="_blank" aria-label="twitter">
-                    <svg class="icon icon-twitter" aria-hidden="true">
-                      <use xlink:href="/images/icons.svg#twitter"></use>
-                    </svg></a></li>
-        <li><a href="https://www.facebook.com/mikepeiman" target="_blank" aria-label="facebook">
-                    <svg class="icon icon-facebook" aria-hidden="true">
-                      <use xlink:href="/images/icons.svg#facebook"></use>
-                    </svg></a></li>
-        <li><a href="https://www.linkedin.com/in/mikepeiman" target="_blank" aria-label="linkedin">
-                    <svg class="icon icon-linkedin" aria-hidden="true">
-                      <use xlink:href="/images/icons.svg#linkedin"></use>
-                    </svg></a></li>
-        <li><a href="https://plus.google.com/u/0/+MikePeiman" target="_blank" aria-label="googleplus">
-                    <svg class="icon icon-googleplus" aria-hidden="true">
-                      <use xlink:href="/images/icons.svg#googleplus"></use>
-                    </svg></a></li>
-        <li><a href="https://github.com/mikepeiman" target="_blank" aria-label="github">
-                    <svg class="icon icon-github" aria-hidden="true">
-                      <use xlink:href="/images/icons.svg#github"></use>
-                    </svg></a></li>
-   <!--     <li><a href="#" aria-label="youtube">
-                    <svg class="icon icon-youtube" aria-hidden="true">
-                      <use xlink:href="/images/icons.svg#youtube"></use>
-                    </svg></a></li>
-        <li><a href="#" aria-label="pinterest">
-                    <svg class="icon icon-pinterest" aria-hidden="true">
-                      <use xlink:href="/images/icons.svg#pinterest"></use>
-                    </svg></a></li> -->
+      <footer class="footer">
+        <ul class="frow direction-row justify-around">
+          <li>
+            <p>Mike Peiman &copy 2017</p>
+            <p><a href="mailto:love@mikepeiman.com">Send me some love!</a></p>
+          </li>
+          <li><a href="https://twitter.com/mikepeiman" target="_blank" aria-label="twitter">
+                      <svg class="icon icon-twitter" aria-hidden="true">
+                        <use xlink:href="/images/icons.svg#twitter"></use>
+                      </svg></a></li>
+          <li><a href="https://www.facebook.com/mikepeiman" target="_blank" aria-label="facebook">
+                      <svg class="icon icon-facebook" aria-hidden="true">
+                        <use xlink:href="/images/icons.svg#facebook"></use>
+                      </svg></a></li>
+          <li><a href="https://www.linkedin.com/in/mikepeiman" target="_blank" aria-label="linkedin">
+                      <svg class="icon icon-linkedin" aria-hidden="true">
+                        <use xlink:href="/images/icons.svg#linkedin"></use>
+                      </svg></a></li>
+          <li><a href="https://plus.google.com/u/0/+MikePeiman" target="_blank" aria-label="googleplus">
+                      <svg class="icon icon-googleplus" aria-hidden="true">
+                        <use xlink:href="/images/icons.svg#googleplus"></use>
+                      </svg></a></li>
+          <li><a href="https://github.com/mikepeiman" target="_blank" aria-label="github">
+                      <svg class="icon icon-github" aria-hidden="true">
+                        <use xlink:href="/images/icons.svg#github"></use>
+                      </svg></a></li>
+     <!--     <li><a href="#" aria-label="youtube">
+                      <svg class="icon icon-youtube" aria-hidden="true">
+                        <use xlink:href="/images/icons.svg#youtube"></use>
+                      </svg></a></li>
+          <li><a href="#" aria-label="pinterest">
+                      <svg class="icon icon-pinterest" aria-hidden="true">
+                        <use xlink:href="/images/icons.svg#pinterest"></use>
+                      </svg></a></li> -->
       </ul>
     </footer>
   </body>
