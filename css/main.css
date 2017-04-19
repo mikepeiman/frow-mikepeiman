@@ -397,7 +397,6 @@ nav {
     margin-right: auto;
     margin-left: 1.5em; }
   nav a:hover {
-    color: #26C3FF;
     text-decoration: none; }
   nav .menu-item:hover {
     border-bottom: 5px solid #26C3FF;
@@ -411,6 +410,12 @@ nav {
   color: #fffcf2;
   text-decoration: none;
   display: block; }
+
+.menu-item.active {
+  border-bottom: 5px solid #26C3FF;
+  color: #fffcf2;
+  padding-bottom: 0.25em;
+  text-decoration: none; }
 
 .site-branding {
   -ms-flex-direction: column;

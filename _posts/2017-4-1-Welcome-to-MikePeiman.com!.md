@@ -3,7 +3,6 @@ layout: post
 title:  "Welcome to MikePeiman.com!"
 date:   2017-4-1 11:15:00
 thumbnail: http://lorempixel.com/output/food-q-c-50-50-5.jpg
-permalink: welcome-to-the-site
 categories: web-design launch welcome
 ---
 
