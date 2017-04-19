@@ -121,8 +121,8 @@ a:visited {
   font-size: .9em;
   line-height: 1.1em; }
 
-.posts ul li:nth-child(4) {
-  margin-bottom: 2em; }
+.posts:last-child {
+  padding-bottom: 2em; }
 
 .post-feed-date {
   color: #808080;

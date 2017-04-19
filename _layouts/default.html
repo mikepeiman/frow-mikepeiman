@@ -31,25 +31,8 @@
 </script> 
   </head>
     <body>
-      <nav class="frow">
-        <ul class="nav-menu">
-          <li>
-            <div class="site-branding">
-              <a href="http://www.mikepeiman.com">
-                <h1 class="site-title">MIKE PEIMAN</h1>
-              </a>
-              <p class="site-description">
-                <span id="father">Father</span>. <span id="thinker">Thinker</span>. <span id="developer">Developer</span>.
-              </p>
-            </div>
-          </li>
-          <li><a class="menu-item" id="home" href="/">Home</a></li>
-          <li><a class="menu-item" id="about" href="/about.html">About</a></li>
-          <li><a class="menu-item" id="blog" href="/blog.html">Blog</a></li>
-          <li><a class="menu-item" id="work" href="/work.html">Work</a></li>
-          <li><a class="menu-item" id="contact" href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+
+      {% include default-nav.html %}
       
       <div class="frow site">
 
@@ -57,41 +40,7 @@
 
       </div>
 
-      <footer class="footer">
-        <ul class="frow direction-row justify-around">
-          <li>
-            <p>Mike Peiman &copy 2017</p>
-            <p><a href="mailto:love@mikepeiman.com">Send me some love!</a></p>
-          </li>
-          <li><a href="https://twitter.com/mikepeiman" target="_blank" aria-label="twitter">
-                      <svg class="icon icon-twitter" aria-hidden="true">
-                        <use xlink:href="/images/icons.svg#twitter"></use>
-                      </svg></a></li>
-          <li><a href="https://www.facebook.com/mikepeiman" target="_blank" aria-label="facebook">
-                      <svg class="icon icon-facebook" aria-hidden="true">
-                        <use xlink:href="/images/icons.svg#facebook"></use>
-                      </svg></a></li>
-          <li><a href="https://www.linkedin.com/in/mikepeiman" target="_blank" aria-label="linkedin">
-                      <svg class="icon icon-linkedin" aria-hidden="true">
-                        <use xlink:href="/images/icons.svg#linkedin"></use>
-                      </svg></a></li>
-          <li><a href="https://plus.google.com/u/0/+MikePeiman" target="_blank" aria-label="googleplus">
-                      <svg class="icon icon-googleplus" aria-hidden="true">
-                        <use xlink:href="/images/icons.svg#googleplus"></use>
-                      </svg></a></li>
-          <li><a href="https://github.com/mikepeiman" target="_blank" aria-label="github">
-                      <svg class="icon icon-github" aria-hidden="true">
-                        <use xlink:href="/images/icons.svg#github"></use>
-                      </svg></a></li>
-     <!--     <li><a href="#" aria-label="youtube">
-                      <svg class="icon icon-youtube" aria-hidden="true">
-                        <use xlink:href="/images/icons.svg#youtube"></use>
-                      </svg></a></li>
-          <li><a href="#" aria-label="pinterest">
-                      <svg class="icon icon-pinterest" aria-hidden="true">
-                        <use xlink:href="/images/icons.svg#pinterest"></use>
-                      </svg></a></li> -->
-      </ul>
-    </footer>
+      {% include default-footer.html %}
+      
   </body>
 </html>
