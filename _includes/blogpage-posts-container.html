@@ -1,0 +1,28 @@
+<div class="frow direction-column centered">
+	<h1>LATEST ARTICLES</h1>
+		<div class="posts-container">
+	  <ul class="blog-post-feed">
+
+    {% for post in site.posts %}
+    	<li class="blogpage-post-feed-item">
+
+   <!-- <div class="col-md-1-8">
+     			<img class="blog-feed-thumbnail" src="{{ post.thumbnail }}" height="50" width="50">
+     		</div>
+     		<div class="col-md-7-8">  -->
+     			<a href="{{ post.url }}">
+     				<p class="post-feed-title">{{ post.title }}</p>
+     				<p class="post-feed-date">{{ post.date | date: "%B %d, %Y" }} &raquo; 
+	     				
+	     				{% if post.lead %}
+		     			<span class="post-lead">{{ post.lead }}</span>
+		     			{% endif %}
+
+		     		</p>
+	     		</a>
+      </li>
+    {% endfor %}
+
+  </ul>
+  </div>
+</div>

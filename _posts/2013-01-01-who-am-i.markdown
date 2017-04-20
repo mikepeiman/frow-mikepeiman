@@ -2,8 +2,7 @@
 layout: post
 title:  "Who am I?"
 date:   2013-1-1 11:15:00
-thumbnail: http://lorempixel.com/output/cats-q-c-50-50-1.jpg
-permalink: who-is-mike-peiman
+image: http://lorempixel.com/output/cats-q-c-50-50-1.jpg
 categories: mikepeiman
 ---
 

@@ -69,75 +69,6 @@ a:visited {
   -ms-flex: 1;
       flex: 1; }
 
-.posts {
-  list-style-type: none;
-  color: #1a1a1a;
-  background: #fffcf2;
-  margin: 1em;
-  padding: 0.25em 0 0 0;
-  line-height: 1.25em;
-  border-top: 5px solid #FFC100;
-  box-shadow: 0px 3px 5px 1px #808080; }
-
-.posts-container {
-  -ms-flex: 1;
-      flex: 1; }
-
-.posts h1 {
-  font-size: 2em;
-  font-weight: bold; }
-
-.posts li {
-  line-height: 1.75em; }
-
-.posts a {
-  text-decoration: none; }
-
-.posts a:hover {
-  text-decoration: none; }
-  .posts a:hover .post-feed-title {
-    color: #FFC100; }
-  .posts a:hover .post-excerpt {
-    color: #33E100; }
-  .posts a:hover .post-feed-thumbnail {
-    box-shadow: 0px 3px 5px 1px #808080; }
-
-.posts-container ul li {
-  text-align: left;
-  margin: 0 0 0 1.5em; }
-
-.blog-post li a {
-  text-decoration: none; }
-  .blog-post li a :hover {
-    color: #26C3FF; }
-
-.blog-post li a:hover {
-  color: #FFC100; }
-
-.blog-feed-thumbnail {
-  margin: .6em 0 0 0; }
-
-.posts-container ul li p {
-  font-size: .9em;
-  line-height: 1.1em; }
-
-.posts:last-child {
-  padding-bottom: 2em; }
-
-.post-feed-date {
-  color: #808080;
-  font-size: .8em;
-  font-family: 'PT Sans', monospace; }
-
-.post-feed-title {
-  color: #1a1a1a; }
-
-.posts a .post-excerpt {
-  color: #808080; }
-
-.category {
-  color: #009dd9; }
-
 .signup-form {
   list-style-type: none;
   -ms-flex: 1;
@@ -491,6 +422,110 @@ footer .rss img {
 /*
 /*****************************************************************************/
 /* standard */
+.post {
+  margin: 2em;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2em;
+  box-shadow: 0px 3px 5px 1px #808080; }
+
+.posts-container {
+  -ms-flex: 1;
+      flex: 1; }
+
+.homepage-posts-container {
+  list-style-type: none;
+  color: #fffcf2;
+  background: #1a1a1a;
+  margin: 1em;
+  padding: 0.25em 0 0 0;
+  line-height: 1.25em;
+  border-top: 5px solid #FFC100;
+  box-shadow: 0px 3px 5px 1px #808080;
+  -ms-flex: 1;
+      flex: 1; }
+
+.blog-posts-container {
+  list-style-type: none;
+  color: #fffcf2;
+  background: #1a1a1a;
+  margin: 1em;
+  padding: 0.25em 0 0 0;
+  line-height: 1.25em;
+  border-top: 5px solid #FFC100;
+  box-shadow: 0px 3px 5px 1px #808080;
+  -ms-flex: 1;
+      flex: 1; }
+
+.homepage-posts-container h1 {
+  font-size: 2em;
+  font-weight: bold; }
+
+.homepage-posts-container li {
+  line-height: 1.75em; }
+
+.homepage-posts-container a {
+  text-decoration: none;
+  color: #fffcf2; }
+
+.post-feed-arrow {
+  color: #33E100; }
+
+.homepage-posts-container a:hover {
+  text-decoration: none; }
+  .homepage-posts-container a:hover .post-feed-title {
+    color: #FFC100; }
+  .homepage-posts-container a:hover .post-feed-arrow {
+    color: #229500; }
+  .homepage-posts-container a:hover .post-feed-date {
+    color: #229500; }
+  .homepage-posts-container a:hover .post-excerpt {
+    color: #33E100; }
+  .homepage-posts-container a:hover .post-feed-thumbnail {
+    box-shadow: 0px 3px 5px 1px #808080; }
+
+.posts-container ul li {
+  text-align: left; }
+
+.blog-feed-thumbnail {
+  margin: .6em 0 0 0; }
+
+.posts-container ul li p {
+  font-size: .9em;
+  line-height: 1.1em; }
+
+.homepage-posts-container:last-child {
+  padding-bottom: 1.25em; }
+
+.post-feed-date {
+  color: #808080;
+  font-size: .95em;
+  text-align: left; }
+
+.post-feed-title {
+  color: #FFC100; }
+
+.homepage-posts-container a .post-excerpt {
+  color: #808080; }
+
+.category {
+  color: #009dd9; }
+
+.meta-date {
+  color: #FFC100;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1em;
+  box-shadow: 0px 3px 5px 1px #808080; }
+
+.blogpage-post-feed-item {
+  padding: .5em;
+  margin: 0 0 .5em 0; }
+
+.blogpage-post-feed-item:hover {
+  color: #229500; }
+
+.blog-post-feed-item:hover {
+  color: #26C3FF; }
+
 .post pre {
   border: 1px solid #808080;
   background-color: #fffcf2;
@@ -536,6 +571,10 @@ footer .rss img {
     background: #fffcf2; }
   nav ul li {
     padding-right: .75em; }
+  .menu-item.active {
+    border: none;
+    color: #26C3FF;
+    padding-bottom: 0; }
   .input-field {
     padding: .5em;
     margin: .5em; }
@@ -586,12 +625,12 @@ footer .rss img {
   .nav-menu li {
     margin-bottom: .1em;
     padding: 0; }
-  .posts {
+  .homepage-posts-container {
     margin: 0;
     font-size: 80%; }
-  .posts {
+  .homepage-posts-container {
     margin-top: 2em; }
-  .posts:last-child {
+  .homepage-posts-container:last-child {
     margin-bottom: 2em;
     padding-bottom: 2em; }
   footer ul li {
