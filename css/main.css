@@ -510,11 +510,24 @@ footer .rss img {
 .category {
   color: #009dd9; }
 
-.meta-date {
+.post-details {
   color: #FFC100;
   background: rgba(0, 0, 0, 0.7);
   padding: 1em;
   box-shadow: 0px 3px 5px 1px #808080; }
+
+.meta-date {
+  color: #FFC100;
+  margin-right: 1em;
+  text-align: left; }
+
+.meta-reading-time {
+  color: #33E100;
+  margin: 0 auto; }
+
+.meta-word-count {
+  color: #26C3FF;
+  margin-left: 1em; }
 
 .blogpage-post-feed-item {
   padding: .5em;
