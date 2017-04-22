@@ -452,17 +452,27 @@ footer .rss img {
   .post-header h1 {
     font-size: 4em;
     margin-bottom: 0;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    color: white; }
 
 .post-menu {
   background: transparent; }
   .post-menu h1 {
+    color: white; }
+  .post-menu a {
+    color: white; }
+  .post-menu .site-branding p {
     color: white; }
 
 .post-image {
   position: fixed;
   z-index: -1;
   width: 100%; }
+
+.header-alpha {
+  background: linear-gradient(rgba(0, 0, 255, 0.45), rgba(255, 0, 0, 0.45)), url(http://pipsum.com/1400x800.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
 
 .homepage-posts-container {
   list-style-type: none;
@@ -545,22 +555,32 @@ footer .rss img {
   color: #009dd9; }
 
 .post-details {
-  color: #FFC100;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 1em;
-  box-shadow: 0px 3px 5px 1px #808080; }
+  color: white;
+  padding: 1em; }
 
 .meta-date {
-  color: #FFC100;
+  color: white;
   margin-right: 1em;
   text-align: left; }
 
+.meta-date:after {
+  content: "\2219";
+  margin-left: 25px;
+  font-size: 40px;
+  vertical-align: middle; }
+
 .meta-reading-time {
-  color: #33E100;
+  color: white;
   margin: 0 auto; }
 
+.meta-reading-time:after {
+  content: "\2219";
+  margin-left: 25px;
+  font-size: 40px;
+  vertical-align: middle; }
+
 .meta-word-count {
-  color: #26C3FF;
+  color: white;
   margin-left: 1em; }
 
 .blog-post {

@@ -515,6 +515,7 @@ footer .rss img {
 		font-size: 4em;
 		margin-bottom: 0;
 		padding-bottom: 0;
+		color: white;
 	}
 }
 
@@ -523,12 +524,32 @@ footer .rss img {
 	h1 {
 		color: white;
 	}
+
+	a {
+		color: white;
+	}
+
+	.site-branding p {
+		color: white;
+	}
 }
 
 .post-image {
 	position: fixed;
 	z-index: -1;
 	width: 100%;
+
+}
+
+.header-alpha {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 255, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    url(http://pipsum.com/1400x800.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .homepage-posts-container {
@@ -640,25 +661,36 @@ footer .rss img {
 }
 
 .post-details {
-	color: $main-color;
-	background: rgba(0,0,0,0.7);
+	color: white;
 	padding: 1em;
-	box-shadow: $card-shadow-grey;
 }
 
 .meta-date {
-	color: $main-color;
+	color: white; //adjust-color($main-color, $lightness: 25%);
 	margin-right: 1em;
 	text-align: left;
 }
 
+.meta-date:after {
+		content: "\2219";
+		margin-left: 25px;
+		font-size: 40px;
+		vertical-align: middle;
+}
+
 .meta-reading-time {
-	color: $second-color;
+	color: white; // adjust-color($second-color, $lightness: 25%);
 	margin: 0 auto;
+}
+.meta-reading-time:after {
+		content: "\2219";
+		margin-left: 25px;
+		font-size: 40px;
+		vertical-align: middle;
 }
 
 .meta-word-count {
-	color: $third-color;
+	color: white; //adjust-color($third-color, $lightness: 25%);
 	margin-left: 1em;
 }
 

@@ -2,19 +2,20 @@
 layout: default-post
 ---
 
-<body class="body-post">
+<body class="body-post header-alpha">
+<!--
 			{% if page.image %}
 			<img class="post-image" src="{{ page.image }}" alt="{{ page.image }}">
 			{% endif %}
+-->
 <div class="frow direction-column site">
 		<div class="post-header column-centered"> 
 		<!--{% if page.image %}style="background: url({{ page.image }}) top left no-repeat" alt="{{ page.image }}"{% endif %}-->
 			<h1>{{ page.title }}</h1>
-			<p class="post-author">{{ page.author }}</p>
-
 			<p class="post-details">
 				<span class="meta-date">{{ page.date | date: "%B %d, %Y" }}</span>
-				<span class="meta-reading-time">Reading time: <span class="reading-time"></span></span>
+				<span class="meta-reading-time"><span class="reading-time"></span> read</span>
+				<span class="meta-author">{{ page.author }}</span>
 				<span class="meta-word-count"><span class="word-count"></span> words</span>
 			</p>
 		</div>
