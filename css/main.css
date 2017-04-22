@@ -12,7 +12,6 @@ html {
   height: 100%; }
 
 body {
-  background: url(../images/mikepeiman-site-bg-v2-white.png) left top no-repeat;
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 1.25em;
   text-align: center;
@@ -21,6 +20,15 @@ body {
   min-height: 100%;
   -ms-flex-direction: column;
       flex-direction: column; }
+
+.body-page {
+  background: white; }
+
+.first-column {
+  background: url(../images/mikepeiman-site-bg-v2-white.png) left top no-repeat;
+  margin: 1em 0;
+  border-top: 5px solid #FFC100;
+  box-shadow: 0px 3px 5px 1px #808080; }
 
 h3, h4, h5, h6 {
   font-family: 'Ubuntu'; }
@@ -309,9 +317,10 @@ p:empty {
 /*
 /*****************************************************************************/
 nav {
-  background: #1a1a1a;
-  padding-bottom: 0.25em;
-  border-bottom: 5px solid #26C3FF; }
+  background: none;
+  padding-bottom: 0.25em; }
+  nav .site-title {
+    color: black; }
   nav ul {
     display: -ms-flexbox;
     display: flex;
@@ -322,30 +331,34 @@ nav {
         align-items: center; }
   nav ul li {
     padding-right: 2em; }
-    nav ul li h1 {
-      color: #FFC100; }
   nav ul li:first-child {
     margin-right: auto;
     margin-left: 1.5em; }
   nav a:hover {
     text-decoration: none; }
-  nav .menu-item:hover {
-    border-bottom: 5px solid #26C3FF;
-    color: #fffcf2;
-    padding-bottom: 0.25em;
-    text-decoration: none; }
   nav ul {
     margin-right: 2em; }
 
 .nav-menu a {
-  color: #fffcf2;
+  color: black;
+  text-decoration: none;
+  display: block; }
+
+.nav-menu h1 {
+  color: black; }
+
+.menu-item {
+  color: black;
+  text-decoration: none;
+  display: block; }
+
+.menu-item:hover {
+  color: #FFC100;
   text-decoration: none;
   display: block; }
 
 .menu-item.active {
-  border-bottom: 5px solid #26C3FF;
-  color: #fffcf2;
-  padding-bottom: 0.25em;
+  color: #26C3FF;
   text-decoration: none; }
 
 .site-branding {
@@ -359,7 +372,7 @@ nav {
 
 .site-branding h1 {
   margin: 0.3em 0 0 0;
-  color: #fffcf2;
+  color: black;
   text-align: left; }
 
 .site-branding p {
@@ -370,6 +383,9 @@ nav {
 
 .meta {
   color: #808080; }
+
+.footer li p a {
+  text-decoration: none; }
 
 footer {
   color: #808080;
@@ -428,6 +444,26 @@ footer .rss img {
   box-shadow: 0px 3px 5px 1px #808080;
   overflow-wrap: break-word; }
 
+.post-header {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 100vh;
+  width: 100%; }
+  .post-header h1 {
+    font-size: 4em;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+
+.post-menu {
+  background: transparent; }
+  .post-menu h1 {
+    color: white; }
+
+.post-image {
+  position: fixed;
+  z-index: -1;
+  width: 100%; }
+
 .homepage-posts-container {
   list-style-type: none;
   color: #fffcf2;
@@ -451,29 +487,31 @@ footer .rss img {
   box-shadow: 0px 3px 5px 1px #808080;
   -ms-flex: 1;
       flex: 1; }
+  .blog-posts-container h1 {
+    padding: 0 1em; }
 
 .homepage-posts-container h1 {
   font-size: 2em;
   font-weight: bold; }
 
 .homepage-posts-container li {
-  line-height: 1.75em; }
+  padding-bottom: .5em; }
 
 .homepage-posts-container a {
   text-decoration: none;
-  color: #fffcf2; }
+  color: #808080; }
 
 .post-feed-arrow {
-  color: #33E100; }
+  color: #b38700; }
 
 .homepage-posts-container a:hover {
   text-decoration: none; }
   .homepage-posts-container a:hover .post-feed-title {
-    color: #FFC100; }
+    color: #fffcf2; }
   .homepage-posts-container a:hover .post-feed-arrow {
-    color: #229500; }
+    color: #FFC100; }
   .homepage-posts-container a:hover .post-feed-date {
-    color: #229500; }
+    color: #FFC100; }
   .homepage-posts-container a:hover .post-excerpt {
     color: #33E100; }
   .homepage-posts-container a:hover .post-feed-thumbnail {
@@ -524,6 +562,12 @@ footer .rss img {
 .meta-word-count {
   color: #26C3FF;
   margin-left: 1em; }
+
+.blog-post {
+  padding: 0 1em; }
+
+.blog-post-feed {
+  width: 100%; }
 
 .blogpage-post-feed-item {
   padding: .5em;
@@ -600,10 +644,12 @@ footer .rss img {
     background: #fffcf2; }
   nav ul li {
     padding-right: .75em; }
-  .menu-item.active {
+  .first-column {
     border: none;
-    color: #26C3FF;
-    padding-bottom: 0; }
+    box-shadow: none;
+    display: none;
+    margin: 0;
+    padding: 0; }
   .input-field {
     padding: .5em;
     margin: .5em; }
@@ -1532,10 +1578,6 @@ textarea:not(.reset) {
 @media (min-width: 768px) {
   .frow-container {
     max-width: 700px; } }
-
-@media (min-width: 992px) {
-  .frow-container {
-    max-width: 760px; } }
 
 @media (min-width: 1200px) {
   .frow-container {

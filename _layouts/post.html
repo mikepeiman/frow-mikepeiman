@@ -2,22 +2,28 @@
 layout: default-post
 ---
 
-	<article class="centered frow-container">
-		<h1>{{ page.title }}</h1>
-		<p class="post-author">{{ page.author }}</p>
-		{% if page.image %}
-		<img class="post-image" src="{{ page.image }}" alt="{{ page.image }}">
-		{% endif %}
-		<p class="post-details">
-			<span class="meta-date">{{ page.date | date: "%B %d, %Y" }}</span>
-			<span class="meta-reading-time">Reading time: <span class="reading-time"></span></span>
-			<span class="meta-word-count"><span class="word-count"></span> words</span>
-		</p>
+<body class="body-post">
+			{% if page.image %}
+			<img class="post-image" src="{{ page.image }}" alt="{{ page.image }}">
+			{% endif %}
+<div class="frow direction-column site">
+		<div class="post-header column-centered"> 
+		<!--{% if page.image %}style="background: url({{ page.image }}) top left no-repeat" alt="{{ page.image }}"{% endif %}-->
+			<h1>{{ page.title }}</h1>
+			<p class="post-author">{{ page.author }}</p>
 
+			<p class="post-details">
+				<span class="meta-date">{{ page.date | date: "%B %d, %Y" }}</span>
+				<span class="meta-reading-time">Reading time: <span class="reading-time"></span></span>
+				<span class="meta-word-count"><span class="word-count"></span> words</span>
+			</p>
+		</div>
+	<article class="centered frow-container">
 		<div class="post">
 		{{ content }}
 		<script>$('.post').readingTime();</script>
 		</div>
 	</article>
 	{% include subpage-signup.html %}
+</div>
 

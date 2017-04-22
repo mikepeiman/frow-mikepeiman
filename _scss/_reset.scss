@@ -15,13 +15,23 @@
 html { height: 100%; }
 
 body {
-    background: $bg-image;
     font-family: 'Raleway', Helvetica, sans-serif;
     font-size: 1.25em;
     text-align: center;
     display: flex;
     min-height: 100%;
     flex-direction: column;
+}
+
+.body-page {
+	background: white; //$bg-image;
+}
+
+.first-column {
+	background: $bg-image;
+	margin: 1em 0;
+	border-top: 5px solid $main-color;
+	box-shadow: $card-shadow-grey;
 }
 
 h3, h4, h5, h6 {
@@ -337,10 +347,12 @@ p:empty {
 /*****************************************************************************/
 
 nav {
-  background: $main-black;
+  background: none;
   padding-bottom: 0.25em;
-  border-bottom: 5px solid $third-color;
-
+ // border-bottom: 5px solid $third-color;
+	.site-title {
+		color: black;
+	}
   ul {
   	display: flex;
   	justify-content: flex-end; // space-around;
@@ -350,10 +362,6 @@ nav {
 
   ul li {
   	padding-right: 2em;
-
-  	h1 {
-  		color: $main-color;
-  	}
   }
 
 	ul li:first-child {
@@ -365,28 +373,38 @@ nav {
   text-decoration: none;
 	}
 
-	.menu-item:hover {
-	  border-bottom: 5px solid $third-color;
-	  color: $main-white;
-	  padding-bottom: 0.25em;
-	  text-decoration: none;
-	}
-
 	ul {
 		margin-right: 2em;
 	}
 }
 
-.nav-menu a {
-	color: $main-white;
+
+.nav-menu {
+	a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	}
+	h1 {
+		color: black;
+	}
+}
+.menu-item {
+	color: black;
+	text-decoration: none;
+	display: block;
+}
+
+.menu-item:hover {
+	color: $main-color;
 	text-decoration: none;
 	display: block;
 }
 
 .menu-item.active {
-	  border-bottom: 5px solid $third-color;
-	  color: $main-white;
-	  padding-bottom: 0.25em;
+	 // border-bottom: 5px solid $third-color;
+	  color: $third-color;
+	 // padding-bottom: 0.25em;
 	  text-decoration: none;
 }
 
@@ -401,7 +419,7 @@ nav {
 
 .site-branding h1 {
 	margin: 0.3em 0 0 0;
-	color: $main-white;
+	color:black;
 	text-align: left;
 }
 
@@ -414,6 +432,10 @@ nav {
 
 .meta {
     color: $main-grey;
+}
+
+.footer li p a {
+		text-decoration: none;
 }
 
 footer {
@@ -484,6 +506,31 @@ footer .rss img {
 	overflow-wrap: break-word;
 }
 
+.post-header {
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+
+	h1 {
+		font-size: 4em;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+.post-menu {
+	background: rgba(0,0,0,0);
+	h1 {
+		color: white;
+	}
+}
+
+.post-image {
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+}
+
 .homepage-posts-container {
     list-style-type: none;
     color: $main-white;
@@ -506,8 +553,11 @@ footer .rss img {
     border-top: 5px solid $main-color;
     box-shadow: $card-shadow-grey;
     flex: 1;
-}
 
+    h1 {
+    	padding: 0 1em;
+    }
+}
 
 .homepage-posts-container h1 {
 	font-size: 2em;
@@ -515,31 +565,31 @@ footer .rss img {
 }
 
 .homepage-posts-container li {
-    line-height: 1.75em;
+    padding-bottom: .5em;
 }
 
 .homepage-posts-container a {
 	text-decoration: none;
-	color: $main-white;
+	color: $main-grey;
 }
 
 .post-feed-arrow {
-		color: $second-color;
+		color: $main-accent;
 }
 
 .homepage-posts-container a:hover {
 	text-decoration: none;
 
 	.post-feed-title {
-		color: $main-color;
+		color: $main-white;
 	}
 
 	.post-feed-arrow {
-		color: $second-accent;
+		color: $main-color;
 	}
 
 	.post-feed-date {
-		color: $second-accent;
+		color: $main-color;
 	}
 
 	.post-excerpt {
@@ -610,6 +660,14 @@ footer .rss img {
 .meta-word-count {
 	color: $third-color;
 	margin-left: 1em;
+}
+
+.blog-post {
+	padding: 0 1em;
+}
+
+.blog-post-feed {
+	width: 100%;
 }
 
 .blogpage-post-feed-item {
@@ -707,10 +765,12 @@ footer .rss img {
   	padding-right: .75em;
   }
 
-  .menu-item.active {
-  		border: none;
-  		color: $third-color;
-  		padding-bottom: 0;
+  .first-column {
+  	border: none;
+  	box-shadow: none;
+  	display: none;
+  	margin: 0;
+  	padding: 0;
   }
 
 	.input-field {
