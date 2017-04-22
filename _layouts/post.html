@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: default-post
 ---
-<div class="frow row-centered">
-	<article class="col-md-3-5">
+
+	<article class="centered frow-container">
 		<h1>{{ page.title }}</h1>
 		<p class="post-author">{{ page.author }}</p>
 		{% if page.image %}
@@ -19,4 +19,5 @@ layout: default
 		<script>$('.post').readingTime();</script>
 		</div>
 	</article>
-</div>
+	{% include subpage-signup.html %}
+

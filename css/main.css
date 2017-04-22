@@ -423,14 +423,10 @@ footer .rss img {
 /*****************************************************************************/
 /* standard */
 .post {
-  margin: 2em;
-  background: rgba(0, 0, 0, 0.05);
-  padding: 2em;
-  box-shadow: 0px 3px 5px 1px #808080; }
-
-.posts-container {
-  -ms-flex: 1;
-      flex: 1; }
+  background: #fffcf2;
+  padding: .75em;
+  box-shadow: 0px 3px 5px 1px #808080;
+  overflow-wrap: break-word; }
 
 .homepage-posts-container {
   list-style-type: none;
@@ -542,7 +538,8 @@ footer .rss img {
 .post pre {
   border: 1px solid #808080;
   background-color: #fffcf2;
-  padding: 0 .4em; }
+  padding: 0 .4em;
+  overflow-wrap: break-word; }
 
 .post ul, .post ol {
   margin-left: 1.35em; }
@@ -550,7 +547,8 @@ footer .rss img {
 .post code {
   border: 1px solid #808080;
   background-color: #fffcf2;
-  padding: 0 .2em; }
+  padding: 0 .2em;
+  overflow-wrap: break-word; }
 
 .post pre code {
   border: none; }
@@ -563,6 +561,24 @@ footer .rss img {
 
 .post pre.terminal code {
   background-color: #808080; }
+
+.post ul li {
+  list-style-type: disc;
+  text-align: left;
+  overflow-wrap: break-word;
+  margin-left: .75em; }
+
+.post ul li:last-of-type {
+  margin-bottom: 1em; }
+
+.post ol li {
+  list-style-type: disc;
+  text-align: left;
+  overflow-wrap: break-word;
+  margin-left: .75em; }
+
+.post ol li:last-of-type {
+  margin-bottom: 1em; }
 
 /*****************************************************************************/
 /*
@@ -642,7 +658,7 @@ footer .rss img {
     margin: 0;
     font-size: 80%; }
   .homepage-posts-container {
-    margin-top: 2em; }
+    margin: 2em 1em; }
   .homepage-posts-container:last-child {
     margin-bottom: 2em;
     padding-bottom: 2em; }
@@ -661,6 +677,17 @@ footer .rss img {
 /*
 /*****************************************************************************/
 @media all and (max-width: 480px) {
+  .hire-me {
+    margin: 0 .75em 2em .75em;
+    padding-top: 1.75em;
+    background: #1a1a1a;
+    position: relative;
+    box-shadow: 0px 3px 5px 1px #808080; }
+  .posts-container {
+    padding: 1em 2em;
+    margin: 1em; }
+    .posts-container h1 {
+      width: 90%; }
   footer ul {
     padding-right: 0; }
   footer ul li:nth-child(2) {
@@ -1504,18 +1531,15 @@ textarea:not(.reset) {
 
 @media (min-width: 768px) {
   .frow-container {
-    width: 750px;
-    background: blue; } }
+    max-width: 700px; } }
 
 @media (min-width: 992px) {
   .frow-container {
-    width: 970px;
-    background: red; } }
+    max-width: 760px; } }
 
 @media (min-width: 1200px) {
   .frow-container {
-    width: 1170px;
-    background: green; } }
+    max-width: 800px; } }
 
 .frow {
   display: -ms-flexbox;

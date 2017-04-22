@@ -478,14 +478,10 @@ footer .rss img {
 /* standard */
 
 .post {
-	margin: 2em;
-	background: rgba(0,0,0,0.05);
-	padding: 2em;
+	background: $main-white;
+	padding: .75em;
 	box-shadow: $card-shadow-grey;
-}
-
-.posts-container {
-	flex: 1;
+	overflow-wrap: break-word;
 }
 
 .homepage-posts-container {
@@ -501,7 +497,7 @@ footer .rss img {
 }
 
 .blog-posts-container {
-	   list-style-type: none;
+	  list-style-type: none;
     color: $main-white;
     background: $main-black;
     margin: 1em;
@@ -633,6 +629,7 @@ footer .rss img {
     border: 1px solid $main-grey;
     background-color: $main-white;
     padding: 0 .4em;
+    overflow-wrap: break-word;
 }
 
 .post ul, .post ol {
@@ -643,6 +640,7 @@ footer .rss img {
     border: 1px solid $main-grey;
     background-color: $main-white;
     padding: 0 .2em;
+    overflow-wrap: break-word;
 }
 
 .post pre code {
@@ -658,6 +656,28 @@ footer .rss img {
 
 .post pre.terminal code {
     background-color: $main-grey;
+}
+
+.post ul li {
+	list-style-type: disc;
+	text-align: left;
+	overflow-wrap: break-word;
+	margin-left: .75em;
+}
+
+.post ul li:last-of-type {
+	margin-bottom: 1em;
+}
+
+.post ol li {
+	list-style-type: disc;
+	text-align: left;
+	overflow-wrap: break-word;
+	margin-left: .75em;
+}
+
+.post ol li:last-of-type {
+	margin-bottom: 1em;
 }
 
 /*****************************************************************************/
@@ -765,7 +785,7 @@ footer .rss img {
 	}
 	
 	.homepage-posts-container {
-		margin-top: 2em;
+		margin: 2em 1em;
 	}
 
 	.homepage-posts-container:last-child {
@@ -795,6 +815,24 @@ footer .rss img {
 /*****************************************************************************/
 
 @media all and (max-width: 480px) {
+
+.hire-me {
+	margin: 0 .75em 2em .75em;
+	padding-top: 1.75em;
+	background: $main-black;
+	position: relative;
+  //-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+  //-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+  box-shadow: $card-shadow-grey; //3px 5px 5px rgba(0,0,0,0.8);
+}
+
+	.posts-container {
+		padding: 1em 2em;
+		margin: 1em;
+		h1 {
+			width: 90%;
+		}
+	}
 
 	footer ul {
 		padding-right: 0;

@@ -1,0 +1,19 @@
+<nav class="frow">
+  <ul class="nav-menu post-menu">
+    <li>
+      <div class="site-branding">
+        <a href="http://www.mikepeiman.com">
+          <h1 class="site-title">MIKE PEIMAN</h1>
+        </a>
+        <p class="site-description">
+          <span id="father">Father</span>. <span id="thinker">Thinker</span>. <span id="developer">Developer</span>.
+        </p>
+      </div>
+    </li>
+    <li><a {% if page.url == "/" %}class="menu-item active"{% endif %} class="menu-item" id="home" href="/">Home</a></li>
+    <li><a {% if page.url == "/about.html" %}class="menu-item active"{% endif %} class="menu-item" id="about" href="/about.html">About</a></li>
+    <li><a {% if page.url == "/blog.html" %}class="menu-item active"{% endif %} class="menu-item" id="blog" href="/blog.html">Blog</a></li>
+    <li><a {% if page.url == "/work.html" %}class="menu-item active"{% endif %} class="menu-item" id="work" href="/work.html">Work</a></li>
+    <li><a {% if page.url == "/contact.html" %}class="menu-item active"{% endif %} class="menu-item" id="contact" href="/contact.html">Contact</a></li>
+  </ul>
+</nav>

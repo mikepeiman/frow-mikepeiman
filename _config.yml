@@ -1,5 +1,5 @@
 title: Mike Peiman | Better
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 description: "My name is Mike Peiman, and I develop ideas, websites, and human potential. I blog about lifehacking, 
