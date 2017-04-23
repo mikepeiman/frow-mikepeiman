@@ -1,0 +1,48 @@
+- image: "http://pipsum.com/200x100.jpg"
+  title: "SOLVE Ghana Inc"
+  content: "Excelled as Operations Manager and co-designer of aquaponics grow systems, 
+  I also supervised daily labor and operations, procurement, research and development."
+  categories:
+  - Hardware Systems Design
+  - Operations Management
+  - Research
+
+- image: "http://pipsum.com/200x100.jpg"
+  title: "Tulip Electronics Inc"
+  content: "In addition to building a new website and conducting digital marketing campaigns, 
+  increased sales 30% and collected 20% of annual revenue in multi-year accounts receivable."
+  categories:
+  - Web Design
+  - Photography
+  - Copywriting
+  - Business Strategy
+
+- image: "http://pipsum.com/200x100.jpg"
+  title: "International Humanitarian Services"
+  content: "Conducted professional research to recruit speakers for high-level NGO think tank on
+  disaster response and preparedness."
+  categories:
+  - Professional Research
+
+- image: "http://pipsum.com/200x100.jpg"
+  title: "Whistler-Blackcomb"
+  content: "Worked ten seasons total as a snowboard instructor, attaining my expert-Level Three certification
+  in my fourth season teaching."
+  categories:
+  - Teaching
+  - Customer Service
+
+- image: "http://pipsum.com/200x100.jpg"
+  title: "Clean Tech Trade Alliance"
+  content: "Conducted research to discover and recruit leading-edge clean-tech companies for membership in
+  this unique consortium of sustainable businesses."
+  categories:
+  - Technology Research
+  - Customer Accounts
+
+- image: "http://pipsum.com/200x100.jpg"
+  title: "CASI-ACMS"
+  content: "Conducted and evaluated courses training and certifying Level One Snowboard Instructors."
+  categories:
+  - Teaching
+  - Leadership

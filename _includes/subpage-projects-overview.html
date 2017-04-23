@@ -1,1 +1,16 @@
 <h1>My projects</h1>
+<div class="frow portfolio-page">
+	{% for item in site.data.portfolio %}
+		<div class="frow portfolio-item col-md-2-7">
+			<img src="{{ item.image }}" class="portfolio-thumbnail">
+			<h2>{{ item.title }}</h2>
+
+			<p>{{ item.content }}</p>
+			<ul>
+				{% for category in item.categories %}
+				<li>{{ category }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+ 	{% endfor %}
+	</div>

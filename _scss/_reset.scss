@@ -501,10 +501,9 @@ footer .rss img {
 /* standard */
 
 .post {
-	background: $main-white;
 	padding: .75em;
-	box-shadow: $card-shadow-grey;
-	overflow-wrap: break-word;
+	line-height: 1.5em;
+	text-align: left;
 }
 
 .post-header {
@@ -518,6 +517,15 @@ footer .rss img {
 		padding-bottom: 0;
 		color: white;
 	}
+}
+
+.stag-dropcap {
+	font-size: 125px;
+	line-height: 125px;
+	width: 125px;
+	height: 125px;
+	background: $main-black;
+	color: white;
 }
 
 .post-menu {
@@ -540,6 +548,28 @@ footer .rss img {
 	z-index: -1;
 	width: 100%;
 
+}
+
+.further-reading-section {
+	margin: 1em;
+	padding: 1em;
+	background: $main-black;
+	color: $main-white;
+}
+.page-categories-section {
+	margin: 1em;
+	padding: 1em;
+	background: adjust-color($main-black, $lightness: -15%);
+	color: $main-color;
+	li {
+		padding: .5em 1em;
+	}
+}
+.related-posts-section {
+	margin: 1em;
+	padding: 1em;
+	background: adjust-color($main-black, $lightness: -30%);
+	color: $main-white;
 }
 
 .homepage-posts-container {
@@ -765,6 +795,19 @@ footer .rss img {
 .post ol li:last-of-type {
 	margin-bottom: 1em;
 }
+
+/*****************************************************************************/
+/*
+/* PORTFOLIO
+/*
+/*****************************************************************************/
+
+.portfolio-item {
+	background: rgba(0,0,0,0.2);
+	padding: 1.5em;
+	margin: 1em;
+}
+
 
 /*****************************************************************************/
 /*

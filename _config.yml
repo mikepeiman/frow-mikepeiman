@@ -6,4 +6,14 @@ description: "My name is Mike Peiman, and I develop ideas, websites, and human p
 technology, philosophy, relationships, fitness, and many other subjects. 
 I love to help people, and my life's goal is to leave the world at least a little better than I found it."
 twitter_username: 
-github_username: 
+github_username:
+permalink: none
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Mike Peiman"
