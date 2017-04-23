@@ -1,5 +1,15 @@
-<h1>My projects</h1>
+<h1>Portfolio from JSON</h1>
 <div class="frow portfolio-page">
+<div class="projects-menu frow justify-around">
+	<ul>
+		<li class="filter" data-filter="all">All</li>
+		{% assign filters = site.data.portfolio | group_by: 'category' %}
+		{% for filter in filters %}
+		<li class="filter" data-filter=".{{ filter.name }}">{{ filter.name }}</li>
+		{% endfor %}
+	</ul>
+</div>
+
 	{% for item in site.data.portfolio %}
 		<div class="frow portfolio-item col-md-2-7">
 			<img src="{{ item.image }}" class="portfolio-thumbnail">

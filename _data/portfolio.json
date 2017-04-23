@@ -1,0 +1,20 @@
+[
+{
+	"category": "Web Design",
+	"img": "images/image.jpg",
+	"title": "Tulip Electronics Inc",
+	"content": "Some description of the work I did"
+},
+{
+	"category": "Snowboarding",
+	"img": "images/image.jpg",
+	"title": "Whistler-Blackcomb Inc",
+	"content": "I shredded the gnar like a boss"
+},
+{
+	"category": "Truth Speaking",
+	"img": "images/image.jpg",
+	"title": "Warrior of Truth and Love",
+	"content": "I am uniting truth and love into a philosophy of thriving"
+},
+]
