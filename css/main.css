@@ -366,18 +366,19 @@ nav {
       flex-direction: column;
   -ms-flex: 1;
       flex: 1;
-  margin-top: 1.5em; }
+  margin: .5em 0 0 1.25em; }
 
 .site-branding a {
   text-decoration: none; }
 
 .site-branding h1 {
-  margin: 0.3em 0 0 0;
+  margin: 0.3em 1.5em 0 0;
   color: black;
-  text-align: left; }
+  text-align: left;
+  font-size: 2.25em; }
 
 .site-branding p {
-  margin: 0 0 1.25em 0;
+  margin: 0 0 1.25em 0.1em;
   font-size: 1em;
   color: #26C3FF;
   text-align: left; }
@@ -476,6 +477,16 @@ footer .rss img {
   position: fixed;
   z-index: -1;
   width: 100%; }
+
+.underneath-post {
+  margin: 1em; }
+
+.disqus-comments {
+  margin: 1em;
+  padding: 2em;
+  background: #ffefbd;
+  border-radius: 15px;
+  border: 5px solid #FFC100; }
 
 .further-reading-section {
   margin: 1em;
@@ -589,8 +600,7 @@ footer .rss img {
 
 .meta-date {
   color: white;
-  margin-right: .25em;
-  text-align: left; }
+  margin-right: .25em; }
 
 .meta-date:after {
   content: "\2219";
@@ -734,14 +744,50 @@ footer .rss img {
     /* On small screens, we are no longer using row direction but column */
     -ms-flex-direction: column;
         flex-direction: column;
-    background: url(../images/mikepeiman-site-bg-v3-dark.png) left center no-repeat #1a1a1a;
-    border-bottom: 5px solid #26C3FF; }
+    background: black;
+    border-bottom: 5px solid #26C3FF;
+    color: white; }
+  .post-header h1 {
+    font-size: 2em; }
+  .post-details {
+    color: white;
+    padding: .25em;
+    border: 2px solid #1a1a1a;
+    border-radius: 1.5em;
+    margin: 1em auto 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    line-height: 1.25em;
+    font-size: .9em; }
+    .post-details .meta-date {
+      color: white;
+      margin: .25em 0 0 0;
+      text-align: center; }
+    .post-details .meta-date:after {
+      content: ""; }
+    .post-details .meta-reading-time {
+      color: white;
+      margin: .25em 0 0 0;
+      text-align: center; }
+    .post-details .meta-reading-time:after {
+      content: ""; }
+    .post-details .meta-author {
+      color: white;
+      margin: .25em 0 0 0;
+      text-align: center; }
+    .post-details .meta-word-count {
+      color: white;
+      margin: .25em 0 0 0;
+      text-align: center; }
   .site-branding {
-    background: rgba(0, 27, 38, 0.35);
+    background: rgba(0, 175, 242, 0.35);
     padding: 5px;
     margin-bottom: 2em;
     border-radius: 5px;
-    border-bottom: 5px solid #26C3FF; }
+    box-shadow: 0 0 3px .5px white;
+    -ms-flex-pack: center;
+        justify-content: center; }
   .site-branding h1 {
     text-align: center; }
   .site-branding p {
@@ -751,6 +797,8 @@ footer .rss img {
     width: 95%;
     margin-top: .75em;
     margin-bottom: .75em; }
+    .nav-menu a {
+      color: white; }
     .nav-menu a:hover {
       color: #26C3FF;
       text-decoration: none;
@@ -788,6 +836,12 @@ footer .rss img {
     background: #1a1a1a;
     position: relative;
     box-shadow: 0px 3px 5px 1px #808080; }
+  .underneath-post {
+    margin: 2em 0 0 0; }
+  .frow-container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px; }
   .posts-container {
     padding: 1em 2em;
     margin: 1em; }
@@ -1630,13 +1684,13 @@ textarea:not(.reset) {
 
 .frow-container {
   margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+  margin-left: auto; }
 
 @media (min-width: 768px) {
   .frow-container {
-    max-width: 700px; } }
+    max-width: 700px;
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media (min-width: 1200px) {
   .frow-container {

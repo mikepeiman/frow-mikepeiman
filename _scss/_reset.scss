@@ -411,7 +411,7 @@ nav {
 .site-branding {
 	flex-direction: column;
 	flex: 1;
-	margin-top: 1.5em;
+	margin: .5em 0 0 1.25em;
 }
 
 .site-branding a {
@@ -419,13 +419,14 @@ nav {
 }
 
 .site-branding h1 {
-	margin: 0.3em 0 0 0;
+	margin: 0.3em 1.5em 0 0;
 	color:black;
 	text-align: left;
+	font-size: 2.25em;
 }
 
 .site-branding p {
-	margin: 0 0 1.25em 0;
+	margin: 0 0 1.25em 0.1em;
 	font-size: 1em;
 	color: $third-color;
 	text-align: left;
@@ -547,7 +548,18 @@ footer .rss img {
 	position: fixed;
 	z-index: -1;
 	width: 100%;
+}
 
+.underneath-post {
+	margin: 1em;
+}
+
+.disqus-comments {
+	margin: 1em;
+	padding: 2em;
+	background: adjust-color($main-color, $lightness: 37%);
+	border-radius: 15px;
+	border: 5px solid $main-color;
 }
 
 .further-reading-section {
@@ -556,6 +568,7 @@ footer .rss img {
 	background: $main-black;
 	color: $main-white;
 }
+
 .page-categories-section {
 	margin: 1em;
 	padding: 1em;
@@ -694,7 +707,6 @@ footer .rss img {
 .meta-date {
 	color: white; //adjust-color($main-color, $lightness: 25%);
 	margin-right: .25em;
-	text-align: left;
 }
 
 .meta-date:after {
@@ -870,33 +882,79 @@ footer .rss img {
   nav {
 		/* On small screens, we are no longer using row direction but column */
   	flex-direction: column;
-    background: $bg-image-mobile;
+    background: black; //$bg-image-mobile;
 //    background-size: auto 80%;
     border-bottom: 5px solid $third-color;
+    color: white;
   }
 
+	.post-header h1 {
+		font-size: 2em;
+	}
+
+	.post-details {
+		color: white;
+		padding: .25em;
+		border: 2px solid $main-black;
+	  border-radius: 1.5em;
+		margin: 1em auto 0 auto;
+		display: flex;
+		//flex-direction: column;
+		text-align: center;
+		line-height: 1.25em;
+		font-size: .9em;
+	
+		.meta-date {
+			color: white;
+			margin: .25em 0 0 0;
+			text-align: center;
+		}
+		.meta-date:after {
+				content: "";
+		}
+		.meta-reading-time {
+			color: white;
+			margin: .25em 0 0 0;
+			text-align: center;
+		}
+		.meta-reading-time:after {
+				content: "";
+		}
+		.meta-author {
+			color: white;
+			margin: .25em 0 0 0;
+			text-align: center;
+		}
+		.meta-word-count {
+			color: white;
+			margin: .25em 0 0 0;
+			text-align: center;
+		}
+}
+
 	.site-branding {
-		background: adjust-color($third-color, $lightness: -50%, $alpha: -.65);
+		background: adjust-color($third-color, $lightness: -10%, $alpha: -.65);
 		padding: 5px;
 		margin-bottom: 2em;
 		border-radius: 5px;
-		border-bottom: 5px solid $third-color;
+		//border-bottom: 5px solid $third-color;
+		box-shadow: 0 0 3px .5px white;
+		justify-content: center;
 	}
-
 	.site-branding h1 {
 		text-align: center;
 	}
-
 	.site-branding p {
 		text-align: center;
 	}
-
   .nav-menu {
   	display: inline-block;
   	width: 95%;
 		margin-top: .75em;
 		margin-bottom: .75em;
-
+		a {
+			color: white;
+		}
 		a:hover {
 		  color: $third-color;
 		  text-decoration: none;
@@ -957,7 +1015,17 @@ footer .rss img {
   box-shadow: $card-shadow-grey; //3px 5px 5px rgba(0,0,0,0.8);
 }
 
-	.posts-container {
+.underneath-post {
+	margin: 2em 0 0 0;
+}
+
+.frow-container {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.posts-container {
 		padding: 1em 2em;
 		margin: 1em;
 		h1 {

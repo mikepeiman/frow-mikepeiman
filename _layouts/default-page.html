@@ -1,43 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>
-      {% if page.title %}
-      {{ page.title }}
-      {% else %}
-      {{ site.title }}
-      {% endif %}
-    </title>
-    <meta name="description" content="
-      {% if page.description %}
-      {{ page.description }}
-      {% else %}
-      {{ site.description }}
-      {% endif %}">
-    <meta name="viewport" content="width=device-width">
-    <base href="{{ site.url }}"
+{% include head.html %}
 
-    <!-- Custom CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700,900|PT+Sans|Anonymous+Pro|Montserrat:400,400i,700,700i,900,900i|Raleway:400,400i,500,500i,600,600i,700,700i|Ubuntu|Nunito|Oxygen|PT+Sans|Philosopher|IM+Fell+Great+Primer+SC|Karla" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Arimo|Arvo|Cabin|Cabin+Sketch|Cantarell|Cantora+One|Dosis|Gudea|IM+Fell+English|IM+Fell+Great+Primer+SC|Karla|Kaushan+Script|Lato|Libre+Baskerville|Montserrat|Nunito|Oxygen|PT+Sans|Philosopher|Rajdhani|Raleway|Timmana|Ubuntu" rel="stylesheet"> -->
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/parsley.min.js"></script>
-    <script src="/js/readingTime.js"></script>
-    <!-- <script src="js/heartAnimate.js"></script> 
-    To show svg heart icon animation: add to #form-submit: onclick="addHeart()" -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-93096307-1', 'auto');
-  ga('send', 'pageview');
-</script> 
-  </head>
     <body class="body-page">
 
       {% include nav-page.html %}
@@ -50,5 +12,8 @@
 
       {% include footer.html %}
 
+<script>
+  var nav = responsiveNav(".nav-collapse");
+</script>
   </body>
 </html>
