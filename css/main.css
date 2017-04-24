@@ -30,7 +30,7 @@ body {
 .first-column {
   background: url(../images/mikepeiman-site-bg-v2-white.png) left top no-repeat;
   margin: 1em 0;
-  border-top: 5px solid #FFC100;
+  border-top: 5px solid #b35a00;
   box-shadow: 0px 3px 5px 1px #808080; }
 
 h3, h4, h5, h6 {
@@ -511,10 +511,15 @@ footer .rss img {
   background: black;
   color: #fffcf2; }
 
+/*****************************************************************************/
+/*
+/* HOMEPAGE POSTS FEED STYLES
+/*
+/*****************************************************************************/
 .homepage-posts-container {
   list-style-type: none;
   color: #fffcf2;
-  background: #1a1a1a;
+  background: #fffcf2;
   margin: 1em;
   padding: 0.25em 0 0 0;
   line-height: 1.25em;
@@ -524,6 +529,7 @@ footer .rss img {
       flex: 1; }
 
 .homepage-posts-container h1 {
+  color: #1a1a1a;
   font-size: 2em;
   font-weight: bold; }
 
@@ -535,7 +541,7 @@ footer .rss img {
   color: #808080; }
 
 .post-feed-arrow {
-  color: #b38700; }
+  color: #b35a00; }
 
 .homepage-posts-container a:hover {
   text-decoration: none; }
@@ -564,9 +570,12 @@ footer .rss img {
   padding-bottom: 1.25em; }
 
 .post-feed-date {
-  color: #808080;
+  color: #b35a00;
+  font-family: "Raleway", Monaco, "Courier New", monospace;
   font-size: .95em;
-  text-align: left; }
+  text-align: left;
+  padding-bottom: 5px;
+  text-decoration: underline; }
 
 .post-feed-title {
   color: #1a1a1a; }
@@ -597,6 +606,11 @@ footer .rss img {
 .blog-post {
   padding: 0 1em; }
 
+/*****************************************************************************/
+/*
+/* BLOG PAGE POSTS FEED STYLES
+/*
+/*****************************************************************************/
 .blog-post-feed {
   width: 100%; }
 
@@ -771,7 +785,16 @@ footer .rss img {
   .nav-menu {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .blogpage-post-feed-item {
+    padding: .5em;
+    margin: 0 0 .1em -1em; }
+    .blogpage-post-feed-item p {
+      border-left: 3px solid transparent;
+      padding-left: 8px; }
+    .blogpage-post-feed-item .post-feed-date {
+      font-size: .75em;
+      text-transform: uppercase; } }
 
 /*****************************************************************************/
 /*

@@ -33,7 +33,7 @@ body {
 .first-column {
 	background: $bg-image;
 	margin: 1em 0;
-	border-top: 5px solid $main-color;
+	border-top: 5px solid $main-accent;
 	box-shadow: $card-shadow-grey;
 }
 
@@ -587,10 +587,16 @@ footer .rss img {
 	color: $main-white;
 }
 
+/*****************************************************************************/
+/*
+/* HOMEPAGE POSTS FEED STYLES
+/*
+/*****************************************************************************/
+
 .homepage-posts-container {
     list-style-type: none;
     color: $main-white;
-    background: $main-black;
+    background: $main-white;
     margin: 1em;
     padding: $section-padding;
     line-height: 1.25em;
@@ -600,6 +606,7 @@ footer .rss img {
 }
 
 .homepage-posts-container h1 {
+	color: $main-black;
 	font-size: 2em;
 	font-weight: bold;
 }
@@ -661,10 +668,12 @@ footer .rss img {
 	}
 
 .post-feed-date {
-    color: $main-grey;
-    //font-family: Monaco, "Courier New", monospace;
+    color: $main-accent;
+    font-family: "Raleway", Monaco, "Courier New", monospace;
     font-size: .95em;
     text-align: left;
+    padding-bottom: 5px;
+    text-decoration: underline;
 }
 
 .post-feed-title {
@@ -701,6 +710,12 @@ footer .rss img {
 .blog-post {
 	padding: 0 1em;
 }
+
+/*****************************************************************************/
+/*
+/* BLOG PAGE POSTS FEED STYLES
+/*
+/*****************************************************************************/
 
 .blog-post-feed {
 	width: 100%;
@@ -923,6 +938,19 @@ footer .rss img {
 	.nav-menu {
 		justify-content: space-around;
 		margin: 0 auto;
+	}
+
+	.blogpage-post-feed-item {
+		padding: .5em;
+		margin: 0 0 .1em -1em;
+		p {
+			border-left: 3px solid rgba(0,0,0,0);
+			padding-left: 8px;
+		}
+		.post-feed-date {
+			font-size: .75em;
+			text-transform: uppercase;
+		}
 	}
 }
 
