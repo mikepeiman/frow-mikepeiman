@@ -2,7 +2,7 @@
 layout: default-post
 ---
 
-<body class="body-post" style="background: linear-gradient(rgba(0, 0, 255, 0.45), rgba(255, 0, 0, 0.45)), url({{ page.image }}); background-repeat: no-repeat; background-size: 100% 100%;">
+<body class="body-post" style="background: linear-gradient(rgba(0, 0, 255, 0.45), rgba(255, 0, 0, 0.45)), url({{ page.image }}); background-repeat: no-repeat; background-size: 100% 100%;	background-attachment: fixed;">
 <!--
 			{% if page.image %}
 			<img class="post-image" src="{{ page.image }}" alt="{{ page.image }}">
@@ -19,42 +19,46 @@ layout: default-post
 				<li class="meta-word-count"><span class="word-count"></span> words</li>
 			</ul>
 		</div>
-	<article class="centered frow-container">
-		<div class="post">
-		{{ page.content }}
-		<script>$('.post').readingTime();</script>
-		</div>
-	</article>
+	<div class="post-page-below-header">
+		<div class="post-page-below-header-inner frow-container">
+			<article class="centered">
+				<div class="post">
+				{{ page.content }}
+				<script>$('.post').readingTime();</script>
+				</div>
+			</article>
 
-	<div class="underneath-post frow-container">
-		{% include subpage-signup.html %}
+			<div class="underneath-post">
+				{% include subpage-signup.html %}
 
-			<div class="frow further-reading-section">
-				{% if page.previous %}
-				<span class="page-prev-link"><a rel="prev" href="{{ page.previous.url }}">Prev</a></span>
-				{% endif %}
-				{% if page.next %}
-				<span class="page-next-link"><a rel="prev" href="{{ page.next.url }}">Next</a></span>
-				{% endif %}
+					<div class="frow further-reading-section">
+						{% if page.previous %}
+						<span class="page-prev-link"><a rel="prev" href="{{ page.previous.url }}">Prev</a></span>
+						{% endif %}
+						{% if page.next %}
+						<span class="page-next-link"><a rel="prev" href="{{ page.next.url }}">Next</a></span>
+						{% endif %}
+					</div>
+					<div class="frow page-categories-section">
+						{% for category_name in page.categories limit:3 %}
+							<ul>
+								<li>{{ category_name | capitalize }}</li>
+							</ul>
+						{% endfor %}
+					</div>
+					<div class="frow related-posts-section">
+						<ul>
+							{% for post in site.categories[category_name] limit:5 %}
+								<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+							{% endfor %}
+						</ul>
+				</div>
+				<div class="disqus-comments">
+					{% if site.comments %}
+						{% include comments.html %}
+					{% endif %}
+				</div>
 			</div>
-			<div class="frow page-categories-section">
-				{% for category_name in page.categories limit:3 %}
-					<ul>
-						<li>{{ category_name | capitalize }}</li>
-					</ul>
-				{% endfor %}
-			</div>
-			<div class="frow related-posts-section">
-				<ul>
-					{% for post in site.categories[category_name] limit:5 %}
-						<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-					{% endfor %}
-				</ul>
-		</div>
-		<div class="disqus-comments">
-			{% if site.comments %}
-				{% include comments.html %}
-			{% endif %}
 		</div>
 	</div>
 </div>

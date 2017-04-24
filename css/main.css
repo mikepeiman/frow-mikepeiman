@@ -446,12 +446,13 @@ footer .rss img {
 .post {
   padding: .75em;
   line-height: 1.5em;
-  text-align: left; }
+  text-align: left;
+  background: #fffcf2; }
 
 .post-header {
   -ms-flex-direction: column;
       flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   border-bottom: 5px solid #1a1a1a; }
   .post-header h1 {
@@ -460,10 +461,22 @@ footer .rss img {
     padding-bottom: 0;
     color: white; }
 
+.post-page-below-header {
+  background: rgba(255, 255, 255, 0.75);
+  /*	background-repeat: no-repeat; 
+	background-size: 100% 100%;	
+	background-attachment: fixed;*/ }
+
+.post-page-below-header-inner {
+  background: white;
+  padding: 0 2em;
+  margin: 0 2em; }
+
 .lead-paragraph {
   font-size: 1.25em;
   margin-bottom: 1.25em;
-  line-height: 1.25em; }
+  line-height: 1.25em;
+  padding-top: 1em; }
 
 .dropcap-box {
   width: 5.5em;

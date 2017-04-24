@@ -507,11 +507,12 @@ footer .rss img {
 	padding: .75em;
 	line-height: 1.5em;
 	text-align: left;
+	background: $main-white;
 }
 
 .post-header {
 	flex-direction: column;
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	border-bottom: 5px solid $main-black;
 
@@ -523,10 +524,24 @@ footer .rss img {
 	}
 }
 
+.post-page-below-header {
+	background: rgba(255,255,255,0.75); //linear-gradient(rgba(245, 245, 245, 1), rgba(0, 0, 55, .1));
+/*	background-repeat: no-repeat; 
+	background-size: 100% 100%;	
+	background-attachment: fixed;*/
+}
+
+.post-page-below-header-inner {
+	background: white;
+	padding: 0 2em;
+	margin: 0 2em;
+}
+
 .lead-paragraph {
 	font-size: 1.25em;
 	margin-bottom: 1.25em;
 	line-height: 1.25em;
+	padding-top: 1em;
 }
 .dropcap-box {
 //	width: 5.5em;
