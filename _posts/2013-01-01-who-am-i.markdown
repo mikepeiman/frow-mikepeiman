@@ -6,6 +6,6 @@ image: http://lorempixel.com/output/cats-q-c-50-50-1.jpg
 categories: mikepeiman
 ---
 
-This website, hosted under my own name, is intended as a platform for me to share my views, for the purpose of representing myself as truly as possible, and importantly, as a platform for providing value to the world. 
+<p class="lead-paragraph"><span class="dropcap-box"><span class="dropcap">T</span></span>his website, hosted under my own name, is intended as a platform for me to share my views, for the purpose of representing myself as truly as possible, and importantly, as a platform for providing value to the world.</p>
 
 I am a lifelong learner, a deep systems thinker and a big-picture visionary. I believe much of my greatest contribution to the world is in the form of my insights and ideas. I expect that the messages I share via this website will become a major piece of my work in the world.

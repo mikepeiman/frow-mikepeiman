@@ -6,8 +6,8 @@ image: http://lorempixel.com/output/business-q-c-50-50-6.jpg
 categories: jekyll update
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+<p class="lead-paragraph"><span class="dropcap-box"><span class="dropcap">Y</span></span>ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
+To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
 
 Jekyll also offers powerful support for code snippets:
 

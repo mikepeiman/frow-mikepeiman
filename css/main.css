@@ -452,20 +452,35 @@ footer .rss img {
   -ms-flex-direction: column;
       flex-direction: column;
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 5px solid #1a1a1a; }
   .post-header h1 {
     font-size: 4em;
     margin: 2em 0 .25em 0;
     padding-bottom: 0;
     color: white; }
 
-.stag-dropcap {
-  font-size: 125px;
-  line-height: 125px;
-  width: 125px;
-  height: 125px;
+.lead-paragraph {
+  font-size: 1.25em;
+  margin-bottom: 1.25em;
+  line-height: 1.25em; }
+
+.dropcap-box {
+  width: 5.5em;
+  height: 4.7em;
   background: #1a1a1a;
-  color: white; }
+  float: left;
+  text-align: center;
+  margin: .2em .5em 0 0;
+  padding: .5em;
+  border-radius: 5px; }
+
+.dropcap {
+  font-family: "Times New Roman", "Oxygen";
+  font-size: 5em;
+  line-height: .7em;
+  color: white;
+  text-align: center; }
 
 .post-menu {
   background: transparent; }

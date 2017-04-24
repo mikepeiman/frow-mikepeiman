@@ -513,6 +513,7 @@ footer .rss img {
 	flex-direction: column;
 	height: 100vh;
 	width: 100%;
+	border-bottom: 5px solid $main-black;
 
 	h1 {
 		font-size: 4em;
@@ -522,13 +523,28 @@ footer .rss img {
 	}
 }
 
-.stag-dropcap {
-	font-size: 125px;
-	line-height: 125px;
-	width: 125px;
-	height: 125px;
+.lead-paragraph {
+	font-size: 1.25em;
+	margin-bottom: 1.25em;
+	line-height: 1.25em;
+}
+.dropcap-box {
+//	width: 5.5em;
+	width: 5.5em;
+	height: 4.7em;
 	background: $main-black;
+	float: left;
+	text-align: center;
+	margin: .2em .5em 0 0;
+	padding: .5em;
+	border-radius: 5px;
+}
+.dropcap {
+	font-family: "Times New Roman", "Oxygen";
+	font-size: 5em;
+	line-height: .7em;
 	color: white;
+	text-align: center;
 }
 
 .post-menu {
