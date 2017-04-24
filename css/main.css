@@ -20,10 +20,12 @@ body {
   min-height: 100%;
   -ms-flex-direction: column;
       flex-direction: column;
-  background: linear-gradient(rgba(0, 0, 255, 0.45), rgba(255, 0, 0, 0.45)); }
+  background-color: white; }
 
 .body-page {
-  background: white; }
+  background-image: linear-gradient(white, rgba(38, 195, 255, 0.25));
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 .first-column {
   background: url(../images/mikepeiman-site-bg-v2-white.png) left top no-repeat;
@@ -521,20 +523,6 @@ footer .rss img {
   -ms-flex: 1;
       flex: 1; }
 
-.blog-posts-container {
-  list-style-type: none;
-  color: #fffcf2;
-  background: #1a1a1a;
-  margin: 1em;
-  padding: 0.25em 0 0 0;
-  line-height: 1.25em;
-  border-top: 5px solid #FFC100;
-  box-shadow: 0px 3px 5px 1px #808080;
-  -ms-flex: 1;
-      flex: 1; }
-  .blog-posts-container h1 {
-    padding: 0 1em; }
-
 .homepage-posts-container h1 {
   font-size: 2em;
   font-weight: bold; }
@@ -581,7 +569,7 @@ footer .rss img {
   text-align: left; }
 
 .post-feed-title {
-  color: #FFC100; }
+  color: #1a1a1a; }
 
 .homepage-posts-container a .post-excerpt {
   color: #808080; }
@@ -606,47 +594,39 @@ footer .rss img {
   .post-details :first-child {
     list-style: none; }
 
-/*
-.meta-date {
-	color: white; //adjust-color($main-color, $lightness: 25%);
-	margin-right: .25em;
-}
-
-.meta-date:after {
-		content: "\2219";
-		margin-left: 15px;
-		font-size: 40px;
-		vertical-align: middle;
-}
-
-.meta-reading-time {
-	color: white; // adjust-color($second-color, $lightness: 25%);
-	margin: 0 auto;
-}
-.meta-reading-time:after {
-		content: "\2219";
-		margin-left: 15px;
-		font-size: 40px;
-		vertical-align: middle;
-}
-
-.meta-word-count {
-	color: white; //adjust-color($third-color, $lightness: 25%);
-	margin-left: .25em;
-}
-*/
 .blog-post {
   padding: 0 1em; }
 
 .blog-post-feed {
   width: 100%; }
 
+.blog-posts-container {
+  list-style-type: none;
+  color: #1a1a1a;
+  background: #fffcf2;
+  margin: 1em;
+  padding: 0.25em 0 0 0;
+  line-height: 1.25em;
+  border-top: 5px solid #FFC100;
+  box-shadow: 0px 3px 5px 1px #808080;
+  -ms-flex: 1;
+      flex: 1; }
+  .blog-posts-container h1 {
+    padding: 0 1em; }
+
 .blogpage-post-feed-item {
   padding: .5em;
-  margin: 0 0 .5em 0; }
+  margin: 0 0 .1em 1em; }
+  .blogpage-post-feed-item p {
+    border-left: 3px solid transparent;
+    padding-left: 8px; }
 
-.blogpage-post-feed-item:hover {
-  color: #229500; }
+.blogpage-post-feed-item a:hover {
+  text-decoration: none; }
+  .blogpage-post-feed-item a:hover p {
+    border-left: 3px solid #FFC100; }
+  .blogpage-post-feed-item a:hover .post-feed-title {
+    color: #009dd9; }
 
 .blog-post-feed-item:hover {
   color: #26C3FF; }
@@ -803,7 +783,8 @@ footer .rss img {
     /* On small screens, we are no longer using row direction but column */
     -ms-flex-direction: column;
         flex-direction: column;
-    background: rgba(255, 0, 255, 0.05);
+    background: #fffcf2;
+    border-bottom: 5px solid #009dd9;
     color: white; }
   .post-header h1 {
     font-size: 2em; }
@@ -826,38 +807,6 @@ footer .rss img {
     float: right;
     background: rgba(0, 0, 0, 0.45);
     width: 50%; }
-  /*
-	.site-branding {
-		background: adjust-color($third-color, $lightness: -10%, $alpha: -.65);
-		padding: 5px;
-		margin-bottom: 2em;
-		border-radius: 5px;
-		//border-bottom: 5px solid $third-color;
-		box-shadow: 0 0 3px .5px white;
-		justify-content: center;
-	}
-	.site-branding h1 {
-		text-align: center;
-	}
-	.site-branding p {
-		text-align: center;
-	}
-
-  .nav-menu {
-  	flex-direction: column;
-		margin-top: .75em;
-		margin-bottom: .75em;
-		a {
-			color: white;
-		}
-		a:hover {
-		  color: $third-color;
-		  text-decoration: none;
-		  border: none;
-		  padding: 0;
-		}
-	}
-*/
   .nav-menu ul {
     display: -ms-flexbox;
     display: flex;
