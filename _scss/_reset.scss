@@ -428,7 +428,7 @@ nav {
 	text-align: left;
 }
 
-#site-branding-post-h1 {
+#site-branding-post {
 	color: white;
 }
 
@@ -816,6 +816,18 @@ footer .rss img {
 	margin-bottom: 1em;
 }
 
+#nav-page {
+	h1 {
+		color: black;
+	}
+	a {
+		color: black;
+	}
+	a:hover {
+		color: $third-color;
+	}
+}
+
 /*****************************************************************************/
 /*
 /* PORTFOLIO
@@ -943,9 +955,9 @@ footer .rss img {
   nav {
 		/* On small screens, we are no longer using row direction but column */
   	flex-direction: column;
-    background: black; //$bg-image-mobile;
+  	background: rgba(255,0,255,.05);
 //    background-size: auto 80%;
-    border-bottom: 5px solid $third-color;
+//    border-bottom: 5px solid $third-color;
     color: white;
   }
 

@@ -381,7 +381,7 @@ nav {
   color: #26C3FF;
   text-align: left; }
 
-#site-branding-post-h1 {
+#site-branding-post {
   color: white; }
 
 .meta {
@@ -696,6 +696,15 @@ footer .rss img {
 .post ol li:last-of-type {
   margin-bottom: 1em; }
 
+#nav-page h1 {
+  color: black; }
+
+#nav-page a {
+  color: black; }
+
+#nav-page a:hover {
+  color: #26C3FF; }
+
 /*****************************************************************************/
 /*
 /* PORTFOLIO
@@ -794,8 +803,7 @@ footer .rss img {
     /* On small screens, we are no longer using row direction but column */
     -ms-flex-direction: column;
         flex-direction: column;
-    background: black;
-    border-bottom: 5px solid #26C3FF;
+    background: rgba(255, 0, 255, 0.05);
     color: white; }
   .post-header h1 {
     font-size: 2em; }
