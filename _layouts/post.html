@@ -2,11 +2,9 @@
 layout: default-post
 ---
 
-<body class="body-post" style="background: linear-gradient(rgba(0, 0, 255, 0.45), rgba(255, 0, 0, 0.45)), url({{ page.image }}); background-repeat: no-repeat; background-size: 100% 100%;	background-attachment: fixed;">
+<body class="body-post" style="background: url({{ page.image }}); background: linear-gradient(rgba(0, 0, 255, 0.45), rgba(255, 0, 0, 0.45)), url({{ page.image }}); background-repeat: no-repeat; background-size: 100% 100%;	background-attachment: fixed;">
 <!--
-			{% if page.image %}
-			<img class="post-image" src="{{ page.image }}" alt="{{ page.image }}">
-			{% endif %}
+added background twice to avoid flash of gradient with no image
 -->
 <div class="frow direction-column site">
 		<div class="post-header column-centered"> 

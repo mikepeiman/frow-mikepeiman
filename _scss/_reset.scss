@@ -25,18 +25,19 @@ body {
 }
 
 .body-page {
-	background-image: linear-gradient(rgba(255,255,255,.95), rgba(38,195,255,0)), $bg-image-1;
+	background-image: linear-gradient(rgba(0,0,255,.45), rgba(26,26,26,0)), $bg-image-10;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+//	background-position: center;
 }
 
 .first-column {
-	background: $bg-image-1;
+	background: $bg-image-11;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	margin: 1em 0;
 	border-top: 5px solid $main-accent;
-	box-shadow: $card-shadow-grey;
+	box-shadow: $card-shadow-black;
 }
 
 h3, h4, h5, h6 {
@@ -150,7 +151,7 @@ input {
 		background: none;
 		font-family: 'Ubuntu';
 		text-transform: uppercase;
-		font-size: .85em;
+		font-size: .75em;
 	}
 
 .input-field-post::placeholder {
@@ -1197,7 +1198,7 @@ footer .rss img {
 	}
 
 .hire-me {
-	margin: 0 .75em 2em .75em;
+	margin: 0 -.75em 2em -.75em;
 	padding-top: 1.75em;
 	background: $main-black;
 	position: relative;
@@ -1217,8 +1218,8 @@ footer .rss img {
 }
 
 .posts-container {
-		padding: 1em 2em;
-		margin: 1em;
+		padding: .5em .75em;
+		margin: 1em 0;
 		h1 {
 			width: 90%;
 		}
