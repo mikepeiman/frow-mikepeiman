@@ -34,10 +34,10 @@ layout: default-post
 
 					<div class="further-reading-section">
 						{% if page.previous %}
-						<span class="page-prev-link"><a rel="prev" href="{{ page.previous.url }}">Prev</a></span>
+						<span class="post-nav-link" id="post-nav-previous"><a rel="prev" href="{{ page.previous.url }}">&lsaquo; Prev</a></span>
 						{% endif %}
 						{% if page.next %}
-						<span class="page-next-link"><a rel="prev" href="{{ page.next.url }}">Next</a></span>
+						<span class="post-nav-link" id="post-nav-next"><a rel="next" href="{{ page.next.url }}">Next &rsaquo;</a></span>
 						{% endif %}
 					</div>
 					<div class="page-categories-section">

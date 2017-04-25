@@ -25,13 +25,15 @@ body {
 }
 
 .body-page {
-	background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(38,195,255,0.25));
+	background-image: linear-gradient(rgba(255,255,255,.95), rgba(38,195,255,0)), $bg-image-1;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 
 .first-column {
-	background: $bg-image;
+	background: $bg-image-1;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	margin: 1em 0;
 	border-top: 5px solid $main-accent;
 	box-shadow: $card-shadow-grey;
@@ -65,7 +67,7 @@ h1, h2 {
 	width: 150px;
 	height: 150px;
 	border: 2px solid $main-grey;
-	background: $site-img-1;
+	//background: $bg-image-1;
 	background-size: cover;
 }
 
@@ -473,6 +475,9 @@ nav {
 	flex-direction: column;
 	flex: 1;
 	margin: .5em 0 0 1.25em;
+	/*background: white;
+	padding: 0 0 0 .5em;
+	border-left: 5px solid $third-color;*/
 }
 
 .site-branding a {

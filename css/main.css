@@ -23,12 +23,14 @@ body {
   background-color: white; }
 
 .body-page {
-  background-image: linear-gradient(white, rgba(38, 195, 255, 0.25));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(38, 195, 255, 0)), url("../images/bg1.png");
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
 .first-column {
-  background: url(../images/mikepeiman-site-bg-v2-white.png) left top no-repeat;
+  background: url("../images/bg1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 1em 0;
   border-top: 5px solid #b35a00;
   box-shadow: 0px 3px 5px 1px #404040; }
@@ -57,7 +59,6 @@ h1, h2 {
   width: 150px;
   height: 150px;
   border: 2px solid #404040;
-  background: url(../images/20160921_092955-1x1.jpg) center center no-repeat;
   background-size: cover; }
 
 a {
@@ -444,7 +445,10 @@ nav {
       flex-direction: column;
   -ms-flex: 1;
       flex: 1;
-  margin: .5em 0 0 1.25em; }
+  margin: .5em 0 0 1.25em;
+  /*background: white;
+	padding: 0 0 0 .5em;
+	border-left: 5px solid $third-color;*/ }
 
 .site-branding a {
   text-decoration: none; }
