@@ -95,6 +95,19 @@ a:visited {
   .signup-form p {
     padding: 0 1em .65em 1em; }
 
+.signup-form-post {
+  list-style-type: none;
+  -ms-flex: 1;
+      flex: 1;
+  color: white;
+  background: none;
+  margin: 1em 0;
+  padding: 0.25em 0 0 0;
+  line-height: 1.25em;
+  text-align: center; }
+  .signup-form-post p {
+    padding: 0 1em .65em 1em; }
+
 input {
   appearance: none;
   -webkit-appearance: none;
@@ -108,27 +121,69 @@ input {
   padding: .5em;
   cursor: pointer; }
 
+.input-field-post {
+  margin: .5em 0;
+  font-family: 'Ubuntu';
+  color: #b35a00;
+  border: 3px solid #FFC100;
+  padding: .5em;
+  cursor: pointer; }
+
 .input-field::-webkit-input-placeholder {
   background: none;
   font-family: 'Ubuntu';
+  text-transform: uppercase;
   font-size: .85em; }
 
 .input-field::-moz-placeholder {
   background: none;
   font-family: 'Ubuntu';
+  text-transform: uppercase;
   font-size: .85em; }
 
 .input-field:-ms-input-placeholder {
   background: none;
   font-family: 'Ubuntu';
+  text-transform: uppercase;
   font-size: .85em; }
 
 .input-field::placeholder {
   background: none;
   font-family: 'Ubuntu';
+  text-transform: uppercase;
   font-size: .85em; }
 
-.button-heart input {
+.input-field-post::-webkit-input-placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-size: .85em; }
+
+.input-field-post::-moz-placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-size: .85em; }
+
+.input-field-post:-ms-input-placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-size: .85em; }
+
+.input-field-post::placeholder {
+  background: none;
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-size: .85em; }
+
+.form-submit input {
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer; }
+
+.form-submit-post input {
   border: 0;
   outline: 0;
   background: none;
@@ -141,11 +196,33 @@ input[type="submit"] {
 
 .form-submit {
   background: #009dd9;
-  border: 2px solid #26C3FF;
+  border: 2px solid #009dd9;
   padding: .5em;
   margin: 1.15em 0 1.5em 0;
   color: #fffcf2;
   box-shadow: 0px 3px 5px 1px #1a1a1a;
+  transition: all .25s;
+  z-index: 1000; }
+
+.form-submit-post {
+  background: #009dd9;
+  border: 2px solid #FFC100;
+  padding: .5em;
+  margin: 1.15em 0 1.5em 0;
+  color: #fffcf2;
+  transition: all .25s;
+  z-index: 1000; }
+
+.form-submit-post:hover {
+  color: #fffcf2;
+  box-shadow: 0px 3px 5px 1px #1a1a1a;
+  transition: all .25s;
+  z-index: 1000; }
+
+.form-submit-post:active {
+  background: #26C3FF;
+  border: 2px solid white;
+  box-shadow: none;
   transition: all .25s;
   z-index: 1000; }
 
@@ -470,7 +547,7 @@ footer .rss img {
 	background-attachment: fixed;*/ }
 
 .post-page-below-header-inner {
-  background: #b35a00;
+  background: #009dd9;
   padding: 0 2em;
   margin: 0 2em; }
 
@@ -523,10 +600,21 @@ footer .rss img {
   border: 5px solid #FFC100; }
 
 .further-reading-section {
-  margin: 1em 0 0 0;
-  padding: 1em;
-  background: #1a1a1a;
-  color: #fffcf2; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-bottom: 1em; }
+  .further-reading-section a {
+    background: #404040;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    color: #fffcf2;
+    border-radius: 1em;
+    box-shadow: 0px 3px 5px 1px #1a1a1a;
+    text-decoration: none; }
+  .further-reading-section a:hover {
+    text-decoration: none; }
 
 .page-categories-section {
   margin: 1em 0 0 0;
@@ -551,7 +639,7 @@ footer .rss img {
   list-style-type: none;
   color: #fffcf2;
   background: #fffcf2;
-  margin: 1em;
+  margin: 0 0 1em 0;
   padding: 0.25em 0 0 0;
   line-height: 1.25em;
   border-top: 5px solid #FFC100;

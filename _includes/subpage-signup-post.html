@@ -1,0 +1,73 @@
+<div class="signup-form-post">
+  <div class="frow-container">
+    <h1>Knowledge is power</h1>
+    <p>The best insights, resources, tools, and wisdom I've gleaned from my strange and wonderful journey in this life. You'll want to check this out.</p>
+<!-- Begin MailChimp Signup Form -->
+    <form action="//mikepeiman.us7.list-manage.com/subscribe/post?u=2e0789618f3335c1fdeae5f80&amp;id=f5d18d0c88" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate frow column-center" target="_blank" validate>
+      <div>
+        <input required type="text" name="FNAME" class="form-name input-field-post required form-control" id="mce-FNAME" placeholder="name" autocomplete="on" required="">
+      </div>
+      <div>
+        <input required type="email" name="EMAIL" class="form-email input-field-post required form-control" id="mce-EMAIL" placeholder="email address" autocomplete="on" required="">
+      </div>
+      
+      <div id="mce-responses" class="clear">
+          <div class="response">
+            <p class="mce-msg" id="mce-error-response"></p>
+            <p class="mce-msg" id="mce-success-response"></p>
+          </div>
+      </div>    
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_2e0789618f3335c1fdeae5f80_f5d18d0c88" tabindex="-1" value="">
+      </div>
+
+      <div class="form-submit-post" id="form-submit">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--End mc_embed_signup-->
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+</script>
+
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+</script>
+
+<script type="text/javascript">
+  $(function () {
+  $('#mc-embedded-subscribe-form').parsley().on('field:validated', function() {
+    var ok = $('.parsley-error').length === 0;
+    $('.bs-callout-info').toggleClass('hidden', !ok);
+    $('.bs-callout-warning').toggleClass('hidden', ok);
+  })
+  .on('form:submit', function() {
+    return true;
+  });
+  });
+</script>
+
+<script> 
+  var mceSuccess = document.querySelector("#mce-success-response");
+  mceSuccess.addEventListener("click", function() {
+    console.log("mceSuccess click");
+    var mceSuccess = document.querySelector("#mce-success-response");
+    var submitButton = document.querySelector("#mc-embedded-subscribe");
+
+      mceSuccess.removeAttribute("style");
+      mceSuccess.classList.toggle("closed");
+  });
+
+  var mceError = document.querySelector("#mce-error-response");
+  mceError.addEventListener("click", function() {
+    console.log("mceError click");
+    var mceError = document.querySelector("#mce-error-response");
+    var submitButton = document.querySelector("#mc-embedded-subscribe");
+
+      mceError.removeAttribute("style");
+      mceError.classList.toggle("closed");
+  });
+</script>

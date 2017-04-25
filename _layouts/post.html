@@ -29,9 +29,10 @@ layout: default-post
 			</article>
 
 			<div class="underneath-post">
-				{% include subpage-signup.html %}
 
-					<div class="frow further-reading-section">
+				{% include subpage-signup-post.html %}
+
+					<div class="further-reading-section">
 						{% if page.previous %}
 						<span class="page-prev-link"><a rel="prev" href="{{ page.previous.url }}">Prev</a></span>
 						{% endif %}
@@ -39,14 +40,14 @@ layout: default-post
 						<span class="page-next-link"><a rel="prev" href="{{ page.next.url }}">Next</a></span>
 						{% endif %}
 					</div>
-					<div class="frow page-categories-section">
+					<div class="page-categories-section">
 						{% for category_name in page.categories limit:3 %}
 							<ul>
 								<li>{{ category_name | capitalize }}</li>
 							</ul>
 						{% endfor %}
 					</div>
-					<div class="frow related-posts-section">
+					<div class="related-posts-section">
 						<ul>
 							{% for post in site.categories[category_name] limit:5 %}
 								<li><a href="{{ post.url }}">{{ post.title }}</a></li>

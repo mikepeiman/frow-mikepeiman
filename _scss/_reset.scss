@@ -101,7 +101,20 @@ a:visited { color: $third-accent; }
     border-top: 5px solid $third-color;
     box-shadow: $card-shadow-grey;
     text-align: center;
+    p {
+    	padding: 0 1em .65em 1em;
+    }
+}
 
+.signup-form-post {
+    list-style-type: none;
+    flex: 1;
+    color: white;
+    background: none;
+    margin: 1em 0;
+    padding: $section-padding;
+    line-height: 1.25em;
+    text-align: center;
     p {
     	padding: 0 1em .65em 1em;
     }
@@ -122,13 +135,37 @@ input {
 		cursor: pointer;
 	}
 
+.input-field-post {
+		margin: .5em 0;
+		font-family: 'Ubuntu';
+		color: $main-accent;
+		border: 3px solid $main-color;
+		padding: .5em;
+		cursor: pointer;
+	}
+
 .input-field::placeholder {
 		background: none;
 		font-family: 'Ubuntu';
+		text-transform: uppercase;
 		font-size: .85em;
 	}
 
-.button-heart input {
+.input-field-post::placeholder {
+		background: none;
+		font-family: 'Ubuntu';
+		text-transform: uppercase;
+		font-size: .85em;
+	}
+
+.form-submit input {
+	border: 0;
+	outline: 0;
+	background: none;
+	cursor: pointer;
+}
+
+.form-submit-post input {
 	border: 0;
 	outline: 0;
 	background: none;
@@ -143,11 +180,36 @@ input[type="submit"] {
 
 .form-submit {
 	background: $third-accent;
-	border: 2px solid $third-color;
+	border: 2px solid $third-accent;
 	padding: .5em;
 	margin: 1.15em 0 1.5em 0;
 	color: $main-white;
 	box-shadow: $card-shadow-black;
+	transition: all .25s;
+	z-index: 1000;
+}
+
+.form-submit-post {
+	background: $third-accent;
+	border: 2px solid $main-color;
+	padding: .5em;
+	margin: 1.15em 0 1.5em 0;
+	color: $main-white;
+	transition: all .25s;
+	z-index: 1000;
+}
+
+.form-submit-post:hover {
+	color: $main-white;
+	box-shadow: $card-shadow-black;
+	transition: all .25s;
+	z-index: 1000;
+}
+
+.form-submit-post:active {
+	background: $third-color;
+	border: 2px solid white;
+	box-shadow: none;
 	transition: all .25s;
 	z-index: 1000;
 }
@@ -534,7 +596,7 @@ footer .rss img {
 }
 
 .post-page-below-header-inner {
-	background: $main-accent;
+	background: $third-accent;
 	padding: 0 2em;
 	margin: 0 2em;
 }
@@ -599,10 +661,21 @@ footer .rss img {
 }
 
 .further-reading-section {
-	margin: 1em 0 0 0;
-	padding: 1em;
-	background: $main-black;
-	color: $main-white;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1em;
+	a {
+		background: $main-grey;
+		margin: 1em 0 0 0;
+		padding: 1em;
+		color: $main-white;
+		border-radius: 1em;
+		box-shadow: $card-shadow-black;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;	
+	}
 }
 
 .page-categories-section {
@@ -631,7 +704,7 @@ footer .rss img {
     list-style-type: none;
     color: $main-white;
     background: $main-white;
-    margin: 1em;
+    margin: 0 0 1em 0;
     padding: $section-padding;
     line-height: 1.25em;
     border-top: 5px solid $main-color;
