@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll included post"
 date:   2014-04-20 09:11:03
-image: http://lorempixel.com/output/business-q-c-50-50-6.jpg
+image: http://pipsum.com/1400x700.jpg
 categories: jekyll update
 ---
 

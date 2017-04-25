@@ -95,7 +95,7 @@ a:visited { color: $third-accent; }
     flex: 1;
     color: $main-black; // $main-white;
     background: $main-white;//$main-black;
-    margin: 1em;
+    margin: 1em 0;
     padding: $section-padding;
     line-height: 1.25em;
     border-top: 5px solid $third-color;
@@ -365,6 +365,7 @@ nav {
 
   ul li {
   	padding-right: 2em;
+ 		text-transform: uppercase;
   }
 
 	a:hover {
@@ -449,6 +450,7 @@ footer {
   //  margin-top: 2em;
     background: $main-black;
     padding: 1em 0;
+		bottom: 0;
 
     ul {
 	  	display: flex;
@@ -525,14 +527,14 @@ footer .rss img {
 }
 
 .post-page-below-header {
-	background: rgba(255,255,255,0.75); //linear-gradient(rgba(245, 245, 245, 1), rgba(0, 0, 55, .1));
+	background: rgba(0,0,0,0.75); //linear-gradient(rgba(245, 245, 245, 1), rgba(0, 0, 55, .1));
 /*	background-repeat: no-repeat; 
 	background-size: 100% 100%;	
 	background-attachment: fixed;*/
 }
 
 .post-page-below-header-inner {
-	background: white;
+	background: $main-accent;
 	padding: 0 2em;
 	margin: 0 2em;
 }
@@ -584,11 +586,12 @@ footer .rss img {
 }
 
 .underneath-post {
-	margin: 1em;
+	margin: 1em 0 4em 0;
+	padding-bottom: 1em;
 }
 
 .disqus-comments {
-	margin: 1em;
+	margin: 1em 0 0 0;
 	padding: 2em;
 	background: adjust-color($main-color, $lightness: 37%);
 	border-radius: 15px;
@@ -596,25 +599,25 @@ footer .rss img {
 }
 
 .further-reading-section {
-	margin: 1em;
+	margin: 1em 0 0 0;
 	padding: 1em;
 	background: $main-black;
 	color: $main-white;
 }
 
 .page-categories-section {
-	margin: 1em;
+	margin: 1em 0 0 0;
 	padding: 1em;
-	background: adjust-color($main-black, $lightness: -15%);
+	background: $main-grey;
 	color: $main-color;
 	li {
 		padding: .5em 1em;
 	}
 }
 .related-posts-section {
-	margin: 1em;
+	margin: 1em 0 0 0;
 	padding: 1em;
-	background: adjust-color($main-black, $lightness: -30%);
+	background: $main-grey;
 	color: $main-white;
 }
 
@@ -876,7 +879,7 @@ footer .rss img {
 
 @media all and (min-width: 750px) {
 	.nav-menu {
-		margin-top: -6em;
+		margin: -6.25em 0 0 1.25em;
 	}
 }
 
@@ -970,6 +973,10 @@ footer .rss img {
 		justify-content: space-around;
 		margin: 0 auto;
 	}
+	  nav {
+  	border-bottom: 5px solid $third-color;
+  	background: rgba(0,0,0,0.3);
+  }
 
 	.blogpage-post-feed-item {
 		padding: .5em;
@@ -983,6 +990,35 @@ footer .rss img {
 			text-transform: uppercase;
 		}
 	}
+
+	.post-details {
+		margin: 1em auto;
+		display: inline-block;
+		//flex-direction: column;
+		text-align: center;
+		line-height: 1.25em;
+		font-size: .9em;
+		background: rgba(0,0,0,0.3);
+		//border: 1px solid $main-accent;
+		//box-shadow: 0 0 5px 1px rgba(255,255,255,0.15);
+
+		li {
+			list-style: none;
+			padding: .25em;
+			color: $main-white;
+			margin: 0 auto;	
+		}
+		li:nth-of-type(3) {
+			float: left;
+		}
+		li:nth-of-type(3):after {
+				content: ",";
+		}
+		li:nth-of-type(4) {
+			float: left;
+		}
+
+	}
 }
 
 
@@ -993,35 +1029,20 @@ footer .rss img {
 /*****************************************************************************/
 
 @media all and (max-width: 670px) {
-
+/*
   nav {
-		/* On small screens, we are no longer using row direction but column */
   	flex-direction: column;
   	background: $main-white;
-//    background-size: auto 80%;
     border-bottom: 5px solid $third-accent;
     color: white;
-  }
+  }*/
+
 
 	.post-header h1 {
 		font-size: 2em;
 	}
 
-	.post-details {
-		margin: 1em auto 0 auto;
-		display: block;
-		//flex-direction: column;
-		text-align: center;
-		line-height: 1.25em;
-		font-size: .9em;
-		li {
-		list-style: none;
-		background: rgba(0,0,0,0.25);
-		border-radius: 5px;
-		padding: .25em;			
-		}
-	}
-
+/*
 	.post-header ul li:nth-of-type(4) {
 		float: left;
 		background: rgba(0,0,0,0.35);
@@ -1031,7 +1052,7 @@ footer .rss img {
 		float: right;
 		background: rgba(0,0,0,0.45);
 		width: 50%;
-	}
+	}*/
 
 	.nav-menu ul {
 		display: flex;
@@ -1089,6 +1110,12 @@ footer .rss img {
 		p {
 			font-size: .75em;
 		}
+	}
+
+	.nav-menu li {
+		margin-bottom: .1em;
+		font-size: .75em;
+		text-transform: uppercase;
 	}
 
 .hire-me {

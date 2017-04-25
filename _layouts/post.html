@@ -53,11 +53,13 @@ layout: default-post
 							{% endfor %}
 						</ul>
 				</div>
+				{% if site.comments %}
 				<div class="disqus-comments">
-					{% if site.comments %}
+
 						{% include comments.html %}
-					{% endif %}
+					
 				</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>

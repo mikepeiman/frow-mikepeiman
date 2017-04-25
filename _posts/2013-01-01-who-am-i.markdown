@@ -2,7 +2,7 @@
 layout: post
 title:  "Who am I in a long long long much much longer longer longer title?"
 date:   2013-1-1 11:15:00
-image: http://lorempixel.com/output/cats-q-c-50-50-1.jpg
+image: http://pipsum.com/1400x700.jpg
 categories: mikepeiman
 ---
 

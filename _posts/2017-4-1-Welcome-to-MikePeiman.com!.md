@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to MikePeiman.com!"
 date:   2017-4-1 11:15:00
-image: http://lorempixel.com/output/food-q-c-50-50-5.jpg
+image: http://pipsum.com/1400x700.jpg
 categories: web-design launch welcome
 ---
 

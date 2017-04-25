@@ -2,7 +2,7 @@
 layout: post
 title:  "Selfie post"
 date:   2013-1-1 11:15:00
-image: http://lorempixel.com/output/nightlife-q-c-50-50-8.jpg
+image: http://pipsum.com/1400x700.jpg
 categories: tech coding web-development
 ---
 
