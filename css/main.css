@@ -47,15 +47,20 @@ h1, h2 {
 nav {
   font-family: 'Raleway', Helvetica, sans-serif; }
 
+.quotes-section {
+  background: white;
+  padding: 2.75em;
+  margin: 3em 0; }
+
 .block-quote {
   color: #404040;
   font-family: 'Karla','IM Fell Great Primer SC','Philosopher','PT Sans','Nunito','Oxygen', 'Ubuntu';
   font-weight: normal;
-  width: 90%;
   border-left: 5px solid #FFC100;
-  margin: 0 0 .5em 1em;
-  background: rgba(0, 0, 0, 0.05);
-  padding: .65em; }
+  margin: .5em 0 .5em 1em;
+  background: rgba(0, 0, 0, 0.1);
+  padding: .65em;
+  text-align: left; }
 
 .small-image {
   position: relative;
@@ -419,7 +424,7 @@ p:empty {
 .banner-cta {
   margin: 9em -.75em 2em -.75em;
   padding-top: 1.75em;
-  background: #404040;
+  background: url(../images/bg1.png);
   position: relative; }
 
 .folded-corner-left:before {
