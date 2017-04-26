@@ -265,8 +265,10 @@ p#mce-success-response, p#mce-error-response {
 	color: $third-accent;
 	background: none;
 	a {
-		text-decoration: none;
+		text-decoration: underline;
 		color: $third-accent;
+		display: block;
+		margin-top: .5em;
 	}
 }
 
@@ -291,13 +293,11 @@ p#mce-success-response, p#mce-error-response {
   color: $main-color;
   background: rgba(255,255,255,0.4);
 }
-#mce-success-response:hover, #mce-error-response:hover {
-  	a {
+#mce-success-response a:hover, #mce-error-response a:hover {
   		color: $third-color;
   		cursor: pointer;
   		font-size: 110%;
   		text-decoration: underline;
-  	}
 }
 .no-after:after {
 	display: none;

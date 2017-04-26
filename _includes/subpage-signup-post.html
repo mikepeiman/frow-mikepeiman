@@ -32,56 +32,63 @@
 
 <!--End mc_embed_signup-->
 <script>
-  var mcSubmit = document.querySelector("#mc-embedded-subscribe");
-  mcSubmit.addEventListener("click", function() {
-    console.log("mceSubmit click");
-    var mceSuccess = document.querySelector("#mce-success-response");
-    var mceError = document.querySelector("#mce-error-response");
-    setTimeout(function(if (mceSuccess.hasChildNodes()) {
-        var mceClose = document.querySelector("#mce-response-close-button");
-        var mceContainer = document.querySelector("#mce-container");
-        mceClose.classList.toggle("closed");
-        mceClose.classList.toggle("no-after");
-        mceContainer.classList.toggle("closed");
-      }
-      if (mceError.hasChildNodes()) {
-        var mceClose = document.querySelector("#mce-response-close-button");
-        var mceContainer = document.querySelector("#mce-container");
-        mceClose.classList.toggle("closed");
-        mceClose.classList.toggle("no-after");
-        mceContainer.classList.toggle("closed");
-      ), 500); 
+  function toggleMCE() {
+    console.log("toggleMCE function running");
+    $("#mce-response-close-button").toggleClass("no-after");
+    $("#mce-response-close-button").toggleClass("closed");
+    $("#mce-container").toggleClass("closed");
+  }
+
+  function mcErrorCheck() {
+    console.log("mcErrorCheck run");
+    if ($("#mce-error-response").children().length > 0) { 
+      console.log("mceError has children");
+      console.log("calling toggleMCE");
+      toggleMCE();
     }
+    else (
+      console.log("mceError has no children")
+    );
+  }
+
+  function mcSuccessCheck() {
+    console.log("mcSuccessCheck run");
+    if ($("#mce-success-response").children().length > 0) { 
+      console.log("mceSuccess has children");
+      console.log("calling toggleMCE");
+      toggleMCE();
+    }
+    else (
+      console.log("mceSuccess has no children")
+    );
+  }   
+
+  function submitClick() {
+    $('#mc-embedded-subscribe').click(function() {
+      console.log("mcSubmit click running");
+      console.log("calling mcErrorCheck");
+      mcErrorCheck();
+      console.log("calling mcSuccessCheck");
+      mcSuccessCheck();
+    });
+  }
+
+  function mceContainerClick() {
+    $("#mce-container").click(function() {
+      console.log("mceContainer click running");
+      console.log("calling mcErrorCheck");
+      mcErrorCheck();
+      console.log("calling mcSuccessCheck");
+      mcSuccessCheck();
+    });
+  }
+
+  $("#mce-response-close-button").click(function() {
+    console.log("close button clicked, calling toggleMCE");
+    toggleMCE();
   });
 
-
-
-  var mceSuccess = document.querySelector("#mce-success-response");
-  mceSuccess.addEventListener("click", function() {
-    console.log("mceSuccess click");
-    var mceSuccess = document.querySelector("#mce-success-response");
-      mceSuccess.removeAttribute("style");
-      mceSuccess.classList.toggle("closed");
-  });
-
-  var mceError = document.querySelector("#mce-error-response");
-  mceError.addEventListener("click", function() {
-    console.log("mceError click");
-    var mceError = document.querySelector("#mce-error-response");
-      mceError.removeAttribute("style");
-      mceError.classList.toggle("closed");
-  });
-
-  var mceClose = document.querySelector("#mce-response-close-button");
-  mceClose.addEventListener("click", function() {
-    console.log("mceClose click");
-    var mceClose = document.querySelector("#mce-response-close-button");
-    var mceResponses = document.querySelector("#mce-responses");
-      mceClose.removeAttribute("style");
-      mceClose.classList.toggle("no-after");
-      mceClose.classList.toggle("closed");
-      mceResponses.classList.toggle("closed");
-  });
+  submitClick();
 </script>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
 </script>
