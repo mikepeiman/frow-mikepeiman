@@ -430,13 +430,28 @@ p:empty {
 	border: 5px solid $main-black;
 }
 
-.banner-cta {
-	margin: 9em -.75em 2em -.75em;
-	padding-top: 1.75em;
-	background: $bg-image-1;
-	position: relative;
+.banner-cta-1 {
+	margin: 2em .75em;
+	padding-top: 1.5em;
+	background: $main-white;
+  position: relative;
+	flex: 1 1 auto;
+	color: $main-black;
+		h2 {
+		color: $main-color;
+	}
 }
-
+.banner-cta-2 {
+	margin: 2em .75em;
+	padding-top: 1.5em;
+	background: $main-white;
+	position: relative;
+	flex: 1 1 auto;
+	color: $main-black;
+	h2 {
+		color: $second-color;
+	}
+}
 .folded-corner-left:before {
   content: "";
   position: absolute;
@@ -478,14 +493,22 @@ p:empty {
 .banner-cta a:hover {
 	text-decoration: none;
 }
-
-.banner-cta-button {
+.banner-cta-button-1 {
 	background: $third-accent;
 	border: 2px solid $third-color;
 	padding: .5em 2em;
 	color: $main-white;
-	box-shadow: $card-shadow-black;
+	position: relative;
+	top: -50px;
+	z-index: -1;
 }
+.banner-cta-button-2 {
+	background: $third-accent;
+	border: 2px solid $third-color;
+	padding: .5em 2em;
+	color: $main-white;
+}
+
 .banner-cta-button:hover {
 			background: $third-color;
 			color: $main-black;
