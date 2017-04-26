@@ -12,7 +12,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: 'Nunito', 'PT Sans', 'Raleway', Helvetica, sans-serif;
   font-size: 1.25em;
   text-align: center;
   display: -ms-flexbox;
@@ -23,7 +23,7 @@ body {
   background-color: white; }
 
 .body-page {
-  background-image: linear-gradient(rgba(0, 0, 255, 0.45), rgba(26, 26, 26, 0)), url(../images/bg10.jpg);
+  background-image: linear-gradient(rgba(0, 0, 25, 0.9), rgba(26, 0, 26, 0.75)), url(../images/bg10.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
@@ -43,6 +43,9 @@ h1, h2 {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1em; }
+
+nav {
+  font-family: 'Raleway', Helvetica, sans-serif; }
 
 .block-quote {
   color: #404040;
@@ -112,7 +115,16 @@ a:visited {
 input {
   appearance: none;
   -webkit-appearance: none;
-  cursor: pointer; }
+  cursor: pointer;
+  border: none;
+  background: none; }
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  border: none;
+  background: none; }
 
 .input-field {
   margin: .5em 0;
@@ -125,10 +137,23 @@ input {
 .input-field-post {
   margin: .5em 0;
   font-family: 'Ubuntu';
-  color: #b35a00;
+  color: #fffcf2;
   border: 3px solid #FFC100;
   padding: .5em;
-  cursor: pointer; }
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05); }
+
+.input-field-post:hover {
+  border: 3px solid #fffcf2;
+  background: rgba(255, 255, 255, 0.15); }
+
+.input-field-post:active {
+  border: 3px solid #fffcf2;
+  background: rgba(0, 0, 0, 0.15); }
+
+.input-field-post:active:hover {
+  border: 3px solid #fffcf2;
+  background: rgba(0, 0, 0, 0.15); }
 
 .input-field::-webkit-input-placeholder {
   background: none;
@@ -158,25 +183,29 @@ input {
   background: none;
   font-family: 'Ubuntu';
   text-transform: uppercase;
-  font-size: .85em; }
+  font-size: .85em;
+  color: #fffcf2; }
 
 .input-field-post::-moz-placeholder {
   background: none;
   font-family: 'Ubuntu';
   text-transform: uppercase;
-  font-size: .85em; }
+  font-size: .85em;
+  color: #fffcf2; }
 
 .input-field-post:-ms-input-placeholder {
   background: none;
   font-family: 'Ubuntu';
   text-transform: uppercase;
-  font-size: .85em; }
+  font-size: .85em;
+  color: #fffcf2; }
 
 .input-field-post::placeholder {
   background: none;
   font-family: 'Ubuntu';
   text-transform: uppercase;
-  font-size: .85em; }
+  font-size: .85em;
+  color: #fffcf2; }
 
 .form-submit input {
   border: 0;
@@ -188,12 +217,22 @@ input {
   border: 0;
   outline: 0;
   background: none;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
+  .form-submit-post input:active {
+    outline: none; }
+  .form-submit-post input:focus {
+    outline: none; }
 
 input[type="submit"] {
   font-family: 'Ubuntu';
   color: #fffcf2;
-  transition: all .25s; }
+  transition: all .25s;
+  outline: none; }
+  input[type="submit"]:active {
+    outline: none; }
+  input[type="submit"]:focus {
+    outline: none; }
 
 .form-submit {
   background: #009dd9;
@@ -206,7 +245,6 @@ input[type="submit"] {
   z-index: 1000; }
 
 .form-submit-post {
-  background: #009dd9;
   border: 2px solid #FFC100;
   padding: .5em;
   margin: 1.15em 0 1.5em 0;
@@ -216,9 +254,9 @@ input[type="submit"] {
 
 .form-submit-post:hover {
   color: #fffcf2;
-  box-shadow: 0px 3px 5px 1px #1a1a1a;
   transition: all .25s;
-  z-index: 1000; }
+  z-index: 1000;
+  background: #009dd9; }
 
 .form-submit-post:active {
   background: #26C3FF;
@@ -229,31 +267,43 @@ input[type="submit"] {
 
 p#mce-success-response, p#mce-error-response {
   padding: 1em;
-  margin: 1em;
-  border: 1px solid #26C3FF;
-  border-radius: 10px;
-  box-shadow: 0px 3px 5px 1px #404040;
-  color: #FFC100;
-  background: #666; }
+  color: #009dd9;
+  background: none; }
+  p#mce-success-response a, p#mce-error-response a {
+    text-decoration: none;
+    color: #009dd9; }
 
-p#mce-success-response:after, p#mce-error-response:after {
-  content: "click to close";
-  color: #FFC100;
-  font-style: italic;
-  font-weight: bold;
+#mce-response-close-button {
+  color: #26C3FF;
+  text-transform: uppercase;
+  font-size: .7em;
   cursor: pointer;
   display: block;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  width: 75px;
   margin: .5em auto 0 auto;
-  padding: 0.5em;
+  padding: .5em;
   width: 10em; }
 
-p#mce-success-response:hover, p#mce-error-response:hover {
-  color: #26C3FF;
-  cursor: pointer; }
+#mce-response-close-button:after {
+  content: "Click here to close"; }
 
-p#mce-error-response a {
-  display: block;
-  margin: .5em; }
+#mce-response-close-button:hover {
+  color: #FFC100;
+  background: rgba(255, 255, 255, 0.4); }
+
+#mce-success-response:hover a, #mce-error-response:hover a {
+  color: #26C3FF;
+  cursor: pointer;
+  font-size: 110%;
+  text-decoration: underline; }
+
+.no-after:after {
+  display: none;
+  width: 0;
+  height: 0;
+  background: none; }
 
 p:empty {
   display: none; }
@@ -273,15 +323,20 @@ p:empty {
     padding: .25em 0 0 .35em;
     fill: none; }
 
-.heart-shown #form-submit svg {
-  fill: red;
-  transition: all .5s; }
+/*
+.heart-shown {
+ #form-submit	svg {
+		fill: red;
+		transition: all .5s;
+	}
+}
 
 .button-heart svg {
-  margin: -1.5em auto 0;
-  padding: .25em 0 0 .35em; }
+	margin: -1.5em auto 0;
+	padding: .25em 0 0 .35em;
+}
 
-/*
+
 #form-submit:hover {
 	background: $third-color;
 	svg {
@@ -301,10 +356,11 @@ p:empty {
 		transition: transform .75s;
 	}
 }*/
-.whisper {
-  font-style: italic;
-  font-size: 90%; }
-
+/*****************************************************************************/
+/*
+/* Intro-text sections
+/*
+/*****************************************************************************/
 .intro-text {
   color: #1a1a1a;
   background: #fffcf2;
@@ -324,6 +380,30 @@ p:empty {
 .intro-text p {
   padding: 0 1em 1em 1em; }
 
+.intro-text-2 {
+  color: white;
+  margin: 1em;
+  padding: 0.25em 0 0 0;
+  line-height: 1.25em;
+  -ms-flex: 1;
+      flex: 1;
+  text-align: center; }
+
+.intro-text-2 h1 {
+  font-weight: bold;
+  font-size: 3.5em; }
+
+.intro-text-2 p {
+  padding: 0 1em 1em 1em;
+  font-size: 1.35em;
+  line-height: 1.25em; }
+
+/*
+.intro-text-p-panel {
+	border: 1px solid $main-white;
+	background: rgba(0,0,0,0.65);
+	padding: 1em 0 0 0;
+}*/
 .flex-container {
   -ms-flex: 1;
       flex: 1; }
@@ -334,61 +414,60 @@ p:empty {
   margin-bottom: -.5em;
   border: 5px solid #1a1a1a; }
 
-.hire-me {
-  margin: 0 -.75em 2em -.75em;
+.banner-cta {
+  margin: 9em -.75em 2em -.75em;
   padding-top: 1.75em;
-  background: #1a1a1a;
-  position: relative;
-  box-shadow: 0px 3px 5px 1px #404040; }
+  background: #404040;
+  position: relative; }
 
-.folded-corner-left-green:before {
+.folded-corner-left:before {
   content: "";
   position: absolute;
-  top: -.33em;
+  top: -.66em;
   left: 0%;
   width: 0px;
   height: 0px;
-  border-bottom: 0.35em solid #229500;
-  border-left: 0.75em solid rgba(255, 255, 255, 0);
+  border-bottom: 0.7em solid #009dd9;
+  border-left: 1.75em solid rgba(255, 255, 255, 0);
   /*Set to background color, not transparent!*/
   /*  -webkit-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
   -moz-box-shadow: -2px -2px 7px rgba(0,0,0,0.3);
   box-shadow: -2px -2px 7px rgba(0,0,0,0.3);*/ }
 
-.folded-corner-right-green:after {
+.folded-corner-right:after {
   content: "";
   position: absolute;
-  top: -.33em;
+  top: -.66em;
   right: 0%;
   width: 0px;
   height: 0px;
-  border-bottom: 0.35em solid #229500;
-  border-right: 0.75em solid rgba(255, 255, 255, 0);
+  border-bottom: 0.7em solid #009dd9;
+  border-right: 1.75em solid rgba(255, 255, 255, 0);
   /*Set to background color, not transparent!*/
   /* -webkit-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
   -moz-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
   box-shadow: 7px 7px 7px rgba(0,0,0,0.3); */ }
 
-.hire-me p {
+.banner-cta p {
   text-align: center;
-  color: #33E100;
+  color: #26C3FF;
   margin-bottom: .5em; }
 
-.hire-me a {
+.banner-cta a {
   text-decoration: none; }
 
-.hire-me a:hover {
+.banner-cta a:hover {
   text-decoration: none; }
 
-.hire-me-button {
-  background: #229500;
-  border: 2px solid #33E100;
+.banner-cta-button {
+  background: #009dd9;
+  border: 2px solid #26C3FF;
   padding: .5em 2em;
   color: #fffcf2;
   box-shadow: 0px 3px 5px 1px #1a1a1a; }
 
-.hire-me-button:hover {
-  background: #33E100;
+.banner-cta-button:hover {
+  background: #26C3FF;
   color: #1a1a1a;
   text-decoration: none; }
 
@@ -1009,7 +1088,7 @@ footer .rss img {
     margin-bottom: .1em;
     font-size: .75em;
     text-transform: uppercase; }
-  .hire-me {
+  .banner-cta {
     margin: 0 -.75em 2em -.75em;
     padding-top: 1.75em;
     background: #1a1a1a;
