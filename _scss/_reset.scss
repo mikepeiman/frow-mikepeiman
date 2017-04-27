@@ -25,10 +25,12 @@ body {
 }
 
 .body-page {
+	background: $main-black;
+/*
 	background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-10;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-//	background-position: center;
+*/
 }
 
 .first-column {
@@ -58,21 +60,21 @@ nav {
 
 .quotes-section {
 	background: $main-black;
-	padding: 10% 5% 15% 5%;
-	margin: 2em 0;
-}
-.qs-1 {
-	border-top: 3px solid $main-accent;
-	border-bottom: 3px solid $main-accent;
-}
-.qs-2 {
-	border-top: 3px solid $second-accent;
-	border-bottom: 3px solid $second-accent;
-}
-.qs-3 {
-	border-top: 3px solid $third-accent;
-	border-bottom: 3px solid $third-accent;
-}
+	padding: 2em 2.5em;
+	margin: 0 0 2em 0;
+	}/*
+	.qs-1 {
+		border-top: 15px solid $main-accent;
+		border-bottom: 15px solid $main-accent;
+	}
+	.qs-2 {
+		border-top: 15px solid $second-accent;
+		border-bottom: 15px solid $second-accent;
+	}
+	.qs-3 {
+		border-top: 15px solid $third-accent;
+		border-bottom: 15px solid $third-accent;
+	}*/
 
 .quotes-container {
 	color: $main-black;
@@ -96,8 +98,8 @@ nav {
 		font-weight: bold;
 		font-style: italic;
 		span {
-			border-top: 1px solid $main-black;
-			border-bottom: 1px solid $main-black;
+			border-top: 2px solid $main-grey;
+			border-bottom: 2px solid $main-grey;
 			padding: .1em;
 
 		}
@@ -125,10 +127,16 @@ nav {
 	display: inline-flex;
 	align-items: center;
 	justify-content: space-between !important;
-	margin: 1em -2px 1.75em 0;
-	padding: 0 1em 0 0;
-	border-bottom: 3px solid $third-accent;
-	background-image: linear-gradient(rgba(38,195,255,0.5), rgba(0,0,0,0));
+	margin: 1em 0 1.75em 0;
+	padding: 2.5em 2em 2.5em 6em;
+/*	border-top: 3px solid $third-color;
+	border-left: 3px solid $third-color;
+	border-bottom: 6px solid $third-color;
+	border-right: 6px solid $third-color; */
+	border: 15px solid #FABC11;
+	//box-shadow: -6px -6px 0px 3px $main-accent;
+  background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
+  background-size: cover;
 	h1 {
 		margin: 0;
 		padding: 0;
@@ -190,11 +198,10 @@ a:visited { color: $third-accent; }
     flex: 1;
     color: white;
     background: none;
-    margin: 0;
+    margin: 0 0 2em 0;
     padding: 0;
     line-height: 1.25em;
     text-align: center;
-    border-left: 5px solid white;
     h1 {
     	margin-bottom: 1em;
     }
@@ -671,8 +678,6 @@ nav {
 footer {
     color: $main-grey;
     font-size: 0.75em;
-    border-top: $main-border;
-  //  margin-top: 2em;
     background: $main-black;
     padding: 1em 0;
 		bottom: 0;
@@ -688,6 +693,8 @@ footer {
 	  ul li:first-child {
 	  	margin-right: auto;
 	  	margin-left: 1.5em;
+	  	font-size: 1.25em;
+	  	padding: .5em;
 	  }
   .icon {
 		fill: $main-color;
@@ -919,11 +926,20 @@ footer .rss img {
 }
 
 .posts-container {
+	margin: 0 0 2em 0;
 	ul li {
 		text-align: left;
 	}
 	h1 {
 		color: white;
+		font-size: 2.5em;
+	}
+	.post-feed-date {
+		font-size: 1em;
+		text-decoration: none;
+	}
+	.post-feed-title {
+		font-size: 1.25em;
 	}
 }
 
@@ -1231,6 +1247,25 @@ footer .rss img {
 
 @media all and (max-width: 810px) {
 
+	 nav {
+  	border-bottom: 3px solid $third-accent;
+  	background: rgba(0,0,0,0.3);
+  }
+ 	.nav-menu {
+		justify-content: space-around;
+		margin: 0 auto;
+	}
+	.nav-menu ul {
+		display: flex;
+		flex-direction: column;
+	}
+  .nav-menu li {
+		margin-bottom: .1em;
+		padding: 5px;
+		justify-content: space-around;
+		flex-direction: column;
+	}
+
 	.post-header h1 {
 		font-size: 2.5em;
 	}
@@ -1272,14 +1307,7 @@ footer .rss img {
 /*****************************************************************************/
 
 @media all and (max-width: 750px) {
-	.nav-menu {
-		justify-content: space-around;
-		margin: 0 auto;
-	}
-	  nav {
-  	border-bottom: 3px solid $third-accent;
-  	background: rgba(0,0,0,0.3);
-  }
+
 	.greeting {
 		border: none;
 	}
@@ -1335,18 +1363,6 @@ footer .rss img {
 
 	.post-header h1 {
 		font-size: 2em;
-	}
-
-	.nav-menu ul {
-		display: flex;
-		flex-direction: column;
-	}
-
-  .nav-menu li {
-		margin-bottom: .1em;
-		padding: 5px;
-		justify-content: space-around;
-		flex-direction: column;
 	}
 
 	.intro-text {
@@ -1433,7 +1449,9 @@ footer .rss img {
 	.greeting {
 		margin-top: -1.25em;
 	}
-
+	.quotes-section {
+		padding: 2em 1.5em;
+	}
 	.quotes-container {
 		padding: 2.5em .35em 1.5em .35em;
 		h1 {
@@ -1443,7 +1461,7 @@ footer .rss img {
 		p span {
 			display: block;
 			font-size: 90%;
-			width: 80%;
+			width: 70%;
 			margin: 0 auto;
 			padding: .15em;
 		}
