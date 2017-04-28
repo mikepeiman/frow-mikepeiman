@@ -95,10 +95,10 @@ a:visited {
 		border-bottom: 15px solid $third-accent;
 	}*/
 .quotes-container {
-  color: #1a1a1a;
+  color: #fffcf2;
   font-weight: normal;
-  margin: 1.5em 0 0 0;
-  background: #fffcf2;
+  margin: 8em 0;
+  background: #1a1a1a;
   padding: 4em 2em 3em 2em;
   text-align: center;
   text-transform: uppercase; }
@@ -122,18 +122,24 @@ a:visited {
 .qc-1 {
   border-left: 15px solid #b35a00;
   border-right: 15px solid #b35a00;
-  border-top: 15px solid #1a1a1a;
-  border-bottom: 15px solid #1a1a1a; }
+  border-top: 15px solid #663400;
+  border-bottom: 15px solid #663400; }
   .qc-1 p {
     color: #b35a00; }
 
 .qc-2 {
-  border-left: 15px solid #229500; }
+  border-left: 15px solid #229500;
+  border-right: 15px solid #229500;
+  border-top: 15px solid #104800;
+  border-bottom: 15px solid #104800; }
   .qc-2 p {
     color: #229500; }
 
 .qc-3 {
-  border-left: 15px solid #009dd9; }
+  border-left: 15px solid #009dd9;
+  border-right: 15px solid #009dd9;
+  border-top: 15px solid #00658c;
+  border-bottom: 15px solid #00658c; }
   .qc-3 p {
     color: #009dd9; }
 
@@ -585,6 +591,7 @@ p a.link-homepage {
   background: #272727;
   border-radius: 5px;
   padding: 5px;
+  margin: 2px;
   text-decoration: none;
   color: #fffcf2;
   font-weight: 400; }
@@ -806,7 +813,7 @@ footer .rss img {
   line-height: 1.25em;
   padding: .75em;
   text-align: left;
-  background: #002e40;
+  background: #00658c;
   border: 5px solid #fffcf2;
   /*
 	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
@@ -894,6 +901,11 @@ footer .rss img {
 /* HOMEPAGE POSTS FEED STYLES
 /*
 /*****************************************************************************/
+.homepage-section {
+  background: #272727;
+  border-top: 15px solid #404040;
+  border-bottom: 15px solid #404040; }
+
 .homepage-posts-container {
   list-style-type: none;
   color: #fffcf2;
