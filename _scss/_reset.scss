@@ -26,11 +26,11 @@ body {
 
 .body-page {
 	background: $main-black;
-/*
+
 	background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-10;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-*/
+
 }
 
 .first-column {
@@ -55,10 +55,6 @@ h1, h2 {
 	line-height: 1em;
 }
 
-nav {
-	font-family: 'Raleway', Helvetica, sans-serif;
-}
-
 .greeting {
 	align-items: center;
 	display: inline-flex;
@@ -66,7 +62,7 @@ nav {
 	margin: 0 auto;
 	padding: 0;//2.5em 2em 2.5em 6em;
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
-	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-left: 15px solid adjust-color($main-black, $lightness: 0%);
 	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
 	background: adjust-color($main-black, $lightness: 15%);
@@ -91,9 +87,9 @@ nav {
 	background-repeat: no-repeat;
 	flex: 1 1 auto;
 	padding: 0;
-	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-top: 15px solid $main-black; //adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
-	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-bottom: 15px solid $main-black; //adjust-color($main-black, $lightness: 10%);
 	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
 }
 
@@ -113,12 +109,12 @@ a:visited { color: $third-accent; }
 
 /*****************************************************************************/
 /*
-/* Home
+/* Quotes sections
 /*
 /*****************************************************************************/
 
 .quotes-section {
-	background: $main-black;
+	background: none;//$main-black;
 	padding: 2em 2.5em;
 	margin: 0 0 2em 0;
 	}/*
@@ -166,6 +162,9 @@ a:visited { color: $third-accent; }
 }
 .qc-1 {
 	border-left: 15px solid $main-accent;
+	border-right: 15px solid $main-accent;
+	border-top: 15px solid $main-black;
+	border-bottom: 15px solid $main-black;
 		p {
 		color: $main-accent;
 	}
@@ -182,6 +181,115 @@ a:visited { color: $third-accent; }
 		color: $third-accent;
 	}
 }
+
+
+/*****************************************************************************/
+/*
+/* NAV
+/*
+/*****************************************************************************/
+
+
+nav {
+	font-family: 'Raleway', Helvetica, sans-serif;
+	/*position: fixed;
+	top: 0;
+	width: 100%;*/
+	background: none;
+	z-index: 1000;
+  padding-bottom: 0.25em;
+ // border-bottom: 5px solid $third-color;
+	.site-title {
+		color: black;
+	}
+  ul {
+  	display: flex;
+  	justify-content: flex-end; // space-around;
+  	width: 100%;
+  	align-items: center;
+  }
+
+  ul li {
+  	padding-right: 2em;
+ 		text-transform: uppercase;
+  }
+
+	a:hover {
+  text-decoration: none;
+	}
+
+	ul {
+		margin-right: 2em;
+	}
+}
+
+
+.nav-menu {
+	a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	}
+	h1 {
+		color: black;
+	}
+}
+.menu-item {
+	color: black;
+	text-decoration: none;
+	display: block;
+}
+
+.menu-item:hover {
+	color: $main-color;
+	text-decoration: none;
+	display: block;
+}
+
+.menu-item.active {
+	 // border-bottom: 5px solid $third-color;
+	  color: $third-color;
+	 // padding-bottom: 0.25em;
+	  text-decoration: none;
+}
+
+.site-branding {
+	flex-direction: column;
+	flex: 1;
+	margin: .5em 0 0 1.25em;
+	/*background: white;
+	padding: 0 0 0 .5em;
+	border-left: 5px solid $third-color;*/
+}
+
+.site-branding a {
+	text-decoration: none;
+}
+
+.site-branding h1 {
+	margin: 0.3em 1.5em 0 0;
+	color: white;
+	text-align: left;
+	font-size: 2.25em;
+}
+
+.site-branding p {
+	margin: 0 0 1.25em 0.1em;
+	font-size: 1em;
+	color: $third-color;
+	text-align: left;
+}
+
+#site-branding-post {
+	color: white;
+}
+
+/*****************************************************************************/
+/*
+/* FORMS
+/*
+/*****************************************************************************/
+
 .signup-form {
     list-style-type: none;
     flex: 1;
@@ -471,7 +579,7 @@ p:empty {
 
 .intro-text {
 		color: white; //$main-white;
-    margin: 1em 0;
+    margin: 6em 0 0 0;
     padding: $section-padding;
     line-height: 1.25em;
     flex: 1;
@@ -482,7 +590,7 @@ p:empty {
   }
   p {
 		padding: .75em 0;
-		font-size: 1.35em;
+		font-size: 1.15em;
 		line-height: 1.25em;
 	}
 }
@@ -576,101 +684,6 @@ p:empty {
 			background: $third-color;
 			color: $main-black;
 			text-decoration: none;
-}
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-nav {
-  background: none;
-  padding-bottom: 0.25em;
- // border-bottom: 5px solid $third-color;
-	.site-title {
-		color: black;
-	}
-  ul {
-  	display: flex;
-  	justify-content: flex-end; // space-around;
-  	width: 100%;
-  	align-items: center;
-  }
-
-  ul li {
-  	padding-right: 2em;
- 		text-transform: uppercase;
-  }
-
-	a:hover {
-  text-decoration: none;
-	}
-
-	ul {
-		margin-right: 2em;
-	}
-}
-
-
-.nav-menu {
-	a {
-	color: black;
-	text-decoration: none;
-	display: block;
-	}
-	h1 {
-		color: black;
-	}
-}
-.menu-item {
-	color: black;
-	text-decoration: none;
-	display: block;
-}
-
-.menu-item:hover {
-	color: $main-color;
-	text-decoration: none;
-	display: block;
-}
-
-.menu-item.active {
-	 // border-bottom: 5px solid $third-color;
-	  color: $third-color;
-	 // padding-bottom: 0.25em;
-	  text-decoration: none;
-}
-
-.site-branding {
-	flex-direction: column;
-	flex: 1;
-	margin: .5em 0 0 1.25em;
-	/*background: white;
-	padding: 0 0 0 .5em;
-	border-left: 5px solid $third-color;*/
-}
-
-.site-branding a {
-	text-decoration: none;
-}
-
-.site-branding h1 {
-	margin: 0.3em 1.5em 0 0;
-	color: white;
-	text-align: left;
-	font-size: 2.25em;
-}
-
-.site-branding p {
-	margin: 0 0 1.25em 0.1em;
-	font-size: 1em;
-	color: $third-color;
-	text-align: left;
-}
-
-#site-branding-post {
-	color: white;
 }
 
 .meta {
