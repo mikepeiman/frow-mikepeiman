@@ -26,11 +26,9 @@ body {
 
 .body-page {
 	background: $main-black;
-
-	background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-10;
+	background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-1;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-
 }
 
 .first-column {
@@ -62,7 +60,7 @@ h1, h2 {
 	margin: 0 auto;
 	padding: 0;//2.5em 2em 2.5em 6em;
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
-	border-left: 15px solid adjust-color($main-black, $lightness: 0%);
+	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
 	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
 	background: adjust-color($main-black, $lightness: 15%);
@@ -77,6 +75,10 @@ h1, h2 {
 	}
 }
 
+.greeting-about {
+	border: none;
+}
+
 .img-small-profile {
 	position: relative;
 	width: 150px;
@@ -87,10 +89,10 @@ h1, h2 {
 	background-repeat: no-repeat;
 	flex: 1 1 auto;
 	padding: 0;
-	border-top: 15px solid $main-black; //adjust-color($main-black, $lightness: 10%);
-	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
-	border-bottom: 15px solid $main-black; //adjust-color($main-black, $lightness: 10%);
-	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-top: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-left: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-bottom: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-right: 15px solid adjust-color($main-black, $lightness: 10%);
 }
 
 a         { 
@@ -579,11 +581,12 @@ p:empty {
 
 .intro-text {
 		color: white; //$main-white;
-    margin: 6em 0 0 0;
+    margin: 3em 0 0 0;
     padding: $section-padding;
     line-height: 1.25em;
     flex: 1;
     text-align: center;
+    background: black;
 	h1 {
     font-weight: bold;
     font-size: 3.5em;
@@ -767,8 +770,8 @@ footer .rss img {
 	flex-direction: column;
 	height: 90vh;
 	width: 100%;
-	border-bottom: 5px solid $main-black;
-
+	border-bottom: 15px solid $main-black;
+	background-attachment: fixed;
 	h1 {
 		font-size: 4em;
 		margin: 2em 0 .25em 0;
@@ -1069,6 +1072,46 @@ footer .rss img {
 
 .blog-post-feed-item:hover {
 	color: $third-color;
+}
+
+.blogpage-post-feed-item-2 {
+	padding: .5em;
+	margin: 0 auto .5em;
+	width: 80%;
+	color: $main-white;
+	border-top: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-left: 15px solid adjust-color($main-black, $lightness: 0%);
+	border-bottom: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-right: 15px solid adjust-color($main-black, $lightness: 0%);
+	background: adjust-color($main-black, $lightness: 10%);
+	p {
+		border-left: 3px solid rgba(0,0,0,0);
+		padding-left: 8px;
+		font-size: .9em;
+	}
+}
+
+.blogpage-post-feed-item-2 a:hover {
+	text-decoration: none;
+
+	/*	p {
+			border-left: 3px solid $main-color;
+		}
+		.post-feed-title {
+			color: $third-accent;
+		}*/
+}
+
+.blog-post-feed-item-2:hover {
+	color: $third-color;
+}
+
+.blog-post-feed li:hover {
+	//border-top: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-left: 15px solid adjust-color($main-accent, $lightness: 5%);
+	//border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-right: 15px solid adjust-color($main-accent, $lightness: 5%);
+	background: adjust-color($main-black, $lightness: 15%);
 }
 
 .post pre {

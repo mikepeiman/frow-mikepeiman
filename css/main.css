@@ -24,7 +24,7 @@ body {
 
 .body-page {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(0, 0, 25, 0.9), rgba(26, 0, 26, 0.75)), url(../images/bg10.jpg);
+  background-image: linear-gradient(rgba(0, 0, 25, 0.9), rgba(26, 0, 26, 0.75)), url(../images/bg1.png);
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
@@ -56,7 +56,7 @@ h1, h2 {
   margin: 0 auto;
   padding: 0;
   border-top: 15px solid #343434;
-  border-left: 15px solid #1a1a1a;
+  border-left: 15px solid #272727;
   border-bottom: 15px solid #343434;
   border-right: 15px solid #272727;
   background: #404040;
@@ -67,6 +67,9 @@ h1, h2 {
     padding: 0 30px 0 0;
     -ms-flex: 1 1.5 auto;
         flex: 1 1.5 auto; }
+
+.greeting-about {
+  border: none; }
 
 .img-small-profile {
   position: relative;
@@ -79,10 +82,10 @@ h1, h2 {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   padding: 0;
-  border-top: 15px solid #1a1a1a;
-  border-left: 15px solid #272727;
-  border-bottom: 15px solid #1a1a1a;
-  border-right: 15px solid #272727; }
+  border-top: 15px solid #272727;
+  border-left: 15px solid #343434;
+  border-bottom: 15px solid #272727;
+  border-right: 15px solid #343434; }
 
 a {
   color: #fffcf2;
@@ -547,12 +550,13 @@ p:empty {
 
 .intro-text {
   color: white;
-  margin: 6em 0 0 0;
+  margin: 3em 0 0 0;
   padding: 0.25em 0 0 0;
   line-height: 1.25em;
   -ms-flex: 1;
       flex: 1;
-  text-align: center; }
+  text-align: center;
+  background: black; }
   .intro-text h1 {
     font-weight: bold;
     font-size: 3.5em; }
@@ -716,7 +720,8 @@ footer .rss img {
       flex-direction: column;
   height: 90vh;
   width: 100%;
-  border-bottom: 5px solid #1a1a1a; }
+  border-bottom: 15px solid #1a1a1a;
+  background-attachment: fixed; }
   .post-header h1 {
     font-size: 4em;
     margin: 2em 0 .25em 0;
@@ -959,6 +964,38 @@ footer .rss img {
 
 .blog-post-feed-item:hover {
   color: #26C3FF; }
+
+.blogpage-post-feed-item-2 {
+  padding: .5em;
+  margin: 0 auto .5em;
+  width: 80%;
+  color: #fffcf2;
+  border-top: 15px solid #272727;
+  border-left: 15px solid #1a1a1a;
+  border-bottom: 15px solid #272727;
+  border-right: 15px solid #1a1a1a;
+  background: #343434; }
+  .blogpage-post-feed-item-2 p {
+    border-left: 3px solid transparent;
+    padding-left: 8px;
+    font-size: .9em; }
+
+.blogpage-post-feed-item-2 a:hover {
+  text-decoration: none;
+  /*	p {
+			border-left: 3px solid $main-color;
+		}
+		.post-feed-title {
+			color: $third-accent;
+		}*/ }
+
+.blog-post-feed-item-2:hover {
+  color: #26C3FF; }
+
+.blog-post-feed li:hover {
+  border-left: 15px solid #cc6700;
+  border-right: 15px solid #cc6700;
+  background: #404040; }
 
 .post pre {
   border: 1px solid #404040;
