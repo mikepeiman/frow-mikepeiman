@@ -15,8 +15,6 @@ body {
   font-family: 'Nunito', 'PT Sans', 'Raleway', Helvetica, sans-serif;
   font-size: 1.25em;
   text-align: center;
-  display: -ms-flexbox;
-  display: flex;
   min-height: 100%;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -24,8 +22,9 @@ body {
 
 .body-page {
   background: #1a1a1a;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.5), #1a1a1a), url(../images/bg2.png);
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 .body-post {
   /*background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-1;
@@ -42,6 +41,10 @@ body {
   border-right: 15px solid #b35a00;
   box-shadow: 0px 3px 5px 1px #1a1a1a; }
 
+.flex-container {
+  -ms-flex: 1;
+      flex: 1; }
+
 h3, h4, h5, h6 {
   font-family: 'Ubuntu'; }
 
@@ -50,47 +53,6 @@ h1, h2 {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1em; }
-
-.greeting {
-  -ms-flex-align: center;
-      align-items: center;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-pack: justify !important;
-      justify-content: space-between !important;
-  margin: 0 auto;
-  padding: 0;
-  border-top: 15px solid #343434;
-  border-left: 15px solid #272727;
-  border-bottom: 15px solid #343434;
-  border-right: 15px solid #272727;
-  background: #404040;
-  /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
-  background-size: cover;*/ }
-  .greeting h1 {
-    margin: 0;
-    padding: 0 30px 0 0;
-    -ms-flex: 1 1.5 auto;
-        flex: 1 1.5 auto; }
-
-.greeting-about {
-  border: none; }
-
-.img-small-profile {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin-right: 1.5em;
-  background-image: url(../images/mike-1x1-250x250.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
-  padding: 0;
-  border-top: 15px solid #272727;
-  border-left: 15px solid #343434;
-  border-bottom: 15px solid #272727;
-  border-right: 15px solid #343434; }
 
 a {
   color: #fffcf2;
@@ -559,8 +521,7 @@ p:empty {
   line-height: 1.25em;
   -ms-flex: 1;
       flex: 1;
-  text-align: center;
-  background: black; }
+  text-align: center; }
   .intro-text h1 {
     font-weight: bold;
     font-size: 3.5em; }
@@ -569,10 +530,82 @@ p:empty {
     font-size: 1.15em;
     line-height: 1.25em; }
 
-.flex-container {
-  -ms-flex: 1;
-      flex: 1; }
+.greeting {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: justify !important;
+      justify-content: space-between !important;
+  margin: 0 auto;
+  padding: 0;
+  /*	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
+	background: adjust-color($main-black, $lightness: 15%);*/
+  /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
+  background-size: cover;*/ }
+  .greeting h1 {
+    margin: 0;
+    padding: 0 30px 0 0;
+    -ms-flex: 1 1.5 auto;
+        flex: 1 1.5 auto; }
 
+.greeting-body {
+  padding: 2em;
+  /*
+	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
+	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
+	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
+	background: adjust-color($main-black, $lightness: 3%);*/ }
+
+.greeting-about {
+  border: none; }
+
+.img-small-profile {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-right: 1.5em;
+  background-image: url(../images/mike-1x1-250x250.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  padding: 0;
+  border-top: 15px solid #272727;
+  border-left: 15px solid #343434;
+  border-bottom: 15px solid #272727;
+  border-right: 15px solid #343434; }
+
+p a.link-homepage {
+  display: inline-block;
+  background: #272727;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  color: #fffcf2;
+  font-weight: 400; }
+  p a.link-homepage:hover {
+    background: #1a1a1a;
+    color: #009dd9; }
+
+.link-about {
+  border: 2px solid #009dd9; }
+
+.link-work {
+  border: 2px solid #009dd9; }
+
+.link-coaching {
+  border: 2px solid #009dd9; }
+
+/*****************************************************************************/
+/*
+/* Calls To Action
+/*
+/*****************************************************************************/
 .banner-cta-1 {
   margin: 2em .75em;
   padding-top: 1.5em;
@@ -746,7 +779,8 @@ footer .rss img {
   font-size: 1.25em;
   margin-bottom: 1.25em;
   line-height: 1.25em;
-  padding-top: 1em; }
+  padding-top: 1em;
+  text-align: left; }
 
 .dropcap-box {
   width: 5.5em;
@@ -762,8 +796,42 @@ footer .rss img {
   font-family: "Times New Roman", "Oxygen";
   font-size: 5em;
   line-height: .7em;
+  font-weight: bold;
   color: white;
   text-align: center; }
+
+.lead-paragraph-home {
+  font-size: 115%;
+  margin-bottom: 1.25em;
+  line-height: 1.25em;
+  padding: .75em;
+  text-align: left;
+  background: #002e40;
+  border: 5px solid #fffcf2;
+  /*
+	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
+	border-bottom: 5px solid adjust-color($main-black, $lightness: 25%);
+	border-left: 5px solid adjust-color($main-black, $lightness: 15%);
+	border-right: 5px solid adjust-color($main-black, $lightness: 15%);*/ }
+  .lead-paragraph-home p {
+    font-family: 'Raleway'; }
+
+.dropcap-box-home {
+  width: 5.25em;
+  height: 3.85em;
+  background: #fffcf2;
+  float: left;
+  text-align: center;
+  margin: -.25em .2em 0 0;
+  padding: .5em .5em .5em .3em;
+  border-radius: 5px;
+  -webkit-transform: scale(0.9, 1);
+  transform: scale(0.9, 1); }
+
+.dropcap-home {
+  color: #1a1a1a;
+  font-size: 4.6em;
+  line-height: .6em; }
 
 .post-menu {
   background: transparent; }
