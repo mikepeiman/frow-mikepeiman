@@ -26,11 +26,16 @@ body {
 
 .body-page {
 	background: $main-black;
-	background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-1;
+	//background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-1;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
-
+.body-post {
+	/*background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-1;
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	background-attachment: fixed;*/
+}
 .first-column {
 	background: $main-white; //$bg-image-10;
 	background-repeat: no-repeat;
@@ -95,19 +100,24 @@ h1, h2 {
 	border-right: 15px solid adjust-color($main-black, $lightness: 10%);
 }
 
-a         { 
+a { 
 	color: $main-white;
 	text-decoration: none;
+	cursor: pointer;
 }
-a:hover   { 
+a:hover { 
 	color: $third-color;
 	text-decoration: none;
+	cursor: pointer;
  }
-a:visited { color: $third-accent; }
+a:visited { 
+	color: $third-accent; 
+	}
 
 .site {
 	flex: 1;
 }
+
 
 /*****************************************************************************/
 /*
@@ -196,9 +206,9 @@ nav {
 	font-family: 'Raleway', Helvetica, sans-serif;
 	/*position: fixed;
 	top: 0;
-	width: 100%;*/
-	background: none;
-	z-index: 1000;
+	width: 100%;
+	background: #1a1a1a;
+	z-index: 1000;*/
   padding-bottom: 0.25em;
  // border-bottom: 5px solid $third-color;
 	.site-title {
@@ -256,8 +266,7 @@ nav {
 }
 
 .site-branding {
-	flex-direction: column;
-	flex: 1;
+	display: block;
 	margin: .5em 0 0 1.25em;
 	/*background: white;
 	padding: 0 0 0 .5em;
@@ -768,9 +777,9 @@ footer .rss img {
 
 .post-header {
 	flex-direction: column;
-	height: 90vh;
+	height: calc(100vh - 106px);
 	width: 100%;
-	border-bottom: 15px solid $main-black;
+	//border-bottom: 15px solid $main-black;
 	background-attachment: fixed;
 	h1 {
 		font-size: 4em;
@@ -1037,13 +1046,10 @@ footer .rss img {
 
 .blog-posts-container {
 	  list-style-type: none;
-    color: $main-black;
-    background: $main-white;
     margin: 1em;
     padding: $section-padding;
     line-height: 1.25em;
-    border-top: 5px solid $main-color;
-    box-shadow: $card-shadow-grey;
+    border: 5px solid $main-color;
     flex: 1;
     h1 {
     	padding: 0 1em;
@@ -1079,11 +1085,11 @@ footer .rss img {
 	margin: 0 auto .5em;
 	width: 80%;
 	color: $main-white;
-	border-top: 15px solid adjust-color($main-black, $lightness: 5%);
-	border-left: 15px solid adjust-color($main-black, $lightness: 0%);
-	border-bottom: 15px solid adjust-color($main-black, $lightness: 5%);
-	border-right: 15px solid adjust-color($main-black, $lightness: 0%);
-	background: adjust-color($main-black, $lightness: 10%);
+	border-top: 5px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 5%);
+	border-left: 15px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 0%);
+	border-bottom: 5px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 5%);
+	border-right: 15px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 0%);
+	//background: adjust-color($main-black, $lightness: 10%);
 	p {
 		border-left: 3px solid rgba(0,0,0,0);
 		padding-left: 8px;
@@ -1093,13 +1099,13 @@ footer .rss img {
 
 .blogpage-post-feed-item-2 a:hover {
 	text-decoration: none;
-
-	/*	p {
+/*
+		p {
 			border-left: 3px solid $main-color;
-		}
+		}*/
 		.post-feed-title {
 			color: $third-accent;
-		}*/
+		}
 }
 
 .blog-post-feed-item-2:hover {
@@ -1111,7 +1117,7 @@ footer .rss img {
 	border-left: 15px solid adjust-color($main-accent, $lightness: 5%);
 	//border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-right: 15px solid adjust-color($main-accent, $lightness: 5%);
-	background: adjust-color($main-black, $lightness: 15%);
+	background: adjust-color($main-black, $lightness: 1%);
 }
 
 .post pre {

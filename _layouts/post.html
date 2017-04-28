@@ -1,12 +1,6 @@
 ---
 layout: default-post
 ---
-
-<body style="background-image: linear-gradient(rgba(0, 0, 255, 0.45), rgba(255, 0, 0, 0.45)), url({{ page.image }}); background-repeat: no-repeat; background-size: 100% 100%;	background-attachment: fixed;">
-<!--
-added background twice to avoid flash of gradient with no image
--->
-<div class="frow direction-column site">
 		<div class="post-header column-centered"> 
 		<!--{% if page.image %}style="background: url({{ page.image }}) top left no-repeat" alt="{{ page.image }}"{% endif %}-->
 			<h1>{{ page.title }}</h1>
@@ -27,40 +21,43 @@ added background twice to avoid flash of gradient with no image
 			</article>
 
 			<div class="underneath-post">
-
 				{% include subpage-signup-post.html %}
-
 					<div class="further-reading-section">
+
 						{% if page.previous %}
 						<span class="post-nav-link" id="post-nav-previous"><a rel="prev" href="{{ page.previous.url }}">&lsaquo; Prev</a></span>
 						{% endif %}
 						{% if page.next %}
 						<span class="post-nav-link" id="post-nav-next"><a rel="next" href="{{ page.next.url }}">Next &rsaquo;</a></span>
 						{% endif %}
+
 					</div>
 					<div class="page-categories-section">
+
 						{% for category_name in page.categories limit:3 %}
 							<ul>
 								<li>{{ category_name | capitalize }}</li>
 							</ul>
 						{% endfor %}
+
 					</div>
 					<div class="related-posts-section">
 						<ul>
+
 							{% for post in site.categories[category_name] limit:5 %}
 								<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 							{% endfor %}
+
 						</ul>
 				</div>
+
 				{% if site.comments %}
 				<div class="disqus-comments">
-
-						{% include comments.html %}
-					
+						{% include comments.html %}					
 				</div>
 				{% endif %}
+
 			</div>
 		</div>
 	</div>
-</div>
 

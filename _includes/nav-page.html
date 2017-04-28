@@ -1,17 +1,18 @@
-<nav class="frow" id="nav-page">
-  <div class="site-branding" id="site-branding-page">
-    <a href="http://www.mikepeiman.com">
-      <h1 class="site-title" id="site-branding-page-h1">MIKE PEIMAN</h1>
-    </a>
-    <p class="site-description">
-      <span id="father">Thinker</span>. <span id="thinker">Coach</span>. <span id="developer">Developer</span>.
-    </p>
-  </div>
-    <ul class="nav-menu post-menu">
-    <li><a {% if page.url == "/" %}class="menu-item active"{% endif %} class="menu-item" id="home" href="/">Home</a></li>
-    <li><a {% if page.url == "/about.html" %}class="menu-item active"{% endif %} class="menu-item" id="about" href="/about.html">About</a></li>
-    <li><a {% if page.url == "/blog.html" %}class="menu-item active"{% endif %} class="menu-item" id="blog" href="/blog.html">Blog</a></li>
-    <li><a {% if page.url == "/work.html" %}class="menu-item active"{% endif %} class="menu-item" id="work" href="/work.html">Work</a></li>
-    <li><a {% if page.url == "/contact.html" %}class="menu-item active"{% endif %} class="menu-item" id="contact" href="/contact.html">Contact</a></li>
-  </ul>
-</nav>
+<header class="header-shrink">
+  <nav class="frow">
+    <div id="site-branding-post" class="site-branding">
+      <a id="home" href="/">
+        <h1 class="site-title">MIKE PEIMAN</h1>
+        <p class="site-description">
+          <span id="father">Learner</span>. <span id="thinker">Teacher</span>. <span id="developer">Developer</span>.
+        </p>
+      </a>
+    </div>
+      <ul class="nav-menu post-menu">
+      <li><a {% if page.url == "/about.html" %}class="menu-item active"{% endif %} class="menu-item" id="about" href="/about.html">About</a></li>
+      <li><a {% if page.url == "/blog.html" %}class="menu-item active"{% endif %} class="menu-item" id="blog" href="/blog.html">Blog</a></li>
+      <li><a {% if page.url == "/work.html" %}class="menu-item active"{% endif %} class="menu-item" id="work" href="/work.html">Work</a></li>
+      <li><a {% if page.url == "/contact.html" %}class="menu-item active"{% endif %} class="menu-item" id="contact" href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
