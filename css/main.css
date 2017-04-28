@@ -31,11 +31,12 @@ body {
 */ }
 
 .first-column {
-  background: url(../images/bg11.png);
+  background: #fffcf2;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 1em 0;
-  border-top: 5px solid #b35a00;
+  border-top: 15px solid #b35a00;
+  border-right: 15px solid #b35a00;
   box-shadow: 0px 3px 5px 1px #1a1a1a; }
 
 h3, h4, h5, h6 {
@@ -50,6 +51,64 @@ h1, h2 {
 nav {
   font-family: 'Raleway', Helvetica, sans-serif; }
 
+.greeting {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: justify !important;
+      justify-content: space-between !important;
+  margin: 0 auto;
+  padding: 0;
+  border-top: 15px solid #343434;
+  border-left: 15px solid #272727;
+  border-bottom: 15px solid #343434;
+  border-right: 15px solid #272727;
+  background: #404040;
+  /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
+  background-size: cover;*/ }
+  .greeting h1 {
+    margin: 0;
+    padding: 0 30px 0 0;
+    -ms-flex: 1 1.5 auto;
+        flex: 1 1.5 auto; }
+
+.img-small-profile {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-right: 1.5em;
+  background-image: url(../images/mike-1x1-250x250.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  padding: 0;
+  border-top: 15px solid #343434;
+  border-left: 15px solid #272727;
+  border-bottom: 15px solid #343434;
+  border-right: 15px solid #272727; }
+
+a {
+  color: #fffcf2;
+  text-decoration: none; }
+
+a:hover {
+  color: #26C3FF;
+  text-decoration: none; }
+
+a:visited {
+  color: #009dd9; }
+
+.site {
+  -ms-flex: 1;
+      flex: 1; }
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
 .quotes-section {
   background: #1a1a1a;
   padding: 2em 2.5em;
@@ -96,70 +155,17 @@ nav {
 .qc-1 {
   border-left: 15px solid #b35a00; }
   .qc-1 p {
-    color: #FFC100; }
+    color: #b35a00; }
 
 .qc-2 {
   border-left: 15px solid #229500; }
   .qc-2 p {
-    color: #33E100; }
+    color: #229500; }
 
 .qc-3 {
   border-left: 15px solid #009dd9; }
   .qc-3 p {
-    color: #26C3FF; }
-
-.greeting {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify !important;
-      justify-content: space-between !important;
-  margin: 1em 0 1.75em 0;
-  padding: 2.5em 2em 2.5em 6em;
-  /*	border-top: 3px solid $third-color;
-	border-left: 3px solid $third-color;
-	border-bottom: 6px solid $third-color;
-	border-right: 6px solid $third-color; */
-  border: 15px solid #FABC11;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.1)), url(../images/bg2.png);
-  background-size: cover; }
-  .greeting h1 {
-    margin: 0;
-    padding: 0;
-    -ms-flex: 1 1.5 auto;
-        flex: 1 1.5 auto; }
-
-.img-small-profile {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  padding: 2px;
-  margin-right: 1.5em;
-  background-image: url(../images/mike-1x1-250x250.jpg);
-  background-size: cover;
-  -ms-flex: 1 1 auto;
-      flex: 1 1 auto; }
-
-a {
-  color: #fffcf2;
-  text-decoration: none; }
-
-a:hover {
-  color: #26C3FF;
-  text-decoration: none; }
-
-a:visited {
-  color: #009dd9; }
-
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
-.site {
-  -ms-flex: 1;
-      flex: 1; }
+    color: #009dd9; }
 
 .signup-form {
   list-style-type: none;
@@ -710,13 +716,13 @@ footer .rss img {
     color: white; }
 
 .post-page-below-header {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.75);
   /*	background-repeat: no-repeat; 
 	background-size: 100% 100%;	
 	background-attachment: fixed;*/ }
 
 .post-page-below-header-inner {
-  background: #009dd9;
+  background: none;
   padding: 0 2em;
   margin: 0 2em; }
 
