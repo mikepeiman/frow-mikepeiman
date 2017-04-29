@@ -580,6 +580,10 @@ p a.link-homepage {
   .learn-more h2 {
     color: #FFC100; }
 
+.learn-more-box {
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
 .lm-1 {
   background: #27008c; }
 
@@ -806,7 +810,8 @@ footer .rss img {
   background: #00658c; }
 
 .lph-2 {
-  background: #001f8c; }
+  background: #00658c;
+  text-align: center; }
 
 .lead-paragraph-home-2 {
   font-size: 1.15em;
@@ -979,8 +984,7 @@ footer .rss img {
 
 .blogpage-post-feed-item {
   padding: .5em;
-  margin: 0 auto;
-  width: 80%; }
+  margin: 0 auto; }
   .blogpage-post-feed-item p {
     border-left: 3px solid transparent;
     padding-left: 8px; }
@@ -998,8 +1002,7 @@ footer .rss img {
 .post-feed-item {
   padding: .5em;
   font-family: 'Montserrat';
-  margin: 0 auto .5em auto;
-  width: 80%;
+  margin: 0 auto .5em 2em;
   color: #fffcf2;
   border-top: 5px solid transparent;
   border-left: 15px solid transparent;

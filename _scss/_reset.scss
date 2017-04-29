@@ -638,6 +638,9 @@ p a.link-homepage {
 		color: $main-color;
 	}
 }
+.learn-more-box {
+	justify-content: space-between;
+}
 .lm-1 {
 	background: adjust-color($third-accent, $lightness: -15%, $hue: 60);
 }
@@ -888,7 +891,8 @@ footer .rss img {
 	background: adjust-color($third-accent, $lightness: -15%, $hue: 0);
 }
 .lph-2 {
-	background: adjust-color($third-accent, $lightness: -15%, $hue: 30);
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 0);
+	text-align: center;
 }
 
 .lead-paragraph-home-2 {
@@ -1098,7 +1102,7 @@ footer .rss img {
 .blogpage-post-feed-item {
 	padding: .5em;
 	margin: 0 auto;
-	width: 80%;
+	//width: 80%;
 	p {
 		border-left: 3px solid rgba(0,0,0,0);
 		padding-left: 8px;
@@ -1122,8 +1126,8 @@ footer .rss img {
 .post-feed-item {
 	padding: .5em;
 	font-family: 'Montserrat';
-	margin: 0 auto .5em auto;
-	width: 80%;
+	margin: 0 auto .5em 2em;
+	//width: 80%;
 	color: $main-white;
 	border-top: 5px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 5%);
 	border-left: 15px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 0%);
