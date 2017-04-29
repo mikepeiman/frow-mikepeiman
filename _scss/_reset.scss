@@ -28,8 +28,8 @@ body {
 	background: $main-black;
 	background-image: linear-gradient(rgba(26,26,26,.5), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
-	background-size: cover;
-	//background-attachment: fixed;
+	background-size: auto 100vh;
+	background-attachment: fixed;
 }
 .body-post {
 	/*background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-1;
@@ -85,9 +85,10 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-image: -webkit-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,0));
-	background-image: -o-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,0));
-	background-image: linear-gradient(rgba(26,26,26,1), rgba(26,26,26,0));
+	z-index: 2000;
+	background-image: -webkit-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,.75));
+	background-image: -o-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,.75));
+	background-image: linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,0));
 }
 
 /*****************************************************************************/
@@ -97,7 +98,7 @@ header {
 /*****************************************************************************/
 
 .quotes-section {
-	background: none;//$main-black;
+	background: $main-black;
 	padding: 2em 2.5em;
 	margin: 0 0 2em 0;
 	}/*
@@ -117,7 +118,7 @@ header {
 .quotes-container {
 	color: $main-white;
 	font-weight: normal;
-	margin: 3em 0 calc(100vh - 400px) 0;
+	margin: 1em 0 12em 0;
 	background: $main-black;//adjust-color($main-black, $lightness: 75%);
 	padding: 4em 2em 3em 2em;
 	text-align: center;
@@ -143,6 +144,7 @@ header {
 		}
 	}
 }
+/*
 .qc-1 {
 	border-left: 15px solid $main-accent;
 	border-right: 15px solid $main-accent;
@@ -161,6 +163,7 @@ header {
 		}
 	}
 }
+
 .qc-2 {
 	border-left: 15px solid $second-accent;
 	border-right: 15px solid $second-accent;
@@ -175,6 +178,43 @@ header {
 		span {
 			border-top: 5px solid adjust-color($second-accent, $lightness: -15%);
 			border-bottom: 5px solid adjust-color($second-accent, $lightness: -15%);
+			padding: .1em;
+		}
+	}
+}
+*/
+.qc-1 {
+	border-left: 15px solid $third-accent;
+	border-right: 15px solid $third-accent;
+	border-top: 15px solid adjust-color($third-accent, $lightness: -15%);
+	border-bottom: 15px solid adjust-color($third-accent, $lightness: -15%);
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $quote-bg-1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	p {
+		color: $main-white;
+		span {
+			border-top: 5px solid adjust-color($third-accent, $lightness: -15%);
+			border-bottom: 5px solid adjust-color($third-accent, $lightness: -15%);
+			padding: .1em;
+		}
+	}
+}
+.qc-2 {
+	border-left: 15px solid $third-accent;
+	border-right: 15px solid $third-accent;
+	border-top: 15px solid adjust-color($third-accent, $lightness: -15%);
+	border-bottom: 15px solid adjust-color($third-accent, $lightness: -15%);
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $quote-bg-11;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	p {
+		color: $main-white;
+		span {
+			border-top: 5px solid adjust-color($third-accent, $lightness: -15%);
+			border-bottom: 5px solid adjust-color($third-accent, $lightness: -15%);
 			padding: .1em;
 		}
 	}
@@ -229,7 +269,7 @@ nav {
 		text-decoration: none;
 		display: block;
 		color: white;
-		background: $main-black;
+		//background: $main-black;
   	padding: .5em;
   	border-radius: .25em;
 	}
@@ -342,7 +382,6 @@ input:hover {
 		border: 3px solid $main-color;
 		padding: .5em;
 		cursor: pointer;
-		background: rgba(255,255,255,0.05);
 	}
 
 	.input-field-post:hover {
@@ -414,7 +453,7 @@ input[type="submit"] {
 }
 
 .form-submit-post {
-	border: 2px solid $main-color;
+	border: 3px solid $main-color;
 	padding: .5em;
 	margin: 1.15em 0 1.5em 0;
 	color: $main-white;
@@ -426,12 +465,12 @@ input[type="submit"] {
 	color: $main-white;
 	transition: all .25s;
 	z-index: 1000;
-	background: $third-accent;
+	border: 3px solid $main-white;
+	background: rgba(255,255,255,0.15);
 }
 
 .form-submit-post:active {
-	background: $third-color;
-	border: 2px solid white;
+	border: 3px solid $second-color;
 	box-shadow: none;
 	transition: all .25s;
 	z-index: 1000;
@@ -1005,17 +1044,43 @@ footer .rss img {
 /*****************************************************************************/
 
 .homepage-section {
-	background: adjust-color($main-black, $lightness: 5%);
+	background: $main-black;
+	padding: 0;
 }
+.hp-1 {
+	margin-top: 6em;
+}
+.hp-2 {
+	margin-top: 0em;
+}
+.hp-3 {
+	margin-top: 6em;
+}
+.hp-4 {
+	margin-top: 6em;
+}
+.hp-5 {
+	margin-top: 6em;
+}
+.posts-feed-h1 {
+		color: white;
+		font-size: 3em;
+		background: adjust-color($main-accent, $lightness: -5%);
+		padding: 1em 0;
+		margin-top: -1em;
+	}
+.signup-h1 {
+		color: white;
+		font-size: 3em;
+		background: adjust-color($main-accent, $lightness: -5%);
+		padding: 1em 0;
+		margin-top: -1em;
+	}
 
 .posts-container {
 	margin: 0 0 2em 0;
 	ul li {
 		text-align: left;
-	}
-	h1 {
-		color: white;
-		font-size: 3em;
 	}
 	.post-feed-date {
 		font-size: 1.15em;
@@ -1360,7 +1425,10 @@ footer .rss img {
 
 @media all and (max-width: 810px) {
 
-	nav {
+	header {
+		background: $main-black;
+		border-bottom: 5px solid $third-color;
+		z-index: 2000;
   }
  	.nav-menu {
 		justify-content: space-around;
@@ -1553,7 +1621,6 @@ footer .rss img {
 	nav {
 		margin-bottom: 0;
 		padding-bottom: .25em;
-		border-bottom: 3px solid $third-accent;
 	}
 	.nav-menu li {
 		margin-bottom: .1em;

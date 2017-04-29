@@ -1,0 +1,18 @@
+<h1 class="col-md-1-1 signup-h1">Projects from YAML</h1>
+<div class="frow col-md-3-5">
+	<div class="frow portfolio-page">
+		{% for project in site.data.projects %}
+			<div class="frow portfolio-project col-md-2-7">
+				<img src="{{ project.image }}" class="portfolio-thumbnail">
+				<h2>{{ project.title }}</h2>
+
+				<p>{{ project.content }}</p>
+				<ul>
+					{% for category in project.categories %}
+					<li>{{ category }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+	 	{% endfor %}
+	</div>
+</div>

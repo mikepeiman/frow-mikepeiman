@@ -1,11 +1,13 @@
 {% include head.html %}
+<html>
   <body class="frow">
     <div class="body-page"> 
     <!-- Make sure to include the extra closing div inside the partial where I want my bg-image to end -->
       {% include nav-page.html %}
-        <div class="frow site">
-          {{ content }}
-        </div>
-      {% include footer.html %}
-  </body>
-</html>
+			<div class="frow site">
+				<div class="col-md-3-5">
+			  	{% include subpage-intro-text-1.html %}
+			  </div>
+			</div>
+		</div>
+		{{ content }}
