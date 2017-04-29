@@ -21,14 +21,14 @@ body {
     //display: flex;
     min-height: 100%;
     flex-direction: column;
-    background-color: white;
+    background-color: $main-black;
 }
 
 .body-page {
 	background: $main-black;
 	background-image: linear-gradient(rgba(26,26,26,.5), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
-	background-size: auto 100vh;
+	background-size: cover;
 	background-attachment: fixed;
 }
 .body-post {
@@ -80,15 +80,19 @@ a:visited {
 	flex: 1;
 	margin-top: 5em;
 }
-
+.landing-page {
+	flex: 1;
+	margin-top: 5em;
+}
 header {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 2000;
+	background: $main-black;/*
 	background-image: -webkit-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,.75));
 	background-image: -o-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,.75));
-	background-image: linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,0));
+	background-image: linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,0));*/
 }
 
 /*****************************************************************************/
@@ -100,7 +104,7 @@ header {
 .quotes-section {
 	background: $main-black;
 	padding: 2em 2.5em;
-	margin: 0 0 2em 0;
+	margin: 0;
 	}/*
 	.qs-1 {
 		border-top: 15px solid $main-accent;
@@ -585,7 +589,7 @@ p:empty {
 
 .intro-text {
 		color: white; //$main-white;
-    margin: 3em 0 0 0;
+    margin: 3em 0 3em 0;
     line-height: 1.25em;
     flex: 1;
     text-align: center;
@@ -1046,21 +1050,22 @@ footer .rss img {
 .homepage-section {
 	background: $main-black;
 	padding: 0;
+	margin: 0;
 }
 .hp-1 {
-	margin-top: 6em;
+
 }
 .hp-2 {
-	margin-top: 0em;
+
 }
 .hp-3 {
-	margin-top: 6em;
+
 }
 .hp-4 {
-	margin-top: 6em;
+
 }
 .hp-5 {
-	margin-top: 6em;
+
 }
 .posts-feed-h1 {
 		color: white;
