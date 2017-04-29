@@ -4,7 +4,7 @@ highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 description: "My name is Mike Peiman, and I develop ideas, websites, and human potential. I blog about lifehacking, 
 technology, philosophy, relationships, fitness, and many other subjects. 
-I love to help people, and my life's goal is to leave the world at least a little better than I found it."
+I love to help people, and my mission is to leave the world better than I found it."
 twitter_username: 
 github_username:
 permalink: none

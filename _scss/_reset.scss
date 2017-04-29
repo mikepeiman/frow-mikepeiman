@@ -544,28 +544,17 @@ p:empty {
 /*
 /*****************************************************************************/
 
-.intro-text-wrapper-2 {
-		color: $main-black; //$main-white;
-    background: $main-white; //$main-black;
-    margin: 1em;
-    padding: $section-padding;
-    line-height: 1.25em;
-    flex: 1;
-    box-shadow: $card-shadow-grey;
-    border-top: 5px solid $second-color;
-    text-align: center;
-}
-
 .intro-text {
 		color: white; //$main-white;
     margin: 3em 0 0 0;
-    padding: $section-padding;
     line-height: 1.25em;
     flex: 1;
     text-align: center;
 	h1 {
     font-weight: bold;
     font-size: 3.5em;
+    margin: 0;
+		padding: 0;
   }
   p {
 		padding: .75em 0;
@@ -589,15 +578,10 @@ p:empty {
 	//box-shadow: -6px -6px 0px 3px $main-accent;
   /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
   background-size: cover;*/
-	h1 {
-		margin: 0;
-		padding: 0 30px 0 0;
-		flex: 1 1.5 auto;
-	}
 }
 
 .greeting-body {
-	padding: 2em;/*
+	padding: 2em 0;/*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
 	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
@@ -609,6 +593,7 @@ p:empty {
 }
 
 .img-small-profile {
+	display: none;
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -653,6 +638,29 @@ p a.link-homepage {
 /* Calls To Action
 /*
 /*****************************************************************************/
+
+.learn-more {
+	margin: 2em auto;
+	padding-top: 1.5em;
+	background: $main-white;
+	color: $main-black;
+	border: 5px solid $main-white;
+		h2 {
+		color: $main-color;
+	}
+}
+.lm-1 {
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 60);
+}
+.lm-2 {
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 90);
+}
+.lm-3 {
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 120);
+}
+.lm-4 {
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 150);
+}
 
 .banner-cta-1 {
 	margin: 2em .75em;
@@ -850,6 +858,7 @@ footer .rss img {
 	padding-top: 1em;
 	text-align: left;
 }
+
 .dropcap-box {
 //	width: 5.5em;
 	width: 5.5em;
@@ -877,6 +886,29 @@ footer .rss img {
 	padding: .75em;
 	text-align: left;
 	background: adjust-color($third-accent, $lightness: -15%);
+	border: 5px solid $main-white;/*
+	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
+	border-bottom: 5px solid adjust-color($main-black, $lightness: 25%);
+	border-left: 5px solid adjust-color($main-black, $lightness: 15%);
+	border-right: 5px solid adjust-color($main-black, $lightness: 15%);*/
+	p {
+			font-family: 'Raleway';
+	}
+}
+.lph-1 {
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 0);
+}
+.lph-2 {
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 30);
+}
+
+.lead-paragraph-home-2 {
+	font-size: 115%;
+	margin-bottom: 1.25em;
+	line-height: 1.25em;
+	padding: .75em;
+	text-align: left;
+	background: adjust-color($third-accent, $lightness: -15%, $hue: 30);
 	border: 5px solid $main-white;/*
 	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
 	border-bottom: 5px solid adjust-color($main-black, $lightness: 25%);
@@ -1294,7 +1326,11 @@ footer .rss img {
 
 @media all and (min-width: 810px) {
 	.nav-menu {
-		margin: -6.25em 0 0 1.25em;
+		margin: -6.95em 0 0 1.25em;
+	}
+	nav .site-branding {
+		display: block;
+		margin-right: auto;
 	}
 	.signup-form-post {
 		padding-left: 2em;
@@ -1308,10 +1344,7 @@ footer .rss img {
 /*****************************************************************************/
 
 @media all and (min-width: 670px) {
-	nav .site-branding {
-		display: block;
-		margin-right: auto;
-	}
+
 }
 /*****************************************************************************/
 /*
@@ -1346,6 +1379,18 @@ footer .rss img {
   	background: $main-white;
   }
 
+  .img-small-profile {
+		display: inline-block;
+  }
+
+.body-page {
+	background: $main-black;
+	background-image: none;
+	/*linear-gradient(rgba(26,26,26,.5), rgba(26,26,26,1)), $bg-image-2;
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	//background-attachment: fixed;
+}
   nav ul li {
   	padding-right: .75em;
   }
@@ -1361,7 +1406,7 @@ footer .rss img {
 			font-size: 3em;
 		}
 		p {
-			font-size: 1.25em;
+			font-size: 1.15em;
 			width: 80%;
 			margin: 0 auto;
 		}
@@ -1439,8 +1484,7 @@ footer .rss img {
 			font-size: 2.75em;
 		}
 		p {
-			font-size: 1.25em;
-			width: 80%;
+			font-size: 1.05em;
 			margin: 0 auto;
 		}
 	}
@@ -1523,10 +1567,10 @@ footer .rss img {
 
 	.intro-text {
 		h1 {
-			font-size: 2.25em;
+			font-size: 2.5em;
 		}
 		p {
-			font-size: 1.15em;
+			font-size: 1em;
 			width: 90%;
 			margin: 0 auto;
 		}
@@ -1574,11 +1618,15 @@ footer .rss img {
 @media all and (max-width: 480px) {
 
 	.site-branding {
+			margin: .75em 0 0 0;
+			padding: 0;
 		h1 {
-			font-size: 1.5em;
+			font-size: 1.35em;
+			margin: 0;
+			padding: 0;
 		}
 		p {
-			font-size: .75em;
+			font-size: .9em;
 		}
 	}
 	nav {
@@ -1592,18 +1640,28 @@ footer .rss img {
 		text-transform: uppercase;
 	}
 
+	.img-small-profile {
+		margin: 0;
+		flex: 1 .35 auto;
+		border: 3px solid $main-grey;
+	}
+
 	.intro-text h1 {
 	  font-size: 2.5em;
 	  padding: .5em 0;
+	  margin: 0;
 	}
 
 	.intro-text p {
 		font-size: 1em;
-		padding: .5em .35em;
+		padding: .5em 0;
 	}
 
 	.greeting {
 		margin-top: -1.25em;
+		h1 {
+			margin: 0;
+		}
 	}
 	.quotes-section {
 		padding: 2em 1.5em;

@@ -508,29 +508,18 @@ p:empty {
 /* Intro-text sections
 /*
 /*****************************************************************************/
-.intro-text-wrapper-2 {
-  color: #1a1a1a;
-  background: #fffcf2;
-  margin: 1em;
-  padding: 0.25em 0 0 0;
-  line-height: 1.25em;
-  -ms-flex: 1;
-      flex: 1;
-  box-shadow: 0px 3px 5px 1px #404040;
-  border-top: 5px solid #33E100;
-  text-align: center; }
-
 .intro-text {
   color: white;
   margin: 3em 0 0 0;
-  padding: 0.25em 0 0 0;
   line-height: 1.25em;
   -ms-flex: 1;
       flex: 1;
   text-align: center; }
   .intro-text h1 {
     font-weight: bold;
-    font-size: 3.5em; }
+    font-size: 3.5em;
+    margin: 0;
+    padding: 0; }
   .intro-text p {
     padding: .75em 0;
     font-size: 1.15em;
@@ -552,14 +541,9 @@ p:empty {
 	background: adjust-color($main-black, $lightness: 15%);*/
   /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
   background-size: cover;*/ }
-  .greeting h1 {
-    margin: 0;
-    padding: 0 30px 0 0;
-    -ms-flex: 1 1.5 auto;
-        flex: 1 1.5 auto; }
 
 .greeting-body {
-  padding: 2em;
+  padding: 2em 0;
   /*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
@@ -571,6 +555,7 @@ p:empty {
   border: none; }
 
 .img-small-profile {
+  display: none;
   position: relative;
   width: 150px;
   height: 150px;
@@ -613,6 +598,27 @@ p a.link-homepage {
 /* Calls To Action
 /*
 /*****************************************************************************/
+.learn-more {
+  margin: 2em auto;
+  padding-top: 1.5em;
+  background: #fffcf2;
+  color: #1a1a1a;
+  border: 5px solid #fffcf2; }
+  .learn-more h2 {
+    color: #FFC100; }
+
+.lm-1 {
+  background: #27008c; }
+
+.lm-2 {
+  background: #6d008c; }
+
+.lm-3 {
+  background: #8c0065; }
+
+.lm-4 {
+  background: #8c001f; }
+
 .banner-cta-1 {
   margin: 2em .75em;
   padding-top: 1.5em;
@@ -821,6 +827,28 @@ footer .rss img {
 	border-left: 5px solid adjust-color($main-black, $lightness: 15%);
 	border-right: 5px solid adjust-color($main-black, $lightness: 15%);*/ }
   .lead-paragraph-home p {
+    font-family: 'Raleway'; }
+
+.lph-1 {
+  background: #00658c; }
+
+.lph-2 {
+  background: #001f8c; }
+
+.lead-paragraph-home-2 {
+  font-size: 115%;
+  margin-bottom: 1.25em;
+  line-height: 1.25em;
+  padding: .75em;
+  text-align: left;
+  background: #001f8c;
+  border: 5px solid #fffcf2;
+  /*
+	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
+	border-bottom: 5px solid adjust-color($main-black, $lightness: 25%);
+	border-left: 5px solid adjust-color($main-black, $lightness: 15%);
+	border-right: 5px solid adjust-color($main-black, $lightness: 15%);*/ }
+  .lead-paragraph-home-2 p {
     font-family: 'Raleway'; }
 
 .dropcap-box-home {
@@ -1147,7 +1175,10 @@ footer .rss img {
 /*****************************************************************************/
 @media all and (min-width: 810px) {
   .nav-menu {
-    margin: -6.25em 0 0 1.25em; }
+    margin: -6.95em 0 0 1.25em; }
+  nav .site-branding {
+    display: block;
+    margin-right: auto; }
   .signup-form-post {
     padding-left: 2em; } }
 
@@ -1156,11 +1187,6 @@ footer .rss img {
 /* Media - GREATER THAN 670px
 /*
 /*****************************************************************************/
-@media all and (min-width: 670px) {
-  nav .site-branding {
-    display: block;
-    margin-right: auto; } }
-
 /*****************************************************************************/
 /*
 /* Media - LESS THAN 1250px
@@ -1182,6 +1208,14 @@ footer .rss img {
 @media all and (max-width: 995px) {
   body {
     background: #fffcf2; }
+  .img-small-profile {
+    display: inline-block; }
+  .body-page {
+    background: #1a1a1a;
+    background-image: none;
+    /*linear-gradient(rgba(26,26,26,.5), rgba(26,26,26,1)), $bg-image-2;
+	background-repeat: no-repeat;
+	background-size: cover;*/ }
   nav ul li {
     padding-right: .75em; }
   .site-branding {
@@ -1191,7 +1225,7 @@ footer .rss img {
   .intro-text h1 {
     font-size: 3em; }
   .intro-text p {
-    font-size: 1.25em;
+    font-size: 1.15em;
     width: 80%;
     margin: 0 auto; }
   .blogpage-post-feed-item {
@@ -1253,8 +1287,7 @@ footer .rss img {
   .intro-text h1 {
     font-size: 2.75em; }
   .intro-text p {
-    font-size: 1.25em;
-    width: 80%;
+    font-size: 1.05em;
     margin: 0 auto; }
   .signup-form-post {
     border: none;
@@ -1309,9 +1342,9 @@ footer .rss img {
   .post-header h1 {
     font-size: 2em; }
   .intro-text h1 {
-    font-size: 2.25em; }
+    font-size: 2.5em; }
   .intro-text p {
-    font-size: 1.15em;
+    font-size: 1em;
     width: 90%;
     margin: 0 auto; }
   .block-quote {
@@ -1339,10 +1372,15 @@ footer .rss img {
 /*
 /*****************************************************************************/
 @media all and (max-width: 480px) {
-  .site-branding h1 {
-    font-size: 1.5em; }
-  .site-branding p {
-    font-size: .75em; }
+  .site-branding {
+    margin: .75em 0;
+    padding: 0; }
+    .site-branding h1 {
+      font-size: 1.35em;
+      margin: 0;
+      padding: 0; }
+    .site-branding p {
+      font-size: .9em; }
   nav {
     margin-bottom: 0;
     padding-bottom: .25em;
@@ -1351,14 +1389,22 @@ footer .rss img {
     margin-bottom: .1em;
     font-size: .75em;
     text-transform: uppercase; }
+  .img-small-profile {
+    margin: 0;
+    -ms-flex: 1 .35 auto;
+        flex: 1 .35 auto;
+    border: 3px solid #404040; }
   .intro-text h1 {
     font-size: 2.5em;
-    padding: .5em 0; }
+    padding: .5em 0;
+    margin: 0; }
   .intro-text p {
     font-size: 1em;
-    padding: .5em .35em; }
+    padding: .5em 0; }
   .greeting {
     margin-top: -1.25em; }
+    .greeting h1 {
+      margin: 0; }
   .quotes-section {
     padding: 2em 1.5em; }
   .quotes-container {
