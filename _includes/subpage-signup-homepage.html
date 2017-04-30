@@ -41,7 +41,7 @@
 
   function mcErrorCheck() {
     console.log("mcErrorCheck run");
-    if ($("#mce-error-response").children().length > 0) { 
+    if ($("#mce-error-response").contents().length > 0) { 
       console.log("mceError has children");
       console.log("calling toggleMCE");
       toggleMCE();
@@ -53,7 +53,7 @@
 
   function mcSuccessCheck() {
     console.log("mcSuccessCheck run");
-    if ($("#mce-success-response").children().length > 0) { 
+    if ($("#mce-success-response").contents().length > 0) { 
       console.log("mceSuccess has children");
       console.log("calling toggleMCE");
       toggleMCE();
@@ -85,7 +85,7 @@
 
   $("#mce-response-close-button").click(function() {
     console.log("close button clicked, calling toggleMCE");
-    toggleMCE();
+   // toggleMCE();
   });
 
   submitClick();
