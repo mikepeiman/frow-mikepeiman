@@ -26,7 +26,7 @@ body {
 
 .body-page {
 	background: $main-black;
-	background-image: linear-gradient(rgba(26,26,26,.5), rgba(26,26,26,1)), $bg-image-1c;
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-1c;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -630,9 +630,6 @@ p:empty {
 	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
 	background: adjust-color($main-black, $lightness: 3%);*/
 }
-.greeting-about {
-	border: none;
-}
 
 .img-small-profile {
 	display: none;
@@ -932,8 +929,6 @@ footer .rss img {
 	line-height: 1.25em;
 	padding: 1em;
 	text-align: left;
-	background: adjust-color($third-accent, $lightness: -15%);
-	border: 5px solid $main-white;
 /*
 	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
 	border-bottom: 5px solid adjust-color($main-black, $lightness: 25%);
@@ -945,6 +940,8 @@ footer .rss img {
 }
 .lph-1 {
 	color: white;
+	background: adjust-color($third-accent, $lightness: -15%);
+	border: 5px solid $main-white;
 }
 .lph-2 {
 	color: white;
@@ -956,27 +953,35 @@ footer .rss img {
 }
 .lph-3 {
 	color: white;
-	background: $main-black; //adjust-color($third-accent, $lightness: -15%);
+	background: adjust-color($third-accent, $lightness: -15%);
 	border: 5px solid $main-white;
 	text-align: left;
+	font-size: 1.25em;
 	padding: 1em;
 	margin-bottom: 1em;
 }
 .lph-4 {
-	color: white;
-	background: $main-black; //adjust-color($third-accent, $lightness: -15%);
-	border: 5px solid $main-white;
+	color: $main-black;
 	text-align: center;
-	margin: 0 0 1em 0;
-	padding: 1em;
-	ul li {
-		font-size: 1.15em;
+	margin: 0;
+	padding: 0;
+	p {
+		font-size: 1em;
+	 // background: $main-black; //adjust-color($third-accent, $lightness: -15%);
+	  border: 5px solid $main-white;
+	  padding: 0 1em;
+	  margin-bottom: 1em;
 		font-weight: 400;
 		text-align: left;
 		line-height: 1.25em;
 	}
 }
 
+.about-text {
+	background: $main-white;
+	border: 5px solid $third-color;
+	color: $main-black;
+}
 .lead-paragraph-home-2 {
 	font-size: 1.15em;
 	margin-bottom: 1.25em;
@@ -1094,20 +1099,43 @@ footer .rss img {
 .hp-5 {
 
 }
-.posts-feed-h1 {
+.section-header-posts-feed {
 		color: white;
 		font-size: 3em;
 		background: adjust-color($main-accent, $lightness: -5%);
+		border-top: 5px solid $main-color;
+		border-bottom: 5px solid $main-color;
 		padding: 1em 0;
 		margin-top: -2em;
 	}
-.signup-h1 {
+.section-header-signup {
 		color: white;
 		font-size: 3em;
 		background: adjust-color($main-accent, $lightness: -5%);
+		border-top: 5px solid $main-color;
+		border-bottom: 5px solid $main-color;
 		padding: 1em 0;
 		margin-top: -1em;
 	}
+.section-header-about {
+		color: white;
+		font-size: 3em;
+		background: $fourth-accent;
+		border-top: 5px solid $third-color;
+		border-bottom: 5px solid $third-color;
+		padding: 1em 0;
+		margin-top: -1em;
+}
+.section-header-contact {
+		color: white;
+		font-size: 3em;
+		background: $fourth-accent;
+		border-top: 5px solid $third-color;
+		border-bottom: 5px solid $third-color;
+		padding: 1em 0;
+		margin-top: -1em;
+}
+
 
 .posts-container {
 	margin: 0 0 2em 0;

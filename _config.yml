@@ -2,9 +2,8 @@ title: Mike Peiman | Better
 markdown: kramdown
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
-description: "My name is Mike Peiman, and I develop ideas, websites, and human potential. I blog about lifehacking, 
-technology, philosophy, relationships, fitness, and many other subjects. 
-I love to help people, and my mission is to leave the world better than I found it."
+description: "A blog on self-improvement, overcoming challenges, 
+achieving lasting fulfillment and success, and making the world a better place."
 twitter_username: 
 github_username:
 permalink: none
