@@ -22,7 +22,7 @@ body {
 
 .body-page {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.5), #1a1a1a), url(../images/bg2.png);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.5), #1a1a1a), url(../images/mikepeiman-site-bg-transparent-1600x1000.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
@@ -548,10 +548,10 @@ p:empty {
 /*****************************************************************************/
 .intro-text {
   color: white;
-  margin: 3em 0 3em 0;
+  margin: 6em 0 0 0;
   line-height: 1.25em;
-  -ms-flex: 1;
-      flex: 1;
+  -ms-flex-direction: column;
+      flex-direction: column;
   text-align: center; }
   .intro-text h1 {
     font-weight: bold;
@@ -860,7 +860,7 @@ footer .rss img {
   font-size: 1.15em;
   margin-bottom: 1.25em;
   line-height: 1.25em;
-  padding: .75em;
+  padding: 1em;
   text-align: left;
   background: #00658c;
   border: 5px solid #fffcf2;
@@ -873,11 +873,36 @@ footer .rss img {
     font-family: 'Raleway'; }
 
 .lph-1 {
-  background: #00658c; }
+  color: white; }
 
 .lph-2 {
+  color: white;
   background: #00658c;
-  text-align: center; }
+  border: 5px solid #fffcf2;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1em; }
+
+.lph-3 {
+  color: white;
+  background: #1a1a1a;
+  border: 5px solid #fffcf2;
+  text-align: left;
+  padding: 1em;
+  margin-bottom: 1em; }
+
+.lph-4 {
+  color: white;
+  background: #1a1a1a;
+  border: 5px solid #fffcf2;
+  text-align: center;
+  margin: 0;
+  padding: 1em; }
+  .lph-4 ul li {
+    font-size: 1.15em;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.25em; }
 
 .lead-paragraph-home-2 {
   font-size: 1.15em;
@@ -1077,20 +1102,17 @@ footer .rss img {
   border-bottom: 5px solid transparent;
   border-right: 15px solid transparent; }
 
-.post-feed-item a:hover {
-  text-decoration: none; }
-  .post-feed-item a:hover .post-feed-title {
-    color: #009dd9; }
-
-.blog-post-feed-item-2:hover {
-  color: #26C3FF; }
-
-.blog-post-feed li:hover {
-  border-top: 5px solid #272727;
+.post-feed-item:hover {
+  text-decoration: none;
+  border-top: 5px solid #1a1a1a;
   border-left: 15px solid #cc6700;
-  border-bottom: 5px solid #272727;
+  border-bottom: 5px solid #1a1a1a;
   border-right: 15px solid #cc6700;
   background: #222222; }
+  .post-feed-item:hover .post-feed-title {
+    color: #009dd9; }
+  .post-feed-item:hover a {
+    text-decoration: none; }
 
 .post pre {
   border: 1px solid #404040;
