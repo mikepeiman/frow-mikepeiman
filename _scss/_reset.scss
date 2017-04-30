@@ -252,12 +252,13 @@ header {
 
 nav {
 	font-family: 'Raleway', Helvetica, sans-serif;
-  padding-bottom: 0.25em;
   ul {
   	display: flex;
   	justify-content: flex-end; // space-around;
   	width: 100%;
   	align-items: center;
+  	margin-right: 2em;
+  	margin-top: -2em;
   }
   ul li {
   	padding-right: 2em;
@@ -266,22 +267,19 @@ nav {
 	a:hover {
   text-decoration: none;
 	}
-	ul {
-		margin-right: 2em;
-	}
 	.menu-item {
 		text-decoration: none;
 		display: block;
 		color: white;
-		//background: $main-black;
+		/*background: $main-black;
   	padding: .5em;
-  	border-radius: .25em;
+  	border-radius: .25em;*/
 	}
 	.menu-item:hover {
-		color: $third-accent;
+		color: $third-color;
 		text-decoration: none;
 		display: block;
-		background: adjust-color($main-black, $lightness: 5%);
+		//background: adjust-color($main-black, $lightness: 5%);
 	}
 	.menu-item.active {
 		 // border-bottom: 5px solid $third-color;
@@ -589,7 +587,7 @@ p:empty {
 
 .intro-text {
 		color: white; //$main-white;
-    margin: 6em 0 0 0;
+    margin: 6em 0 4em 0;
     line-height: 1.25em;
     flex-direction: column;
     text-align: center;
@@ -624,7 +622,8 @@ p:empty {
 }
 
 .greeting-body {
-	padding: 2em 0;/*
+	padding: 2em 0;
+	margin: 2em 0 0 0;/*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
 	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
@@ -822,6 +821,7 @@ footer {
 	  	margin-left: 1.5em;
 	  	font-size: 1em;
 	  	padding: .5em;
+	  	color: $main-color;
 	  }
   .icon {
 		fill: $main-color;
@@ -967,7 +967,7 @@ footer .rss img {
 	background: $main-black; //adjust-color($third-accent, $lightness: -15%);
 	border: 5px solid $main-white;
 	text-align: center;
-	margin: 0;
+	margin: 0 0 1em 0;
 	padding: 1em;
 	ul li {
 		font-size: 1.15em;
@@ -1328,7 +1328,7 @@ footer .rss img {
 
 @media all and (min-width: 810px) {
 	.nav-menu {
-		margin: -6.95em 0 0 1.25em;
+		margin: -6.95em 2em 0 1.25em;
 	}
 	nav .site-branding {
 		display: block;
@@ -1738,4 +1738,62 @@ footer .rss img {
 		padding: 0em;
 		margin: 0 auto;
 	}
+}
+.video-title {
+	padding: .5em 1em 1em 1em;
+}
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+}
+    
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+    
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+.youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;
 }
