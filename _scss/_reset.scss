@@ -74,7 +74,11 @@ a:hover {
  }
 a:visited { 
 	color: $third-accent; 
+	text-decoration: none;
 	}
+a:active {
+	text-decoration: none;
+}
 
 .site {
 	flex: 1;
