@@ -4,7 +4,7 @@ title:  "Jekyll included post"
 date:   2014-04-20 09:11:03
 image: http://pipsum.com/1519x782.jpg
 categories: jekyll update
-featured: true
+featured: false
 ---
 
 <p class="lead-paragraph"><span class="dropcap-box"><span class="dropcap">Y</span></span>ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

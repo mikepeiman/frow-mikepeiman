@@ -9,9 +9,9 @@
       </a>
     </div>
       <ul class="nav-menu">
+      <li><a {% if page.url == "/blog.html" %}class="menu-item active"{% endif %} class="menu-item" id="home" href="/">Home</a></li>
       <li><a {% if page.url == "/blog.html" %}class="menu-item active"{% endif %} class="menu-item" id="blog" href="/blog.html">Blog</a></li>
       <li><a {% if page.url == "/about.html" %}class="menu-item active"{% endif %} class="menu-item" id="about" href="/about.html">About</a></li>
-      <li><a {% if page.url == "/work.html" %}class="menu-item active"{% endif %} class="menu-item" id="work" href="/work.html">Work</a></li>
       <li><a {% if page.url == "/contact.html" %}class="menu-item active"{% endif %} class="menu-item" id="contact" href="/contact.html">Contact</a></li>
     </ul>
   </nav>
