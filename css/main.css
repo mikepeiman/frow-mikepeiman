@@ -214,10 +214,10 @@ header {
   border-right: 15px solid #009dd9;
   border-top: 15px solid #00658c;
   border-bottom: 15px solid #00658c;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/quote-bg-3b.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left; }
+  background-position: top; }
   .qc-3 p {
     color: #fffcf2; }
     .qc-3 p span {
@@ -261,6 +261,10 @@ nav {
   nav .menu-item.active {
     color: #26C3FF;
     text-decoration: none; }
+    nav .menu-item.active:active {
+      text-decoration: none; }
+    nav .menu-item.active:visited {
+      text-decoration: none; }
 
 .site-branding {
   display: block;
