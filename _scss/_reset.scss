@@ -26,7 +26,7 @@ body {
 
 .body-page {
 	background: $main-black;
-	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-1c;
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-1;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -214,7 +214,7 @@ header {
 	border-right: 15px solid $third-accent;
 	border-top: 15px solid adjust-color($third-accent, $lightness: -15%);
 	border-bottom: 15px solid adjust-color($third-accent, $lightness: -15%);
-	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $quote-bg-11;
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $quote-bg-2;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left;
@@ -232,7 +232,7 @@ header {
 	border-right: 15px solid $third-accent;
 	border-top: 15px solid adjust-color($third-accent, $lightness: -15%);
 	border-bottom: 15px solid adjust-color($third-accent, $lightness: -15%);
-	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-4;
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $quote-bg-3;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
