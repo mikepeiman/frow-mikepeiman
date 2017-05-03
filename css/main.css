@@ -12,7 +12,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: 'Nunito', 'PT Sans', 'Raleway', Helvetica, sans-serif;
+  font-family: 'Raleway','PT Sans', Helvetica, sans-serif;
   font-size: 1.25em;
   text-align: center;
   min-height: 100%;
@@ -75,7 +75,7 @@ a:active {
 .site {
   -ms-flex: 1;
       flex: 1;
-  margin-top: 5em; }
+  margin-top: 3em; }
 
 .landing-page {
   -ms-flex: 1;
@@ -1095,7 +1095,7 @@ p a.link-homepage {
   border-top: 5px solid #FFC100;
   border-bottom: 5px solid #FFC100;
   padding: 1em 0;
-  margin-top: -2em; }
+  margin-top: -1em; }
 
 .section-header-signup {
   color: white;

@@ -15,7 +15,7 @@
 html { height: 100%; }
 
 body {
-    font-family: 'Nunito', 'PT Sans', 'Raleway', Helvetica, sans-serif;
+    font-family: 'Raleway','PT Sans', Helvetica, sans-serif;
     font-size: 1.25em;
     text-align: center;
     //display: flex;
@@ -82,7 +82,7 @@ a:active {
 
 .site {
 	flex: 1;
-	margin-top: 5em;
+	margin-top: 3em;
 }
 .landing-page {
 	flex: 1;
@@ -1210,7 +1210,7 @@ p a.link-homepage {
 		border-top: 5px solid $main-color;
 		border-bottom: 5px solid $main-color;
 		padding: 1em 0;
-		margin-top: -2em;
+		margin-top: -1em;
 	}
 .section-header-signup {
 		color: white;
@@ -1329,7 +1329,6 @@ p a.link-homepage {
 	padding: .5em;
 	font-family: 'Montserrat';
 	margin: 0 auto .5em 2em;
-	//width: 80%;
 	color: $main-white;
 	border-top: 5px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 5%);
 	border-left: 15px solid rgba(0,0,0,0);//adjust-color($main-black, $lightness: 0%);
@@ -1517,11 +1516,7 @@ p a.link-homepage {
   	}
   }
 	.intro-text {
-		h1 {
-		//	font-size: 3em;
-		}
 		p {
-		//	font-size: 1.15em;
 			width: 80%;
 			margin: 0 auto;
 		}
@@ -1583,25 +1578,9 @@ p a.link-homepage {
 		flex-direction: column;
 	}
 
-	.post-header h1 {
-		//font-size: 2.5em;
-	}
-	.site-branding {
-		h1 {
-	//		font-size: 2em;
-		}
-		p {
-	//		font-size: 1em;
-		}
-	}
-
 	.intro-text {
 		padding-top: 0;
-		h1 {
-	//		font-size: 2.75em;
-		}
 		p {
-		//	font-size: 1.05em;
 			margin: 0 auto;
 		}
 	}
@@ -1694,11 +1673,7 @@ p a.link-homepage {
 	}
 
 	.intro-text {
-		h1 {
-	//		font-size: 2.5em;
-		}
 		p {
-		//	font-size: 1em;
 			width: 90%;
 			margin: 0 auto;
 		}
@@ -1748,12 +1723,8 @@ p a.link-homepage {
 			margin: .75em 0 0 0;
 			padding: 0;
 		h1 {
-		//	font-size: 1.35em;
 			margin: 0;
 			padding: 0;
-		}
-		p {
-		//	font-size: .9em;
 		}
 	}
 	nav {
@@ -1762,7 +1733,6 @@ p a.link-homepage {
 	}
 	.nav-menu li {
 		margin-bottom: .1em;
-	//	font-size: .85em;
 		text-transform: uppercase;
 	}
 
@@ -1773,13 +1743,11 @@ p a.link-homepage {
 	}
 
 	.intro-text h1 {
-	//  font-size: 2.25em;
 	  padding: .5em 0;
 	  margin: 0;
 	}
 
 	.intro-text p {
-	//	font-size: 1em;
 		padding: .5em 0;
 	}
 
@@ -1795,12 +1763,10 @@ p a.link-homepage {
 	.quotes-container {
 		padding: 2.5em .35em 1.5em .35em;
 		h1 {
-		//	font-size: 1.65em;
 			padding: 0;
 		}
 		p span {
 			display: block;
-		//	font-size: 90%;
 			width: 70%;
 			margin: 0 auto;
 			padding: .15em;
