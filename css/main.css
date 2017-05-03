@@ -274,12 +274,40 @@ nav {
   display: block;
   margin: .5em 0 0 1.25em;
   text-decoration: none;
+  border: none;
+  outline: none;
   /*background: white;
 	padding: 0 0 0 .5em;
 	border-left: 5px solid $third-color;*/ }
+  .site-branding:active {
+    text-decoration: none;
+    border: none;
+    outline: none; }
+  .site-branding:visited {
+    text-decoration: none;
+    border: none;
+    outline: none; }
+  .site-branding:focus {
+    text-decoration: none;
+    border: none;
+    outline: none; }
 
 .site-branding a {
-  text-decoration: none; }
+  text-decoration: none;
+  border: none;
+  outline: none; }
+  .site-branding a:active {
+    text-decoration: none;
+    border: none;
+    outline: none; }
+  .site-branding a:visited {
+    text-decoration: none;
+    border: none;
+    outline: none; }
+  .site-branding a:focus {
+    text-decoration: none;
+    border: none;
+    outline: none; }
 
 .site-branding h1 {
   margin: 0.3em 1.5em 0 0;
@@ -945,7 +973,7 @@ p a.link-homepage {
     padding: 0 1em;
     margin-bottom: 1em;
     font-weight: 400;
-    text-align: left;
+    text-align: center;
     line-height: 1.25em; }
 
 .about-text {
