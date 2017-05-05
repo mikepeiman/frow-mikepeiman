@@ -863,16 +863,20 @@ p a.link-homepage {
 /*****************************************************************************/
 /* standard */
 .post {
-  padding: 0 1em;
+  padding: 0 1em 1em 1em;
+  margin: 0;
   line-height: 1.5em;
   text-align: left;
-  background: white; }
+  background: #fffcf2; }
+  .post p {
+    margin-bottom: 1em; }
 
 .post-header {
   -ms-flex-direction: column;
       flex-direction: column;
-  height: calc(100vh - 100px);
+  height: 100vh;
   width: 100%;
+  margin: 0;
   background-attachment: fixed; }
   .post-header h1 {
     font-size: 3em;
@@ -882,36 +886,42 @@ p a.link-homepage {
 
 .post-intro {
   padding: 1em;
+  margin: 1em 1em 2em 1em;
+  background: #fffcf2;
   color: #00658c;
   border-top: 5px solid #00658c;
   border-bottom: 5px solid #00658c; }
 
+.leading-quotation-mark {
+  font-weight: bold; }
+
 .post-page-below-header {
   background: white;
-  /*	background-repeat: no-repeat; 
-	background-size: 100% 100%;	
-	background-attachment: fixed;*/ }
+  margin: 0;
+  padding: 0; }
 
 .post-page-below-header-inner {
   background: none;
   padding: 0 1em;
-  margin: 2em; }
+  margin: 0; }
 
 .lead-paragraph {
   font-size: 1.25em;
-  margin-bottom: 1.25em;
   line-height: 1.25em;
-  padding-top: 1em;
-  text-align: left; }
+  padding: .75em;
+  text-align: left;
+  margin: 2em 0;
+  display: inline-block;
+  box-shadow: 0px 3px 5px 1px #404040; }
 
 .dropcap-box {
   width: 5.5em;
-  height: 4.7em;
+  height: 4.6em;
   background: #1a1a1a;
   float: left;
   text-align: center;
   margin: .2em .5em 0 0;
-  padding: .5em;
+  padding: .5em 0;
   border-radius: 5px; }
 
 .dropcap {

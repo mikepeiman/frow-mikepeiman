@@ -934,17 +934,22 @@ p a.link-homepage {
 /* standard */
 
 .post {
-	padding: 0 1em;
+	padding: 0 1em 1em 1em;
+	margin: 0;
 	line-height: 1.5em;
 	text-align: left;
-	background: white;//$main-white;
+	background: $main-white; //adjust-color($main-white, $lightness: -8%);
+	//border: 1px dotted $main-black;
+	p {
+		margin-bottom: 1em;
+	}
 }
 
 .post-header {
 	flex-direction: column;
-	height: calc(100vh - 100px);
+	height: 100vh;
 	width: 100%;
-	//border-bottom: 15px solid $main-black;
+	margin: 0;
 	background-attachment: fixed;
 	h1 {
 		font-size: 3em;
@@ -955,41 +960,48 @@ p a.link-homepage {
 }
 .post-intro {
 	padding: 1em;
+	margin: 1em 1em 2em 1em;
+	background: $main-white;
 	color: $fourth-accent;
 	border-top: 5px solid $fourth-accent;
 	border-bottom: 5px solid $fourth-accent;
 }
-
+.leading-quotation-mark {
+	font-weight: bold;
+}
 .post-page-below-header {
-	background: white;//rgba(255,255,255,0.75); //linear-gradient(rgba(245, 245, 245, 1), rgba(0, 0, 55, .1));
-/*	background-repeat: no-repeat; 
-	background-size: 100% 100%;	
-	background-attachment: fixed;*/
+	background: white;
+	margin: 0;
+	padding: 0;
+
 }
 
 .post-page-below-header-inner {
 	background: none;// $main-grey;
 	padding: 0 1em;
-	margin: 2em;
+	margin: 0;
 }
 
 .lead-paragraph {
 	font-size: 1.25em;
-	margin-bottom: 1.25em;
 	line-height: 1.25em;
-	padding-top: 1em;
+	padding: .75em;
 	text-align: left;
+	margin: 2em 0;
+	display: inline-block;
+	//background: adjust-color($main-white, $lightness: -8%);
+	//border: 1px dotted $main-black;
+	box-shadow: $card-shadow-grey;
 }
 
 .dropcap-box {
-//	width: 5.5em;
-	width: 5.5em;
-	height: 4.7em;
+  width: 5.5em;
+	height: 4.6em;
 	background: $main-black;
 	float: left;
 	text-align: center;
 	margin: .2em .5em 0 0;
-	padding: .5em;
+	padding: .5em 0;
 	border-radius: 5px;
 }
 .dropcap {
