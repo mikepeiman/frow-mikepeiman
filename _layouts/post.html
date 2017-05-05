@@ -11,8 +11,8 @@ layout: default-post
 				<li class="meta-word-count"><span class="word-count"></span> words</li>
 			</ul>
 		</div>
-	<div class="post-page-below-header">
-		<div class="post-page-below-header-inner frow-container">
+	<div class="post-page-below-header frow-container">
+		<div class="post-page-below-header-inner">
 			<article class="centered">
 				<div class="post">
 				{{ page.content }}
@@ -25,12 +25,12 @@ layout: default-post
 					{% if page.previous %}
 					<span class="post-nav-link" id="post-nav-previous"><a rel="prev" href="{{ page.previous.url }}">&lsaquo; Prev Article</a></span>
 					{% else %}
-					<span class="post-nav-link-inactive" id="post-nav-previous"><a rel="prev">&lsaquo; No older articles</a></span>
+					<span class="post-nav-link-inactive" id="post-nav-previous"><a rel="prev">&lsaquo; None older</a></span>
 					{% endif %}
 					{% if page.next %}
 					<span class="post-nav-link" id="post-nav-next"><a rel="next" href="{{ page.next.url }}">Next Article &rsaquo;</a></span>
 					{% else %}
-					<span class="post-nav-link-inactive" id="post-nav-next"><a rel="next">No newer articles &rsaquo;</a></span>
+					<span class="post-nav-link-inactive" id="post-nav-next"><a rel="next">None newer &rsaquo;</a></span>
 					{% endif %}
 				</div>
 				{% include subpage-signup-post.html %}

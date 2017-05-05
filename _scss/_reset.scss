@@ -390,6 +390,7 @@ nav {
 .signup-form-post {
     list-style-type: none;
     flex: 1;
+    width: 100%;
     color: white;
     background: $main-black;
     margin: 0 0 2em 0;
@@ -397,7 +398,7 @@ nav {
     line-height: 1.25em;
     text-align: center;
     h1 {
-    	font-size: 3em;
+    	font-size: 2.5em;
     }
     p {
     	padding: 0 0 1em 0;
@@ -934,11 +935,11 @@ p a.link-homepage {
 /* standard */
 
 .post {
-	padding: 0 1em 1em 1em;
+	padding: 0 1.25em 1.25em 1.25em;
 	margin: 0;
 	line-height: 1.5em;
 	text-align: left;
-	background: $main-white; //adjust-color($main-white, $lightness: -8%);
+	background: white; //				;
 	//border: 1px dotted $main-black;
 	p {
 		margin-bottom: 1em;
@@ -949,28 +950,29 @@ p a.link-homepage {
 	flex-direction: column;
 	height: 100vh;
 	width: 100%;
-	margin: 0;
+	margin: 0 0 -2em 0;
 	background-attachment: fixed;
 	h1 {
 		font-size: 3em;
-		margin: 2em 0 .25em 0;
+		margin: 5em 0 .25em 0;
 		padding-bottom: 0;
 		color: white;
 	}
 }
 .post-intro {
 	padding: 1em;
-	margin: 1em 1em 2em 1em;
-	background: $main-white;
+	margin: 2em 1em 2em 1em;
+	background: white;
 	color: $fourth-accent;
 	border-top: 5px solid $fourth-accent;
 	border-bottom: 5px solid $fourth-accent;
+	//box-shadow: $card-shadow-grey;
 }
 .leading-quotation-mark {
 	font-weight: bold;
 }
 .post-page-below-header {
-	background: white;
+	box-shadow: $card-shadow-grey;
 	margin: 0;
 	padding: 0;
 
@@ -978,7 +980,7 @@ p a.link-homepage {
 
 .post-page-below-header-inner {
 	background: none;// $main-grey;
-	padding: 0 1em;
+	padding: 0;
 	margin: 0;
 }
 
@@ -989,7 +991,7 @@ p a.link-homepage {
 	text-align: left;
 	margin: 2em 0;
 	display: inline-block;
-	//background: adjust-color($main-white, $lightness: -8%);
+	background: white;
 	//border: 1px dotted $main-black;
 	box-shadow: $card-shadow-grey;
 }
@@ -1139,8 +1141,7 @@ p a.link-homepage {
 .further-reading-section {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 1em;
-	margin: 4em 2em 3em 2em;
+	margin: 2em 2em 5em 2em;
 }
 .post-nav-link a {
 		background: $main-grey;
@@ -1455,9 +1456,6 @@ p a.link-homepage {
 		display: block;
 		margin-right: auto;
 	}
-	.signup-form-post {
-		padding-left: 2em;
-	}
 }
 
 /*****************************************************************************/
@@ -1603,7 +1601,10 @@ p a.link-homepage {
 	.signup-form-post {
 		border: none;
 		margin: 1em auto;
-		width: 80%;
+		h1 {
+			margin: .5em auto;
+			padding: 0;
+		}
 	}
 
 	.posts-container {
@@ -1614,11 +1615,11 @@ p a.link-homepage {
 
 /*****************************************************************************/
 /*
-/* Media - LESS THAN 750px
+/* Media - LESS THAN 768px
 /*
 /*****************************************************************************/
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
 	body {
 		font-size: 105%;
 	}
@@ -1665,7 +1666,9 @@ p a.link-homepage {
 		li:nth-of-type(4) {
 			float: left;
 		}
-
+	}
+	.post-page-below-header {
+		box-shadow: none;
 	}
 }
 
@@ -1798,11 +1801,14 @@ p a.link-homepage {
 .underneath-post {
 	margin: 2em 0 0 0;
 }
-
+.further-reading-section {
+	display: flex;
+	justify-content: space-between;
+	margin: 2em 1em 5em 1em;
+}
 .frow-container {
 	width: 100%;
-	padding-left: 0px;
-	padding-right: 0px;
+	padding: 0;
 }
 
 .posts-container {
@@ -1827,6 +1833,29 @@ p a.link-homepage {
 		margin: 0 auto;
 	}
 }
+
+
+/*****************************************************************************/
+/*
+/* Media - LESS THAN 480px
+/*
+/*****************************************************************************/
+
+@media all and (max-width: 340px) {
+	.post-header {
+		h1 {
+			font-size: 2.5em;
+			margin: 5em 0 .25em 0;
+		}
+	}
+}
+
+/*****************************************************************************/
+/*
+/* YouTube embed
+/*
+/*****************************************************************************/
+
 .video-title {
 	padding: .5em 1em 1em 1em;
 }

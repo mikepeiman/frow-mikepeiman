@@ -6,7 +6,7 @@ image: http://pipsum.com/1400x700.jpg
 categories: Mastery
 featured: true
 ---
-<p class="post-intro">This following is a direct excerpt from the excellent book "Mastery" by Robert Greene (pg 28). I will eventually expand on this with a series of posts on this theme, as I reflect on the lessons from this book that resonate most powerfully with me.</p>
+<p class="post-intro">The following is a direct excerpt from the excellent book "Mastery" by Robert Greene (pg 28). I will eventually expand on this with a series of posts on this theme, as I reflect on the lessons from this book that resonate most powerfully with me.</p>
 <p class="lead-paragraph"><span class="dropcap-box"><span class="dropcap dropcap-w">W</span></span>hat we lack most in the modern world is a sense of a larger purpose to our lives.</p>
 
 <p>In the past, it was organized religion that often supplied this. But most of us now live in a secularized world. We human animals are unique - we must build our own world. We do not simply react to events out of biological scripting. But without a sense of direction provided to us, we tend to flounder. We don't know how to fill up and structure our time. There seems to be no defining purpose to our lives. We are perhaps not conscious of this emptiness, but it infects us in all kinds of ways.</p> 
