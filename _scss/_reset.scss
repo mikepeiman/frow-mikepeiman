@@ -268,34 +268,21 @@ nav {
   	padding-right: 2em;
  		text-transform: uppercase;
   }
-	a:hover {
-  text-decoration: none;
-	}
-	.menu-item {
-		text-decoration: none;
-		display: block;
+	a.menu-item {
+	  text-decoration: none;
+	  display: block;
 		color: white;
-		/*background: $main-black;
-  	padding: .5em;
-  	border-radius: .25em;*/
-	}
-	.menu-item:hover {
-		color: $third-color;
-		text-decoration: none;
-		display: block;
-		//background: adjust-color($main-black, $lightness: 5%);
-	}
-	.menu-item.active {
-		 // border-bottom: 5px solid $third-color;
-		  color: $third-color;
-		 // padding-bottom: 0.25em;
-		  text-decoration: none;
-		  &:active {
-		  	text-decoration: none;
-		  }
-		  &:visited {
-		  	text-decoration: none;
-		  }
+		&:active {
+	  	text-decoration: none;
+	  	color: $third-color;
+	  }
+		&:visited {
+	  	text-decoration: underline;
+	  }
+	  &:hover {
+			color: $third-color;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -339,6 +326,11 @@ nav {
 		outline: none;
 	}
 	&:focus {
+		text-decoration: none;
+		border: none;
+		outline: none;
+	}
+	&:hover {
 		text-decoration: none;
 		border: none;
 		outline: none;
@@ -399,6 +391,8 @@ nav {
     text-align: center;
     h1 {
     	font-size: 2.5em;
+    	margin: 1em 0;
+    	padding: 1em 0 0 0;
     }
     p {
     	padding: 0 0 1em 0;
@@ -643,6 +637,7 @@ p:empty {
     font-size: 3em;
     margin: 0;
 		padding: 0;
+		text-decoration: none;
   }
   p {
 		padding: .75em 0;
@@ -709,16 +704,6 @@ p a.link-homepage {
 		color: $third-color;
 	}
 }
-/*
-.link-about {
-	border: 2px solid $third-accent;
-}
-.link-work {
-	border: 2px solid $third-accent;
-}
-.link-coaching {
-	border: 2px solid $third-accent;
-}*/
 
 /*****************************************************************************/
 /*
@@ -841,42 +826,43 @@ p a.link-homepage {
     color: $main-grey;
 }
 
-.social-links li p a {
-		text-decoration: none;
-}
+footer {
+		&.social-links {
+	    color: $main-grey;
+	    background: $main-black;
+	    padding: 1em 0;
+			bottom: 0;
+	    ul {
+		  	display: flex;
+		  	justify-content: flex-end; // space-around;
+		  	width: 100%;
+		  	align-items: center;
+		  	padding-right: 3em;
+		  }
 
-.social-links {
-    color: $main-grey;
-    font-family: 'Montserrat','Raleway';
-    background: $main-black;
-    padding: 1em 0;
-		bottom: 0;
-
-    ul {
-	  	display: flex;
-	  	justify-content: flex-end; // space-around;
-	  	width: 100%;
-	  	align-items: center;
-	  	padding-right: 3em;
-	  }
-
-	  ul li:first-child {
-	  	margin-right: auto;
-	  	margin-left: 1.5em;
-	  	font-size: 1em;
-	  	padding: .5em;
-	  	color: $main-color;
-	  }
-  .icon {
-		fill: $main-color;
-	  width: 32px;
-	  height: 32px;
-	  margin: 1em .25em;
-	  flex: 1;
-	}
-
-	.icon:hover {
-		fill: $third-color;
+		  ul li {
+		  	&:first-child {
+			  	margin-right: auto;
+			  	margin-left: 1.5em;
+			  	font-size: .85em;
+			  	padding: .5em;
+			  	color: $main-color;
+			  	text-align: left;
+		  	}
+			  .icon {
+					fill: $main-color;
+				  width: 32px;
+				  height: 32px;
+				  margin: 1em .25em;
+				  flex: 1;
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+		.icon:hover {
+			fill: $third-color;
+		}
 	}
 }
 .social-links-contact {
@@ -1460,39 +1446,6 @@ p a.link-homepage {
 
 /*****************************************************************************/
 /*
-/* Media - GREATER THAN 670px
-/*
-/*****************************************************************************/
-
-@media all and (min-width: 670px) {
-
-}
-/*****************************************************************************/
-/*
-/* Media - LESS THAN 1250px
-/*
-/*****************************************************************************/
-
-@media all and (max-width: 1250px) {
-	
-/*
-	.intro-text {
-		h1 {
-			font-size: 3em;
-		}
-		p {
-			font-size: 1.25em;
-			width: 100%;
-			margin: 0 auto;
-		}
-	}*/
-}
-
-
-
-
-/*****************************************************************************/
-/*
 /* Media - LESS THAN 995px
 /*
 /*****************************************************************************/
@@ -1603,7 +1556,7 @@ p a.link-homepage {
 		margin: 1em auto;
 		h1 {
 			margin: .5em auto;
-			padding: 0;
+			padding: 1em 0 0 0;
 		}
 	}
 

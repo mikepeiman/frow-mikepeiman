@@ -249,25 +249,17 @@ nav {
   nav ul li {
     padding-right: 2em;
     text-transform: uppercase; }
-  nav a:hover {
-    text-decoration: none; }
-  nav .menu-item {
+  nav a.menu-item {
     text-decoration: none;
     display: block;
-    color: white;
-    /*background: $main-black;
-  	padding: .5em;
-  	border-radius: .25em;*/ }
-  nav .menu-item:hover {
-    color: #26C3FF;
-    text-decoration: none;
-    display: block; }
-  nav .menu-item.active {
-    color: #26C3FF;
-    text-decoration: none; }
-    nav .menu-item.active:active {
-      text-decoration: none; }
-    nav .menu-item.active:visited {
+    color: white; }
+    nav a.menu-item:active {
+      text-decoration: none;
+      color: #26C3FF; }
+    nav a.menu-item:visited {
+      text-decoration: underline; }
+    nav a.menu-item:hover {
+      color: #26C3FF;
       text-decoration: none; }
 
 .site-branding {
@@ -305,6 +297,10 @@ nav {
     border: none;
     outline: none; }
   .site-branding a:focus {
+    text-decoration: none;
+    border: none;
+    outline: none; }
+  .site-branding a:hover {
     text-decoration: none;
     border: none;
     outline: none; }
@@ -357,7 +353,9 @@ nav {
   line-height: 1.25em;
   text-align: center; }
   .signup-form-post h1 {
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    margin: 1em 0;
+    padding: 1em 0 0 0; }
   .signup-form-post p {
     padding: 0 0 1em 0;
     font-size: 1.25em;
@@ -594,7 +592,8 @@ p:empty {
     font-weight: bold;
     font-size: 3em;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    text-decoration: none; }
   .intro-text p {
     padding: .75em 0;
     font-size: 1.15em;
@@ -657,16 +656,6 @@ p a.link-homepage {
     background: #272727;
     color: #26C3FF; }
 
-/*
-.link-about {
-	border: 2px solid $third-accent;
-}
-.link-work {
-	border: 2px solid $third-accent;
-}
-.link-coaching {
-	border: 2px solid $third-accent;
-}*/
 /*****************************************************************************/
 /*
 /* Calls To Action
@@ -781,16 +770,12 @@ p a.link-homepage {
 .meta {
   color: #404040; }
 
-.social-links li p a {
-  text-decoration: none; }
-
-.social-links {
+footer.social-links {
   color: #404040;
-  font-family: 'Montserrat','Raleway';
   background: #1a1a1a;
   padding: 1em 0;
   bottom: 0; }
-  .social-links ul {
+  footer.social-links ul {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -799,20 +784,23 @@ p a.link-homepage {
     -ms-flex-align: center;
         align-items: center;
     padding-right: 3em; }
-  .social-links ul li:first-child {
+  footer.social-links ul li:first-child {
     margin-right: auto;
     margin-left: 1.5em;
-    font-size: 1em;
+    font-size: .85em;
     padding: .5em;
-    color: #FFC100; }
-  .social-links .icon {
+    color: #FFC100;
+    text-align: left; }
+  footer.social-links ul li .icon {
     fill: #FFC100;
     width: 32px;
     height: 32px;
     margin: 1em .25em;
     -ms-flex: 1;
         flex: 1; }
-  .social-links .icon:hover {
+  footer.social-links ul li a {
+    text-decoration: none; }
+  footer.social-links .icon:hover {
     fill: #26C3FF; }
 
 .social-links-contact {
@@ -1304,29 +1292,6 @@ p a.link-homepage {
 
 /*****************************************************************************/
 /*
-/* Media - GREATER THAN 670px
-/*
-/*****************************************************************************/
-/*****************************************************************************/
-/*
-/* Media - LESS THAN 1250px
-/*
-/*****************************************************************************/
-@media all and (max-width: 1250px) {
-  /*
-	.intro-text {
-		h1 {
-			font-size: 3em;
-		}
-		p {
-			font-size: 1.25em;
-			width: 100%;
-			margin: 0 auto;
-		}
-	}*/ }
-
-/*****************************************************************************/
-/*
 /* Media - LESS THAN 995px
 /*
 /*****************************************************************************/
@@ -1413,7 +1378,7 @@ p a.link-homepage {
     margin: 1em auto; }
     .signup-form-post h1 {
       margin: .5em auto;
-      padding: 0; }
+      padding: 1em 0 0 0; }
   .posts-container {
     margin: 1em auto;
     width: 100%; } }
