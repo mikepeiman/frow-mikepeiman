@@ -855,10 +855,21 @@ footer.social-links {
   padding: 0 1.25em 1.25em 1.25em;
   margin: 0;
   line-height: 1.5em;
-  text-align: left;
   background: white; }
   .post p {
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    text-align: left; }
+  .post h1 {
+    text-align: center; }
+  .post blockquote {
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #26C3FF;
+    padding: .5em 1em;
+    margin: 1.5em auto;
+    box-shadow: 0px 3px 5px 1px #404040; }
+    .post blockquote p {
+      padding: 0;
+      margin: 0; }
 
 .post-header {
   -ms-flex-direction: column;
@@ -880,6 +891,21 @@ footer.social-links {
   color: #00658c;
   border-top: 5px solid #00658c;
   border-bottom: 5px solid #00658c; }
+
+.post-img {
+  display: inline-block;
+  width: 100%;
+  height: auto; }
+
+img + em {
+  text-align: center;
+  font-style: normal;
+  margin: -.5em auto 0 auto;
+  padding: .5em;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: block;
+  background: rgba(0, 0, 0, 0.05); }
 
 .leading-quotation-mark {
   font-weight: bold; }

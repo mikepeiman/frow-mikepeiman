@@ -19,7 +19,7 @@ Licensed under the MIT license
           readingTimeTarget: '.reading-time',
             readingTimeAsNumber: false,
           wordCountTarget: '.word-count',
-          wordsPerMinute: 270,
+          wordsPerMinute: 220,
           round: true,
           lang: 'en',
       lessThanAMinuteString: 'Under one minute',

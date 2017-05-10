@@ -924,11 +924,25 @@ footer {
 	padding: 0 1.25em 1.25em 1.25em;
 	margin: 0;
 	line-height: 1.5em;
-	text-align: left;
 	background: white; //				;
 	//border: 1px dotted $main-black;
 	p {
 		margin-bottom: 1em;
+		text-align: left;
+	}
+	h1 {
+		text-align: center;
+	}
+	blockquote {
+		background: rgba(0,0,0,0.05);
+		border-left: 5px solid $third-color;
+		padding: .5em 1em;
+		margin: 1.5em auto;
+		box-shadow: $card-shadow-grey;
+		p {
+			padding: 0;
+			margin: 0;
+		}
 	}
 }
 
@@ -954,9 +968,26 @@ footer {
 	border-bottom: 5px solid $fourth-accent;
 	//box-shadow: $card-shadow-grey;
 }
+.post-img {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+img + em {
+	text-align: center;
+	font-style: normal;
+	margin: -.5em auto 0 auto;
+	padding: .5em;
+	align-self: center;
+	display: block;
+	background: rgba(0,0,0,0.05);
+}
+
 .leading-quotation-mark {
 	font-weight: bold;
 }
+
 .post-page-below-header {
 	box-shadow: $card-shadow-grey;
 	margin: 0;

@@ -6,7 +6,7 @@ description: "A blog on self-improvement, overcoming challenges,
 achieving lasting fulfillment and success, and making the world a better place."
 twitter_username: 
 github_username:
-permalink: none
+permalink: :year/:title.html
 comments: false
 
 defaults:
