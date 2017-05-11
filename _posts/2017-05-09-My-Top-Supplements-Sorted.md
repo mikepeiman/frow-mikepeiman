@@ -41,31 +41,90 @@ Also note that I try to buy larger sizes when possible, and when I've already tr
 
 And finally, full disclosure - these are affiliate links, which means if you click through and buy any of them, I'll get a small commission. Which means you'll be helping me continue my mission of learning, sourcing and sharing the best resources I can find to improve health and quality of life. Cool, right?
 
-<figure id="frow supplements-list">
+<figure class="frow supplements-list">
   <div class="figure-header">
     <h1>Mike's Top Supplements Recommendations</h1>
   </div>
+    <div class="categories-panel">   
+      <h1 class="category-list-title">{{ site.data.supplements-categories.category-list-title }}</h1>   
+      <div class="all-product-categories">
+        <div class="frow col-md-1-2">
+          <h1>Increases <i class="icon-modifier-up fa fa-arrow-circle-o-up"></i></h1>
+          <ul class="all-product-categories">
+            {% for category in site.data.supplements-categories.categories %}
+              {% if category.modifier == "up" %}
+              <li class="category text-modifier-up">
+                <i class="fa fa-fw {{ category.icon }} icon-modifier-up"></i>
+                <span class="category-name"> {{ category.name }}</span>
+              </li>
+              {% else %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="frow col-md-1-2">
+          <h1>Decreases <i class="icon-modifier-down fa fa-arrow-circle-o-down"></i></h1>
+          <ul class="all-product-categories">
+            {% for category in site.data.supplements-categories.categories %}
+              {% if category.modifier == "down" %}
+              <li class="category text-modifier-down">
+                <i class="fa fa-fw {{ category.icon }} icon-modifier-down"></i>
+                <span class="category-name"> {{ category.name }}</span>
+              </li>
+              {% else %}
+              <span data="not up"></span>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
   {% for product in site.data.supplements %}
-  <ul class="all-product-categories">
-    {% for category in product.categories %}
-      <li class="category">{{ category }}</li>
-    {% endfor %}
-  </ul>
   <div class="products">
-    <div class="single-product">
-      <ul class="single-product-categories">
-        <li class="product-category"></li>
+    <div class="single-product frow col-md-1-3">
+      <ul class="product-header">
+        <a href="{{ product.url }}"><li class="product-shortname">{{ product.shortname }}</li></a>
+        <li class="product-brandname">{{ product.brandname }}</li>
+        <li class="product-longdesc">{{ product.longdesc }}</li>
       </ul>
-      <<span class="product-shortname"><a href="{{ product.url }}">{{ product.shortname }}</a></span>
-      <span class="product-brandname">{{ product.brandname }}</span>
-      <span class="product-longdesc">{{ product.longdesc }}</span>
-      <span class="product-price">{{ product.price }}</span>
-      <span class="product-unit">{{ product.unit }}</span>
-      <span class="product-quantity">{{ product.quantity }}</span>
-      <span class="product-type">{{ product.type }}</span>
-      <span class="product-source">{{ product.source }}</span>
-      <span class="product-rating">{{ product.rating }}</span>
-      <span class="product-unit-price">{{ product.unit-price }} per <span class="global-unit"></span></span>
+        <div class="single-product-categories">
+            <ul>
+              {% for category in product.categories %}
+                {% if category.modifier == "up" %}
+                <li class="category category-modifier-up">
+                  <i class="fa fa-fw {{ category.icon }} icon-modifier-up"></i>
+                  <span class="category-name"> {{ category.name }}</span>
+                  <i class="icon-modifier-up fa fa-arrow-circle-o-up pull-right"></i>
+                </li>
+                {% else %}
+                {% endif %}
+              {% endfor %}
+              {% for category in site.data.supplements-categories.categories %}
+                {% if category.modifier == "down" %}
+                <li class="category category-modifier-down">
+                  <i class="fa fa-fw {{ category.icon }} icon-modifier-down"></i>
+                  <span class="category-name category-modifier-down"> {{ category.name }}</span>
+                  <i class="icon-modifier-down fa fa-arrow-circle-o-down pull-right"></i>
+                </li>
+                {% else %}
+                <span data="not up"></span>
+                {% endif %}
+              {% endfor %}
+            </ul>
+        </div>
+      <div class="single-product-categories">
+        <ul class="product-details">
+          <li class="product-detail product-price">{{ product.price }}</li>
+          <li class="product-detail product-detail product-price">{{ product.amount }}</li>
+          <li class="product-detail product-unit">{{ product.unit }}</li>
+          <li class="product-detail product-source">{{ product.source }}</li>
+          <li class="product-detail product-form">{{ product.form }}</li>
+          <li class="product-detail product-quantity">{{ product.quantity }}</li>
+          <li class="product-detail product-type">{{ product.type }}</li>
+          <li class="product-detail product-rating">{{ product.rating }}</li>
+          <li class="product-detail product-unit-price">{{ product.unit-price }} per <span class="global-unit">{{ site.data.supplements-categories.global-unit }}</span></li>
+        </ul>
+      </div>
     </div>
   </div>
   {% endfor %}

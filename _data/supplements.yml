@@ -8,15 +8,18 @@
   price: "24.95"
   amount: "4"
   unit: "oz"
-  global-unit: ""
+  form: "powder"
   unit-price: ""
   categories:
-  - vitamins
-  - highly recommended
-  - immune support
-  - antioxidant
-  - whole foods
-  - vitamin C
+  - name: "oxidation"
+    icon: "fa-fire"
+    modifier: "down"
+  - name: "inflammation"
+    icon: "fa-fire-extinguisher"
+    modifier: "down"
+  - name: "immune system"
+    icon: "fa-medkit"
+    modifier: "up"
   type: "vitamin"
   source: "whole foods"
   rating: "10"
@@ -30,7 +33,6 @@
   price: "24.95"
   amount: "4"
   unit: "oz"
-  global-unit: ""
   unit-price: ""
   categories:
   - vitamins

@@ -2,7 +2,7 @@
 layout: default-post
 ---
 		<div class="post-header column-centered"> 
-		<!--{% if page.image %}style="background: url({{ page.image }}) top left no-repeat" alt="{{ page.image }}"{% endif %}-->
+		{% if page.image %}style="background: url({{ page.image }}) top left no-repeat" alt="{{ page.image }}"{% endif %}
 			<h1>{{ page.title }}</h1>
 			<ul class="post-details">
 				<li class="meta-date">{{ page.date | date: "%B %d, %Y" }}</li>
