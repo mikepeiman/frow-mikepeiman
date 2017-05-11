@@ -1,12 +1,14 @@
-- title: "Pure Synergy Pure Radiance C 100% Natural Wholefood Vitamin C Powder 4oz by The Synergy Company"
+- longdesc: "Pure Synergy Pure Radiance C 100% Natural Wholefood Vitamin C Powder 4oz by The Synergy Company"
   shortname: "Whole Foods Vitamin C"
+  brandname: "The Synergy Company"
   url: "http://amzn.to/2q13vLt"
   description: ""
   msp-comment: "Whole foods powder is the most ideal form, as it contains many cofactors which increase its effectiveness. I take this daily, and more when my glands are swollen or I feel run down. This is my #1 supplement for immune support!"
   img: ""
   price: "24.95"
   amount: "4"
-  units: "oz"
+  unit: "oz"
+  global-unit: ""
   unit-price: ""
   categories:
   - vitamins
@@ -15,81 +17,28 @@
   - antioxidant
   - whole foods
   - vitamin C
-- title: ""
-  url: ""
+  type: "vitamin"
+  source: "whole foods"
+  rating: "10"
+- longdesc: "Mostly awesome Synergy Pure Radiance C 100% Natural Wholefood Vitamin C Powder 4oz by The Synergy Company"
+  shortname: "Half Foods Vitamin C"
+  brandname: "The The The The Synergy Company"
+  url: "http://amzn.to/2q13vLt"
   description: ""
+  msp-comment: "Whole foods powder is the most ideal form, as it contains many cofactors which increase its effectiveness. I take this daily, and more when my glands are swollen or I feel run down. This is my #1 supplement for immune support!"
   img: ""
-  price-low: ""
-  price-high: ""
-  amount: ""
-  units: ""
+  price: "24.95"
+  amount: "4"
+  unit: "oz"
+  global-unit: ""
   unit-price: ""
   categories:
-  - 
-  - 
-  - 
-- title: ""
-  url: ""
-  description: ""
-  img: ""
-  price-low: ""
-  price-high: ""
-  amount: ""
-  units: ""
-  unit-price: ""
-  categories:
-  - 
-  - 
-  - 
-- title: ""
-  url: ""
-  description: ""
-  img: ""
-  price-low: ""
-  price-high: ""
-  amount: ""
-  units: ""
-  unit-price: ""
-  categories:
-  - 
-  - 
-  - 
-- title: ""
-  url: ""
-  description: ""
-  img: ""
-  price-low: ""
-  price-high: ""
-  amount: ""
-  units: ""
-  unit-price: ""
-  categories:
-  - 
-  - 
-  - 
-- title: ""
-  url: ""
-  description: ""
-  img: ""
-  price-low: ""
-  price-high: ""
-  amount: ""
-  units: ""
-  unit-price: ""
-  categories:
-  - 
-  - 
-  - 
-- title: ""
-  url: ""
-  description: ""
-  img: ""
-  price-low: ""
-  price-high: ""
-  amount: ""
-  units: ""
-  unit-price: ""
-  categories:
-  - 
-  - 
-  - 
+  - vitamins
+  - highly recommended
+  - immune support
+  - antioxidant
+  - whole foods
+  - vitamin C
+  type: "vitamin"
+  source: "whole foods"
+  rating: "10"

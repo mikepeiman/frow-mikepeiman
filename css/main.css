@@ -1267,20 +1267,8 @@ img + em {
 .post pre.terminal code {
   background-color: #404040; }
 
-.post ul li {
-  list-style-type: disc;
-  text-align: left;
-  overflow-wrap: break-word;
-  margin-left: .75em; }
-
 .post ul li:last-of-type {
   margin-bottom: 1em; }
-
-.post ol li {
-  list-style-type: disc;
-  text-align: left;
-  overflow-wrap: break-word;
-  margin-left: .75em; }
 
 .post ol li:last-of-type {
   margin-bottom: 1em; }
@@ -1293,6 +1281,40 @@ img + em {
 
 #nav-page a:hover {
   color: #26C3FF; }
+
+/*****************************************************************************/
+/*
+/* PRODUCTS
+/*
+/*****************************************************************************/
+.all-product-categories {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none; }
+  .all-product-categories li {
+    list-style-type: none; }
+
+.category {
+  padding: .25em;
+  margin: .25em;
+  background: rgba(0, 50, 100, 0.25);
+  border: 1px solid #1a1a1a;
+  list-style-type: none;
+  -ms-flex: 1 5 auto;
+      flex: 1 5 auto;
+  max-width: 20%;
+  -ms-flex-item-align: fit;
+      align-self: fit; }
+
+.products {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 /*****************************************************************************/
 /*
