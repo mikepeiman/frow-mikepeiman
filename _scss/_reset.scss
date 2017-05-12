@@ -1515,6 +1515,8 @@ img + em {
 	font-size: 80%;
 	margin-right: .5em;
 	color: $main-black;
+	display: flex;
+	flex-direction: column;
 }
 .category-list-title {
 	display: block;
@@ -1558,6 +1560,7 @@ ul.product-header {
 	background: white;
 	color: $main-black;
 	line-height: 1em;
+	flex: 1;
 	margin: 0;
 	padding: 0;
 		a {
@@ -1571,9 +1574,8 @@ ul.product-header {
 			vertical-align: middle;
 			align-self: center;
 			font-weight: bold;
-			height: 6em;
+			flex: 1;
 			color: $third-accent;
-			border-bottom: 5px solid $main-black;
 			.product-shortname {
 				margin-bottom: .5em;
 				padding-bottom: .5em;
@@ -1584,8 +1586,6 @@ ul.product-header {
 				}
 			}
 			.product-brandname {
-				margin-bottom: .5em;
-				margin-top: -.25em;
 				vertical-align: middle;
 				flex-direction: column;
 				justify-content: center;
@@ -1622,7 +1622,7 @@ ul.product-header {
 			&:before {
 				content: "$";
 			}
-			width: 25%;	
+
 		}
 }
 .buy-now-row {
@@ -1649,7 +1649,7 @@ ul.product-header {
 		line-height: 1.25em;
 		font-weight: normal;
 		padding: 1em;
-		height: 100%;
+		height: 10em;
 		overflow: hidden;
 		background: white;
 		color: black;
@@ -1684,7 +1684,6 @@ ul.product-header {
 }
 .product-detail {
 	width: auto;
-	font-size: 1.25em;
 	margin: 0;
 	line-height: 1em;
 	color: $main-black;
@@ -2030,16 +2029,13 @@ ul.product-header {
 		background: white;
 		color: $main-black;
 		line-height: 1.25em;
+		flex: 1;
 		margin: 0;
 		padding: 0;
 			a {
-
-				/*border-top: 3px solid $main-grey;
-				border-left: 2px solid $main-grey;
-				border-right: 2px solid $main-grey;*/
 				margin: .25em 0;
 				padding: 0 .25em;
-				height: auto;
+				flex: 1;
 				vertical-align: middle;
 				align-self: center;
 				font-weight: bold;				

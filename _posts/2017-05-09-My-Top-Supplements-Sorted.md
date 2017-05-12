@@ -119,12 +119,12 @@ And finally, full disclosure - these are affiliate links, which means if you cli
         </div>
       <div class="single-product-categories">
         <ul class="product-details">
-          <li class="product-detail buy-now-row col-sm-1-3">
+          <li class="product-detail buy-now-row">
             <span class="product-price">{{ product.price | divided_by: 100.00 }} </span> for 
             <span class="product-amount"> {{ product.amount }} {{ product.unit }}</span>
             <span class="button buy-now-button">Buy now!</span>
           </li>
-          <li class="product-detail col-sm-1-3">
+          <li class="product-detail">
             {% assign product-unit-price = (product.price | divided_by: product.amount | divided_by: 100.00 ) %}
             {% assign global-unit = site.data.supplements-categories.global-unit %}
             {% case global-unit %}
@@ -173,7 +173,7 @@ And finally, full disclosure - these are affiliate links, which means if you cli
                 {% endcase %}
             {% endcase %}
           </li>
-          <li class="product-detail col-sm-1-3">
+          <li class="product-detail">
             <span class="product-source">
               <label>Source: </label>
               <div>{{ product.source }}</div>

@@ -47,7 +47,7 @@
     modifier: "up"
   type: "food"
   source: "whole foods"
-  rating: 10
+  rating: 8
 - longdesc: "Macro Greens Superfood - 18 Billion Non-Dairy Probiotic Cultures - Raw Green Superfood With Concentrated Polyphenols - Certified Organic Barley Grass Powder - 5+ Servings Of Fruits & Vegetables"
   shortname: "Greens Powder Complex"
   brandname: "MacroLife Naturals"
@@ -72,4 +72,4 @@
     modifier: "up"
   type: "vitamin"
   source: "whole foods"
-  rating: 10
+  rating: 9
