@@ -18,6 +18,9 @@ categories:
   - name: "stress & anxiety"
     icon: "fa-heartbeat"
     modifier: "down"
+  - name: "muscle building"
+    icon: "fa-universal-access"
+    modifier: "up"
 types:
   - name: "vitamin"
     icon: "fa-cogs"
@@ -47,4 +50,4 @@ sources:
   - name: "synthesized"
     icon: "fa-cogs"
     modifier: "up"
-global-unit: "gram"
+global-unit: "100g"

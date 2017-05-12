@@ -1,12 +1,12 @@
 - longdesc: "Pure Synergy Pure Radiance C 100% Natural Wholefood Vitamin C Powder 4oz by The Synergy Company"
-  shortname: "Whole Foods Vitamin C"
+  shortname: "Whole Foods Vitamin C Powder"
   brandname: "The Synergy Company"
   url: "http://amzn.to/2q13vLt"
   description: ""
   msp-comment: "Whole foods powder is the most ideal form, as it contains many cofactors which increase its effectiveness. I take this daily, and more when my glands are swollen or I feel run down. This is my #1 supplement for immune support!"
   img: ""
-  price: "24.95"
-  amount: "4"
+  price: 2495
+  amount: 4
   unit: "oz"
   form: "powder"
   unit-price: ""
@@ -22,25 +22,54 @@
     modifier: "up"
   type: "vitamin"
   source: "whole foods"
-  rating: "10"
-- longdesc: "Mostly awesome Synergy Pure Radiance C 100% Natural Wholefood Vitamin C Powder 4oz by The Synergy Company"
-  shortname: "Half Foods Vitamin C"
-  brandname: "The The The The Synergy Company"
-  url: "http://amzn.to/2q13vLt"
+  rating: 10
+- longdesc: "Mike's Mix All-Natural, Unflavored Whey Protein Concentrate-4 lbs"
+  shortname: "Pure Whey Protein Concentrate"
+  brandname: "Mike's Mix"
+  url: "http://amzn.to/2pE8BJv"
   description: ""
   msp-comment: "Whole foods powder is the most ideal form, as it contains many cofactors which increase its effectiveness. I take this daily, and more when my glands are swollen or I feel run down. This is my #1 supplement for immune support!"
   img: ""
-  price: "24.95"
-  amount: "4"
+  price: 4464
+  amount: 64
   unit: "oz"
+  form: "powder"
   unit-price: ""
   categories:
-  - vitamins
-  - highly recommended
-  - immune support
-  - antioxidant
-  - whole foods
-  - vitamin C
+  - name: "oxidation"
+    icon: "fa-fire"
+    modifier: "down"
+  - name: "inflammation"
+    icon: "fa-fire-extinguisher"
+    modifier: "down"
+  - name: "immune system"
+    icon: "fa-medkit"
+    modifier: "up"
+  type: "food"
+  source: "whole foods"
+  rating: 10
+- longdesc: "Macro Greens Superfood - 18 Billion Non-Dairy Probiotic Cultures - Raw Green Superfood With Concentrated Polyphenols - Certified Organic Barley Grass Powder - 5+ Servings Of Fruits & Vegetables"
+  shortname: "Greens Powder Complex"
+  brandname: "MacroLife Naturals"
+  url: "http://amzn.to/2qyvZgD"
+  description: ""
+  msp-comment: "A good base of mixed greens, fruits and vegetables, along with trace amounts of herbs, minerals, and vitamins. This is a delicious complex whole foods supplement which I take daily, and more when I'm not eating as much fresh whole foods. My #1 go-to for a whole-foods greens powder with good flavor."
+  img: ""
+  price: 6495
+  amount: 30
+  unit: "oz"
+  form: "powder"
+  unit-price: ""
+  categories:
+  - name: "oxidation"
+    icon: "fa-fire"
+    modifier: "down"
+  - name: "inflammation"
+    icon: "fa-fire-extinguisher"
+    modifier: "down"
+  - name: "immune system"
+    icon: "fa-medkit"
+    modifier: "up"
   type: "vitamin"
   source: "whole foods"
-  rating: "10"
+  rating: 10

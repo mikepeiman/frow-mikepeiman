@@ -48,7 +48,7 @@ And finally, full disclosure - these are affiliate links, which means if you cli
     <div class="categories-panel">   
       <h1 class="category-list-title">{{ site.data.supplements-categories.category-list-title }}</h1>   
       <div class="all-product-categories">
-        <div class="frow col-md-1-2">
+        <div class="frow col-xs-1-2">
           <h1>Increases <i class="icon-modifier-up fa fa-arrow-circle-o-up"></i></h1>
           <ul class="all-product-categories">
             {% for category in site.data.supplements-categories.categories %}
@@ -62,7 +62,7 @@ And finally, full disclosure - these are affiliate links, which means if you cli
             {% endfor %}
           </ul>
         </div>
-        <div class="frow col-md-1-2">
+        <div class="frow col-xs-1-2">
           <h1>Decreases <i class="icon-modifier-down fa fa-arrow-circle-o-down"></i></h1>
           <ul class="all-product-categories">
             {% for category in site.data.supplements-categories.categories %}
@@ -79,13 +79,19 @@ And finally, full disclosure - these are affiliate links, which means if you cli
         </div>
       </div>
     </div>
-  {% for product in site.data.supplements %}
   <div class="products">
-    <div class="single-product frow col-md-1-3">
+  {% for product in site.data.supplements %}
+    <div class="single-product frow col-lg-1-3">
       <ul class="product-header">
-        <a href="{{ product.url }}"><li class="product-shortname">{{ product.shortname }}</li></a>
-        <li class="product-brandname">{{ product.brandname }}</li>
-        <li class="product-longdesc">{{ product.longdesc }}</li>
+        <a href="{{ product.url }}">
+          <li class="product-shortname">{{ product.shortname }}</li>
+          <li class="product-brandname">{{ product.brandname }}</li>
+        </a>
+        <a href="{{ product.url }}">
+          <li class="product-longdesc">{{ product.longdesc }}
+            <span class="button buy-now-button secret">Buy now!</span>
+          </li>
+        </a>
       </ul>
         <div class="single-product-categories">
             <ul>
@@ -93,13 +99,13 @@ And finally, full disclosure - these are affiliate links, which means if you cli
                 {% if category.modifier == "up" %}
                 <li class="category category-modifier-up">
                   <i class="fa fa-fw {{ category.icon }} icon-modifier-up"></i>
-                  <span class="category-name"> {{ category.name }}</span>
+                  <span class="category-name category-modifier-up"> {{ category.name }}</span>
                   <i class="icon-modifier-up fa fa-arrow-circle-o-up pull-right"></i>
                 </li>
                 {% else %}
                 {% endif %}
               {% endfor %}
-              {% for category in site.data.supplements-categories.categories %}
+              {% for category in product.categories %}
                 {% if category.modifier == "down" %}
                 <li class="category category-modifier-down">
                   <i class="fa fa-fw {{ category.icon }} icon-modifier-down"></i>
@@ -107,27 +113,97 @@ And finally, full disclosure - these are affiliate links, which means if you cli
                   <i class="icon-modifier-down fa fa-arrow-circle-o-down pull-right"></i>
                 </li>
                 {% else %}
-                <span data="not up"></span>
                 {% endif %}
               {% endfor %}
             </ul>
         </div>
       <div class="single-product-categories">
         <ul class="product-details">
-          <li class="product-detail product-price">{{ product.price }}</li>
-          <li class="product-detail product-detail product-price">{{ product.amount }}</li>
-          <li class="product-detail product-unit">{{ product.unit }}</li>
-          <li class="product-detail product-source">{{ product.source }}</li>
-          <li class="product-detail product-form">{{ product.form }}</li>
-          <li class="product-detail product-quantity">{{ product.quantity }}</li>
-          <li class="product-detail product-type">{{ product.type }}</li>
-          <li class="product-detail product-rating">{{ product.rating }}</li>
-          <li class="product-detail product-unit-price">{{ product.unit-price }} per <span class="global-unit">{{ site.data.supplements-categories.global-unit }}</span></li>
+          <li class="product-detail buy-now-row col-sm-1-3">
+            <span class="product-price">{{ product.price | divided_by: 100.00 }} </span> for 
+            <span class="product-amount"> {{ product.amount }} {{ product.unit }}</span>
+            <span class="button buy-now-button">Buy now!</span>
+          </li>
+          <li class="product-detail col-sm-1-3">
+            {% assign product-unit-price = (product.price | divided_by: product.amount | divided_by: 100.00 ) %}
+            {% assign global-unit = site.data.supplements-categories.global-unit %}
+            {% case global-unit %}
+            {% assign global-unit = site.data.supplements-categories.global-unit %}
+              {% when "100g" %}              
+                {% case product.unit %}
+                  {% when "100g" %}                  
+                    {% assign global-unit-price = product-unit-price %}
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>
+                    <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
+                  {% when "oz" %}                  
+                    {% assign global-unit-price = product-unit-price | divided_by: 28.00 | times: 100 %}
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>
+                    <span class="global-unit-price">{{ global-unit-price | round: 2 }}/{{ global-unit }}</span>
+                  {% else %}                  
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>
+                    <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
+                {% endcase %}
+              {% when "oz" %}              
+                {% case product.unit %}
+                  {% when "100g" %}                  
+                    {% assign global-unit-price = product-unit-price %}
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                    <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                  {% when "oz" %}                  
+                    {% assign global-unit-price = product-unit-price | divided_by: 28.00 %}
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                    <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                  {% else %}                  
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                    <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                {% endcase %}
+              {% when "ml" %}              
+                {% case product.unit %}
+                  {% when "100g" %}                  
+                    {% assign global-unit-price = product-unit-price %}
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                    <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                  {% when "oz" %}                  
+                    {% assign global-unit-price = product-unit-price | divided_by: 28.00 %}
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                    <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                  {% else %}                  
+                    <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                    <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                {% endcase %}
+            {% endcase %}
+          </li>
+          <li class="product-detail col-sm-1-3">
+            <span class="product-source">
+              <label>Source: </label>
+              <div>{{ product.source }}</div>
+            </span>
+          </li>
+          <li class="product-detail">
+            <span class="product-form">
+              <label>Form: </label>
+              <div>{{ product.form }}</div>
+            </span>
+          </li>
+          <li class="product-detail">
+            <span class="product-type">
+              <label>Type: </label>
+              <div>{{ product.type }}</div>
+            </span>
+          </li>
+          <li class="product-detail">Form: <span class="product-form">{{ product.form }}</span></li>
+          <li class="product-detail"><span class="product-quantity">{{ product.quantity }}</span></li>
+          <li class="product-detail"><span class="product-type">{{ product.type }}</span></li>
+          <li class="product-detail">Rating: 
+            <span class="stars-container stars-{{ product.rating }}" title="{{ product.rating }}/10">★★★★★
+            </span>
+          </li>
         </ul>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
+  
 </figure>
 
 
