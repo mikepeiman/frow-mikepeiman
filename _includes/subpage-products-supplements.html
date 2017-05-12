@@ -78,11 +78,11 @@
     <div class="single-product-categories">
       <ul class="product-details">
         <li class="product-detail buy-now-row">
-          <span class="product-price">{{ product.price | divided_by: 100.00 }} </span> for 
-          <span class="product-amount"> {{ product.amount }} {{ product.unit }}</span>
+          <span class="product-price">{{ product.price | divided_by: 100.00 }}  for 
+          <span class="product-amount"> {{ product.amount }} {{ product.unit }}</span></span>
           <span class="button buy-now-button">Add to cart</span>
         </li>
-        <li class="product-detail">
+        <li class="product-detail unit-pricing">
           {% assign product-unit-price = (product.price | divided_by: product.amount | divided_by: 100.00 ) %}
           {% assign global-unit = site.data.supplements-categories.global-unit %}
           {% case global-unit %}
@@ -91,42 +91,42 @@
               {% case product.unit %}
                 {% when "100g" %}                  
                   {% assign global-unit-price = product-unit-price %}
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>
+                  
                   <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
                 {% when "oz" %}                  
                   {% assign global-unit-price = product-unit-price | divided_by: 28.00 | times: 100 %}
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>
-                  <span class="global-unit-price">{{ global-unit-price | round: 2 }}/{{ global-unit }}</span>
+                  
+                  <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
                 {% else %}                  
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>
+                  
                   <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
               {% endcase %}
             {% when "oz" %}              
               {% case product.unit %}
                 {% when "100g" %}                  
                   {% assign global-unit-price = product-unit-price %}
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                  
                   <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
                 {% when "oz" %}                  
                   {% assign global-unit-price = product-unit-price | divided_by: 28.00 %}
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                  
                   <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
                 {% else %}                  
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                  
                   <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
               {% endcase %}
             {% when "ml" %}              
               {% case product.unit %}
                 {% when "100g" %}                  
                   {% assign global-unit-price = product-unit-price %}
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                  
                   <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
                 {% when "oz" %}                  
                   {% assign global-unit-price = product-unit-price | divided_by: 28.00 %}
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                  
                   <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
                 {% else %}                  
-                  <span class="product-unit-price">{{ product-unit-price }} per {{ product.unit }}</span>,
+                  
                   <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
               {% endcase %}
           {% endcase %}
@@ -149,10 +149,16 @@
             <div>{{ product.type }}</div>
           </span>
         </li>
-        <li class="product-detail"><span class="product-quantity">{{ product.quantity }}</span></li>
-        <li class="product-detail"><span class="product-type">{{ product.type }}</span></li>
-        <li class="product-detail">Rating: 
-          <span class="stars-container stars-{{ product.rating }}" title="{{ product.rating }}/10">★★★★★
+        <li class="product-detail"> 
+          <span class="product-amount">
+            <label>Amount: </label>
+            <div>{{ product.amount }} {{ product.unit }}</div>
+          </span>
+        </li>
+        <li class="product-detail">
+          <span class="rating-container">
+            <label>Rating: </label>
+            <div class="stars-container stars-{{ product.rating }}" title="{{ product.rating }}/10">★★★★★</div>
           </span>
         </li>
       </ul>
