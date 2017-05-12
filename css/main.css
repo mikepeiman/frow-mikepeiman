@@ -1322,18 +1322,13 @@ img + em {
     padding-left: .5em; }
 
 .single-product-categories {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  list-style-type: none;
-  -ms-flex-align: stretch;
-      align-items: stretch;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  vertical-align: middle;
+  /*display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	list-style-type: none;
+	align-items: stretch;
+	justify-content: flex-start;
+	vertical-align: middle;*/
   margin-bottom: 0;
   width: 100%;
   font-size: 125%;
@@ -1410,10 +1405,10 @@ ul.product-header {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: left;
-      justify-content: left;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   text-align: center;
-  background: white;
+  background: rgba(0, 0, 0, 0.1);
   color: #1a1a1a;
   line-height: 1em;
   -ms-flex: 1;
@@ -1428,67 +1423,62 @@ ul.product-header {
 			border-right: 2px solid $main-grey;*/
     margin: .25em 0;
     padding: 0 .25em;
-    vertical-align: middle;
-    -ms-flex-item-align: center;
-        align-self: center;
+    min-height: 5.5em;
     font-weight: bold;
-    -ms-flex: 1;
-        flex: 1;
     color: #009dd9; }
-    ul.product-header a .product-shortname {
-      margin-bottom: .5em;
-      padding-bottom: .5em;
-      border-bottom: 5px solid #FFC100;
-      transition: all .5s; }
-    ul.product-header a .product-brandname {
-      vertical-align: middle;
-      -ms-flex-direction: column;
-          flex-direction: column;
-      -ms-flex-pack: center;
-          justify-content: center; }
-    ul.product-header a:hover {
+  ul.product-header .product-name-container {
+    min-height: 5.5em;
+    font-size: 125%; }
+  ul.product-header .product-desc-container {
+    text-transform: capitalize;
+    font-size: 110%;
+    padding: .25em;
+    margin: .25em 0;
+    font-family: 'Nunito'; }
+  ul.product-header .product-brandname {
+    font-weight: normal; }
+  ul.product-header .product-shortname {
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    border-bottom: 5px solid #FFC100;
+    transition: all .5s; }
+    ul.product-header .product-shortname:hover {
       color: #26C3FF; }
-      ul.product-header a:hover .product-shortname {
+      ul.product-header .product-shortname:hover .product-shortname {
         border-bottom: 5px solid #b35a00;
         transition: all .5s; }
-    ul.product-header a:after .product-shortname {
+    ul.product-header .product-shortname:after .product-shortname {
       border-bottom: 5px solid #b35a00;
       transition: all .5s; }
-  ul.product-header:nth-child(1) {
-    font-size: 125%;
-    margin: 0;
-    padding: 0; }
-  ul.product-header:nth-child(2) {
-    font-weight: bold;
-    margin: 0;
-    color: #404040; }
-  ul.product-header:nth-child(3) {
-    padding: .5em; }
-  ul.product-header:nth-child(4) {
-    color: #FFC100; }
-    ul.product-header:nth-child(4):before {
-      content: "$"; }
 
 .buy-now-row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  padding: .25em;
+  text-align: center;
+  margin: 0 auto; }
+  .buy-now-row:hover {
+    background: #33E100;
+    color: #1a1a1a;
+    cursor: pointer;
+    border-radius: 10px; }
 
 .buy-now-button {
-  background: #229500;
-  position: relative;
-  right: 0;
+  background: white;
   padding: .5em;
   margin: 0 auto;
-  border-radius: 10px; }
-
-.secret {
-  display: none; }
+  border-radius: 10px;
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid transparent;
+  width: 40%;
+  margin: .5em auto;
+  transition: all .5s; }
+  .buy-now-button:hover {
+    background: #33E100;
+    color: #1a1a1a;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all .5s; }
 
 .product-longdesc {
   font-size: 80%;
@@ -1496,8 +1486,6 @@ ul.product-header {
   line-height: 1.25em;
   font-weight: normal;
   padding: 1em;
-  height: 10em;
-  overflow: hidden;
   background: white;
   color: black;
   transition: all .5s; }
@@ -1563,7 +1551,7 @@ ul.product-header {
     float: right; }
 
 .product-price {
-  color: #fffcf2; }
+  color: #1a1a1a; }
   .product-price:before {
     content: "$"; }
 
@@ -1818,8 +1806,9 @@ ul.product-header {
     background: white;
     color: #1a1a1a;
     line-height: 1.25em;
-    -ms-flex: 1;
-        flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+    background: rgba(0, 0, 0, 0.1);
     margin: 0;
     padding: 0; }
     ul.product-header a {
@@ -1832,6 +1821,7 @@ ul.product-header {
           align-self: center;
       font-weight: bold;
       color: #009dd9;
+      background: white;
       border: none; }
       ul.product-header a .product-shortname {
         margin-bottom: .5em;
@@ -1868,6 +1858,8 @@ ul.product-header {
     display: flex;
     -ms-flex-direction: row;
         flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -ms-flex-pack: justify;
         justify-content: space-between;
     -ms-flex-align: space-between;
@@ -1923,34 +1915,35 @@ ul.product-header {
   .product-detail {
     width: 100%;
     margin: 0;
-    line-height: 1em;
-    display: inline-block; }
+    line-height: 1em; }
   .product-source {
-    display: block; }
+    display: block;
+    color: #1a1a1a; }
     .product-source label {
       color: #fffcf2;
-      float: left; }
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
     .product-source div {
-      float: right; }
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
   .product-form {
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
     .product-form label {
-      color: #fffcf2;
+      color: #1a1a1a;
       float: left; }
     .product-form div {
       float: right; }
   .product-type {
     display: block; }
     .product-type label {
-      color: #fffcf2;
+      color: #1a1a1a;
       float: left; }
     .product-type div {
       float: right; }
   .product-price {
-    color: #fffcf2; }
+    color: #1a1a1a; }
     .product-price:before {
       content: "$"; }
   .product-unit-price {
