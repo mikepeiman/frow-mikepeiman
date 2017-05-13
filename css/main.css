@@ -1240,6 +1240,24 @@ img + em {
   .post-feed-item:hover a {
     text-decoration: none; }
 
+.post ul {
+  text-align: left; }
+  .post ul li {
+    margin-left: 1em;
+    list-style: none;
+    border-bottom: none; }
+    .post ul li h2 {
+      margin: 1.5em 0 .75em 0;
+      border-bottom: 5px solid #404040;
+      color: #404040; }
+    .post ul li ul li {
+      border-bottom: 2px solid #FFC100; }
+      .post ul li ul li:last-child {
+        border-bottom: none;
+        margin-bottom: .5em; }
+    .post ul li:nth-of-type(1) {
+      list-style: none; }
+
 .post pre {
   border: 1px solid #404040;
   background-color: #fffcf2;
