@@ -1237,7 +1237,7 @@ img + em {
 .section-header-posts-feed {
 		color: white;
 		font-size: 3em;
-		background: adjust-color($main-accent, $lightness: -15%);
+		background: $main-black;//adjust-color($main-accent, $lightness: -15%);
 		border-top: 5px solid $main-color;
 		border-bottom: 5px solid $main-color;
 		padding: 1em 0;
@@ -1246,7 +1246,7 @@ img + em {
 .section-header-signup {
 		color: white;
 		font-size: 3em;
-		background: adjust-color($second-accent, $lightness: -15%);
+		background: $main-black;//adjust-color($second-accent, $lightness: -15%);
 		border-top: 5px solid $second-color;
 		border-bottom: 5px solid $fourth-color;
 		padding: 1em 0;
@@ -1255,7 +1255,7 @@ img + em {
 .section-header-about {
 		color: white;
 		font-size: 3em;
-		background: adjust-color($third-accent, $lightness: -15%);
+		background: $main-black;//adjust-color($third-accent, $lightness: -15%);
 		border-top: 5px solid $third-color;
 		border-bottom: 5px solid $third-color;
 		padding: 1em 0;
@@ -1264,7 +1264,7 @@ img + em {
 .section-header-contact {
 		color: white;
 		font-size: 3em;
-		background: adjust-color($fourth-accent, $lightness: -15%);
+		background: $main-black;//adjust-color($fourth-accent, $lightness: -15%);
 		border-top: 5px solid $fourth-color;
 		border-bottom: 5px solid $fourth-color;
 		padding: 1em 0;

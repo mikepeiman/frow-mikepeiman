@@ -1116,7 +1116,7 @@ img + em {
 .section-header-posts-feed {
   color: white;
   font-size: 3em;
-  background: #663400;
+  background: #1a1a1a;
   border-top: 5px solid #FFC100;
   border-bottom: 5px solid #FFC100;
   padding: 1em 0;
@@ -1125,7 +1125,7 @@ img + em {
 .section-header-signup {
   color: white;
   font-size: 3em;
-  background: #104800;
+  background: #1a1a1a;
   border-top: 5px solid #33E100;
   border-bottom: 5px solid #26ff62;
   padding: 1em 0;
@@ -1134,7 +1134,7 @@ img + em {
 .section-header-about {
   color: white;
   font-size: 3em;
-  background: #00658c;
+  background: #1a1a1a;
   border-top: 5px solid #26C3FF;
   border-bottom: 5px solid #26C3FF;
   padding: 1em 0;
@@ -1143,7 +1143,7 @@ img + em {
 .section-header-contact {
   color: white;
   font-size: 3em;
-  background: #004012;
+  background: #1a1a1a;
   border-top: 5px solid #26ff62;
   border-bottom: 5px solid #26ff62;
   padding: 1em 0;
