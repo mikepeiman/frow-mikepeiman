@@ -1056,8 +1056,8 @@ img + em {
 }
 .lph-1 {
 	color: white;
-	background: adjust-color($third-accent, $lightness: -15%);
-	border: 5px solid $main-white;
+	background: $main-grey;//adjust-color($third-accent, $lightness: -15%);
+	//border: 5px solid $main-white;
 }
 .lph-2 {
 	color: white;
@@ -1246,16 +1246,16 @@ img + em {
 .section-header-signup {
 		color: white;
 		font-size: 3em;
-		background: adjust-color($main-accent, $lightness: -15%);
-		border-top: 5px solid $main-color;
-		border-bottom: 5px solid $main-color;
+		background: adjust-color($second-accent, $lightness: -15%);
+		border-top: 5px solid $second-color;
+		border-bottom: 5px solid $fourth-color;
 		padding: 1em 0;
 		margin: -1em 0 1em 0;
 	}
 .section-header-about {
 		color: white;
 		font-size: 3em;
-		background: $fourth-accent;
+		background: adjust-color($third-accent, $lightness: -15%);
 		border-top: 5px solid $third-color;
 		border-bottom: 5px solid $third-color;
 		padding: 1em 0;
@@ -1264,9 +1264,9 @@ img + em {
 .section-header-contact {
 		color: white;
 		font-size: 3em;
-		background: adjust-color($main-accent, $lightness: -15%);
-		border-top: 5px solid $main-color;
-		border-bottom: 5px solid $main-color;
+		background: adjust-color($fourth-accent, $lightness: -15%);
+		border-top: 5px solid $fourth-color;
+		border-bottom: 5px solid $fourth-color;
 		padding: 1em 0;
 		margin: -1em 0 1em 0;
 }
@@ -1525,22 +1525,22 @@ img + em {
 	border-bottom: 5px solid $main-grey;
 }
 .icon-modifier-up {
-	color: $fourth-color;
+	color: $second-color;
 }
 .icon-modifier-down {
-	color: $third-color;
+	color: $fifth-color;
 }
 .text-modifier-up {
 	color: $second-accent;
 }
 .text-modifier-down {
-	color: $third-accent;
+	color: $fifth-accent;
 }
 .category-modifier-up {
-	color: $fourth-accent;
+	color: $third-accent;
 }
 .category-modifier-down {
-	color: $third-accent;
+	color: $fifth-accent;
 }
 .products {
 	display: flex;
@@ -1592,6 +1592,8 @@ ul.product-header {
 		.product-name-container {
 			min-height: 5.5em;
 			font-size: 125%;
+			box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.25);
+			padding: .5em;
 		}
 		.product-desc-container {
 			text-transform: capitalize;
@@ -1638,14 +1640,15 @@ ul.product-header {
 			border-right: 2px solid rgba(0,0,0,0);
 			color: $main-black;
 			cursor: pointer;
+			text-align: center;
 			transition: all .5s;
 			.buy-now-button {
 				background: white;
 				//float: right;
 				margin: 0 auto;
 				border-radius: 10px;
+				text-align: center;
 				list-style: none;
-				display: flex;
 				border: 2px solid  $second-color;
 				margin: .5em auto;
 			  transition: all .5s;
@@ -1662,20 +1665,21 @@ ul.product-header {
 			}
 		}
 }
-.buy-now-button {
+span.button.buy-now-button {
 	background: white;
 	//float: right;
 	padding: .5em;
 	margin: 0 auto;
 	list-style: none;
-	display: flex;
-	border: 2px solid rgba(0,0,0,0);
+	display: block;
+	border: 2px solid $second-accent;
 	margin: .5em auto;
 	text-align: center;
   transition: all .5s;
 	&:hover {
 		color: white;
 		cursor: pointer;
+		text-align: center;
 		border: 2px solid $second-color;
  		transition: all .5s;
 	}
@@ -1687,28 +1691,31 @@ ul.product-header {
 		line-height: 1.25em;
 		font-weight: normal;
 		padding: 1em;
-		background: white;
+		min-height: 100%;
 		color: black;
 		text-align: center;
 		transition: all .25s;
-		span.buy-now-button {
-			text-align: center;
-			margin: .25em auto;
-			border: 1px solid black;
-			width: 100%;
-			transition: all .25s;
+		.button.buy-now-button {
+			margin-top: 1em;
 		}
 		&:hover {
 			transition: all .25s;
+			text-align: center;
 			.buy-now-button {
 				background: $second-color;
 				display: block;
+				text-align: center;
 				width: 100%;
-				margin: .25em auto;
+				margin: .5em auto;
 				transition: all .25s;
 			}
 		}
 	}
+.buy-now-link {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 
 .product-details {
 	display: flex;
@@ -1800,9 +1807,12 @@ ul.product-header {
 	}
 }
 .unit-pricing {
-	padding: .25em;
+	padding: 0;
 	margin-bottom: .25em;
 	text-align: center;
+	border: 2px solid black;
+	background: adjust-color($main-black, $lightness: 5%);
+	display: inline-flex;
 }
 .categories-panel {
 	background: none;
@@ -1819,7 +1829,7 @@ ul.product-header {
   overflow: hidden;
   display: block;
 	color: $main-white;
-	background: $main-black;
+	background: adjust-color($main-black, $lightness: 5%);
 	padding: .25em;
 	margin: .25em 0;
 	label {
@@ -2111,7 +2121,7 @@ ul.product-header {
 		color: $main-black;
 		line-height: 1.25em;
 		display: flex;
-		background: rgba(0,0,0,0.1);
+	//	background: rgba(0,0,0,0.1);
 		margin: 0;
 		padding: 0;
 			a {
@@ -2216,11 +2226,6 @@ ul.product-header {
 		li {
 			margin: .25em;
 			width: 100%;
-			&:nth-of-type(2) {
-				border: 2px solid black;
-				background: adjust-color($main-black, $lightness: 5%);
-				display: inline-flex;
-			}
 		}
 	}
 	.product-detail {

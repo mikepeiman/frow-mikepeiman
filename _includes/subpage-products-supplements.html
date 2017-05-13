@@ -7,7 +7,7 @@
     <h1 class="category-list-title">{{ site.data.supplements-categories.category-list-title }}</h1>   
     <div class="all-product-categories">
       <div class="frow col-xs-1-2">
-        <h1>Increases <i class="icon-modifier-up fa fa-arrow-circle-o-up"></i></h1>
+        <h1>Increase <i class="icon-modifier-up fa fa-arrow-circle-o-up"></i></h1>
         <ul class="all-product-categories">
           {% for category in site.data.supplements-categories.categories %}
             {% if category.modifier == "up" %}
@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div class="frow col-xs-1-2">
-        <h1>Decreases <i class="icon-modifier-down fa fa-arrow-circle-o-down"></i></h1>
+        <h1>Decrease <i class="icon-modifier-down fa fa-arrow-circle-o-down"></i></h1>
         <ul class="all-product-categories">
           {% for category in site.data.supplements-categories.categories %}
             {% if category.modifier == "down" %}
