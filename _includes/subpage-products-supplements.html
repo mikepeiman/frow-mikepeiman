@@ -1,5 +1,5 @@
 
-<figure class="frow supplements-list">
+<figure class="frow supplements-list frow-container">
   <div class="figure-header">
     <h1>Mike's Top Supplements Recommendations</h1>
   </div>
@@ -37,10 +37,10 @@
       </div>
     </div>
   </div>
-  <div class="products">
+  <div class="products frow">
   {% for product in site.data.supplements %}
-    <div class="single-product col-lg-1-3">
-        <ul class="product-header frow">
+    <div class="single-product">
+        <ul class="product-header">
           <a class="product-name-container" target="_blank" href="{{ product.url }}">
             <li class="product-shortname">{{ product.shortname }}</li>
             <li class="product-brandname">{{ product.brandname }}</li>

@@ -24,12 +24,34 @@ body {
     background-color: $main-black;
 }
 
-.body-page {
+.body-homepage {
 	background: $main-black;
 	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-1;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+}
+.body-page {
+	background: $main-white;
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.body-shop {
+	//background: $main-white;
+	background-image: linear-gradient($third-color, $fifth-accent);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.shop-bg {
+	background: white;
+	margin-top: 6em;
+	h1 {
+		margin-top: 1em;
+		color: white;
+	}
 }
 .body-post {
 	/*background-image: linear-gradient(rgba(0,0,25,.9), rgba(26,0,26,.75)), $bg-image-1;
@@ -365,7 +387,7 @@ nav {
     flex: 1;
     color: $main-black; // $main-white;
     background: $main-white;//$main-black;
-    margin: 1em 0;
+    margin: 1em auto;
     padding: $section-padding;
     line-height: 1.25em;
     border-top: 5px solid $third-color;
@@ -378,29 +400,66 @@ nav {
     	padding: 0 1em .65em 1em;
     }
 }
-
+.signup-form-page {
+	margin: 1em auto;
+}
+.signup-form-container {
+	background: $main-black;
+	margin: 0;
+	padding: 1em 0;
+}
 .signup-form-post {
     list-style-type: none;
     flex: 1;
     width: 100%;
     color: white;
     background: $main-black;
-    margin: 0 0 2em 0;
+    margin: 0 auto;
     padding: 0 1.25em 1.25em 1.25em;
     line-height: 1.25em;
     text-align: center;
     h1 {
     	font-size: 2.5em;
-    	margin: 1em 0;
+    	color: $main-color;
+    	margin: 0;
     	padding: 1em 0 0 0;
+    	box-shadow: 2px 2px 2px 2px $main-color;
     }
     p {
     	padding: 0 0 1em 0;
     	font-size: 1.25em;
     	line-height: 1.25em;
     }
+    p:first-child {
+    	margin: 2em 0 0 0;
+    }
 }
-
+.signup-form-shop {
+    list-style-type: none;
+    flex: 1;
+    width: 100%;
+    color: white;
+    background: $main-black;
+    margin: 0 auto;
+    padding: 0 1.25em 1.25em 1.25em;
+    line-height: 1.25em;
+    text-align: center;
+    h1 {
+    	font-size: 2.5em;
+    	color: $main-color;
+    	margin: 0;
+    	padding: 1em 0 0 0;
+    	box-shadow: 2px 2px 2px 2px $main-color;
+    }
+    p {
+    	padding: 0 0 1em 0;
+    	font-size: 1.25em;
+    	line-height: 1.25em;
+    }
+    p:first-child {
+    	margin: 2em 0 0 0;
+    }
+}
 input {
 	appearance: none;
 	-webkit-appearance: none;
@@ -1247,11 +1306,22 @@ img + em {
 		color: white;
 		font-size: 3em;
 		background: $main-black;//adjust-color($second-accent, $lightness: -15%);
-		border-top: 5px solid $second-color;
-		border-bottom: 5px solid $fourth-color;
+		border-top: 5px solid $main-color;/*
+		border-bottom: 5px solid $second-color;*/
 		padding: 1em 0;
-		margin: -1em 0 1em 0;
+		margin: 0;
 	}
+	.section-header-signup-2 {
+			font-size: 3em;
+			background: $main-black;//adjust-color($second-accent, $lightness: -15%);
+			border-top: 5px solid $main-color;
+			border-bottom: 5px solid $main-color;
+			padding: 1em 0;
+			margin: 0;
+			color: white;
+    	//text-shadow: 2px 2px 2px $main-color;
+		}
+
 .section-header-about {
 		color: white;
 		font-size: 3em;
@@ -1462,6 +1532,12 @@ img + em {
 	width: 100%;
 	margin: 0;
 }
+.figure-header {
+		h1 {
+		color: $main-grey;
+		margin: 1em 0 0 0;
+	}
+}
 .all-product-categories {
 	display: flex;
 	flex-direction: row;
@@ -1470,6 +1546,7 @@ img + em {
 	align-items: stretch;
 	justify-content: flex-start;
 	vertical-align: middle;
+	font-size: 1em;
 	ul {
 		margin-left: 0;
 	}
@@ -1504,12 +1581,17 @@ img + em {
 	align-items: stretch;
 	justify-content: flex-start;
 	vertical-align: middle;*/
-	margin-bottom: 0;
+
 	width: 100%;
 	font-size: 125%;
 	margin: .5em 0;
 	ul {
-		margin-left: 0;
+		li {
+				i:last-child {
+					//padding-right: 1.5em;
+					margin-left: 0;
+				}
+		}
 	}
 	h1 {
 		margin: 0;
@@ -1536,9 +1618,10 @@ img + em {
 }
 .single-product {
 	font-size: 80%;
-	margin-right: .5em;
+	margin: 0 .25em;
 	color: $main-black;
 	display: flex;
+	width: 30%;
 	flex-direction: column;
 }
 .category-list-title {
@@ -1546,6 +1629,9 @@ img + em {
 	margin: 0 auto;
 	padding-bottom: .5em;
 	border-bottom: 5px solid $main-grey;
+}
+i .fa {
+	margin: auto 1em;
 }
 .icon-modifier-up {
 	color: $second-color;
@@ -1573,8 +1659,6 @@ img + em {
 	color: $main-black;
 	flex: 1;
 	height: auto;
-	border-top: 15px solid $main-grey;
-	border-bottom: 50px solid $main-grey;
 	margin-bottom: 2em;
 }
 
@@ -1650,7 +1734,8 @@ ul.product-header {
 }
 
 .product-details .buy-now-row {
-	padding: .25em;
+	padding: .5em;
+	display: inline-block;
 	text-align: center;
 	margin: 0;
 	border-top: 2px solid $main-grey;
@@ -1715,6 +1800,7 @@ span.button.buy-now-button {
 		font-weight: normal;
 		padding: 1em;
 		min-height: 100%;
+		margin-bottom: 1em;
 		color: black;
 		text-align: center;
 		transition: all .25s;
@@ -1767,18 +1853,22 @@ span.button.buy-now-button {
 	color: $main-black;
 	label {
 		float: left;
+		padding-left: 1em;
 	}
 	div {
 		float: right;
+		padding-right: 1em;
 	}
 }
 .product-form {
 	color: $main-black;
 	label {
 		float: left;
+		padding-left: 1em;
 	}
 	div {
 		float: right;
+		padding-right: 1em;
 	}
 }
 .product-type {
@@ -1786,9 +1876,11 @@ span.button.buy-now-button {
 	color: $main-black;
 	label {
 		float: left;
+		padding-left: 1em;
 	}
 	div {
 		float: right;
+		padding-right: 1em;
 	}
 }
 .product-amount {
@@ -1796,9 +1888,11 @@ span.button.buy-now-button {
 	color: $main-black;
 	label {
 		float: left;
+		padding-left: 1em;
 	}
 	div {
 		float: right;
+		padding-right: 1em;
 	}
 }
 .product-price {
@@ -1831,16 +1925,15 @@ span.button.buy-now-button {
 }
 .unit-pricing {
 	padding: 0;
-	margin-bottom: .25em;
+	margin: 0 0 .25em 0;
 	text-align: center;
-	border: 2px solid black;
 	background: adjust-color($main-black, $lightness: 5%);
 	display: inline-flex;
 }
 .categories-panel {
-	background: none;
+	background: white;
 	margin: 2em 0;
-//	height: 20em;
+	padding: 1em 0;
 		h1 {
 		margin: .25em 0;
 		color: $main-grey;
@@ -1853,8 +1946,8 @@ span.button.buy-now-button {
   display: block;
 	color: $main-white;
 	background: adjust-color($main-black, $lightness: 5%);
-	padding: .25em;
-	margin: .25em 0;
+	padding: .85em 1em;
+	margin: .25em 0 2em 0;
 	label {
 		float: left;
 	}
@@ -2132,7 +2225,6 @@ span.button.buy-now-button {
 
 	.products {
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
 		background: white;
 		height: auto;
@@ -2189,7 +2281,7 @@ span.button.buy-now-button {
 				}
 			}
 			&:nth-child(1) {
-				font-size: 2em;
+				font-size: 1.1em;
 				text-decoration: none;
 				text-transform: uppercase;
 				margin: 0;
@@ -2247,7 +2339,6 @@ span.button.buy-now-button {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		li {
-			margin: .25em;
 			width: 100%;
 		}
 	}
@@ -2308,12 +2399,12 @@ span.button.buy-now-button {
 		}
 	}
 	.global-unit-price {
-		float: right;
+
 		color: $main-color;
 		font-weight: bold;
 		padding: .75em;
 		margin: 0;
-		width: 50%;
+	  width: 100%;
 		&:before {
 			content: "$"
 		}
@@ -2322,7 +2413,6 @@ span.button.buy-now-button {
 	.categories-panel {
 		background: none;
 		margin: 0;
-		height: 20em;
 			h1 {
 			margin: .25em 0;
 			color: $main-grey;
@@ -2380,6 +2470,14 @@ span.button.buy-now-button {
 		width: 100%;
 		margin: 1em auto 0 auto;
 	}
+	.single-product {
+		font-size: 80%;
+		margin: 0 .25em;
+		color: $main-black;
+		display: flex;
+		width: 70%;
+		flex-direction: column;
+}
 }
 
 /*****************************************************************************/
