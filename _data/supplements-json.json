@@ -1,0 +1,50 @@
+[
+{
+  "shortname": "Pure Synergy Vitamin C Powder",
+    "categories": { "vitamin", "powder", "antioxidant", "immune support", "whole foods" },
+    "link-url": "http://amzn.to/2q13vLt",
+    "img-url": "",
+    "longdesc": "Pure Synergy Pure Radiance C 100% Natural Wholefood Vitamin C Powder 4oz by The Synergy Company",
+    "brandname": "The Synergy Company",
+    "price": 2495,
+    "amount": 4,
+    "unit": "oz",
+    "type": "vitamin",
+    "form": "powder",
+    "quality": 10,
+    "value": 8,
+    "rating": 10
+},
+{
+  "shortname": "Pure Whey Protein Concentrate",
+    "categories": { "protein", "powder", "whey protein", "whole foods" },
+    "link-url": "http://amzn.to/2pE8BJv",
+    "img-url": "",
+    "longdesc": "Mike's Mix is the best deal on unflavored, high quality whey protein concentrate.",
+    "brandname": "Mike's Mix",
+    "price": 4464,
+    "amount": 64,
+    "unit": "oz",
+    "type": "whey protein",
+    "form": "powder",
+    "quality": 8,
+    "value": 10,
+    "rating": 9
+},
+{
+  "shortname": "Macro Greens Superfood Powder",
+    "categories": { "greens", "powder", "complex", "whole foods", "vitamin" },
+    "link-url": "http://amzn.to/2qyvZgD",
+    "img-url": "",
+    "longdesc": "18 Billion Non-Dairy Probiotic Cultures - Raw Green Superfood With Concentrated Polyphenols - Certified Organic Barley Grass Powder - 5+ Servings Of Fruits & Vegetables.",
+    "brandname": "MacroLife Naturals",
+    "price": 6495,
+    "amount": 30,
+    "unit": "oz",
+    "type": "whole foods",
+    "form": "powder",
+    "quality": 9,
+    "value": 9,
+    "rating": 10
+}
+]

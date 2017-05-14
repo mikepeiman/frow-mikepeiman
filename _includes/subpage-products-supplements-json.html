@@ -1,0 +1,162 @@
+
+<figure class="frow supplements-list frow-container">
+  <div class="figure-header">
+    <h1>Mike's Top Supplements Recommendations</h1>
+  </div>
+  <div class="categories-panel">   
+    <h1 class="category-list-title">{{ site.data.supplements-categories.category-list-title }}</h1>   
+    <div class="all-product-categories">
+      <div class="frow col-xs-1-2">
+        <h1>Increase <i class="icon-modifier-up fa fa-arrow-circle-o-up"></i></h1>
+        <ul class="all-product-categories">
+          {% for category in site.data.supplements-categories.categories %}
+            {% if category.modifier == "up" %}
+            <li class="category text-modifier-up">
+              <i class="fa fa-fw {{ category.icon }} icon-modifier-up"></i>
+              <span class="category-name"> {{ category.name }}</span>
+            </li>
+            {% else %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="frow col-xs-1-2">
+        <h1>Decrease <i class="icon-modifier-down fa fa-arrow-circle-o-down"></i></h1>
+        <ul class="all-product-categories">
+          {% for category in site.data.supplements-categories.categories %}
+            {% if category.modifier == "down" %}
+            <li class="category text-modifier-down">
+              <i class="fa fa-fw {{ category.icon }} icon-modifier-down"></i>
+              <span class="category-name"> {{ category.name }}</span>
+            </li>
+            {% else %}
+            <span data="not up"></span>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="products frow">
+  {% for product in site.data.supplements-json %}
+    <div class="single-product">
+        <ul class="product-header">
+          <a class="product-name-container" target="_blank" href="{{ product.url }}">
+            <li class="product-shortname">{{ product.shortname }}</li>
+            <li class="product-brandname">{{ product.brandname }}</li>
+          </a>
+          <a class="frow product-desc-container" target="_blank" href="{{ product.url }}">
+            <li class="product-longdesc">
+              <span>{{ product.longdesc }}<span class="button buy-now-button">Add to cart</span></span>
+            </li>
+          </a>
+        </ul>
+    <div class="single-product-categories">
+        <ul class="frow">
+          {% for category in product.categories %}
+            <li class="category supplements-json">
+              <span class="category-name">{{ category }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+    <div class="single-product-categories">
+      <ul class="product-details">
+        <li class="product-detail buy-now-row">
+          <span class="product-price">{{ product.price | divided_by: 100.00 }}  for 
+          <span class="product-amount"> {{ product.amount }} {{ product.unit }}</span></span>
+          <span class="button buy-now-button">Add to cart</span>
+        </li>
+        <li class="product-detail unit-pricing">
+          {% assign product-unit-price = (product.price | divided_by: product.amount | divided_by: 100.00 ) %}
+          {% assign global-unit = site.data.supplements-categories.global-unit %}
+          {% case global-unit %}
+          {% assign global-unit = site.data.supplements-categories.global-unit %}
+            {% when "100g" %}              
+              {% case product.unit %}
+                {% when "100g" %}                  
+                  {% assign global-unit-price = product-unit-price %}
+                  
+                  <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
+                {% when "oz" %}                  
+                  {% assign global-unit-price = product-unit-price | divided_by: 28.00 | times: 100 %}
+                  
+                  <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
+                {% else %}                  
+                  
+                  <span class="global-unit-price">{{ global-unit-price | round: 2 }} per {{ global-unit }}</span>
+              {% endcase %}
+            {% when "oz" %}              
+              {% case product.unit %}
+                {% when "100g" %}                  
+                  {% assign global-unit-price = product-unit-price %}
+                  
+                  <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                {% when "oz" %}                  
+                  {% assign global-unit-price = product-unit-price | divided_by: 28.00 %}
+                  
+                  <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                {% else %}                  
+                  
+                  <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+              {% endcase %}
+            {% when "ml" %}              
+              {% case product.unit %}
+                {% when "100g" %}                  
+                  {% assign global-unit-price = product-unit-price %}
+                  
+                  <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                {% when "oz" %}                  
+                  {% assign global-unit-price = product-unit-price | divided_by: 28.00 %}
+                  
+                  <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+                {% else %}                  
+                  
+                  <span class="global-unit-price">{{ global-unit-price }} per {{ global-unit }}</span>
+              {% endcase %}
+          {% endcase %}
+        </li>
+        <li class="product-detail">
+          <span class="product-source">
+            <label>Source: </label>
+            <div>{{ product.source }}</div>
+          </span>
+        </li>
+        <li class="product-detail">
+          <span class="product-form">
+            <label>Form: </label>
+            <div>{{ product.form }}</div>
+          </span>
+        </li>
+        <li class="product-detail">
+          <span class="product-type">
+            <label>Type: </label>
+            <div>{{ product.type }}</div>
+          </span>
+        </li>
+        <li class="product-detail"> 
+          <span class="product-amount">
+            <label>Amount: </label>
+            <div>{{ product.amount }} {{ product.unit }}</div>
+          </span>
+        </li>
+        <li class="product-detail">
+          <span class="rating-container">
+            <label>Quality: </label>
+            <div class="stars-container stars-{{ product.quality }}" title="{{ product.quality }}/10">★★★★★</div>
+          </span>
+          <span class="rating-container">
+            <label>Value: </label>
+            <div class="stars-container stars-{{ product.value }}" title="{{ product.value }}/10">★★★★★</div>
+          </span>
+          <span class="rating-container">
+            <label>Overall Rating: </label>
+            <div class="stars-container stars-{{ product.rating }}" title="{{ product.rating }}/10">★★★★★</div>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+    {% endfor %}
+  </div>
+</figure>
