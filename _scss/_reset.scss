@@ -39,11 +39,11 @@ body {
 	background-attachment: fixed;
 }
 .body-shop {
-	//background: $main-white;
-	background-image: linear-gradient($fifth-accent, $third-color);
+	background: $main-black;
+	/*background-image: linear-gradient($fifth-accent, $third-color);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: fixed;*/
 }
 .about-bg {
 	background-image: linear-gradient($fifth-accent, $third-color);
@@ -1598,7 +1598,7 @@ img + em {
 		margin: .25em;
 		list-style-type: none;
 		text-align: left;
-		padding-left: 5%;
+		//padding-left: 5%;
 		vertical-align: middle;
 		width: 100%;
 		line-height: 1em;
@@ -1608,6 +1608,55 @@ img + em {
 	}
 	.category-name {
 		padding-left: .5em;
+	}
+	.category-benefits {
+		background: rgba(0,0,0,0.15);
+		margin: 0.1em;
+		padding: 5px;
+		text-align: left;
+		width: 100%;
+	}
+	.category-benefits-up {
+		border-bottom: 3px solid $fourth-accent;
+		border-radius: 5px;
+		&:hover {
+			border-bottom: 3px solid $fourth-color;
+			cursor: pointer;
+			background: rgba(0,0,0,0.25);
+		}
+	}
+	.category-benefits-down {
+		border-bottom: 3px solid $fifth-accent;
+		border-radius: 5px;
+		&:hover {
+			border-bottom: 3px solid $fifth-color;
+			cursor: pointer;
+			background: rgba(0,0,0,0.25);
+		}
+	}
+	.category-type {
+		background: rgba(0,0,0,0.15);
+		margin: 0.1em;
+		padding: 5px;
+		border-bottom: 3px solid $fifth-accent;
+		border-radius: 5px;
+		&:hover {
+			border-bottom: 3px solid $fifth-color;
+			cursor: pointer;
+			background: rgba(0,0,0,0.25);
+		}
+	}
+	.category-form {
+		background: rgba(0,0,0,0.15);
+		margin: 0.1em;
+		padding: 5px;
+		border-bottom: 3px solid $third-accent;
+		border-radius: 5px;
+		&:hover {
+			border-bottom: 3px solid $third-color;
+			cursor: pointer;
+			background: rgba(0,0,0,0.25);
+		}
 	}
 }
 .single-product-categories {
@@ -1976,9 +2025,10 @@ span.button.buy-now-button {
 	display: inline-flex;
 }
 .categories-panel {
-	background: none;
+	background: rgba(255,255,255,0.1);
 	margin: 2em 0;
 	padding: 1em 0;
+	border-bottom: 5px solid white;
 		h1 {
 		margin: .25em 0;
 		color: $main-white;

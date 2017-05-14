@@ -36,10 +36,11 @@ body {
   background-attachment: fixed; }
 
 .body-shop {
-  background-image: linear-gradient(#27008c, #26C3FF);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
+  background: #1a1a1a;
+  /*background-image: linear-gradient($fifth-accent, $third-color);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;*/ }
 
 .about-bg {
   background-image: linear-gradient(#27008c, #26C3FF);
@@ -1431,7 +1432,6 @@ img + em {
     margin: .25em;
     list-style-type: none;
     text-align: left;
-    padding-left: 5%;
     vertical-align: middle;
     width: 100%;
     line-height: 1em; }
@@ -1439,6 +1439,46 @@ img + em {
       padding: 0; }
   .all-product-categories .category-name {
     padding-left: .5em; }
+  .all-product-categories .category-benefits {
+    background: rgba(0, 0, 0, 0.15);
+    margin: 0.1em;
+    padding: 5px;
+    text-align: left;
+    width: 100%; }
+  .all-product-categories .category-benefits-up {
+    border-bottom: 3px solid #008c27;
+    border-radius: 5px; }
+    .all-product-categories .category-benefits-up:hover {
+      border-bottom: 3px solid #26ff62;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.25); }
+  .all-product-categories .category-benefits-down {
+    border-bottom: 3px solid #27008c;
+    border-radius: 5px; }
+    .all-product-categories .category-benefits-down:hover {
+      border-bottom: 3px solid #6226ff;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.25); }
+  .all-product-categories .category-type {
+    background: rgba(0, 0, 0, 0.15);
+    margin: 0.1em;
+    padding: 5px;
+    border-bottom: 3px solid #27008c;
+    border-radius: 5px; }
+    .all-product-categories .category-type:hover {
+      border-bottom: 3px solid #6226ff;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.25); }
+  .all-product-categories .category-form {
+    background: rgba(0, 0, 0, 0.15);
+    margin: 0.1em;
+    padding: 5px;
+    border-bottom: 3px solid #009dd9;
+    border-radius: 5px; }
+    .all-product-categories .category-form:hover {
+      border-bottom: 3px solid #26C3FF;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.25); }
 
 .single-product-categories {
   /*display: flex;
@@ -1769,9 +1809,10 @@ span.button.buy-now-button {
   display: inline-flex; }
 
 .categories-panel {
-  background: none;
+  background: rgba(255, 255, 255, 0.1);
   margin: 2em 0;
-  padding: 1em 0; }
+  padding: 1em 0;
+  border-bottom: 5px solid white; }
   .categories-panel h1 {
     margin: .25em 0;
     color: #fffcf2; }
