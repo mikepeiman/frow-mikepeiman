@@ -36,13 +36,20 @@ body {
   background-attachment: fixed; }
 
 .body-shop {
-  background-image: linear-gradient(#26C3FF, #27008c);
+  background-image: linear-gradient(#27008c, #26C3FF);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.about-bg {
+  background-image: linear-gradient(#27008c, #26C3FF);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
 
 .shop-bg {
-  background: white;
+  background: none;
+  color: white;
   margin-top: 6em; }
   .shop-bg h1 {
     margin-top: 1em;
@@ -95,8 +102,7 @@ a:active {
 
 .site {
   -ms-flex: 1;
-      flex: 1;
-  margin-top: 3em; }
+      flex: 1; }
 
 .landing-page {
   -ms-flex: 1;
@@ -640,7 +646,7 @@ p:empty {
 /*****************************************************************************/
 .intro-text {
   color: white;
-  margin: 6em 0 4em 0;
+  margin: 5em 0 0 0;
   line-height: 1.25em;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -655,6 +661,20 @@ p:empty {
     padding: .75em 0;
     font-size: 1.15em;
     line-height: 1.25em; }
+
+.underline-1 {
+  border-bottom: 0.15em solid #26C3FF;
+  transition: all .75s; }
+  .underline-1:hover {
+    border-bottom: 0.15em solid #fffcf2;
+    transition: all .75s; }
+
+.underline-2 {
+  border-bottom: 0.15em solid #fffcf2;
+  transition: all .75s; }
+  .underline-2:hover {
+    border-bottom: 0.15em solid #26C3FF;
+    transition: all .75s; }
 
 .greeting {
   -ms-flex-align: center;
@@ -672,10 +692,16 @@ p:empty {
 	background: adjust-color($main-black, $lightness: 15%);*/
   /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
   background-size: cover;*/ }
+  .greeting:hover .underline-2 {
+    border-bottom: 0.15em solid #26C3FF;
+    transition: all .75s; }
+  .greeting:hover .underline-1 {
+    border-bottom: 0.15em solid #fffcf2;
+    transition: all .75s; }
 
 .greeting-body {
   padding: 2em 0;
-  margin: 2em 0 0 0;
+  margin: 1em 0 0 0;
   /*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
@@ -982,7 +1008,7 @@ img + em {
   line-height: 1.25em;
   padding: .75em;
   text-align: left;
-  margin: 2em 0;
+  margin: 1em 0;
   display: inline-block;
   background: white;
   box-shadow: 0px 3px 5px 1px #404040; }
@@ -1025,7 +1051,9 @@ img + em {
 
 .lph-1 {
   color: white;
-  background: #404040; }
+  background: none; }
+  .lph-1 p {
+    line-height: 1.5em; }
 
 .lph-2 {
   color: white;
@@ -1082,10 +1110,10 @@ img + em {
 .dropcap-box-home {
   width: 5.25em;
   height: 3.85em;
-  background: #fffcf2;
+  background: #26C3FF;
   float: left;
   text-align: center;
-  margin: -.25em .2em 0 0;
+  margin: .25em .2em 0 0;
   padding: .5em .5em .5em .3em;
   border-radius: 5px;
   -webkit-transform: scale(0.9, 1);
@@ -1169,6 +1197,9 @@ img + em {
   padding: 0;
   margin: 0; }
 
+.hp-3 {
+  background: none; }
+
 .section-header-posts-feed {
   color: white;
   font-size: 3em;
@@ -1176,17 +1207,16 @@ img + em {
   border-top: 5px solid #FFC100;
   border-bottom: 5px solid #FFC100;
   padding: 1em 0;
-  margin: -1em 0 1em 0; }
+  margin: 3em 0 1em 0; }
 
 .section-header-signup {
   color: white;
   font-size: 3em;
   background: #1a1a1a;
   border-top: 5px solid #FFC100;
-  /*
-		border-bottom: 5px solid $second-color;*/
+  border-bottom: 5px solid #FFC100;
   padding: 1em 0;
-  margin: 0; }
+  margin: 3em 0 0 0; }
 
 .section-header-signup-2 {
   font-size: 3em;
@@ -1200,18 +1230,22 @@ img + em {
 .section-header-about {
   color: white;
   font-size: 3em;
-  background: #1a1a1a;
-  border-top: 5px solid #26C3FF;
-  border-bottom: 5px solid #26C3FF;
+  background: none;
+  /*$main-black;//adjust-color($third-accent, $lightness: -15%);
+		border-top: 5px solid $third-color;
+		border-bottom: 5px solid $third-color;*/
   padding: 1em 0;
-  margin: -1em 0 1em 0; }
+  margin: 3em 0 1em 0; }
+
+#about {
+  background: white; }
 
 .section-header-contact {
   color: white;
   font-size: 3em;
   background: #1a1a1a;
-  border-top: 5px solid #26ff62;
-  border-bottom: 5px solid #26ff62;
+  border-top: 5px solid #FFC100;
+  border-bottom: 5px solid #FFC100;
   padding: 1em 0;
   margin: -1em 0 1em 0; }
 
@@ -1371,7 +1405,7 @@ img + em {
   margin: 0; }
 
 .figure-header h1 {
-  color: #404040;
+  color: white;
   margin: 1em 0 0 0; }
 
 .all-product-categories {
@@ -1395,7 +1429,7 @@ img + em {
     font-size: 2em; }
   .all-product-categories .category {
     vertical-align: middle;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.75);
     padding: .25em;
     margin: .25em;
     list-style-type: none;
@@ -1455,7 +1489,7 @@ img + em {
   display: block;
   margin: 0 auto;
   padding-bottom: .5em;
-  border-bottom: 5px solid #404040; }
+  border-bottom: 5px solid #fffcf2; }
 
 i .fa {
   margin: auto 1em; }
@@ -1467,10 +1501,10 @@ i .fa {
   color: #6226ff; }
 
 .text-modifier-up {
-  color: #229500; }
+  color: #fffcf2; }
 
 .text-modifier-down {
-  color: #27008c; }
+  color: #fffcf2; }
 
 .category-modifier-up {
   color: #009dd9; }
@@ -1727,12 +1761,12 @@ span.button.buy-now-button {
   display: inline-flex; }
 
 .categories-panel {
-  background: white;
+  background: none;
   margin: 2em 0;
   padding: 1em 0; }
   .categories-panel h1 {
     margin: .25em 0;
-    color: #404040; }
+    color: #fffcf2; }
 
 .rating-container {
   position: relative;
@@ -1837,8 +1871,6 @@ span.button.buy-now-button {
   body {
     background: #fffcf2;
     font-size: 112.5%; }
-  .img-small-profile {
-    display: inline-block; }
   .body-page {
     background: #1a1a1a;
     background-image: none;

@@ -40,13 +40,20 @@ body {
 }
 .body-shop {
 	//background: $main-white;
-	background-image: linear-gradient($third-color, $fifth-accent);
+	background-image: linear-gradient($fifth-accent, $third-color);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.about-bg {
+	background-image: linear-gradient($fifth-accent, $third-color);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
 .shop-bg {
-	background: white;
+	background: none;
+	color: white;
 	margin-top: 6em;
 	h1 {
 		margin-top: 1em;
@@ -104,7 +111,7 @@ a:active {
 
 .site {
 	flex: 1;
-	margin-top: 3em;
+	//margin-top: 3em;
 }
 .landing-page {
 	flex: 1;
@@ -687,7 +694,7 @@ p:empty {
 
 .intro-text {
 		color: white; //$main-white;
-    margin: 6em 0 4em 0;
+    margin: 5em 0 0 0;
     line-height: 1.25em;
     flex-direction: column;
     text-align: center;
@@ -702,6 +709,22 @@ p:empty {
 		padding: .75em 0;
 		font-size: 1.15em;
 		line-height: 1.25em;
+	}
+}
+.underline-1 {
+	border-bottom: .15em solid $third-color;
+	transition: all .75s;
+	&:hover {
+		border-bottom: .15em solid $main-white;
+		transition: all .75s;
+	}
+}
+.underline-2 {
+	border-bottom: .15em solid $main-white;
+	transition: all .75s;
+	&:hover {
+		border-bottom: .15em solid $third-color;
+		transition: all .75s;
 	}
 }
 
@@ -720,11 +743,21 @@ p:empty {
 	//box-shadow: -6px -6px 0px 3px $main-accent;
   /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
   background-size: cover;*/
+  &:hover {
+  	.underline-2 {
+			border-bottom: .15em solid $third-color;
+			transition: all .75s;
+	  }
+	  .underline-1 {
+			border-bottom: .15em solid $main-white;
+			transition: all .75s;
+		}
+	}
 }
 
 .greeting-body {
 	padding: 2em 0;
-	margin: 2em 0 0 0;/*
+	margin: 1em 0 0 0;/*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
 	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
@@ -1065,7 +1098,7 @@ img + em {
 	line-height: 1.25em;
 	padding: .75em;
 	text-align: left;
-	margin: 2em 0;
+	margin: 1em 0;
 	display: inline-block;
 	background: white;
 	//border: 1px dotted $main-black;
@@ -1115,7 +1148,9 @@ img + em {
 }
 .lph-1 {
 	color: white;
-	background: $main-grey;//adjust-color($third-accent, $lightness: -15%);
+	background: none;
+	p { line-height: 1.5em; }
+	//$main-grey;//adjust-color($third-accent, $lightness: -15%);
 	//border: 5px solid $main-white;
 }
 .lph-2 {
@@ -1177,10 +1212,10 @@ img + em {
 //	width: 5.5em;
 	width: 5.25em;
 	height: 3.85em;
-	background: $main-white;
+	background: $third-color;
 	float: left;
 	text-align: center;
-	margin: -.25em .2em 0 0;
+	margin: .25em .2em 0 0;
 	padding: .5em .5em .5em .3em;
 	border-radius: 5px;
 	-webkit-transform:scale(0.9, 1.0);
@@ -1285,7 +1320,7 @@ img + em {
 
 }
 .hp-3 {
-
+	background: none;//$fifth-accent;
 }
 .hp-4 {
 
@@ -1300,16 +1335,16 @@ img + em {
 		border-top: 5px solid $main-color;
 		border-bottom: 5px solid $main-color;
 		padding: 1em 0;
-		margin: -1em 0 1em 0;
+		margin: 3em 0 1em 0;
 	}
 .section-header-signup {
 		color: white;
 		font-size: 3em;
 		background: $main-black;//adjust-color($second-accent, $lightness: -15%);
-		border-top: 5px solid $main-color;/*
-		border-bottom: 5px solid $second-color;*/
+		border-top: 5px solid $main-color;
+		border-bottom: 5px solid $main-color;
 		padding: 1em 0;
-		margin: 0;
+		margin: 3em 0 0 0;
 	}
 	.section-header-signup-2 {
 			font-size: 3em;
@@ -1325,18 +1360,22 @@ img + em {
 .section-header-about {
 		color: white;
 		font-size: 3em;
-		background: $main-black;//adjust-color($third-accent, $lightness: -15%);
+		background: none;/*$main-black;//adjust-color($third-accent, $lightness: -15%);
 		border-top: 5px solid $third-color;
-		border-bottom: 5px solid $third-color;
+		border-bottom: 5px solid $third-color;*/
 		padding: 1em 0;
-		margin: -1em 0 1em 0;
+		margin: 3em 0 1em 0;
 }
+#about {
+	background: white;
+}
+
 .section-header-contact {
 		color: white;
 		font-size: 3em;
 		background: $main-black;//adjust-color($fourth-accent, $lightness: -15%);
-		border-top: 5px solid $fourth-color;
-		border-bottom: 5px solid $fourth-color;
+		border-top: 5px solid $main-color;
+		border-bottom: 5px solid $main-color;
 		padding: 1em 0;
 		margin: -1em 0 1em 0;
 }
@@ -1534,7 +1573,7 @@ img + em {
 }
 .figure-header {
 		h1 {
-		color: $main-grey;
+		color: white;
 		margin: 1em 0 0 0;
 	}
 }
@@ -1556,7 +1595,7 @@ img + em {
 	}
 	.category {
 		vertical-align: middle;
-		background: rgba(0,0,0,0.1);
+		background: rgba(0,0,0,0.75);
 		padding: .25em;
 		margin: .25em;
 		list-style-type: none;
@@ -1628,7 +1667,7 @@ img + em {
 	display: block;
 	margin: 0 auto;
 	padding-bottom: .5em;
-	border-bottom: 5px solid $main-grey;
+	border-bottom: 5px solid $main-white;
 }
 i .fa {
 	margin: auto 1em;
@@ -1640,10 +1679,10 @@ i .fa {
 	color: $fifth-color;
 }
 .text-modifier-up {
-	color: $second-accent;
+	color: $main-white;
 }
 .text-modifier-down {
-	color: $fifth-accent;
+	color: $main-white;
 }
 .category-modifier-up {
 	color: $third-accent;
@@ -1931,12 +1970,12 @@ span.button.buy-now-button {
 	display: inline-flex;
 }
 .categories-panel {
-	background: white;
+	background: none;
 	margin: 2em 0;
 	padding: 1em 0;
 		h1 {
 		margin: .25em 0;
-		color: $main-grey;
+		color: $main-white;
 	}
 }
 .rating-container {
@@ -2056,7 +2095,7 @@ span.button.buy-now-button {
   }
 
   .img-small-profile {
-		display: inline-block;
+		//display: inline-block;
   }
 
 .body-page {
@@ -2510,7 +2549,6 @@ span.button.buy-now-button {
 	.img-small-profile {
 		margin: 0;
 		flex: 1 .35 auto;
-
 	}
 
 	.intro-text h1 {
