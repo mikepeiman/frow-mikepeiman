@@ -99,6 +99,7 @@ a:visited {
   text-decoration: none; }
 
 a:active {
+  color: #FFC100;
   text-decoration: none; }
 
 .site {
@@ -1394,6 +1395,14 @@ img + em {
 /* PRODUCTS
 /*
 /*****************************************************************************/
+.filter-button-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
 .supplements-list {
   width: 100%;
   margin: 0; }
@@ -1602,10 +1611,11 @@ ul.product-header {
         color: #404040;
         transition: all .25s; }
   ul.product-header .product-name-container {
-    min-height: 5.5em;
     font-size: 125%;
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.25);
-    padding: .5em; }
+    padding: .5em;
+    -ms-flex: 1;
+        flex: 1; }
   ul.product-header .product-desc-container {
     text-transform: capitalize;
     -ms-flex-direction: row;
@@ -1688,7 +1698,7 @@ span.button.buy-now-button {
 
 .product-longdesc {
   font-size: 80%;
-  font-family: 'Nunito';
+  font-family: 'PT Sans', 'Raleway';
   line-height: 1.25em;
   font-weight: normal;
   padding: 1em;
@@ -2102,6 +2112,8 @@ span.button.buy-now-button {
       text-transform: uppercase;
       margin: 0;
       padding: 0; }
+  .product-header {
+    color: red; }
   .buy-now-row {
     display: -ms-flexbox;
     display: flex;
@@ -2117,7 +2129,7 @@ span.button.buy-now-button {
     display: none; }
   .product-longdesc {
     font-size: 80%;
-    font-family: 'Nunito';
+    font-family: 'PT Sans', 'Raleway';
     line-height: 1.25em;
     font-weight: normal;
     padding: 1em;
