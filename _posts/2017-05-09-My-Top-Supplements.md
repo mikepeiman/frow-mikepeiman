@@ -19,17 +19,19 @@ featured: true
 
 I agree: you don't need supplements. But allow me to suggest a different perspective: You might benefit from them. A lot. They might even change your life.
 
-![My supplement armory this Spring 2017](../images/dsc06634.jpg){:class="post-img"}
-*An overview of my supplement armory this Spring 2017*
+{% include subpage-categories-all-benefits-panel.html %}
 
 Consider this: _**You are always supplementing something.**_. If you drink water, you are supplementing against thirst. If you are eating food, you are supplementing against starvation. If you are climbing Mt. Everest, you'd better be supplementing oxygen! And if you are taking vitamin D3, you are supplementing for lack of sun exposure (you might as well just consider sunshine, fresh air and clean water vitamins too).
 
 For me, learning about nutrition and supplementation has been part of a long journey of healing, about 17 years now. It began with quitting drinking soda and sugary drinks, then quitting cigarettes. I did a year of fulltime studies in massage therapy, and from there I began yoga, hitting the gym, and balancing macronutrients. Building on that I became a hugely passionate CrossFit trainer (as well as CanFitPro and NSCA personal trainer) and explored many whole foods, greens, and other nutritional supplements. 
 
 ![Lifting giant haybales used to be my idea of fun](../images/DSC_6336.JPG){:class="post-img"}
-*Lifting giant haybales used to be my idea of fun ;)*
+*Lifting heavy things used to be my idea of fun ;)*
 
 I believe my greens and protein supplementation played a key role in supporting my immune system against malaria during my time in Africa in 2012. In the past year and a half I've gone even more seriously into supplementation, including nootropics, to deal with serious insomnia and a Generalized Anxiety Disorder. These came about as a result of some difficult living situations and massive stress in my family life - including mental illness, suicide attempts amongst family members, and a separation from my wife and child.
+
+![My supplement armory this Spring 2017](../images/dsc06634.jpg){:class="post-img"}
+*An overview of my supplement armory this Spring 2017*
 
 In short, I've learned a lot and it's been a long, hard road. I hope the knowledge and experience I've gained can help you with your health, wellbeing, energy and fitness - and especially if you're dealing with insomnia (which is a form of torture and I wouldn't wish on anyone!), anxiety (I didn't know the difference between anxiety and stress until the shit hit the fan last summer), a mood disorder or low energy.
 

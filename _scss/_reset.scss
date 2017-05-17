@@ -726,6 +726,14 @@ p:empty {
 		transition: all .75s;
 	}
 }
+.underline-3 {
+	border-bottom: .15em solid $main-color;
+	transition: all .75s;
+	&:hover {
+		border-bottom: .15em solid $fourth-color;
+		transition: all .75s;
+	}
+}
 
 .greeting {
 	align-items: center;
@@ -765,14 +773,15 @@ p:empty {
 }
 
 .img-small-profile {
-	display: none;
-	position: relative;
-	width: 150px;
-	height: 150px;
-	margin-right: 1.5em;
+	display: inline-flex;
+//	position: relative;
+	width: 3.5em;
+	height: 3.5em;
+	margin-right: .5em;
 	background-image: $profile-image-1;
 	background-size: cover;
 	background-repeat: no-repeat;
+	vertical-align: middle;
 	flex: 1 1 auto;
 	padding: 0;
 	border-top: 15px solid adjust-color($main-black, $lightness: 5%);
@@ -962,7 +971,9 @@ footer {
     background: $main-black;
     padding: 1em 0;
 		bottom: 0;
-
+		h1 {
+			color: white;
+		}
     ul {
 	  	display: flex;
 	  	justify-content: flex-end; // space-around;
@@ -1345,7 +1356,7 @@ img + em {
 		padding: 1em 0;
 		margin: 3em 0 0 0;
 	}
-	.section-header-signup-2 {
+.section-header-signup-2 {
 			font-size: 3em;
 			background: $main-black;//adjust-color($second-accent, $lightness: -15%);
 			border-top: 5px solid $main-color;
@@ -1562,9 +1573,23 @@ img + em {
 /*****************************************************************************/
 
 .filter-button-group {
-	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
+	flex-direction: row;
+	align-self: flex-end;
+	overflow: visible;
+	margin: 1em 0 0 0;
+	padding: .25em 0 0 0;
+	border-top: 2px solid $main-white;
+	a {
+		color: $main-white;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	.active {
+		background: rgba(255,255,255,0.15);
+		color: $main-color;
+	}
 }
 .supplements-list {
 	width: 100%;
@@ -1590,12 +1615,16 @@ img + em {
 	justify-content: flex-start;
 	vertical-align: middle;
 	font-size: 1em;
+	margin-right: 1em;
 	ul {
 		margin-left: 0;
 	}
 	h1 {
 		margin: 0;
 		font-size: 2em;
+	}
+	h2 {
+		float: left;
 	}
 	.category {
 		vertical-align: middle;
@@ -1612,14 +1641,17 @@ img + em {
 	 		padding: 0;
 		}
 	}
+	a.filter-all {
+	}
 	.category-name {
 		padding-left: .5em;
 	}
 	.category-benefits {
 		background: rgba(0,0,0,0.15);
-		margin: 0.1em;
+		margin: 0.25em;
 		padding: 5px;
 		text-align: left;
+		line-height: 1.5em;
 		width: 100%;
 	}
 	.category-benefits-up {
@@ -1723,8 +1755,6 @@ img + em {
 .category-list-title {
 	display: block;
 	margin: 0 auto;
-	padding-bottom: .5em;
-	border-bottom: 5px solid $main-white;
 }
 i .fa {
 	margin: auto 1em;
@@ -1755,7 +1785,7 @@ i .fa {
 	color: $main-black;
 	flex: 1;
 	height: auto;
-	margin-bottom: 2em;
+	margin: 0 0 2em 250px;
 }
 
 ul.product-header {
@@ -2032,9 +2062,12 @@ span.button.buy-now-button {
 	display: inline-flex;
 }
 .categories-panel {
-	background: rgba(255,255,255,0.1);
-	margin: 2em 0;
+	background: $main-black;
+	margin: 0;
 	padding: 1em 0;
+	position: fixed;
+	left: 0;
+	top: 125px;
 	border-bottom: 5px solid white;
 		h1 {
 		margin: .25em 0;
@@ -2158,7 +2191,7 @@ span.button.buy-now-button {
   }
 
   .img-small-profile {
-		//display: inline-block;
+		display: inline-block;
   }
 
 .body-page {

@@ -1,0 +1,34 @@
+  <div class="categories-panel">   
+    <h1 class="category-list-title">{{ site.data.supplements-categories.category-list-title }}</h1>   
+    <div class="all-product-categories">
+      <div class="frow col-xs-1-2">
+        <h1>Increase <i class="icon-modifier-up fa fa-arrow-circle-o-up"></i></h1>
+        <ul class="all-product-categories">
+          {% for category in site.data.supplements-categories.categories %}
+            {% if category.modifier == "up" %}
+            <li class="category text-modifier-up">
+              <i class="fa fa-fw {{ category.icon }} icon-modifier-up"></i>
+              <span class="category-name"> {{ category.name }}</span>
+            </li>
+            {% else %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="frow col-xs-1-2">
+        <h1>Decrease <i class="icon-modifier-down fa fa-arrow-circle-o-down"></i></h1>
+        <ul class="all-product-categories">
+          {% for category in site.data.supplements-categories.categories %}
+            {% if category.modifier == "down" %}
+            <li class="category text-modifier-down">
+              <i class="fa fa-fw {{ category.icon }} icon-modifier-down"></i>
+              <span class="category-name"> {{ category.name }}</span>
+            </li>
+            {% else %}
+            <span data="not up"></span>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>

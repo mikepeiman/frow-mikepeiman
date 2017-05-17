@@ -676,6 +676,13 @@ p:empty {
     border-bottom: 0.15em solid #26C3FF;
     transition: all .75s; }
 
+.underline-3 {
+  border-bottom: 0.15em solid #FFC100;
+  transition: all .75s; }
+  .underline-3:hover {
+    border-bottom: 0.15em solid #26ff62;
+    transition: all .75s; }
+
 .greeting {
   -ms-flex-align: center;
       align-items: center;
@@ -710,14 +717,15 @@ p:empty {
 	background: adjust-color($main-black, $lightness: 3%);*/ }
 
 .img-small-profile {
-  display: none;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin-right: 1.5em;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 3.5em;
+  height: 3.5em;
+  margin-right: .5em;
   background-image: url(../images/mike-1x1-250x250.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  vertical-align: middle;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   padding: 0;
@@ -892,6 +900,8 @@ footer.social-links {
   background: #1a1a1a;
   padding: 1em 0;
   bottom: 0; }
+  .social-links-contact h1 {
+    color: white; }
   .social-links-contact ul {
     display: -ms-flexbox;
     display: flex;
@@ -1396,12 +1406,23 @@ img + em {
 /*
 /*****************************************************************************/
 .filter-button-group {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-direction: column;
-      flex-direction: column; }
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  overflow: visible;
+  margin: 1em 0 0 0;
+  padding: .25em 0 0 0;
+  border-top: 2px solid #fffcf2; }
+  .filter-button-group a {
+    color: #fffcf2; }
+  .filter-button-group a:hover {
+    text-decoration: none; }
+  .filter-button-group .active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFC100; }
 
 .supplements-list {
   width: 100%;
@@ -1428,12 +1449,15 @@ img + em {
   -ms-flex-pack: start;
       justify-content: flex-start;
   vertical-align: middle;
-  font-size: 1em; }
+  font-size: 1em;
+  margin-right: 1em; }
   .all-product-categories ul {
     margin-left: 0; }
   .all-product-categories h1 {
     margin: 0;
     font-size: 2em; }
+  .all-product-categories h2 {
+    float: left; }
   .all-product-categories .category {
     vertical-align: middle;
     background: rgba(0, 0, 0, 0.75);
@@ -1450,9 +1474,10 @@ img + em {
     padding-left: .5em; }
   .all-product-categories .category-benefits {
     background: rgba(0, 0, 0, 0.15);
-    margin: 0.1em;
+    margin: 0.25em;
     padding: 5px;
     text-align: left;
+    line-height: 1.5em;
     width: 100%; }
   .all-product-categories .category-benefits-up {
     border-bottom: 3px solid #008c27;
@@ -1538,9 +1563,7 @@ img + em {
 
 .category-list-title {
   display: block;
-  margin: 0 auto;
-  padding-bottom: .5em;
-  border-bottom: 5px solid #fffcf2; }
+  margin: 0 auto; }
 
 i .fa {
   margin: auto 1em; }
@@ -1575,7 +1598,7 @@ i .fa {
   -ms-flex: 1;
       flex: 1;
   height: auto;
-  margin-bottom: 2em; }
+  margin: 0 0 2em 250px; }
 
 ul.product-header {
   display: -ms-flexbox;
@@ -1819,9 +1842,12 @@ span.button.buy-now-button {
   display: inline-flex; }
 
 .categories-panel {
-  background: rgba(255, 255, 255, 0.1);
-  margin: 2em 0;
+  background: #1a1a1a;
+  margin: 0;
   padding: 1em 0;
+  position: fixed;
+  left: 0;
+  top: 125px;
   border-bottom: 5px solid white; }
   .categories-panel h1 {
     margin: .25em 0;
@@ -1930,6 +1956,8 @@ span.button.buy-now-button {
   body {
     background: #fffcf2;
     font-size: 112.5%; }
+  .img-small-profile {
+    display: inline-block; }
   .body-page {
     background: #1a1a1a;
     background-image: none;
