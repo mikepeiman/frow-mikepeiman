@@ -734,32 +734,17 @@ p:empty {
 		transition: all .75s;
 	}
 }
+.underline-greeting {
+	border-bottom: 5px solid $main-color;
+	margin: 0;
+}
 
 .greeting {
 	align-items: center;
 	display: inline-flex;
 	justify-content: space-between !important;
 	margin: 0 auto;
-	padding: 0;//2.5em 2em 2.5em 6em;
-/*	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
-	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
-	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
-	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
-	background: adjust-color($main-black, $lightness: 15%);*/
-	//border: 15px solid #FABC11;
-	//box-shadow: -6px -6px 0px 3px $main-accent;
-  /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
-  background-size: cover;*/
-  &:hover {
-  	.underline-2 {
-			border-bottom: .15em solid $third-color;
-			transition: all .75s;
-	  }
-	  .underline-1 {
-			border-bottom: .15em solid $main-black;
-			transition: all .75s;
-		}
-	}
+	padding: 0;
 }
 
 .greeting-body {

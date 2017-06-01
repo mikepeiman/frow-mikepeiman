@@ -683,6 +683,10 @@ p:empty {
     border-bottom: 0.15em solid #26ff62;
     transition: all .75s; }
 
+.underline-greeting {
+  border-bottom: 5px solid #FFC100;
+  margin: 0; }
+
 .greeting {
   -ms-flex-align: center;
       align-items: center;
@@ -691,20 +695,7 @@ p:empty {
   -ms-flex-pack: justify !important;
       justify-content: space-between !important;
   margin: 0 auto;
-  padding: 0;
-  /*	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
-	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
-	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);
-	border-right: 15px solid adjust-color($main-black, $lightness: 5%);
-	background: adjust-color($main-black, $lightness: 15%);*/
-  /*background-image: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,.1)),$bg-image-2;
-  background-size: cover;*/ }
-  .greeting:hover .underline-2 {
-    border-bottom: 0.15em solid #26C3FF;
-    transition: all .75s; }
-  .greeting:hover .underline-1 {
-    border-bottom: 0.15em solid #1a1a1a;
-    transition: all .75s; }
+  padding: 0; }
 
 .greeting-body {
   padding: 2em 0;

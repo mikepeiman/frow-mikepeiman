@@ -1,25 +1,6 @@
 <div class="intro-text">
   <div class="greeting" id="greeting">
-
-	<script>
-	var i = 0;
-	$("#greeting").click(function() {
-			i++;
-	  		if (i % 2) {
-		TweenLite.to(".underline-1", .5, {className:"underline-3"})
-		TweenLite.to(".underline-2", .5, {className:"underline-1"})
-	} else if (i % 3) {
-		TweenLite.to(".underline-3", .5, {className:"underline-2"})
-		TweenLite.to(".underline-1", .5, {className:"underline-3"})
-	}  else {
-		TweenLite.to(".underline-2", .5, {className:"underline-1"})
-		TweenLite.to(".underline-3", .5, {className:"underline-2"})
-	}
-});
-
-	</script>
-
-  	<h1><span class="underline-1"> </span><span class="underline-2">Hi</span><span class="underline-1">. </span><span class="underline-2">I'M</span><span class="underline-1"> </span><span class="underline-2">MIKE</span><span class="underline-1">.</span></h1>
+  	<h1><span class="underline-greeting">Hi. I'm Mike.</span></h1>
   </div>
   <div class="greeting-body">
 	  <div class="lead-paragraph-home lph-1">
