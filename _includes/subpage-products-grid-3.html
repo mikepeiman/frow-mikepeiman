@@ -2,17 +2,17 @@
   <nav class="product-filter">
       <div class="collection-sort">
         <label>Benefits:</label>
-        <select>
-          <option value="*" data-filter="*" class="sort-option active">All</option>
+        <select class="filters-select">
+          <option value="*">All</option>
           {% assign filters = site.data.supplements-categories.categories | group by: 'categories' %}
           {% for filter in filters %}
-            <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
+            <option class="sort-option" value=".{{ filter.name }}">{{ filter.name }}</option>
           {% endfor %}
         </select>
       </div>
       <div class="collection-sort">
         <label>Types:</label>
-        <select>
+        <select class="filters-select">
           <option value="*" data-filter="*" class="sort-option active">All</option>
           {% assign filters = site.data.supplements-categories.types | group by: 'types' %}
           {% for filter in filters %}
@@ -22,7 +22,7 @@
       </div>
       <div class="collection-sort">
         <label>Forms:</label>
-        <select>
+        <select class="filters-select">
           <option value="*" data-filter="*" class="sort-option active">All</option>
           {% assign filters = site.data.supplements-categories.forms | group by: 'forms' %}
           {% for filter in filters %}
@@ -40,9 +40,12 @@
   </nav>
 </div>
 
-  <div class="flex-container grid col-md-3-5">
+  <div class="grid">
     {% for product in site.data.supplements-2 %}
-      <div class="product-card">
+      <div class="product-card 
+        {% for category in product.categories %}{{ category }} {% endfor %}
+        {% for type in product.type %}{{ type }} {% endfor %}
+        {% for form in product.form %}{{ form }} {% endfor %}">
         <div class="product-iframe">
           {{ product.amazon-iframe }}
         </div>
@@ -55,17 +58,43 @@
   </div>
 
 <script>
+// init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.product-card',
-  layoutMode: 'fitRows'
+  layoutMode: 'masonry'
 });
-// filter items on button click
-$('.collection-sort').on( 'click', 'select', function() {
-  var filterValue = $(this).attr('data-filter');
+// bind filter on select change
+$('.filters-select').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
   $grid.isotope({ filter: filterValue });
 });
-$('.collection-sort option.sort-option').on('click', function(){
-  $('.collection-sort option.sort-option').removeClass('active');
-  $(this).addClass('active');
-});
+
 </script>
+<style>
+.grid {
+  border: 1px solid #333;
+}
+
+/* clear fix */
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+.grid {
+    height:  auto !important;
+}
+.grid * {
+  position: relative !important;
+  left:  auto !important;
+  top:  auto !important;
+}
+
+.product-card > * {
+  margin: 0;
+  padding: 0;
+}
+</style>

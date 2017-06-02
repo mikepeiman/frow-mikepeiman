@@ -1410,15 +1410,20 @@ img + em {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.product-card {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  position: relative; }
+.grid-container {
+  max-width: 72%; }
 
 .grid {
-  margin-top: 120px; }
+  margin-top: 120px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: none !important; }
+
+.product-card {
+  -ms-flex-direction: row;
+      flex-direction: row; }
 
 .filter-button-group {
   -ms-flex-wrap: wrap;

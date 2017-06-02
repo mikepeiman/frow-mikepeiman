@@ -1569,15 +1569,18 @@ img + em {
 	display: flex;
 	flex-wrap: wrap;
 }
-.product-card {
-	display: flex;
-	flex-direction: column;
-	position: relative;
+.grid-container {
+		max-width: 72%;
 }
 .grid {
 	margin-top: 120px;
+	display: flex;
+	flex-wrap: wrap;
+	border: none !important;
 }
-
+.product-card {
+	flex-direction: row;
+}
 .filter-button-group {
 	flex-wrap: wrap;
 	flex-direction: row;
