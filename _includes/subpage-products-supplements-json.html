@@ -43,7 +43,7 @@
     </div>
   </div>
   <div class="products frow">
-  {% for product in site.data.supplements-json %}
+  {% for product in site.data.supplements %}
     <div class="single-product {% for category in product.categories %}{{ category}} {% endfor %}">
         <ul class="product-header">
           <a class="product-name-container" target="_blank" href="{{ product.url }}">
@@ -59,7 +59,7 @@
     <div class="single-product-categories">
         <ul class="frow">
           {% for category in product.categories %}
-            <li class="category supplements-json">
+            <li class="category supplements">
               <span class="category-name">{{ category }}</span>
             </li>
           {% endfor %}

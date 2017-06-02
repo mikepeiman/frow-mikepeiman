@@ -1,0 +1,70 @@
+<div class="shop-nav-container">
+  <nav class="product-filter">
+      <div class="collection-sort">
+        <label>Benefits:</label>
+        <select>
+          <option value="*" data-filter="*" class="sort-option active">All</option>
+          {% assign filters = site.data.supplements-categories.categories | group by: 'categories' %}
+          {% for filter in filters %}
+            <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="collection-sort">
+        <label>Types:</label>
+        <select>
+          <option value="*" data-filter="*" class="sort-option active">All</option>
+          {% assign filters = site.data.supplements-categories.types | group by: 'types' %}
+          {% for filter in filters %}
+            <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="collection-sort">
+        <label>Forms:</label>
+        <select>
+          <option value="*" data-filter="*" class="sort-option active">All</option>
+          {% assign filters = site.data.supplements-categories.forms | group by: 'forms' %}
+          {% for filter in filters %}
+            <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="collection-sort">
+        <label>Sort by:</label>
+        <select>
+          <option value="/">Featured</option>
+        </select>
+      </div>
+  </nav>
+</div>
+
+  <div class="flex-container grid col-md-3-5">
+    {% for product in site.data.supplements-2 %}
+      <div class="product-card">
+        <div class="product-iframe">
+          {{ product.amazon-iframe }}
+        </div>
+        <!-- <span class="rating-container">
+          <label>Mike's Rating: </label>
+          <div class="stars-container stars-{{ product.rating }}" title="{{ product.rating }}/10">★★★★★</div>
+        </span> -->
+      </div>
+    {% endfor %}
+  </div>
+
+<script>
+var $grid = $('.grid').isotope({
+  // options
+});
+// filter items on button click
+$('.collection-sort').on( 'click', 'select', function() {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
+$('.collection-sort option.sort-option').on('click', function(){
+  $('.collection-sort option.sort-option').removeClass('active');
+  $(this).addClass('active');
+});
+</script>

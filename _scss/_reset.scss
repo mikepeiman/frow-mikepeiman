@@ -75,9 +75,6 @@ body {
 	border-right: 15px solid $main-accent;
 	box-shadow: $card-shadow-black;
 }
-.flex-container {
-	flex: 1;
-}
 
 h3, h4, h5, h6 {
    // font-weight: 400;
@@ -283,7 +280,6 @@ header {
 /*
 /*****************************************************************************/
 
-
 nav {
 	font-family: 'Raleway', Helvetica, sans-serif;
   ul {
@@ -312,6 +308,18 @@ nav {
 	  &:hover {
 			color: $third-color;
 			text-decoration: none;
+		}
+	}
+}
+.collection-sort select {
+	border-bottom: none;
+	&:not(.reset) {
+		border-bottom: none;
+		font-family: 'Montserrat', 'Raleway','PT Sans', Helvetica, sans-serif;
+		color: $third-color;
+		font-weight: 400;
+		svg {
+			fill: $third-color;
 		}
 	}
 }
@@ -1556,6 +1564,19 @@ img + em {
 /* PRODUCTS
 /*
 /*****************************************************************************/
+.flex-container {
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+}
+.product-card {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.grid {
+	margin-top: 120px;
+}
 
 .filter-button-group {
 	flex-wrap: wrap;
@@ -1870,7 +1891,6 @@ ul.product-header {
 			transition: all .5s;
 			.buy-now-button {
 				background: none;
-				//float: right;
 				margin: 0 auto;
 				border-radius: 10px;
 				text-align: center;
@@ -1891,7 +1911,6 @@ ul.product-header {
 }
 span.button.buy-now-button {
 	background: white;
-	//float: right;
 	padding: .5em;
 	margin: 0 auto;
 	list-style: none;
@@ -1940,6 +1959,16 @@ span.button.buy-now-button {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.shop-nav-container {
+	position: fixed;
+	top: 140px;
+	background: $main-black;
+	border: 2.5px solid $main-color;
+	padding: .25em .25em 0 .25em;
+	display: flex;
+	z-index: 999;
 }
 .product-filter {
 	display: flex;
@@ -2076,20 +2105,23 @@ span.button.buy-now-button {
 	}
 }
 .rating-container {
-  position: relative;
+  position: absolute;
+  font-size: 80%;
   color: transparent;
   overflow: hidden;
   display: block;
 	color: $main-white;
 	background: adjust-color($main-black, $lightness: 5%);
-	padding: .85em 1em;
-	margin: .25em 0 2em 0;
+	padding: .25em 1em;
+	margin: 239px 0 2em 0;
+	width: 100%;
+/* for use when displaying wider product cards, for rating label and stars on same line	
 	label {
 		float: left;
 	}
 	div {
 		float: right;
-	}
+	} */
 }
 .stars-container {
 	position: relative;
@@ -2176,6 +2208,12 @@ span.button.buy-now-button {
 	nav .site-branding {
 		display: block;
 		margin-right: auto;
+	}
+	.site-nav {
+		height: 120px;
+	}
+	.shop-nav-container {
+	top: 120px;
 	}
 }
 
