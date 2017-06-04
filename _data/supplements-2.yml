@@ -3,79 +3,99 @@
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B008HFO7U4&asins=B008HFO7U4&linkId=a6186bdb27b54a6cfd28284d567d73e1&show_border=true&link_opens_in_new_window=true"></iframe>
   type: vitamin
   form: powder
+  categories: antioxidant, immune system
 - name: Bulk Supplements Pure L-Tryptophan Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00GT42E64&asins=B00GT42E64&linkId=235da34a356b1a9442542a7291afdb0c&show_border=true&link_opens_in_new_window=true"></iframe>
   type: amino acid
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=014312417X&asins=014312417X&linkId=1d404f71ee2ea9617eecf892eae85918&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
+  categories: mood, sleep
+- name: MacroGreens
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B000F4H5UE&asins=B000F4H5UE&linkId=84089ac8844058a7e330342ccf94575c&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: whole foods
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=0979019710&asins=0979019710&linkId=941a53b19e7e34259a7a229c9a3e8494&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
-  form: powder
+  categories: immune system, energy
+- name: Country Life Coenzyme B-Complex
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0011FY9AU&asins=B0011FY9AU&linkId=6f3db1757297a1b714770390be162030&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: vitamin
+  form: capsule
+  categories: energy, stress
 - name: Pure Synergy Vitaminc C Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B008HFO7U4&asins=B008HFO7U4&linkId=a6186bdb27b54a6cfd28284d567d73e1&show_border=true&link_opens_in_new_window=true"></iframe>
   type: vitamin
   form: powder
+  categories: antioxidant, immune system
 - name: Bulk Supplements Pure L-Tryptophan Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00GT42E64&asins=B00GT42E64&linkId=235da34a356b1a9442542a7291afdb0c&show_border=true&link_opens_in_new_window=true"></iframe>
   type: amino acid
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=014312417X&asins=014312417X&linkId=1d404f71ee2ea9617eecf892eae85918&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
+  categories: mood, sleep
+- name: MacroGreens
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B000F4H5UE&asins=B000F4H5UE&linkId=84089ac8844058a7e330342ccf94575c&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: whole foods
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=0979019710&asins=0979019710&linkId=941a53b19e7e34259a7a229c9a3e8494&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
-  form: powder
+  categories: immune system, energy
+- name: Country Life Coenzyme B-Complex
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0011FY9AU&asins=B0011FY9AU&linkId=6f3db1757297a1b714770390be162030&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: vitamin
+  form: capsule
+  categories: energy, stress
 - name: Pure Synergy Vitaminc C Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B008HFO7U4&asins=B008HFO7U4&linkId=a6186bdb27b54a6cfd28284d567d73e1&show_border=true&link_opens_in_new_window=true"></iframe>
   type: vitamin
   form: powder
+  categories: antioxidant, immune system
 - name: Bulk Supplements Pure L-Tryptophan Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00GT42E64&asins=B00GT42E64&linkId=235da34a356b1a9442542a7291afdb0c&show_border=true&link_opens_in_new_window=true"></iframe>
   type: amino acid
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=014312417X&asins=014312417X&linkId=1d404f71ee2ea9617eecf892eae85918&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
+  categories: mood, sleep
+- name: MacroGreens
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B000F4H5UE&asins=B000F4H5UE&linkId=84089ac8844058a7e330342ccf94575c&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: whole foods
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=0979019710&asins=0979019710&linkId=941a53b19e7e34259a7a229c9a3e8494&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
-  form: powder
+  categories: immune system, energy
+- name: Country Life Coenzyme B-Complex
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0011FY9AU&asins=B0011FY9AU&linkId=6f3db1757297a1b714770390be162030&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: vitamin
+  form: capsule
+  categories: energy, stress
 - name: Pure Synergy Vitaminc C Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B008HFO7U4&asins=B008HFO7U4&linkId=a6186bdb27b54a6cfd28284d567d73e1&show_border=true&link_opens_in_new_window=true"></iframe>
   type: vitamin
   form: powder
+  categories: antioxidant, immune system
 - name: Bulk Supplements Pure L-Tryptophan Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00GT42E64&asins=B00GT42E64&linkId=235da34a356b1a9442542a7291afdb0c&show_border=true&link_opens_in_new_window=true"></iframe>
   type: amino acid
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=014312417X&asins=014312417X&linkId=1d404f71ee2ea9617eecf892eae85918&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
+  categories: mood, sleep
+- name: MacroGreens
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B000F4H5UE&asins=B000F4H5UE&linkId=84089ac8844058a7e330342ccf94575c&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: whole foods
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=0979019710&asins=0979019710&linkId=941a53b19e7e34259a7a229c9a3e8494&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
-  form: powder
+  categories: immune system, energy
+- name: Country Life Coenzyme B-Complex
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0011FY9AU&asins=B0011FY9AU&linkId=6f3db1757297a1b714770390be162030&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: vitamin
+  form: capsule
+  categories: energy, stress
 - name: Pure Synergy Vitaminc C Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B008HFO7U4&asins=B008HFO7U4&linkId=a6186bdb27b54a6cfd28284d567d73e1&show_border=true&link_opens_in_new_window=true"></iframe>
   type: vitamin
   form: powder
+  categories: antioxidant, immune system
 - name: Bulk Supplements Pure L-Tryptophan Powder
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00GT42E64&asins=B00GT42E64&linkId=235da34a356b1a9442542a7291afdb0c&show_border=true&link_opens_in_new_window=true"></iframe>
   type: amino acid
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=014312417X&asins=014312417X&linkId=1d404f71ee2ea9617eecf892eae85918&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
+  categories: mood, sleep
+- name: MacroGreens
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B000F4H5UE&asins=B000F4H5UE&linkId=84089ac8844058a7e330342ccf94575c&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: whole foods
   form: powder
-- name: Bulk Supplements Pure L-Tryptophan Powder
-  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=0979019710&asins=0979019710&linkId=941a53b19e7e34259a7a229c9a3e8494&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: amino acid
-  form: powder
+  categories: immune system, energy
+- name: Country Life Coenzyme B-Complex
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0011FY9AU&asins=B0011FY9AU&linkId=6f3db1757297a1b714770390be162030&show_border=true&link_opens_in_new_window=true"></iframe>
+  type: vitamin
+  form: capsule
+  categories: energy, stress

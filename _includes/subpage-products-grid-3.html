@@ -43,7 +43,7 @@
   <div class="grid">
     {% for product in site.data.supplements-2 %}
       <div class="product-card 
-        {% for category in product.categories %}{{ category }} {% endfor %}
+        {% for categories in product.categories %}{{ categories }} {% endfor %}
         {% for type in product.type %}{{ type }} {% endfor %}
         {% for form in product.form %}{{ form }} {% endfor %}">
         <div class="product-iframe">

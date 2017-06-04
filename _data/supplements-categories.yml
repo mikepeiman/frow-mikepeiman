@@ -40,9 +40,11 @@ types:
     icon: "fa-cogs"
   - name: "bioactive fungi"
     icon: "fa-cogs"
-  - name: "foods"
-    icon: "fa-cogs"
   - name: "fermented"
+    icon: "fa-cogs"
+  - name: "amino acid"
+    icon: "fa-cogs"
+  - name: "whole foods"
     icon: "fa-cogs"
 forms:
   - name: "powder"
