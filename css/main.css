@@ -1425,6 +1425,17 @@ img + em {
   -ms-flex-direction: row;
       flex-direction: row; }
 
+.product-link {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 300px; }
+
+.product-title {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  overflow: hidden; }
+
 .filter-button-group {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;

@@ -42,19 +42,23 @@
 
   <div class="grid">
     {% for product in site.data.supplements-2 %}
-      <div class="product-card 
-        {% for categories in product.categories %}{{ categories }}{% endfor %}
-        {% for type in product.type %}{{ type }}{% endfor %}
-        {% for form in product.form %}{{ form }}{% endfor %}">
-        <div class="product-iframe">
-          {{ product.amazon-iframe }}
+      <a class="product-card 
+        {% for categories in product.categories %}{{ categories }} {% endfor %}
+        {% for type in product.type %}{{ type }} {% endfor %}
+        {% for form in product.form %}{{ form }} {% endfor %}" href="{{ amazon-text-link }}" rel="nofollow" target="_blank">
+        
+        <div class="product-link">
+          <p class="product-title">{{ product.name }}</p>
+          <img src="{{ product.amazon-image-url }}" title="{{ product.name }}" style="width: auto; height: 240px;">
         </div>
-        <img src="{{ product.image-url }}">
-        <!-- <span class="rating-container">
+
+        <!-- 
+          <img src="{{ product.image-url }}">
+          <span class="rating-container">
           <label>Mike's Rating: </label>
           <div class="stars-container stars-{{ product.rating }}" title="{{ product.rating }}/10">★★★★★</div>
         </span> -->
-      </div>
+      </a>
     {% endfor %}
   </div>
 
@@ -89,7 +93,7 @@ $('.filters-select').on( 'change', function() {
     height:  auto !important;
 }
 .grid * {
-  position: relative !important;
+  //position: relative !important;
   left:  auto !important;
   top:  auto !important;
 }

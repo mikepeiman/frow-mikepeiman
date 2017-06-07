@@ -1,87 +1,274 @@
 ---
-- name: Pure Synergy Vitaminc C Powder
+- name: Pure Synergy Pure Radiance C 100% Natural Wholefood Vitamin C Powder 4oz by The Synergy Company
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B008HFO7U4&asins=B008HFO7U4&linkId=a6186bdb27b54a6cfd28284d567d73e1&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2s595hB
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/81irJMeEWpL._SX522_.jpg
   type: vitamin
   form: powder
-  categories: antioxidant, immune-system
-- name: Bulk Supplements Pure L-Tryptophan Powder
+  categories: antioxidant immune-system
+- name: Bulk Supplements Pure L-Tryptophan Powder 250g
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00GT42E5K&asins=B00GT42E5K&linkId=74c2acd487d566cca45b38a9b795f4c9&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2rW9vFW
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/51o4bBltSKL._SX522_.jpg
   type: amino-acid
   form: powder
-  categories: mood, sleep
-- name: MacroGreens Superfoods Powder
+  categories: mood sleep
+- name: Macro Greens Superfood - 18 Billion Non-Dairy Probiotic Cultures - Raw Green Superfood With Concentrated Polyphenols - Certified Organic Barley Grass Powder - 5+ Servings Of Fruits & Vegetables 
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B000F4H5UE&asins=B000F4H5UE&linkId=84089ac8844058a7e330342ccf94575c&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2s4Gb13
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/814iqwA%2BrsL._SX522_.jpg
   type: whole foods
   form: powder
-  categories: immune-system, energy
+  categories: immune-system energy
 - name: Country Life Coenzyme B-Complex Capsules
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0011FY9AU&asins=B0011FY9AU&linkId=6f3db1757297a1b714770390be162030&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2rModgE
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/917sAy7jXFL._SY679_.jpg
   type: vitamin
   form: capsule
-  categories: energy, stress
-- name: Weyland Lithium Orotate 10mg
+  categories: energy stress
+- name: Weyland Lithium Orotate - 10mg of Elemental Lithium (as Lithium Orotate) per Vegetarian Capsule
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B011J9ZZGY&asins=B011J9ZZGY&linkId=76cf69f8ea94da83e26a86f0f25b7e54&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2r6qWjb
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/812cMjzAFpL._SY679_.jpg
   type: mineral
   form: capsule
-  categories: mood, sleep, stress-and-anxiety
+  categories: mood sleep stress-and-anxiety
 - name: Mack's Ultra Foam Earplugs - 50 pair
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0051U7W32&asins=B0051U7W32&linkId=aaf420ced322debaf35292e32788a935&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2rMiMyp
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/71Oq9zLbMML._SL1500_.jpg
   type: physical-product
   form: item
   categories: sleep
-- name: Sleep Mask, 3D Contoured, 2-pack
+- name: Sleep Mask 2 Pack Ultra Comfortable Fully Adjustable Strap 3D Contoured Soft Eye Sleeping Masks for Travel Spa Naps Airplane Meditation Eyeshade for Women Men (Black with Nose & without Nose) 
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B072HH12K7&asins=B072HH12K7&linkId=95b59dcbac0548002b6d8b7510d58a9c&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2sEkemx
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/71zGPcWSNAL._SX522_.jpg
   type: physical-product
   form: item
   categories: sleep
-- name: DōMatcha Green Organic Summer Harvest Green Tea, 2.82oz Tin
+- name: DōMatcha Green Organic Summer Harvest Green Tea 2.82oz Tin
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B003O7T87C&asins=B003O7T87C&linkId=562db7d9b57974b46013506870d69cc7&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2s4UEKo
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/7141IMRG%2BkL._SX522_.jpg
   type: herbal
   form: powder
-  categories: energy, mood, focus
-- name: AdrenaSmart Adrenal and Anti-Stress Support
+  categories: energy mood focus
+- name: AdrenaSmart by Lorna Vanderhaeghe - Adrenal and Anti-Stress Support
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00FY5JQP6&asins=B00FY5JQP6&linkId=737039c6517c231eacdb64b1407cea08&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: herbal, vitamin
+  amazon-text-link: http://amzn.to/2rW6uW6
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/71c6aTHHSJL._SX522_.jpg
+  type: herbal vitamin
   form: capsules
   categories: stress-and-anxiety
 - name: AOR Ortho-Adapt Adrenal Support
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B003FG1C8A&asins=B003FG1C8A&linkId=36024fe552e97b9cf0d8b0df0b822e24&show_border=true&link_opens_in_new_window=true"></iframe>
-  type: herbal, vitamin, animal
+  amazon-text-link: http://amzn.to/2sEwGCD
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/51UttL18Q0L.jpg
+  type: herbal vitamin animal
   form: capsules
-  categories: stress-and-anxiety
-- name: Genesis Today California Poppy Supplement, 60ct Caps
+  categories: stress-and-anxiety immune-system
+- name: Genesis Today California Poppy Supplement 60ct Caps
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B009F6XEIK&asins=B009F6XEIK&linkId=d882ba2e2ae68369a11973158838e9f7&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2s4V9UM
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/712dOSdcasL._SX522_.jpg
   type: herbal
   form: capsules
-  categories: mood, sleep, reduces-pain
+  categories: mood sleep reduces-pain
 - name: Organic Traditions Organic Ashwagandha Root Powder 7 oz Pkg
   amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00H8RU03K&asins=B00H8RU03K&linkId=a25a50c9310a7daf6f01060329400bf1&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2s4QeD7
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/51pgymnUQNL.jpg
   type: herbal
   form: powder
-  categories: stress-and-anxiety, mood, sleep
+  categories: stress-and-anxiety mood sleep
   image-url: https://images-na.ssl-images-amazon.com/images/I/51pgymnUQNL.jpg
+- name: Garden Greens - American Superfoods Fresh Processed Super Food Powder Delicious Berry 
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B01LZDW3XT&asins=B01LZDW3XT&linkId=a7b8216cd2db297d1161b7dd49e05590&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2sgkFpJ
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/61yJKGhhgPL._SY679_.jpg
+  type: whole-foods vitamin protein
+  form: powder
+  categories: immune-system lean-metabolism
+- name: Mike's Mix All-Natural Unflavored Whey Protein Concentrate-4 lbs
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00C5PDP28&asins=B00C5PDP28&linkId=ceff34aa516fcf2d605bcb04bba2c040&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2rVUMeb
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/91gMGs6iYEL._SX522_.jpg
+  type: whole-foods animal protein
+  form: powder
+  categories: lean-metabolism
+- name: CurEase Argentine Grass Feed Beef Liver Powder Undefatted Desiccated (dried) Pesticide and Hormone Free 1lb One Pound (454grams) 908 Servings
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00N2YJNBS&asins=B00N2YJNBS&linkId=744f94f972645a7f46b00d9f5e6647a4&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2rMlyDQ
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/812daIhKsaL._SY679_.jpg
+  type: animal vitamin protein
+  form: powder
+  categories: immune-system mood lean-metabolism
+- name: Vitamin K2 (MK7) with D3 Supplement - Vitamin D & K Complex for Strong Bones and a Healthy Heart - 5000 IU of Vitamin D3 & 90 mcg of Vitamin K2 MK-7 - 60 Small & Easy to Swallow Vegetable Capsules
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B01GGFDVUI&asins=B01GGFDVUI&linkId=897d3e9060472777fc43a92c972b5922&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2sglVtb
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/71yDuOPZf2L._SX522_.jpg
+  type: vitamin
+  form: capsules
+  categories: immune-system energy
+- name: Magnesium L Threonate Capsules (Magtein) – High Absorption Supplement – Most Bioavailable Form – 2000 mg – 100 Capsules
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B01M4GM9R1&asins=B01M4GM9R1&linkId=3390b61c8b7eb2dd6a00948d3532ff42&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2r6tYnn
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/91efWe%2BYpcL._SX522_.jpg
+  type: mineral
+  form: capsules
+  categories: sleep immune-system
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B0012TDNAM&asins=B0012TDNAM&linkId=881763204757c3be44cc995bd9a1eaf5&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2sE6PLh
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/41XAsyqMKqL._SX425_.jpg
+  type: physical-product
+  form: item
+  categories: tools
+- name: Kava Stress Relief Candy from Hawaii - Ginger Mint Flavor - 4 Pack
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B01NCSS6FB&asins=B01NCSS6FB&linkId=32914e563f256edc72958e487fdce816&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2r6ppth
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/51BWAYtgaWL.jpg
+  type: herbal
+  form: lozenges
+  categories: stress-and-anxiety sleep reduces-pain
+- name: Sacred 7 Organic Mushroom Extract Powder made with Whole Mushrooms Reishi Maitake Cordyceps Shiitake Lion's Mane Turkey Tail Chaga 8 oz. 226 grams / 100+ servings
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B01BK871DE&asins=B01BK871DE&linkId=83ff101f1a3a00eb47c13d2e1fe68bbf&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2sDQLZR
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/719Q9J9O47L._SX522_.jpg
+  type: adaptogen
+  form: powder
+  categories: immune-system stress-and-anxiety mood
+- name: Creatine Monohydrate Powder Micronized by BulkSupplements (1 kilogram) | 99.99% Pure High Performance Formula | Pre/Post Workout Bodybuilding/Crossfit Supplement
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00E9M4XEE&asins=B00E9M4XEE&linkId=cb3e41813cfe6bbcf70041d02863f26a&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2rVLjU7
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/51o4bBltSKL._SX522_.jpg
+  type: amino-acid
+  form: powder
+  categories: energy mood lean-metabolism immune-system
+- name: Healthworks Cacao Powder Raw Organic 2 lb
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B00JVWJR70&asins=B00JVWJR70&linkId=de6642397b5dc9c25693a76f23e01613&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2rVSP1B
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/91DWS1A39bL._SY679_.jpg
+  type: herbal
+  form: powder
+  categories: energy mood
+- name: (Pack of 2) Iavo Auto ON/OFF Plug In LED Night Light with Dusk to Dawn Sensor (Bright Warm White/Yellow/Amber Glow)
+  amazon-iframe: <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=mikepeiman-20&marketplace=amazon&region=US&placement=B01FJHZ4BS&asins=B01FJHZ4BS&linkId=54baaec6aa1761d3308fb380243eaedd&show_border=true&link_opens_in_new_window=true"></iframe>
+  amazon-text-link: http://amzn.to/2sTLvk2
+  amazon-image-url: https://images-na.ssl-images-amazon.com/images/I/518wOF%2BhvAL._SL1001_.jpg
+  type: physical-product
+  form: item
+  categories: sleep
 - name: 
   amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
   type: 
   form: 
   categories: 
 - name: 
   amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
   type: 
   form: 
   categories: 
 - name: 
   amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
   type: 
   form: 
   categories: 
 - name: 
   amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
   type: 
   form: 
   categories: 
 - name: 
   amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
+  type: 
+  form: 
+  categories: 
+- name: 
+  amazon-iframe: 
+  amazon-text-link: 
+  amazon-image-url: 
   type: 
   form: 
   categories: 

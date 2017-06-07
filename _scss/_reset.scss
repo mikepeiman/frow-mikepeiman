@@ -1581,6 +1581,16 @@ img + em {
 .product-card {
 	flex-direction: row;
 }
+.product-link {
+	display: inline-flex;
+	height: 300px;
+}
+.product-title {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+}
 .filter-button-group {
 	flex-wrap: wrap;
 	flex-direction: row;

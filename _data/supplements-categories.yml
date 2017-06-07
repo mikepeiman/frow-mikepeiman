@@ -30,6 +30,9 @@ categories:
   - name: "reduces-pain"
     icon: none
     modifier: "down"
+  - name: "tools"
+    icon: none
+    modifier: none
 types:
   - name: "vitamin"
   - name: "mineral"
@@ -45,6 +48,10 @@ forms:
   - name: "powder"
     unit: "grams"
   - name: "capsule"
+    unit: "count"
+  - name: "lozenges"
+    unit: "count"
+  - name: "item"
     unit: "count"
   - name: "liquid"
     unit: "ml"
