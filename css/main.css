@@ -2048,6 +2048,9 @@ span.button.buy-now-button {
     /*linear-gradient(rgba(26,26,26,.5), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
 	background-size: cover;*/ }
+  .grid-container {
+    width: 100%;
+    max-width: 100%; }
   nav ul li {
     padding-right: .75em; }
   .site-branding {
