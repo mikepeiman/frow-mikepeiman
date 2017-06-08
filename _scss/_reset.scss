@@ -56,8 +56,11 @@ body {
 	color: white;
 	margin-top: 6em;
 	h1 {
-		margin-top: 1em;
+		margin-top: 3em;
 		color: white;
+	}
+	p {
+		margin-bottom: 1em;
 	}
 }
 .body-post {
@@ -1573,7 +1576,7 @@ img + em {
 		max-width: 72%;
 }
 .grid {
-	margin-top: 120px;
+	margin-top: 1em;
 	display: flex;
 	flex-wrap: wrap;
 	border: none !important;
@@ -1996,6 +1999,8 @@ span.button.buy-now-button {
 	padding: .25em .25em 0 .25em;
 	display: flex;
 	z-index: 999;
+}
+.shop-intro {
 }
 .product-filter {
 	display: flex;
