@@ -1580,16 +1580,30 @@ img + em {
 }
 .product-card {
 	flex-direction: row;
+	max-height: 360px;
+	margin: .25em 0;
+	width: 150px;
+	overflow: hidden;
 }
 .product-link {
-	display: inline-flex;
-	height: 300px;
+	flex-direction: column;
+	width: 120px;
 }
 .product-title {
 	display: inline-block;
 	position: absolute;
 	left: 0;
 	overflow: hidden;
+}
+.product-image {
+	max-height: 140px;
+	max-width: 180px;
+}
+.product-shortname {
+	display: inline-flex;
+	max-width: 120px;
+	text-align: center;
+	margin: 0 auto;
 }
 .filter-button-group {
 	flex-wrap: wrap;

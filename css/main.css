@@ -1423,18 +1423,33 @@ img + em {
 
 .product-card {
   -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+  max-height: 360px;
+  margin: .25em 0;
+  width: 150px;
+  overflow: hidden; }
 
 .product-link {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 300px; }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 120px; }
 
 .product-title {
   display: inline-block;
   position: absolute;
   left: 0;
   overflow: hidden; }
+
+.product-image {
+  max-height: 140px;
+  max-width: 180px; }
+
+.product-shortname {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 120px;
+  text-align: center;
+  margin: 0 auto; }
 
 .filter-button-group {
   -ms-flex-wrap: wrap;

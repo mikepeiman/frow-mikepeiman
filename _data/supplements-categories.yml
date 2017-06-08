@@ -47,7 +47,7 @@ types:
 forms:
   - name: "powder"
     unit: "grams"
-  - name: "capsule"
+  - name: "capsules"
     unit: "count"
   - name: "lozenges"
     unit: "count"

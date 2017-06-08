@@ -2,7 +2,7 @@
   <nav class="product-filter">
       <div class="collection-sort">
         <label>Benefits:</label>
-        <select class="filters-select">
+        <select class="filters-select-1">
           <option value="*">All</option>
           {% assign filters = site.data.supplements-categories.categories | group by: 'categories' %}
           {% for filter in filters %}
@@ -12,7 +12,7 @@
       </div>
       <div class="collection-sort">
         <label>Types:</label>
-        <select class="filters-select">
+        <select class="filters-select-2">
           <option value="*" data-filter="*" class="sort-option active">All</option>
           {% assign filters = site.data.supplements-categories.types | group by: 'types' %}
           {% for filter in filters %}
@@ -22,7 +22,7 @@
       </div>
       <div class="collection-sort">
         <label>Forms:</label>
-        <select class="filters-select">
+        <select class="filters-select-3">
           <option value="*" data-filter="*" class="sort-option active">All</option>
           {% assign filters = site.data.supplements-categories.forms | group by: 'forms' %}
           {% for filter in filters %}
@@ -35,6 +35,8 @@
         <label>Sort by:</label>
         <select>
           <option value="/">Featured</option>
+          <option value="/">Price</option>
+          <option value="/">Featured</option>
         </select>
       </div>
   </nav>
@@ -42,23 +44,29 @@
 
   <div class="grid">
     {% for product in site.data.supplements-2 %}
-      <a class="product-card 
-        {% for categories in product.categories %}{{ categories }} {% endfor %}
-        {% for type in product.type %}{{ type }} {% endfor %}
-        {% for form in product.form %}{{ form }} {% endfor %}" href="{{ amazon-text-link }}" rel="nofollow" target="_blank">
+    <div class="product-card  {% for categories in product.categories %}{{ categories }} {% endfor %}{% for type in product.type %}{{ type }} {% endfor %}{% for form in product.form %}{{ form }}{% endfor %}" href="{{ amazon-text-link }}">
+      <a title="{{ product.name }}" class="product-link" rel="nofollow" target="_blank">
         
+        
+          <span>{{ product.amazon-iframe }}</span>
+          <!-- <img src="{{ product.amazon-image-url }}" title="{{ product.name }}" class="product-image">-->
+          <span class="product-shortname">{{ product.shortname }}</span>
+          </a>
+    </div>
+
+        <!-- 
+
         <div class="product-link">
           <p class="product-title">{{ product.name }}</p>
           <img src="{{ product.amazon-image-url }}" title="{{ product.name }}" style="width: auto; height: 240px;">
         </div>
 
-        <!-- 
           <img src="{{ product.image-url }}">
           <span class="rating-container">
           <label>Mike's Rating: </label>
           <div class="stars-container stars-{{ product.rating }}" title="{{ product.rating }}/10">★★★★★</div>
         </span> -->
-      </a>
+
     {% endfor %}
   </div>
 
@@ -66,10 +74,20 @@
 // init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.product-card',
-  layoutMode: 'masonry'
+  layoutMode: 'fitRows'
 });
 // bind filter on select change
-$('.filters-select').on( 'change', function() {
+$('.filters-select-1').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  $grid.isotope({ filter: filterValue });
+});
+$('.filters-select-2').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  $grid.isotope({ filter: filterValue });
+});
+$('.filters-select-3').on( 'change', function() {
   // get filter value from option value
   var filterValue = this.value;
   $grid.isotope({ filter: filterValue });
