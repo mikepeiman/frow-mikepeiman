@@ -384,6 +384,7 @@ nav {
 .signup-form-container {
   background: #1a1a1a;
   margin: 0;
+  width: 100%;
   padding: 1em 0; }
 
 .signup-form-post {
@@ -1073,12 +1074,19 @@ img + em {
 
 .lph-3 {
   color: white;
-  background: #00658c;
-  border: 5px solid #fffcf2;
+  background: #1a1a1a;
   text-align: left;
   font-size: 1.25em;
+  line-height: 1.4em;
   padding: 1em;
-  margin-bottom: 1em; }
+  margin: 0 0 .75em 0; }
+  .lph-3 p {
+    font-family: 'Raleway'; }
+  .lph-3 hr {
+    padding: .15em;
+    background: #26C3FF;
+    border: none;
+    margin: 1em; }
 
 .lph-4 {
   color: #1a1a1a;
@@ -1086,18 +1094,40 @@ img + em {
   margin: 0;
   padding: 0; }
   .lph-4 p {
-    font-size: 1em;
-    border: 5px solid #fffcf2;
-    padding: 0 1em;
-    margin-bottom: 1em;
+    font-size: 1.15em;
+    line-height: 1.25em;
+    padding: .75em 1.5em .75em 1.5em;
+    font-family: 'Nunito'; }
+
+.p-border-1 {
+  border-left: 15px solid #1a1a1a;
+  border-right: 15px solid #1a1a1a;
+  border-top: 15px solid #404040;
+  border-bottom: 15px solid #404040;
+  font-size: 1.15em;
+  padding: 1.25em 1em; }
+
+.about-block-heading {
+  background: #1a1a1a;
+  margin: 0;
+  width: 100%; }
+  .about-block-heading p {
+    color: white;
+    font-size: 1.15em;
+    padding: 1em;
+    margin: 1em 0;
+    font-family: 'Montserrat';
     font-weight: 400;
-    text-align: center;
-    line-height: 1.25em; }
+    border-top: 15px solid #6226ff;
+    border-bottom: 15px solid #6226ff; }
 
 .about-text {
   background: #fffcf2;
-  border: 5px solid #26C3FF;
+  border-left: 5px solid #26C3FF;
+  border-right: 5px solid #26C3FF;
   color: #1a1a1a; }
+  .about-text a {
+    text-decoration: none; }
 
 .lead-paragraph-home-2 {
   font-size: 1.15em;
@@ -1427,7 +1457,7 @@ img + em {
   -ms-flex-direction: row;
       flex-direction: row;
   max-height: 360px;
-  margin: .25em 0;
+  margin: .25em 0 1em 0;
   width: 150px;
   overflow: hidden; }
 
@@ -1806,6 +1836,13 @@ span.button.buy-now-button {
   display: flex;
   z-index: 999; }
 
+.shop-intro {
+  font-size: 1.15em;
+  line-height: 1.25em; }
+
+.collection-sort {
+  width: 25%; }
+
 .product-filter {
   display: -ms-flexbox;
   display: flex; }
@@ -2113,6 +2150,8 @@ span.button.buy-now-button {
         justify-content: space-around;
     -ms-flex-direction: column;
         flex-direction: column; }
+  .shop-bg h1 {
+    margin-top: 4em; }
   .intro-text {
     padding-top: 0; }
     .intro-text p {
@@ -2137,6 +2176,8 @@ span.button.buy-now-button {
 @media all and (max-width: 768px) {
   body {
     font-size: 105%; }
+  .shop-bg h1 {
+    margin-top: 4em; }
   .greeting {
     border: none; }
   .blogpage-post-feed-item {
@@ -2346,6 +2387,8 @@ span.button.buy-now-button {
 @media all and (max-width: 670px) {
   body {
     font-size: 95%; }
+  body {
+    font-size: 105%; }
   .intro-text p {
     width: 90%;
     margin: 0 auto; }
@@ -2381,6 +2424,8 @@ span.button.buy-now-button {
 @media all and (max-width: 480px) {
   body {
     font-size: 85%; }
+  .shop-bg h1 {
+    margin: 6em .5em 1em .5em; }
   .site-branding {
     margin: .75em 0 0 0;
     padding: 0; }

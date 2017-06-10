@@ -425,6 +425,7 @@ nav {
 .signup-form-container {
 	background: $main-black;
 	margin: 0;
+	width: 100%;
 	padding: 1em 0;
 }
 .signup-form-post {
@@ -1169,12 +1170,21 @@ img + em {
 }
 .lph-3 {
 	color: white;
-	background: adjust-color($third-accent, $lightness: -15%);
-	border: 5px solid $main-white;
+	background: $main-black; //adjust-color($third-accent, $lightness: -15%);
 	text-align: left;
 	font-size: 1.25em;
+	line-height: 1.4em;
 	padding: 1em;
-	margin-bottom: 1em;
+	margin: 0 0 .75em 0;
+	p {
+		font-family: 'Raleway';
+	}
+	hr {
+		padding: .15em;
+		background: $third-color;
+		border: none;
+		margin: 1em;
+	}
 }
 .lph-4 {
 	color: $main-black;
@@ -1182,21 +1192,45 @@ img + em {
 	margin: 0;
 	padding: 0;
 	p {
-		font-size: 1em;
-	 // background: $main-black; //adjust-color($third-accent, $lightness: -15%);
-	  border: 5px solid $main-white;
-	  padding: 0 1em;
-	  margin-bottom: 1em;
-		font-weight: 400;
-		text-align: center;
+		font-size: 1.15em;
 		line-height: 1.25em;
+		padding: .75em 1.5em .75em 1.5em;
+		font-family: 'Nunito';
+	}
+}
+.p-border-1 {
+	border-left: 15px solid $main-black;
+	border-right: 15px solid $main-black;
+	border-top: 15px solid $main-grey;
+	border-bottom: 15px solid $main-grey;
+	font-size: 1.15em;
+	padding: 1.25em 1em;
+}
+
+.about-block-heading {
+	background: $main-black;
+	margin: 0;
+	width: 100%;
+	p {
+		color: white;
+		font-size: 1.15em;
+		padding: 1em;
+		margin: 1em 0;
+		font-family: 'Montserrat';
+		font-weight: 400;
+		border-top: 15px solid $fifth-color;
+		border-bottom: 15px solid $fifth-color;
 	}
 }
 
 .about-text {
 	background: $main-white;
-	border: 5px solid $third-color;
+	border-left: 5px solid $third-color;
+	border-right: 5px solid $third-color;
 	color: $main-black;
+	a {
+		text-decoration: none;
+	}
 }
 .lead-paragraph-home-2 {
 	font-size: 1.15em;
@@ -1584,7 +1618,7 @@ img + em {
 .product-card {
 	flex-direction: row;
 	max-height: 360px;
-	margin: .25em 0;
+	margin: .25em 0 1em 0;
 	width: 150px;
 	overflow: hidden;
 }
@@ -2001,6 +2035,11 @@ span.button.buy-now-button {
 	z-index: 999;
 }
 .shop-intro {
+	font-size: 1.15em;
+	line-height: 1.25em;
+}
+.collection-sort {
+	width: 25%;
 }
 .product-filter {
 	display: flex;
@@ -2349,6 +2388,9 @@ span.button.buy-now-button {
 		justify-content: space-around;
 		flex-direction: column;
 	}
+	.shop-bg h1 {
+		margin-top: 4em;
+	}
 
 	.intro-text {
 		padding-top: 0;
@@ -2384,6 +2426,9 @@ span.button.buy-now-button {
 @media all and (max-width: 768px) {
 	body {
 		font-size: 105%;
+	}
+		.shop-bg h1 {
+		margin-top: 4em;
 	}
 	.greeting {
 		border: none;
@@ -2640,7 +2685,9 @@ span.button.buy-now-button {
 	.post-header h1 {
 //		font-size: 2em;
 	}
-
+	body {
+		font-size: 105%;
+	}
 	.intro-text {
 		p {
 			width: 90%;
@@ -2695,6 +2742,9 @@ span.button.buy-now-button {
 @media all and (max-width: 480px) {
 	body {
 		font-size: 85%;
+	}
+	.shop-bg h1 {
+		margin: 6em .5em 1em .5em;
 	}
 	.site-branding {
 			margin: .75em 0 0 0;

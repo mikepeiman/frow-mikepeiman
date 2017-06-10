@@ -1,44 +1,43 @@
 <div class="shop-nav-container">
   <nav class="product-filter">
-      <div class="collection-sort">
-        <label>Benefits:</label>
-        <select class="filters-select-1">
-          <option value="*">All</option>
-          {% assign filters = site.data.supplements-categories.categories | group by: 'categories' %}
-          {% for filter in filters %}
-            <option class="sort-option" value=".{{ filter.name }}">{{ filter.name }}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="collection-sort">
-        <label>Types:</label>
-        <select class="filters-select-2">
-          <option value="*" data-filter="*" class="sort-option active">All</option>
-          {% assign filters = site.data.supplements-categories.types | group by: 'types' %}
-          {% for filter in filters %}
-            <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="collection-sort">
-        <label>Forms:</label>
-        <select class="filters-select-3">
-          <option value="*" data-filter="*" class="sort-option active">All</option>
-          {% assign filters = site.data.supplements-categories.forms | group by: 'forms' %}
-          {% for filter in filters %}
-            <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
-          {% endfor %}
-        </select>
-      </div>
-
-      <div class="collection-sort">
-        <label>Sort by:</label>
-        <select>
-          <option value="/">Featured</option>
-          <option value="/">Price</option>
-          <option value="/">Featured</option>
-        </select>
-      </div>
+    <div class="collection-sort">
+      <label>Benefits:</label>
+      <select class="filters-select-1">
+        <option value="*">All</option>
+        {% assign filters = site.data.supplements-categories.categories | group by: 'categories' %}
+        {% for filter in filters %}
+          <option class="sort-option" value=".{{ filter.name }}">{{ filter.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="collection-sort">
+      <label>Types:</label>
+      <select class="filters-select-2">
+        <option value="*" data-filter="*" class="sort-option active">All</option>
+        {% assign filters = site.data.supplements-categories.types | group by: 'types' %}
+        {% for filter in filters %}
+          <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="collection-sort">
+      <label>Forms:</label>
+      <select class="filters-select-3">
+        <option value="*" data-filter="*" class="sort-option active">All</option>
+        {% assign filters = site.data.supplements-categories.forms | group by: 'forms' %}
+        {% for filter in filters %}
+          <option class="sort-option" data-filter=".{{ filter.name }}" value=".{{ filter.name }}">{{ filter.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="collection-sort">
+      <label>Sort by:</label>
+      <select>
+        <option value="/">Featured</option>
+        <option value="/">Price</option>
+        <option value="/">Featured</option>
+      </select>
+    </div>
   </nav>
 </div>
 
