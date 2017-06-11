@@ -1,11 +1,32 @@
 {% include head.html %}
-  <body class="frow">
+  <body class="frow" onload="javascript:window_onload();">
     <div class="body-shop"> 
     <!-- Make sure to include the extra closing div inside the partial where I want my bg-image to end -->
       {% include nav-page.html %}
         <div class="frow site">
           {{ content }}
         </div>
+
+<script>
+
+function window_onload() {
+  window.addEventListener("scroll",product_filter_reset_top,false);
+}
+
+var product_filter_top=$("#sticky-product-filter").offset().top + (-120);
+
+function product_filter_reset_top() {
+  var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+  if(scrollTop>product_filter_top&&product_filter.className==="product-filter-absolute") {
+    document.getElementById("product_filter").className="product-filter-fixed";
+  }
+  else if(scrollTop<product_filter_top&&product_filter.className==="product-filter-fixed") {
+    document.getElementById("product_filter").className="product-filter-absolute";
+  }
+}
+
+</script>
+
       {% include footer.html %}
   </body>
 </html>
