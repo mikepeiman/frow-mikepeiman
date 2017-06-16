@@ -23,14 +23,21 @@ body {
 
 .body-homepage {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg1.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/DSC06499-27x10-fx.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
 
 .body-page {
   background: #fffcf2;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/DSC06499-27x10-fx.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.blog-page-bg {
+  background: #fffcf2;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/DSC06499-27x10-fx.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
@@ -120,6 +127,11 @@ header {
 	background-image: -o-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,.75));
 	background-image: linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,0));*/ }
 
+/*****************************************************************************/
+/*
+/* Animation
+/*
+/*****************************************************************************/
 /*****************************************************************************/
 /*
 /* Quotes sections
@@ -346,7 +358,7 @@ nav {
   margin: 0.3em 1.5em 0 0;
   color: white;
   text-align: left;
-  font-size: 2.25em; }
+  font-size: 1.5em; }
   .site-branding h1:hover {
     color: #26C3FF; }
 
@@ -655,7 +667,7 @@ p:empty {
 /*****************************************************************************/
 .intro-text {
   color: white;
-  margin: 5em 0 0 0;
+  margin: 3.5em 0 0 0;
   line-height: 1.25em;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -2076,12 +2088,10 @@ span.button.buy-now-button {
 /*****************************************************************************/
 @media all and (min-width: 810px) {
   .nav-menu {
-    margin: -6.95em 2em 0 1.25em; }
+    margin: -4.95em 2em 0 1.25em; }
   nav .site-branding {
     display: block;
-    margin-right: auto; }
-  .site-nav {
-    height: 120px; } }
+    margin-right: auto; } }
 
 /*****************************************************************************/
 /*
