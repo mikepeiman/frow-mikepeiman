@@ -1,8 +1,8 @@
 <div class="intro-text">
   <div class="greeting" id="greeting">
   	<h1>
-  		<div class="underline-greeting title" id="title-h1">Hi. I'm Mike.</div>
-  		<div class="underline-greeting subtitle" id="title-h2">Natural Philosopher</div>
+  		<div class="underline-greeting title" id="titleh1">Hi. I'm Mike.</div>
+  		<div class="underline-greeting subtitle" id="titleh2">Natural Philosopher</div>
   	</h1>
   </div>
   <div class="greeting-body">
@@ -16,3 +16,17 @@
 	  </div> -->
 	</div>
 </div>
+
+<script>
+$(document).ready(function() {
+$(".lead-paragraph-home").velocity("fadeIn", { duration: 4500 });
+$("#titleh2").blast({ delimiter: "character", customClass: "letter", generateIndexID: true });
+$("#titleh2").css("opacity", 0);
+$("#titleh2")
+.velocity("fadeIn", {duration: 2500})
+.velocity("slideOut", {duration: 500});
+
+$("#letter-[i]").velocity("fadeIn", { duration: 500 },
+	{loop: 20});
+});
+</script>
