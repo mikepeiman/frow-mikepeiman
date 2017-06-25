@@ -23,28 +23,36 @@ body {
 
 .body-homepage {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/DSC06499-27x10-fx-1800x887.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-position: center; }
 
 .body-page {
   background: #fffcf2;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/DSC06499-27x10-fx-1800x887.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
 
 .blog-page-bg {
   background: #fffcf2;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/DSC06499-27x10-fx-1800x887.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
 
 .body-shop {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/DSC06499-27x10-fx-1800x887.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.body-about {
+  background: #1a1a1a;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
@@ -667,21 +675,33 @@ p:empty {
 /*****************************************************************************/
 .intro-text {
   color: white;
-  margin: 3.5em 0 0 0;
+  margin: 2em 0 0 0;
   line-height: 1.25em;
   -ms-flex-direction: column;
       flex-direction: column;
   text-align: center; }
-  .intro-text h1 {
-    font-weight: bold;
-    font-size: 3em;
-    margin: 0;
-    padding: 0;
-    text-decoration: none; }
   .intro-text p {
     padding: .75em 0;
     font-size: 1.15em;
     line-height: 1.25em; }
+
+.title {
+  font-weight: bold;
+  font-size: 125%;
+  margin: 0;
+  padding: 0 0 10px 0;
+  text-decoration: none; }
+
+.subtitle {
+  box-shadow: none;
+  background: none;
+  padding: 0.4em; }
+
+.subtitle-bg {
+  box-shadow: 0px 0px 2px 2px #1a1a1a;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.4em;
+  transition: all 1s; }
 
 .underline-1 {
   border-bottom: 0.15em solid #26C3FF;
@@ -719,8 +739,8 @@ p:empty {
   padding: 0; }
 
 .greeting-body {
-  padding: 2em 0;
-  margin: 1em 0 0 0;
+  padding: 1em 0;
+  margin: .5em 0 0 0;
   /*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);

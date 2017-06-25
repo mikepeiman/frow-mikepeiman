@@ -2,7 +2,7 @@
   <div class="greeting" id="greeting">
   	<h1>
   		<div class="underline-greeting title invisible" id="titleh1">Hi. I'm Mike.</div>
-  		<div class="underline-greeting subtitle invisible" id="titleh2">Natural Philosopher</div>
+  		<div class="subtitle invisible" id="titleh2">Natural Philosopher</div>
   	</h1>
   </div>
   <div class="greeting-body">
@@ -48,6 +48,9 @@ $.Velocity.RunSequence(textAnimation);
 $("#titleh1").removeClass("invisible");
 $("#titleh2").removeClass("invisible");
 $("#leadParagraph").removeClass("invisible");
+setTimeout(function(){
+       $("#titleh2").addClass("subtitle-bg");
+   }, 1000);
 });
 
 

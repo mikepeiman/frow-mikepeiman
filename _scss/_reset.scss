@@ -30,6 +30,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center;
 }
 .body-page {
 	background: $main-white;
@@ -50,7 +51,14 @@ body {
 	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed
+	background-attachment: fixed;
+}
+.body-about {
+	background: $main-black;
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-3;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
 .about-bg {
 	background-image: linear-gradient($fifth-accent, $third-color);
@@ -718,23 +726,34 @@ p:empty {
 /*****************************************************************************/
 
 .intro-text {
-		color: white; //$main-white;
-    margin: 3.5em 0 0 0;
+	color: white; //$main-white;
+    margin: 2em 0 0 0;
     line-height: 1.25em;
     flex-direction: column;
     text-align: center;
-	h1 {
-    font-weight: bold;
-    font-size: 3em;
-    margin: 0;
-		padding: 0;
-		text-decoration: none;
-  }
   p {
 		padding: .75em 0;
 		font-size: 1.15em;
 		line-height: 1.25em;
 	}
+}
+.title {
+    font-weight: bold;
+    font-size: 125%;
+    margin: 0;
+	padding: 0 0 10px 0;
+	text-decoration: none;
+	}
+.subtitle {
+	box-shadow: none;
+	background: none;
+	padding: 0.4em;
+}
+.subtitle-bg {
+	box-shadow: 0px 0px 2px 2px #1a1a1a;
+	background: rgba(0,0,0,0.1);
+	padding: 0.4em;
+	transition: all 1s;
 }
 .underline-1 {
 	border-bottom: .15em solid $third-color;
@@ -774,8 +793,8 @@ p:empty {
 }
 
 .greeting-body {
-	padding: 2em 0;
-	margin: 1em 0 0 0;/*
+	padding: 1em 0;
+	margin: .5em 0 0 0;/*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
 	border-bottom: 15px solid adjust-color($main-black, $lightness: 10%);

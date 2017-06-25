@@ -1,0 +1,13 @@
+{% include head.html %}
+  <body class="frow" onload="javascript:window_onload();">
+    <div class="body-about"> 
+    <!-- Make sure to include the extra closing div inside the partial where I want my bg-image to end -->
+      {% include nav-page.html %}
+        <div class="frow site">
+          {{ content }}
+        </div>
+    </div>
+
+      {% include footer.html %}
+  </body>
+</html>
