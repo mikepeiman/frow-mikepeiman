@@ -23,7 +23,7 @@ body {
 
 .body-homepage {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -52,7 +52,7 @@ body {
 
 .body-about {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg3.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
@@ -129,7 +129,8 @@ header {
   top: 0;
   width: 100%;
   z-index: 2000;
-  background: #1a1a1a;
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 5px solid #1a1a1a;
   /*
 	background-image: -webkit-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,.75));
 	background-image: -o-linear-gradient(rgba(26,26,26,1), rgba(26,26,26,1) 80%, rgba(26,26,26,0) 81%, rgba(26,26,26,.75));
@@ -698,10 +699,10 @@ p:empty {
   padding: 0.4em; }
 
 .subtitle-bg {
-  box-shadow: 0px 0px 2px 2px #1a1a1a;
-  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #1a1a1a;
+  background: rgba(0, 0, 0, 0.65);
   padding: 0.4em;
-  transition: all 1s; }
+  transition: background 1.25s; }
 
 .underline-1 {
   border-bottom: 0.15em solid #26C3FF;
@@ -739,8 +740,8 @@ p:empty {
   padding: 0; }
 
 .greeting-body {
-  padding: 1em 0;
-  margin: .5em 0 0 0;
+  padding: .25em 0;
+  margin: 0;
   /*
 	border-top: 15px solid adjust-color($main-black, $lightness: 10%);
 	border-left: 15px solid adjust-color($main-black, $lightness: 5%);
@@ -2508,6 +2509,8 @@ span.button.buy-now-button {
     margin-top: -1.25em; }
     .greeting h1 {
       margin: 0; }
+  .subtitle {
+    font-size: 85%; }
   .quotes-section {
     padding: 2em 1.5em; }
   .quotes-container {
@@ -2558,13 +2561,15 @@ span.button.buy-now-button {
 
 /*****************************************************************************/
 /*
-/* Media - LESS THAN 480px
+/* Media - LESS THAN 340px
 /*
 /*****************************************************************************/
 @media all and (max-width: 340px) {
   .post-header h1 {
     font-size: 2.5em;
-    margin: 5em 0 .25em 0; } }
+    margin: 5em 0 .25em 0; }
+  .subtitle {
+    font-size: 70%; } }
 
 /*****************************************************************************/
 /*

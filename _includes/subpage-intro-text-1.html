@@ -25,7 +25,7 @@ $("#titleh1").blast({ search: "I'm Mike.", customClass: "titleMike" });
 $("#titleh2").blast({ delimiter: "character", customClass: "subtitleLetter" });
 var textAnimation = [{
     	e: $('#titleh1'),
-	  	p: 'transition.flipYIn',
+	  	p: 'transition.slideUpBigIn',
 		o: {
 		    duration: 750
 		}},{
@@ -37,7 +37,7 @@ var textAnimation = [{
 		}
 	},{ 
 		e: $('.leadParagraphWords'),
-	  	p: 'transition.fadeIn',
+	  	p: 'transition.slideDownBigIn',
 		o: {
 		    duration: 500,
 		    stagger: 25,
