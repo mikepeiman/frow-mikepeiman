@@ -785,6 +785,41 @@ p a.link-homepage {
 /* Calls To Action
 /*
 /*****************************************************************************/
+a.button {
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin: 4px 0;
+  display: inline-block;
+  color: #fffcf2;
+  text-decoration: none; }
+  a.button:hover {
+    text-decoration: none;
+    color: #fffcf2; }
+
+a.button-1 {
+  background: #26C3FF;
+  border: 1px solid #fffcf2; }
+  a.button-1:hover {
+    background: #26C3FF; }
+
+a.button-2 {
+  background: #FFC100;
+  border: 1px solid #fffcf2; }
+  a.button-2:hover {
+    background: #FFC100; }
+
+a.button-3 {
+  background: #009dd9;
+  border: 1px solid #fffcf2; }
+  a.button-3:hover {
+    background: #229500; }
+
+a.button-4 {
+  background: #33E100;
+  border: 1px solid #fffcf2; }
+  a.button-4:hover {
+    background: #33E100; }
+
 .learn-more {
   margin: 2em auto;
   padding-top: 1.5em;

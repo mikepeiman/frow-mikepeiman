@@ -843,6 +843,47 @@ p a.link-homepage {
 /*
 /*****************************************************************************/
 
+a.button {
+	border-radius: 3px;
+	padding: 2px 6px;
+	margin: 4px 0;
+	display: inline-block;
+	color: $main-white;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: $main-white;
+	}
+}
+a.button-1 {
+	background: $third-color;
+	border: 1px solid $main-white;
+	&:hover {
+		background: $third-color;
+	}
+}
+a.button-2 {
+	background: $main-color;
+	border: 1px solid $main-white;
+	&:hover {
+		background: $main-color;
+	}
+}
+a.button-3 {
+	background: $third-accent;
+	border: 1px solid $main-white;
+	&:hover {
+		background: $second-accent;
+	}
+}
+a.button-4 {
+	background: $second-color;
+	border: 1px solid $main-white;
+	&:hover {
+		background: $second-color;
+	}
+}
+
 .learn-more {
 	margin: 2em auto;
 	padding-top: 1.5em;
