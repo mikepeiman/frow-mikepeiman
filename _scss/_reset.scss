@@ -28,7 +28,7 @@ body {
 	background: $main-black;
 	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%;
 	background-attachment: fixed;
 	background-position: center;
 }
@@ -36,34 +36,34 @@ body {
 	background: $main-white;
 	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%;
 	background-attachment: fixed;
 }
 .blog-page-bg {
 	background: $main-white;
 	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%;
 	background-attachment: fixed;
 }
 .body-shop {
 	background: $main-black;
 	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%;
 	background-attachment: fixed;
 }
 .body-about {
 	background: $main-black;
 	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%;
 	background-attachment: fixed;
 }
 .about-bg {
 	background-image: linear-gradient($fifth-accent, $third-color);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%;
 	background-attachment: fixed;
 }
 .shop-bg {
@@ -131,7 +131,7 @@ a:active {
 }
 .landing-page {
 	flex: 1;
-	margin-top: 5em;
+	margin-top: 2em;
 }
 header {
 	position: fixed;
@@ -729,7 +729,7 @@ p:empty {
 
 .intro-text {
 	color: white; //$main-white;
-    margin: 2em 0 0 0;
+    margin: 0;
     line-height: 1.25em;
     flex-direction: column;
     text-align: center;
@@ -750,6 +750,9 @@ p:empty {
 	box-shadow: none;
 	background: none;
 	padding: 0.4em;
+}
+.subtitle-2 {
+	color: $main-color;
 }
 .subtitle-bg {
 	border: 2px solid $main-black;
@@ -846,7 +849,7 @@ p a.link-homepage {
 a.button {
 	border-radius: 3px;
 	padding: 2px 6px;
-	margin: 4px 0;
+	margin: 2px 0;
 	display: inline-block;
 	color: $main-white;
 	text-decoration: none;
@@ -873,7 +876,7 @@ a.button-3 {
 	background: $third-accent;
 	border: 1px solid $main-white;
 	&:hover {
-		background: $second-accent;
+		background: adjust-color($third-accent, $lightness: -15%);
 	}
 }
 a.button-4 {
@@ -1019,7 +1022,7 @@ footer {
 			  	margin-left: 1.5em;
 			  	font-size: .85em;
 			  	padding: .5em;
-			  	color: $main-color;
+			  	color: $third-color;
 			  	text-align: left;
 		  	}
 			  .icon {
@@ -1242,8 +1245,7 @@ img + em {
 	}
 }
 .lph-1 {
-	color: white;
-	background: rgba(0,0,0,0.75);
+	color: $main-white;
 	p { line-height: 1.25em; }
 	margin-bottom: 3em;
 	//$main-grey;//adjust-color($third-accent, $lightness: -15%);
@@ -2427,12 +2429,6 @@ span.button.buy-now-button {
   		color: white;
   	}
   }
-	.intro-text {
-		p {
-			width: 80%;
-			margin: 0 auto;
-		}
-	}
 
 	.blogpage-post-feed-item {
 		padding: .5em .5em .5em 1.5em;
@@ -2460,7 +2456,14 @@ span.button.buy-now-button {
 	.input-field::placeholder {
 		padding-left: 1em;
 	}
+	.intro-text {
+		p {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
 }
+
 
 /*****************************************************************************/
 /*
@@ -2492,14 +2495,6 @@ span.button.buy-now-button {
 	.shop-bg h1 {
 		margin-top: 4em;
 	}
-
-	.intro-text {
-		padding-top: 0;
-		p {
-			margin: 0 auto;
-		}
-	}
-
 	.lead-paragraph-home {
 		border: none;
 	}
@@ -2789,12 +2784,6 @@ span.button.buy-now-button {
 	body {
 		font-size: 105%;
 	}
-	.intro-text {
-		p {
-			width: 90%;
-			margin: 0 auto;
-		}
-	}
 
 	.block-quote {
 		margin: .5em 0;
@@ -2819,7 +2808,13 @@ span.button.buy-now-button {
 	//	font-size: 1.2em;
 	}
 
-
+	.icon {
+					fill: $third-color;
+				  width: 16px;
+				  height: 16px;
+				  margin: .5em .25em;
+				  flex: 1;
+				}
 	.social-links ul li:first-child {
 		width: 100%;
 		margin: 1em auto 0 auto;
@@ -2832,6 +2827,12 @@ span.button.buy-now-button {
 		width: 70%;
 		flex-direction: column;
 }
+	.intro-text {
+		p {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
 }
 
 /*****************************************************************************/
@@ -2952,12 +2953,12 @@ span.button.buy-now-button {
 		margin: 0 auto;
 	}
 	.social-links-contact .icon {
-		fill: $main-color;
-	  width: 32px;
-	  height: 32px;
-	  margin: 1em .25em;
-	  flex: 1;
-	}
+					fill: $third-color;
+				  width: 16px;
+				  height: 16px;
+				  margin: .5em .25em;
+				  flex: 1;
+				}
 }
 
 
