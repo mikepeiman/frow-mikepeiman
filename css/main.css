@@ -1299,7 +1299,7 @@ img + em {
   background: #1a1a1a;
   border-top: 5px solid #FFC100;
   border-bottom: 5px solid #FFC100;
-  padding: 1em 0;
+  padding: .25em 0;
   margin: 3em 0 0 0; }
 
 .section-header-signup-2 {
