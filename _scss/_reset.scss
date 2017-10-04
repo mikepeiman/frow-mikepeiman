@@ -26,7 +26,7 @@ body {
 
 .body-homepage {
 	background: $main-black;
-	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
+	background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-3;
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-attachment: fixed;
@@ -1231,10 +1231,10 @@ img + em {
 }
 .lead-paragraph-home {
 	font-size: 1.15em;
-	margin-bottom: .75em;
+	margin-bottom: 1.25em;
 	line-height: 1.25em;
-	padding: .5em;
-	text-align: center;
+	padding: 1em;
+	text-align: left;
 /*
 	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
 	border-bottom: 5px solid adjust-color($main-black, $lightness: 25%);
@@ -1245,9 +1245,15 @@ img + em {
 	}
 }
 .lph-1 {
+<<<<<<< HEAD
 	color: $main-white;
 	p { line-height: 1.25em; }
 	margin-bottom: 3em;
+=======
+	color: white;
+	background: none;
+	p { line-height: 1.5em; }
+>>>>>>> parent of af03a5d... some homepage styling and content updates
 	//$main-grey;//adjust-color($third-accent, $lightness: -15%);
 	//border: 5px solid $main-white;
 }
@@ -1290,10 +1296,10 @@ img + em {
 	}
 }
 .p-border-1 {
-	border-left: 15px solid $third-color;
-	border-right: 15px solid $third-color;
-	border-top: 15px solid adjust-color($third-accent, $lightness: -15%);
-	border-bottom: 15px solid adjust-color($third-accent, $lightness: -15%);
+	border-left: 15px solid $main-black;
+	border-right: 15px solid $main-black;
+	border-top: 15px solid $main-grey;
+	border-bottom: 15px solid $main-grey;
 	font-size: 1.15em;
 	padding: 1.25em 1em;
 }

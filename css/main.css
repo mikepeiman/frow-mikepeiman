@@ -23,7 +23,7 @@ body {
 
 .body-homepage {
   background: #1a1a1a;
-  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg2.jpg);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.25), #1a1a1a), url(../images/bg3.jpg);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-attachment: fixed;
@@ -1129,10 +1129,10 @@ img + em {
 
 .lead-paragraph-home {
   font-size: 1.15em;
-  margin-bottom: .75em;
+  margin-bottom: 1.25em;
   line-height: 1.25em;
-  padding: .5em;
-  text-align: center;
+  padding: 1em;
+  text-align: left;
   /*
 	border-top: 5px solid adjust-color($main-black, $lightness: 25%);
 	border-bottom: 5px solid adjust-color($main-black, $lightness: 25%);
@@ -1142,10 +1142,15 @@ img + em {
     font-family: 'Raleway'; }
 
 .lph-1 {
+<<<<<<< HEAD
   color: #fffcf2;
   margin-bottom: 3em; }
+=======
+  color: white;
+  background: none; }
+>>>>>>> parent of af03a5d... some homepage styling and content updates
   .lph-1 p {
-    line-height: 1.25em; }
+    line-height: 1.5em; }
 
 .lph-2 {
   color: white;
@@ -1183,10 +1188,10 @@ img + em {
     font-family: 'Nunito'; }
 
 .p-border-1 {
-  border-left: 15px solid #26C3FF;
-  border-right: 15px solid #26C3FF;
-  border-top: 15px solid #00658c;
-  border-bottom: 15px solid #00658c;
+  border-left: 15px solid #1a1a1a;
+  border-right: 15px solid #1a1a1a;
+  border-top: 15px solid #404040;
+  border-bottom: 15px solid #404040;
   font-size: 1.15em;
   padding: 1.25em 1em; }
 
