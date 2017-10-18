@@ -1,17 +1,19 @@
 {% include head.html %}
 <html>
-  <body class="frow">
-    <div class="body-homepage"> 
-    <!-- Make sure to include the extra closing div inside the partial where I want my bg-image to end -->
-      {% include nav-page.html %}
-			<div class="frow landing-page">
-				<div class="col-md-3-5 intro-text hp-3">
-				 <div id="home"></div>
-			  	{% include subpage-intro-text-1.html %}
-			  </div>
-			</div>
+  <body>
+    <div class="frow body-homepage"> 
+    	<div class="col-xs-1-5 block-1">
+    		<!-- Make sure to include the extra closing div inside the partial where I want my bg-image to end -->
+      		{% include nav-page.html %}
 		</div>
-		{{ content }}
+		<div class="col-xs-4-5 intro-text hp-3">
+			<div id="home"></div>
+		  		{% include subpage-intro-text-1.html %}
+		  	</div>
+		</div>
+	</div>
+	{{ content }}
+
 <script>
 
     /* Light YouTube Embeds by @labnol */
