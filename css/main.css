@@ -1142,13 +1142,12 @@ img + em {
     font-family: 'Raleway'; }
 
 .lph-1 {
-<<<<<<< HEAD
   color: #fffcf2;
-  margin-bottom: 3em; }
-=======
+  margin-bottom: 3em;
   color: white;
   background: none; }
->>>>>>> parent of af03a5d... some homepage styling and content updates
+  .lph-1 p {
+    line-height: 1.25em; }
   .lph-1 p {
     line-height: 1.5em; }
 

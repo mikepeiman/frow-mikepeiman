@@ -7,7 +7,7 @@ achieving lasting fulfillment and success, and making the world a better place."
 twitter_username: 
 github_username:
 permalink: :year/:title.html
-comments: false
+comments: true
 
 defaults:
   -
