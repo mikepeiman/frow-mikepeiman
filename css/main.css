@@ -308,6 +308,12 @@ nav {
       color: #26C3FF;
       text-decoration: none; }
 
+.sidebar-main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
 .nav-menu {
   display: inline;
   display: inline-grid; }

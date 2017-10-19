@@ -346,6 +346,10 @@ nav {
 		}
 	}
 }
+.sidebar-main {
+	display: flex;
+	flex-direction: column;
+}
 
 .nav-menu {
 	display: inline;
