@@ -332,7 +332,8 @@ nav {
 	a.menu-item {
 	  text-decoration: none;
 	  display: block;
-		color: white;
+		color: $main-black;
+		line-height: 4vw;
 		&:active {
 	  	text-decoration: none;
 	  	color: $third-color;
@@ -341,7 +342,7 @@ nav {
 	  	text-decoration: underline;
 	  }
 	  &:hover {
-			color: $third-color;
+			color: $main-color;
 			text-decoration: none;
 		}
 	}
@@ -349,6 +350,7 @@ nav {
 .sidebar-main {
 	display: flex;
 	flex-direction: column;
+	background: $second-color;
 }
 
 .nav-menu {
@@ -419,18 +421,18 @@ nav {
 	}
 }
 .site-branding h1 {
-	margin: 0.3em 1.5em 0 0;
+	margin: 0.3em .25em 0 0;
 	color: white;
 	text-align: left;
 	font-size: 1.5em;
 	&:hover {
-		color: $third-color;
+		color: $main-color;
 	}
 }
 .site-branding p {
 	margin: 0 0 1.25em 0.1em;
 	font-size: 1em;
-	color: $third-color;
+	color: $fourth-accent;
 	text-align: left;
 }
 
@@ -758,7 +760,7 @@ p:empty {
 }
 .title {
     font-weight: bold;
-    font-size: 7em;
+    font-size: 8vw;;
     margin: 0;
 	padding: 0 0 10px 0;
 	text-decoration: none;
@@ -2356,9 +2358,9 @@ span.button.buy-now-button {
 /*****************************************************************************/
 
 @media all and (min-width: 810px) {
-	.nav-menu {
-		margin: -4.95em 2em 0 1.25em;
-	}
+	// .nav-menu {
+	// 	margin: -4.95em 2em 0 1.25em;
+	// }
 	nav .site-branding {
 		display: block;
 		margin-right: auto;

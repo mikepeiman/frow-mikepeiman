@@ -298,21 +298,23 @@ nav {
   nav a.menu-item {
     text-decoration: none;
     display: block;
-    color: white; }
+    color: #1a1a1a;
+    line-height: 4vw; }
     nav a.menu-item:active {
       text-decoration: none;
       color: #26C3FF; }
     nav a.menu-item:visited {
       text-decoration: underline; }
     nav a.menu-item:hover {
-      color: #26C3FF;
+      color: #FFC100;
       text-decoration: none; }
 
 .sidebar-main {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+  background: #33E100; }
 
 .nav-menu {
   display: inline;
@@ -372,17 +374,17 @@ nav {
     outline: none; }
 
 .site-branding h1 {
-  margin: 0.3em 1.5em 0 0;
+  margin: 0.3em .25em 0 0;
   color: white;
   text-align: left;
   font-size: 1.5em; }
   .site-branding h1:hover {
-    color: #26C3FF; }
+    color: #FFC100; }
 
 .site-branding p {
   margin: 0 0 1.25em 0.1em;
   font-size: 1em;
-  color: #26C3FF;
+  color: #008c27;
   text-align: left; }
 
 /*****************************************************************************/
@@ -696,7 +698,7 @@ p:empty {
 
 .title {
   font-weight: bold;
-  font-size: 7em;
+  font-size: 8vw;
   margin: 0;
   padding: 0 0 10px 0;
   text-decoration: none; }
@@ -2130,8 +2132,6 @@ span.button.buy-now-button {
 /*
 /*****************************************************************************/
 @media all and (min-width: 810px) {
-  .nav-menu {
-    margin: -4.95em 2em 0 1.25em; }
   nav .site-branding {
     display: block;
     margin-right: auto; } }
@@ -4508,3 +4508,125 @@ textarea:not(.reset) {
   content: "";
   display: table;
   clear: both; }
+
+/* 
+  Based from this article from Divya Manian - 
+  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+
+  Copied from this CodePen: https://codepen.io/Jintos/pen/crlxk
+*/
+.title {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase; }
+
+.title:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 240px;
+  height: 4px;
+  margin-left: -120px;
+  content: '';
+  background-color: #fff; }
+
+/* Clip text element */
+.clip-text {
+  font-size: 10vw;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  /* Color fallback */
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.clip-text:before,
+.clip-text:after {
+  position: absolute;
+  content: ''; }
+
+/* Background */
+.clip-text:before {
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit; }
+
+/* Text Background (black zone) */
+.clip-text:after {
+  position: absolute;
+  z-index: -1;
+  top: .125em;
+  right: .125em;
+  bottom: .125em;
+  left: .125em;
+  background-color: #000; }
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+  background-position: -.65em 0; }
+
+.clip-text--no-textzone:after {
+  content: none; }
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
+.clip-text_sixteen {
+  background-image: url(https://source.unsplash.com/ReAup1bi27E/900x500); }
+
+.clip-text_one {
+  background-image: url(http://cdn8.staztic.com/app/a/6278/6278761/hd-abstract-wallpapers-1-0-s-307x512.jpg); }
+
+.clip-text_two {
+  background-image: url(http://wallpaper-gallery.net/images/black-abstract-wallpaper/black-abstract-wallpaper-4.jpg); }
+
+.clip-text_tree {
+  background-image: url(http://www.cruzine.com/wp-content/uploads/2012/04/005-free-abstract-wallpapers.jpg); }
+
+.clip-text_four {
+  background-image: url(http://hd.wallpaperswide.com/thumbs/abstract_black_design_2-t2.jpg); }
+
+.clip-text_five {
+  background-image: url(http://powellong.com/data/wallpapers/81/WDF_1255144.jpg); }
+
+.clip-text_six {
+  background-image: url(https://www.hdwallpapers.net/previews/3d-colorful-spiral-1057.jpg); }
+
+.clip-text_seven {
+  background-image: url(http://cdn8.staztic.com/app/a/6278/6278761/hd-abstract-wallpapers-1-0-s-307x512.jpg); }
+
+.clip-text_eight {
+  background-image: url(http://lorempixel.com/410/200/people); }
+
+.clip-text_nine {
+  background-image: url(https://wallpaperbrowse.com/media/images/background-pictures-10.jpg); }
+
+.clip-text_ten {
+  background-image: url(http://lorempixel.com/480/200/nightlife/8); }
+
+.clip-text_eleven {
+  background-image: url(http://www.wallcoo.net/cartoon/abstract_rainbow_colours_13_1920x1200/images/Abstract_Rainbow_colour_pattern_4116.jpg);
+  background-size: cover; }
+
+.clip-text_twelve {
+  background-image: url(http://hd.wallpaperswide.com/thumbs/abstract_wallpaper_for_mac-t2.jpg); }
+
+.clip-text_thirteen {
+  background-image: url(http://img.7te.org/images/570x363/abstract-painting-wallpaper-which-is-under-the-abstract-wallpapers-32968.jpg); }
+
+.clip-text_fourteen {
+  background-image: url(https://4kwallpapers.co/wp-content/uploads/2015/09/abstract-colorful-vectors-design-4k-wallpapers.png); }
+
+.clip-text_fifteen {
+  background-image: url(http://lorempixel.com/480/200/nightlife/5); }
