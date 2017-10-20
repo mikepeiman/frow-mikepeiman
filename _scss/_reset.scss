@@ -27,7 +27,7 @@ body {
 .body-homepage {
 	background: $main-black;
 	display: flex;
-	height: 90vh;
+	height: 100vh;
 	// background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
 	// background-repeat: no-repeat;
 	// background-size: cover;
@@ -325,6 +325,8 @@ nav {
   	// margin-right: 2em;
   	// margin-top: -2em;
   }
+
+
   ul li {
   	padding-right: 2em;
  		text-transform: uppercase;
@@ -978,48 +980,38 @@ p a.link-homepage {
 }
 
 footer {
-	height: 10vh;
+
 		&.social-links {
 	    color: $main-grey;
-	    background: $main-black;
 		bottom: 0;
 	    ul {
 		  	display: flex;
-		  	justify-content: flex-end; // space-around;
-		  	width: 100%;
+		  	justify-content: space-around;
+		  	// width: 90%;
 		  	align-items: center;
-		  	padding-right: 3em;
+		  	margin: 1em 0;
 		  }
 
 		  ul li {
-		  	&:first-child {
-			  	margin-right: auto;
-			  	margin-left: 1.5em;
-			  	font-size: .85em;
-			  	padding: .5em;
-			  	color: $main-color;
-			  	text-align: left;
-		  	}
-			  .icon {
-					fill: $main-color;
-				  width: 32px;
-				  height: 32px;
-				  margin: 1em .25em;
-				  flex: 1;
+			  	.icon {
+					fill: $main-black;
+					width: 32px;
+					height: 32px;
+					margin: 0 .2vw;
+					flex: 1;
 				}
 				a {
 					text-decoration: none;
 				}
 			}
 		.icon:hover {
-			fill: $third-color;
+			fill: $main-color;
 		}
 	}
 }
 .social-links-contact {
     color: $main-grey;
     font-family: 'Montserrat','Raleway';
-    background: $main-black;
     padding: 1em 0;
 		bottom: 0;
 		h1 {
@@ -1027,7 +1019,7 @@ footer {
 		}
     ul {
 	  	display: flex;
-	  	justify-content: flex-end; // space-around;
+	  	justify-content: space-around;
 	  	width: 100%;
 	  	align-items: center;
 	  	padding-right: 3em;
@@ -2798,10 +2790,6 @@ span.button.buy-now-button {
 	}
 
 
-	.social-links ul li:first-child {
-		width: 100%;
-		margin: 1em auto 0 auto;
-	}
 	.single-product {
 		font-size: 80%;
 		margin: 0 .25em;

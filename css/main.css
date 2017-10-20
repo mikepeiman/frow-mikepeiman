@@ -25,7 +25,7 @@ body {
   background: #1a1a1a;
   display: -ms-flexbox;
   display: flex;
-  height: 90vh; }
+  height: 100vh; }
 
 .homepage-headings {
   -ms-flex-direction: column;
@@ -904,44 +904,32 @@ p a.link-homepage {
 .meta {
   color: #404040; }
 
-footer {
-  height: 10vh; }
-  footer.social-links {
-    color: #404040;
-    background: #1a1a1a;
-    bottom: 0; }
-    footer.social-links ul {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-      width: 100%;
-      -ms-flex-align: center;
-          align-items: center;
-      padding-right: 3em; }
-    footer.social-links ul li:first-child {
-      margin-right: auto;
-      margin-left: 1.5em;
-      font-size: .85em;
-      padding: .5em;
-      color: #FFC100;
-      text-align: left; }
-    footer.social-links ul li .icon {
-      fill: #FFC100;
-      width: 32px;
-      height: 32px;
-      margin: 1em .25em;
-      -ms-flex: 1;
-          flex: 1; }
-    footer.social-links ul li a {
-      text-decoration: none; }
-    footer.social-links .icon:hover {
-      fill: #26C3FF; }
+footer.social-links {
+  color: #404040;
+  bottom: 0; }
+  footer.social-links ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: center;
+        align-items: center;
+    margin: 1em 0; }
+  footer.social-links ul li .icon {
+    fill: #1a1a1a;
+    width: 32px;
+    height: 32px;
+    margin: 0 .2vw;
+    -ms-flex: 1;
+        flex: 1; }
+  footer.social-links ul li a {
+    text-decoration: none; }
+  footer.social-links .icon:hover {
+    fill: #FFC100; }
 
 .social-links-contact {
   color: #404040;
   font-family: 'Montserrat','Raleway';
-  background: #1a1a1a;
   padding: 1em 0;
   bottom: 0; }
   .social-links-contact h1 {
@@ -949,8 +937,8 @@ footer {
   .social-links-contact ul {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 100%;
     -ms-flex-align: center;
         align-items: center;
@@ -2469,9 +2457,6 @@ span.button.buy-now-button {
     padding-bottom: 2em; }
   .social-links ul li {
     margin: .75em auto; }
-  .social-links ul li:first-child {
-    width: 100%;
-    margin: 1em auto 0 auto; }
   .single-product {
     font-size: 80%;
     margin: 0 .25em;
@@ -4583,7 +4568,8 @@ textarea:not(.reset) {
 
 /* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
 .clip-text_sixteen {
-  background-image: url(https://source.unsplash.com/ReAup1bi27E/900x500); }
+  background-image: url(https://source.unsplash.com/ReAup1bi27E/1200x792);
+  background-position: 100% 50%; }
 
 .clip-text_one {
   background-image: url(http://cdn8.staztic.com/app/a/6278/6278761/hd-abstract-wallpapers-1-0-s-307x512.jpg); }
