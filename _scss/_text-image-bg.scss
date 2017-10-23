@@ -10,16 +10,27 @@
     position: relative;
     text-align: center;
     text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+.title:before {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 45vw;
+    height: 4px;
+    margin-left: -22.5vw;
+    content: '';
+    background-color: #FFD03A;
 }
 .title:after {
     position: absolute;
     top: 100%;
     left: 50%;
-    width: 240px;
+    width: 45vw;
     height: 4px;
-    margin-left: -120px;
+    margin-left: -22.5vw;
     content: '';
-    background-color: #fff;
+    background-color: #FFD03A;
 }
 
 /* Clip text element */
@@ -86,7 +97,7 @@
 
 /* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
 .clip-text_sixteen {
-    background-image: url(https://source.unsplash.com/ReAup1bi27E/1200x792);
+    background-image: url(https://source.unsplash.com/7FNOH-qSxMI/1200x792); //3wC1S7IFijI ReAup1bi27E NPyXoUUlrqg
     background-position: 100% 50%;
 }
 

@@ -21,11 +21,11 @@ body {
     //display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: $main-black;
+    background-color: $main-white;
 }
 
 .body-homepage {
-	background: $main-black;
+	background: #2a2a2a;
 	display: flex;
 	height: 100vh;
 	// background-image: linear-gradient(rgba(26,26,26,.25), rgba(26,26,26,1)), $bg-image-2;
@@ -108,9 +108,9 @@ h3, h4, h5, h6 {
 }
 
 h1, h2 {
-	font-family: 'Montserrat';
+	font-family: 'Raleway', 'Montserrat';
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 1em;
 }
 
@@ -328,7 +328,6 @@ nav {
 
 
   ul li {
-  	padding-right: 2em;
  		text-transform: uppercase;
   }
 	a.menu-item {
@@ -344,7 +343,7 @@ nav {
 	  	text-decoration: underline;
 	  }
 	  &:hover {
-			color: $main-color;
+			background: $main-color;
 			text-decoration: none;
 		}
 	}
@@ -352,7 +351,16 @@ nav {
 .sidebar-main {
 	display: flex;
 	flex-direction: column;
-	background: $second-color;
+	background: $main-white;// $second-color;
+	justify-content: space-between;
+	border-right: 5px solid #60C14B;
+}
+#homepage-headshot {
+	// background-image: url("images/DSC07628-profile-1x1.jpg");
+	margin: 0 0 20px 20px;
+	padding: 0;
+	border: 5px solid #60C14B;
+	z-index: 10;
 }
 
 .nav-menu {
@@ -754,6 +762,7 @@ p:empty {
     line-height: 1.25em;
     flex-direction: column;
     text-align: center;
+    background: #2a2a2a;
   p {
 		padding: .75em 0;
 		font-size: 1.15em;
@@ -761,11 +770,23 @@ p:empty {
 	}
 }
 .title {
-    font-weight: bold;
-    font-size: 8vw;;
+    font-weight: 900;
+    font-size: 700%;
     margin: 0;
 	padding: 0 0 10px 0;
 	text-decoration: none;
+	#title-build {
+		color: #FFD03A;
+	}
+	#title-a {
+		color: #4BC1B6;
+	}
+	#title-better {
+		color: #60C14B;
+	}
+	#title-world {
+		color: #4BC1B6;
+	}
 	}
 .subtitle {
 	box-shadow: none;
@@ -1006,8 +1027,18 @@ footer {
 			}
 		.icon:hover {
 			fill: $main-color;
+			color: $main-color;
 		}
 	}
+}
+.github {
+	margin-top: -2px;
+	height: 34px;
+	width: 34px;
+}
+.github:hover {
+	fill: $main-color;
+	color: $main-color;
 }
 .social-links-contact {
     color: $main-grey;
@@ -2387,9 +2418,9 @@ span.button.buy-now-button {
 	width: 100%;
 	max-width: 100%;
 }
-  nav ul li {
-  	padding-right: .75em;
-  }
+  // nav ul li {
+  // 	padding-right: .75em;
+  // }
 
   .site-branding {
   	color: white;
@@ -2503,6 +2534,9 @@ span.button.buy-now-button {
 	}
 	.greeting {
 		border: none;
+	}
+	.title {
+		font-size: 500%;
 	}
 	.blogpage-post-feed-item {
 		padding: .5em;
@@ -2841,7 +2875,6 @@ span.button.buy-now-button {
 
 	.intro-text h1 {
 	  padding: .5em 0;
-	  margin: 0;
 	}
 
 	.intro-text p {

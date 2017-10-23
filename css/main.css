@@ -19,10 +19,10 @@ body {
   min-height: 100vh;
   -ms-flex-direction: column;
       flex-direction: column;
-  background-color: #1a1a1a; }
+  background-color: #fffcf2; }
 
 .body-homepage {
-  background: #1a1a1a;
+  background: #2a2a2a;
   display: -ms-flexbox;
   display: flex;
   height: 100vh; }
@@ -97,9 +97,9 @@ h3, h4, h5, h6 {
   font-family: 'Ubuntu'; }
 
 h1, h2 {
-  font-family: 'Montserrat';
+  font-family: 'Raleway', 'Montserrat';
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1em; }
 
 a {
@@ -293,7 +293,6 @@ nav {
     -ms-flex-align: center;
         align-items: center; }
   nav ul li {
-    padding-right: 2em;
     text-transform: uppercase; }
   nav a.menu-item {
     text-decoration: none;
@@ -306,7 +305,7 @@ nav {
     nav a.menu-item:visited {
       text-decoration: underline; }
     nav a.menu-item:hover {
-      color: #FFC100;
+      background: #FFC100;
       text-decoration: none; }
 
 .sidebar-main {
@@ -314,7 +313,16 @@ nav {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  background: #33E100; }
+  background: #fffcf2;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-right: 5px solid #60C14B; }
+
+#homepage-headshot {
+  margin: 0 0 20px 20px;
+  padding: 0;
+  border: 5px solid #60C14B;
+  z-index: 10; }
 
 .nav-menu {
   display: inline;
@@ -690,18 +698,27 @@ p:empty {
   line-height: 1.25em;
   -ms-flex-direction: column;
       flex-direction: column;
-  text-align: center; }
+  text-align: center;
+  background: #2a2a2a; }
   .intro-text p {
     padding: .75em 0;
     font-size: 1.15em;
     line-height: 1.25em; }
 
 .title {
-  font-weight: bold;
-  font-size: 8vw;
+  font-weight: 900;
+  font-size: 700%;
   margin: 0;
   padding: 0 0 10px 0;
   text-decoration: none; }
+  .title #title-build {
+    color: #FFD03A; }
+  .title #title-a {
+    color: #4BC1B6; }
+  .title #title-better {
+    color: #60C14B; }
+  .title #title-world {
+    color: #4BC1B6; }
 
 .subtitle {
   box-shadow: none;
@@ -925,7 +942,17 @@ footer.social-links {
   footer.social-links ul li a {
     text-decoration: none; }
   footer.social-links .icon:hover {
-    fill: #FFC100; }
+    fill: #FFC100;
+    color: #FFC100; }
+
+.github {
+  margin-top: -2px;
+  height: 34px;
+  width: 34px; }
+
+.github:hover {
+  fill: #FFC100;
+  color: #FFC100; }
 
 .social-links-contact {
   color: #404040;
@@ -2144,8 +2171,6 @@ span.button.buy-now-button {
   .grid-container {
     width: 100%;
     max-width: 100%; }
-  nav ul li {
-    padding-right: .75em; }
   .site-branding {
     color: white; }
     .site-branding h1 {
@@ -2234,6 +2259,8 @@ span.button.buy-now-button {
     margin-top: 4em; }
   .greeting {
     border: none; }
+  .title {
+    font-size: 500%; }
   .blogpage-post-feed-item {
     padding: .5em;
     margin: 0 0 .1em -1em; }
@@ -2496,8 +2523,7 @@ span.button.buy-now-button {
     -ms-flex: 1 .35 auto;
         flex: 1 .35 auto; }
   .intro-text h1 {
-    padding: .5em 0;
-    margin: 0; }
+    padding: .5em 0; }
   .intro-text p {
     padding: .5em 0; }
   .greeting {
@@ -4503,17 +4529,28 @@ textarea:not(.reset) {
 .title {
   position: relative;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 0 0 5px 0; }
+
+.title:before {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 45vw;
+  height: 4px;
+  margin-left: -22.5vw;
+  content: '';
+  background-color: #FFD03A; }
 
 .title:after {
   position: absolute;
   top: 100%;
   left: 50%;
-  width: 240px;
+  width: 45vw;
   height: 4px;
-  margin-left: -120px;
+  margin-left: -22.5vw;
   content: '';
-  background-color: #fff; }
+  background-color: #FFD03A; }
 
 /* Clip text element */
 .clip-text {
@@ -4568,7 +4605,7 @@ textarea:not(.reset) {
 
 /* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
 .clip-text_sixteen {
-  background-image: url(https://source.unsplash.com/ReAup1bi27E/1200x792);
+  background-image: url(https://source.unsplash.com/7FNOH-qSxMI/1200x792);
   background-position: 100% 50%; }
 
 .clip-text_one {
